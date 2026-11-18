@@ -455,6 +455,55 @@ with st.container(border=True):
     #         disabled=classifier is None,
     #     )
 
+    # --- Sample inputs selector (place right before the Analyze button) ---
+    SAMPLE_INPUTS = {
+        "Select a sample input...": {"question": "", "proof": ""},
+        "Sequence Convergence": {
+            "question": "Prove that a_n = 3/n converges to 0.",
+            "proof": (
+                "Take any positive eps. Choose N as a natural number greater than 3/eps. Then for any n from N onwards, we have |3/n - 0| = 3/n ≤ 3/N < eps. Hence the sequence 3/n approaches 0."
+            ),
+        },
+        "Integration": {
+            "question": "Using a right-endpoint Riemann sum on the uniform partition of $[0,1]$, evaluate $\\int_0^1 \\sqrt{x}\\,dx$ and show that it equals $2/3$.",
+            "proof": (
+                "With right endpoints $k/n$ and width $1/n$, $S_n = (1/n)\\sum_{k=1}^n \\sqrt{k/n} = (1/n^{3/2})\\sum_{k=1}^n \\sqrt{k}$. Using the asymptotic $\\sum_{k=1}^n \\sqrt{k} \\sim \\frac{2}{3}n^{3/2}$ (from Faulhaber-type estimates), we get $S_n \\to 2/3$. Continuity of $\\sqrt{x}$ identifies the integral."
+            ),
+        },
+        "Vector Operations": {
+            "question": "Apply Gram-Schmidt to v1 = (1,2) and v2 = (2,1).",
+            "proof": (
+                "Set u1 equal to v1, which is (1,2). The inner product of v2 with u1 is 2 plus 2, which is 4, and the inner product of u1 with itself is 1 plus 4, which is 5. So the projection of v2 onto u1 is four fifths of (1,2), that is (4/5, 8/5). Subtracting this from v2 gives u2 equal to (6/5, -3/5). Checking orthogonality, the inner product of u1 and u2 is six fifths minus six fifths, which is 0."
+            ),
+        },
+        "Linear Transformation": {
+            "question": "Find the eigenvalues and eigenvectors of A = [[2,1],[1,2]].",
+            "proof": (
+                "The characteristic polynomial is $(2-\\lambda)^2 - 1 = (\\lambda-1)(\\lambda-3)$, so the eigenvalues are $1$ and $3$. For $\\lambda = 3$, $(A-3I)v = 0$ gives $-x+y = 0$, so $v = (1,1)$. For $\\lambda = 1$, $(A-I)v = 0$ gives $x+y = 0$, so $v = (1,-1)$. The eigenvectors are perpendicular, reflecting the spectral theorem for symmetric matrices."
+            ),
+        },
+        "Curvature": {
+            "question": "Compute the curvature of the parabola gamma(t) = (t, t^2) at t = 1.",
+            "proof": (
+                "The first derivatives are 1 and 2t, and the second derivatives are 0 and 2. The plane curvature formula gives two divided by the three halves power of one plus four t squared. At t equal to 1 this is two divided by five times the square root of five."
+            ),
+        },
+    }
+
+    def _load_sample_input():
+        selected = st.session_state.get("sample_input_selector")
+        if selected and selected != "Select a sample input...":
+            sample = SAMPLE_INPUTS[selected]
+            st.session_state["question_input"] = sample["question"]
+            st.session_state["proof_input"] = sample["proof"]
+
+    st.selectbox(
+        "Load a sample theorem & proof",
+        options=list(SAMPLE_INPUTS.keys()),
+        key="sample_input_selector",
+        on_change=_load_sample_input,
+    )
+
     if st.button("Analyze proof and prepare Manim parameters", type="primary", use_container_width=True):
         if not question.strip() and not proof.strip():
             st.warning("Enter at least a question or a proof.")
