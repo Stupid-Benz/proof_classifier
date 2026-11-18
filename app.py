@@ -9,13 +9,13 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+import contextlib
+import io
+
+import numpy as np
+from PIL import Image
+
 from classifier import HierarchicalProofClassifier
-from document_ocr import (
-    DocumentOCRInputError,
-    append_document_text,
-    create_pp_structure_pipeline,
-    run_document_ocr,
-)
 from feedback_store import FEEDBACK_PATH, count_feedback_records, save_reviewed_feedback
 from image_latex_ocr import (
     LatexOCRInputError,
@@ -45,6 +45,31 @@ from template_runtime import (
     render_manim,
     template_path_for_family,
 )
+from page_latex_ocr import (
+    PageOCRInputError,
+    load_pix2text_model,
+    recognize_page_image,
+    recognize_pdf,
+)
+
+import os
+
+def detect_device() -> str:
+    """Pick the fastest device available; honour P2V_DEVICE override."""
+    override = os.environ.get("P2V_DEVICE", "auto").lower()
+    if override in ("cpu", "cuda", "mps"):
+        return override
+    try:
+        import torch
+        if torch.cuda.is_available():
+            return "cuda"
+        if getattr(torch.backends, "mps", None) and torch.backends.mps.is_available():
+            return "mps"
+    except ImportError:
+        pass
+    return "cpu"
+
+DEVICE = detect_device()
 
 def format_template_json(obj, indent=2, level=0):
     pad = " " * (indent * level)
@@ -159,26 +184,75 @@ CLASSIFIER_PATH = PROJECT_ROOT / "models" / "proof_classifier.joblib"
 NER_MODEL_DIR = PROJECT_ROOT / "models" / "ner"
 
 
-@st.cache_resource
-def load_classifier(path: str):
-    return HierarchicalProofClassifier(path, device="cpu")
+@st.cache_resource(show_spinner="Loading proof classifier…")
+def load_classifier(path: str, device: str):
+    clf = HierarchicalProofClassifier(path, device=device)
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
+        try:
+            clf.predict(
+                "Prove that the sequence a_n = 1/n converges to 0.",
+                "For every epsilon > 0, choose N > 1/epsilon. Then |1/n| < epsilon.",
+            )
+        except Exception as exc:
+            print(f"Classifier warmup inference failed: {exc}")
+    return clf
 
 
-@st.cache_resource
-def load_extractor(path: str):
-    return ParameterExtractor(path, device="cpu")
+@st.cache_resource(show_spinner="Loading NER extractor…")
+def load_extractor(path: str, device: str):
+    ext = ParameterExtractor(path, device=device)
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
+        try:
+            warmup_family = next(iter(MANIM_FAMILIES))
+            ext.extract(
+                "Prove that the sequence a_n = 3/n converges to 0.",
+                "For epsilon > 0, choose N > 3/epsilon. Then |3/n| < epsilon.",
+                warmup_family,
+                threshold=0.5,
+            )
+        except Exception as exc:
+            print(f"Extractor warmup inference failed: {exc}")
+    return ext
 
 
-@st.cache_resource(show_spinner=False)
-def load_document_ocr_model():
-    return create_pp_structure_pipeline(device="cpu")
-
-
-@st.cache_resource(show_spinner=False)
-def load_latex_ocr_model():
+@st.cache_resource(show_spinner="Loading equation OCR (pix2tex)…")
+def load_latex_ocr_model(device: str):
     from pix2tex.cli import LatexOCR
 
-    return LatexOCR()
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
+        model = LatexOCR()
+        if device != "cpu":
+            try:
+                model.model.to(device)
+                model.args.device = device
+                model.model.eval()
+            except Exception as exc:
+                print(f"pix2tex GPU move failed ({exc}); using default device.")
+
+        # Warmup inference: compiles the encoder/decoder graph and, on GPU,
+        # the CUDA kernels. A blank image is enough; output is discarded.
+        try:
+            model(Image.new("RGB", (256, 64), "white"))
+        except Exception as exc:
+            print(f"pix2tex warmup inference failed: {exc}")
+    return model
+
+
+@st.cache_resource(show_spinner="Loading page OCR (Pix2Text)…")
+def load_page_ocr_model(device: str):
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
+        model = load_pix2text_model(device=device, enable_table=False)
+        # Pix2Text lazily loads layout, MFD, MFR, and text OCR on the first
+        # recognize_page() call. Force them now so the first click is fast.
+        try:
+            model.recognize_page(Image.new("RGB", (512, 512), "white"))
+        except Exception as exc:
+            print(f"Pix2Text warmup inference failed: {exc}")
+    return model
 
 
 def clean_ansi(text: str) -> str:
@@ -191,7 +265,7 @@ classifier = None
 classifier_problem = None
 if CLASSIFIER_PATH.exists():
     try:
-        classifier = load_classifier(str(CLASSIFIER_PATH))
+        classifier = load_classifier(str(CLASSIFIER_PATH), DEVICE)
         expected_families = {family for families in SUBJECT_FAMILIES.values() for family in families}
         actual_families = set(classifier.bundle.get("proof_families", []))
         if actual_families and actual_families != expected_families:
@@ -204,21 +278,51 @@ if CLASSIFIER_PATH.exists():
     except Exception as exc:
         classifier_problem = str(exc)
 
-extractor = load_extractor(str(NER_MODEL_DIR))
+extractor = load_extractor(str(NER_MODEL_DIR), DEVICE)
+# --- Model warmup: preload heavy OCR models so first clicks are instant ---
+WARMUP_OCR = os.environ.get("P2V_WARMUP_OCR", "1") == "1"
+ocr_pix2tex_ready = False
+ocr_pix2text_ready = False
+if WARMUP_OCR:
+    try:
+        load_latex_ocr_model(DEVICE)
+        ocr_pix2tex_ready = True
+    except Exception as exc:
+        print(f"pix2tex warmup failed: {exc}")
+    try:
+        load_page_ocr_model(DEVICE)
+        ocr_pix2text_ready = True
+    except Exception as exc:
+        print(f"Pix2Text warmup failed: {exc}")
 
 # --- Sidebar ---
 with st.sidebar:
     st.markdown("### Model status")
     status_badges = []
     if classifier is not None:
-        status_badges.append(("Classifier: Loaded", "default"))
+        status_badges.append(("Classifier: Loaded", "outline"))
     else:
         status_badges.append(("Classifier: Missing", "destructive"))
 
     if extractor.has_ner_model and not getattr(extractor, "checkpoint_problem", None):
-        status_badges.append(("BIO NER: Loaded", "default"))
+        status_badges.append(("BIO NER: Loaded", "outline"))
     else:
         status_badges.append(("BIO NER: Offline", "secondary"))
+
+    if WARMUP_OCR:
+        status_badges.append(
+            ("pix2tex: Warm" if ocr_pix2tex_ready else "pix2tex: Cold", "outline" if ocr_pix2tex_ready else "secondary")
+        )
+        status_badges.append(
+            ("Pix2Text: Warm" if ocr_pix2text_ready else "Pix2Text: Cold", "outline" if ocr_pix2text_ready else "secondary")
+        )
+
+    device_label = {
+        "cuda": "GPU (CUDA)",
+        "mps": "GPU (MPS)",
+        "cpu": "CPU",
+    }.get(DEVICE, DEVICE.upper())
+    status_badges.append((f"Device: {device_label}", "outline" if DEVICE == "cpu" else "secondary"))
 
     render_badges(status_badges)
 
@@ -245,25 +349,33 @@ with st.sidebar:
     c_fb.metric("Feedback", count_feedback_records())
     c_ner.metric("BIO Spans", count_manual_annotations())
 
-# --- Unified OCR Drawer ---
-with st.expander("OCR & Document Import (Equations / Screenshots / PDFs)", expanded=False):
-    ocr_tab1, ocr_tab2 = st.tabs(["Image Input — Equations to LaTeX", "Full-Page OCR — Complete Proof / PDF"])
+# --- Equation Image OCR (pix2tex only; PaddleOCR temporarily disabled) ---
+ocr_tab_eq, ocr_tab_page = st.tabs(["Equation OCR (pix2tex)", "Page OCR (Pix2Text)"])
 
-    with ocr_tab1:
+with ocr_tab_eq:
+    with st.expander("Equation Image OCR — pix2tex", expanded=False):
         st.write(
-            "Upload cropped images of mathematical expressions or take a photo. "
-            "LaTeX-OCR recognizes mathematical notation; it is not a full-page handwriting or prose OCR system."
+            "Upload a cropped mathematical expression or take a photo. "
+            "pix2tex converts mathematical notation into editable LaTeX. "
+            "For best results, crop closely around one equation; it is not designed "
+            "to transcribe an entire page of prose."
         )
+
         uploaded_equations = st.file_uploader(
             "Upload equation image(s)",
             type=["png", "jpg", "jpeg", "webp", "bmp", "tif", "tiff"],
             accept_multiple_files=True,
             key="latex_ocr_uploads",
         )
-        camera_equation = st.camera_input("Or take a photo of an equation", key="latex_ocr_camera")
-        image_sources = list(uploaded_equations or [])
-        if camera_equation is not None:
-            image_sources.append(camera_equation)
+
+        camera_equation = st.camera_input(
+            "Or take a photo of an equation",
+            key="latex_ocr_camera",
+        )
+
+        # Persist pasted images across Streamlit reruns.
+        if "latex_ocr_pasted_files" not in st.session_state:
+            st.session_state["latex_ocr_pasted_files"] = []
 
         pasted_equations = st.chat_input(
             "Paste an equation screenshot here (Ctrl+V)",
@@ -271,155 +383,445 @@ with st.expander("OCR & Document Import (Equations / Screenshots / PDFs)", expan
             file_type=["png", "jpg", "jpeg", "webp"],
             key="latex_ocr_paste",
         )
-        if pasted_equations is not None:
-            image_sources.extend(pasted_equations.files)
 
+        if pasted_equations is not None:
+            new_files = getattr(pasted_equations, "files", []) or []
+            if new_files:
+                st.session_state["latex_ocr_pasted_files"] = [
+                    (f.name or f"pasted_{i}.png", f.getvalue())
+                    for i, f in enumerate(new_files, start=1)
+                ]
+
+        # Build a persistent list of (filename, image_bytes).
+        image_sources = [
+            (f.name, f.getvalue())
+            for f in (uploaded_equations or [])
+        ]
+
+        if camera_equation is not None:
+            image_sources.append(
+                ("camera-photo.png", camera_equation.getvalue())
+            )
+
+        image_sources.extend(
+            st.session_state["latex_ocr_pasted_files"]
+        )
+
+        if image_sources:
+            st.success(f"{len(image_sources)} image(s) ready for recognition.")
+            for filename, _ in image_sources:
+                st.caption(f"📄 {filename}")
+        else:
+            st.info("Upload, paste or photograph an equation to begin.")
+
+        if st.session_state["latex_ocr_pasted_files"]:
+            if st.button("Clear pasted images", key="clear_pasted_ocr"):
+                st.session_state["latex_ocr_pasted_files"] = []
+                st.rerun()
+
+        # Recognition
         if st.button(
             "Recognize image(s) as LaTeX",
-            type="secondary",
+            type="primary",
             disabled=not image_sources,
             key="run_latex_ocr",
-            use_container_width=True,
+            width='stretch',
         ):
-            try:
-                with st.spinner("Loading LaTeX-OCR and recognizing images..."):
-                    ocr_model = load_latex_ocr_model()
-                    predictions, failures = [], []
-                    for image_file in image_sources:
-                        filename = getattr(image_file, "name", "camera-photo.png")
+            predictions = []
+            failures = []
+
+            with st.status(
+                "Initializing pix2tex...",
+                expanded=True,
+            ) as status:
+                try:
+                    status.write("Step 1/2: Loading pix2tex model...")
+
+                    progress = st.progress(
+                        0.0,
+                        text="Loading model..."
+                    )
+
+                    ocr_model = load_latex_ocr_model(DEVICE)
+
+                    status.write("Model loaded successfully.")
+
+                    total = len(image_sources)
+
+                    for index, (filename, image_bytes) in enumerate(
+                        image_sources
+                    ):
+                        status.write(
+                            f"Recognizing image {index + 1}/{total}: {filename}"
+                        )
+
                         try:
-                            predicted_latex = recognize_latex_from_bytes(image_file.getvalue(), ocr_model)
-                            predictions.append((filename, predicted_latex))
+                            predicted_latex = recognize_latex_from_bytes(
+                                image_bytes,
+                                ocr_model,
+                            )
+                            predictions.append(
+                                (filename, predicted_latex)
+                            )
+
+                            status.write(
+                                f"Successfully recognized: {filename}"
+                            )
+
                         except Exception as image_exc:
-                            failures.append((filename, str(image_exc)))
+                            failures.append(
+                                (filename, str(image_exc))
+                            )
+                            status.write(
+                                f"Failed: {filename} — {image_exc}"
+                            )
+
+                        progress.progress(
+                            (index + 1) / total,
+                            text=f"Processed {index + 1}/{total} images"
+                        )
+
                     if predictions:
                         st.session_state["latex_ocr_results"] = predictions
-                        st.session_state["latex_ocr_output"] = combine_latex_predictions(predictions)
-                    if not predictions and failures:
-                        raise RuntimeError(
-                            "No image could be recognized. "
-                            + " | ".join(f"{name}: {message}" for name, message in failures)
+                        st.session_state["latex_ocr_output"] = (
+                            combine_latex_predictions(predictions)
                         )
-                if predictions:
-                    st.success(f"Recognized {len(predictions)} image(s). Review the LaTeX below.")
-                for failed_name, failure_message in failures:
-                    st.warning(f"Could not recognize {failed_name}: {failure_message}")
-            except ImportError as exc:
-                st.error(f"LaTeX-OCR is not installed in this environment. Details: {exc}")
-            except (LatexOCRInputError, RuntimeError, OSError) as exc:
-                st.error(str(exc))
-            except Exception as exc:
-                st.error(f"Could not initialize LaTeX-OCR: {exc}")
+
+                        # Clear transient pasted files after successful processing.
+                        st.session_state["latex_ocr_pasted_files"] = []
+
+                        status.update(
+                            label=(
+                                f"Recognition completed: "
+                                f"{len(predictions)}/{total} successful"
+                            ),
+                            state="complete",
+                            expanded=True,
+                        )
+
+                        st.success(
+                            "Recognition completed! "
+                            "Review the generated LaTeX below."
+                        )
+                    else:
+                        status.update(
+                            label="Recognition failed.",
+                            state="error",
+                            expanded=True,
+                        )
+
+                        st.error(
+                            "No image could be recognized. "
+                            "Check the error messages above."
+                        )
+
+                    for failed_name, failure_message in failures:
+                        st.warning(
+                            f"{failed_name}: {failure_message}"
+                        )
+
+                except ImportError as exc:
+                    status.update(
+                        label="pix2tex dependency error.",
+                        state="error",
+                    )
+                    st.error(
+                        f"pix2tex dependency is missing: {exc}"
+                    )
+
+                except Exception as exc:
+                    status.update(
+                        label="OCR initialization failed.",
+                        state="error",
+                    )
+                    st.error(
+                        f"{type(exc).__name__}: {exc}"
+                    )
 
         if st.session_state.get("latex_ocr_output"):
-            st.text_area("Review and edit recognized LaTeX", key="latex_ocr_output", height=160)
+            st.text_area(
+                "Review and edit recognized LaTeX",
+                key="latex_ocr_output",
+                height=180,
+            )
             insert_target = st.radio(
                 "Insert recognized LaTeX into",
                 ["Proof", "Question / theorem statement"],
                 horizontal=True,
                 key="latex_ocr_insert_target",
             )
-            if st.button("Append recognized LaTeX", key="insert_latex_ocr", use_container_width=True):
+            if st.button(
+                "Append recognized LaTeX",
+                key="insert_latex_ocr",
+                width='stretch',
+            ):
                 try:
-                    target_key = "proof_input" if insert_target == "Proof" else "question_input"
+                    target_key = (
+                        "proof_input"
+                        if insert_target == "Proof"
+                        else "question_input"
+                    )
                     existing = st.session_state.get(target_key, "")
                     st.session_state[target_key] = append_latex_to_text(
-                        existing, st.session_state.get("latex_ocr_output", "")
+                        existing,
+                        st.session_state.get("latex_ocr_output", ""),
                     )
-                    st.success(f"Recognized LaTeX appended to {insert_target.lower()}.")
+                    st.success(
+                        f"Recognized LaTeX appended to {insert_target.lower()}."
+                    )
                 except LatexOCRInputError as exc:
                     st.warning(str(exc))
 
-    with ocr_tab2:
-        st.write(
-            "Upload a PDF or a complete page image. PaddleOCR PP-StructureV3 detects page layout, "
-            "recognizes ordinary text and formulas, and reconstructs the content in reading order."
+# ---- New Page OCR tab ----
+with ocr_tab_page:
+    with st.container(border=True):
+        st.markdown("#### Page OCR — Full page / PDF to Markdown")
+        st.caption(
+            "Upload full pages or PDFs, or paste screenshots. Pix2Text recognizes "
+            "layout, text, tables, and math formulas, and returns Markdown with inline LaTeX. "
+            "Best for full pages or whole documents; use the Equation OCR tab for a single "
+            "cropped formula."
         )
-        pasted_document = st.chat_input(
-            "Paste a screenshot here (Ctrl+V)",
-            accept_file=True,
-            file_type=["png", "jpg", "jpeg", "webp", "bmp", "tif", "tiff"],
-            key="document_ocr_paste",
-        )
-        if pasted_document is not None and pasted_document.files:
-            pasted_file = pasted_document.files[0]
-            st.session_state["document_ocr_paste_bytes"] = pasted_file.getvalue()
-            st.session_state["document_ocr_paste_name"] = pasted_file.name or "pasted_screenshot.png"
 
-        pasted_bytes = st.session_state.get("document_ocr_paste_bytes")
-        if pasted_bytes:
-            st.image(pasted_bytes, caption="Pasted screenshot", use_container_width=True)
-            if st.button("Remove pasted screenshot"):
-                st.session_state.pop("document_ocr_paste_bytes", None)
-                st.session_state.pop("document_ocr_paste_name", None)
+        page_upload = st.file_uploader(
+            "Upload page image(s) or PDF(s)",
+            type=["png", "jpg", "jpeg", "webp", "bmp", "tif", "tiff", "pdf"],
+            accept_multiple_files=True,
+            key="page_ocr_upload",
+        )
+
+        # Persist pasted screenshots across Streamlit reruns.
+        if "page_ocr_pasted_files" not in st.session_state:
+            st.session_state["page_ocr_pasted_files"] = []
+
+        pasted_pages = st.chat_input(
+            "Paste a page screenshot here (Ctrl+V)",
+            accept_file="multiple",
+            file_type=["png", "jpg", "jpeg", "webp"],
+            key="page_ocr_paste",
+        )
+
+        if pasted_pages is not None:
+            new_files = getattr(pasted_pages, "files", []) or []
+            if new_files:
+                st.session_state["page_ocr_pasted_files"] = [
+                    (f.name or f"pasted_{i}.png", f.getvalue())
+                    for i, f in enumerate(new_files, start=1)
+                ]
+
+        # Build a unified source list: uploaded files first, then pasted screenshots.
+        page_sources: list[tuple[str, bytes, bool]] = [
+            (f.name, f.getvalue(), (f.name or "").lower().endswith(".pdf"))
+            for f in (page_upload or [])
+        ]
+        page_sources.extend(
+            (name, data, False)
+            for name, data in st.session_state["page_ocr_pasted_files"]
+        )
+
+        if page_sources:
+            st.success(f"{len(page_sources)} source(s) ready for recognition.")
+            for name, _, is_pdf in page_sources:
+                icon = "📕" if is_pdf else "🖼️"
+                st.caption(f"{icon} {name}")
+        else:
+            st.info("Upload or paste a page to begin.")
+
+        if st.session_state["page_ocr_pasted_files"]:
+            if st.button(
+                "Clear pasted screenshots",
+                key="clear_page_ocr_pasted",
+            ):
+                st.session_state["page_ocr_pasted_files"] = []
                 st.rerun()
 
-        document_upload = st.file_uploader(
-            "Upload a full-page PDF or image",
-            type=["pdf", "png", "jpg", "jpeg", "webp", "bmp", "tif", "tiff"],
-            accept_multiple_files=False,
-            key="document_ocr_upload",
-        )
-        document_bytes = document_upload.getvalue() if document_upload is not None else pasted_bytes
-        document_filename = (
-            document_upload.name
-            if document_upload is not None
-            else st.session_state.get("document_ocr_paste_name", "pasted_screenshot.png")
+        page_numbers_input = st.text_input(
+            "PDF page numbers (optional, comma-separated, 0-based; leave empty for all pages)",
+            placeholder="e.g. 0,1,3",
+            key="page_ocr_page_numbers",
         )
 
         if st.button(
-            "Recognize complete document",
-            disabled=document_bytes is None,
-            type="secondary",
-            use_container_width=True,
-            key="run_document_ocr",
+            "Recognize page(s) as Markdown",
+            type="primary",
+            disabled=not page_sources,
+            width='stretch',
+            key="run_page_ocr",
         ):
-            try:
-                with st.spinner("Recognizing document..."):
-                    document_pipeline = load_document_ocr_model()
-                    document_result = run_document_ocr(document_bytes, document_filename, document_pipeline)
-                st.session_state["document_ocr_result"] = document_result
-                st.session_state["document_ocr_text"] = document_result["text"]
-                st.success("Document recognized successfully!")
-            except Exception as exc:
-                st.error(f"Full-page OCR failed: {exc}")
+            if not page_sources:
+                st.warning("Please upload or paste a page first.")
+            else:
+                page_numbers = None
+                raw_pages = page_numbers_input.strip()
+                if raw_pages:
+                    try:
+                        page_numbers = [
+                            int(x.strip())
+                            for x in raw_pages.split(",")
+                            if x.strip()
+                        ]
+                    except ValueError:
+                        st.error(
+                            "Page numbers must be integers separated by commas, "
+                            "e.g. 0,1,2."
+                        )
+                        st.stop()
 
-        document_result = st.session_state.get("document_ocr_result")
-        if document_result:
-            st.caption(
-                f"Source: {document_result['filename']} · "
-                f"Pages: {document_result['page_count']} · "
-                f"Engine: {document_result['engine']}"
-            )
-            page_results = document_result.get("pages", [])
-            if page_results:
-                st.markdown("**Page-by-page OCR output**")
-                for page in page_results:
-                    st.markdown(f"**Page {page['page_number']}**")
-                    st.markdown(page.get("text", "") or "*(No text detected on this page.)*")
-                    if page is not page_results[-1]:
-                        st.divider()
+                results: list[tuple[str, str]] = []
+                failures: list[tuple[str, str]] = []
+
+                with st.status(
+                    "Loading Pix2Text model…", expanded=True
+                ) as status:
+                    try:
+                        status.write("Loading model…")
+                        model = load_page_ocr_model(DEVICE)
+                        status.write("Model loaded. Starting recognition.")
+
+                        total = len(page_sources)
+                        progress = st.progress(0.0, text="Starting…")
+
+                        for index, (name, data, is_pdf) in enumerate(page_sources):
+                            status.write(
+                                f"Recognizing {index + 1}/{total}: {name}"
+                            )
+                            try:
+                                if is_pdf:
+                                    md = recognize_pdf(
+                                        data,
+                                        model,
+                                        page_numbers=page_numbers,
+                                    )
+                                else:
+                                    md = recognize_page_image(data, model)
+                                results.append((name, md))
+                                status.write(f"Done: {name}")
+                            except (
+                                PageOCRInputError,
+                                LatexOCRInputError,
+                            ) as exc:
+                                failures.append((name, str(exc)))
+                                status.write(
+                                    f"Invalid input: {name} — {exc}"
+                                )
+                            except Exception as exc:
+                                failures.append(
+                                    (name, f"{type(exc).__name__}: {exc}")
+                                )
+                                status.write(f"Failed: {name} — {exc}")
+
+                            progress.progress(
+                                (index + 1) / total,
+                                text=f"Processed {index + 1}/{total}",
+                            )
+
+                        if results:
+                            combined = "\n\n---\n\n".join(
+                                md for _, md in results
+                            )
+                            st.session_state["page_ocr_output"] = combined
+                            # Clear transient pasted files after success,
+                            # matching the pix2tex tab behaviour.
+                            st.session_state["page_ocr_pasted_files"] = []
+                            status.update(
+                                label=(
+                                    f"Recognition complete: "
+                                    f"{len(results)}/{total} succeeded"
+                                ),
+                                state="complete",
+                                expanded=True,
+                            )
+                            st.success(
+                                "Recognition complete. Review and edit the "
+                                "Markdown below."
+                            )
+                        else:
+                            status.update(
+                                label="Recognition failed",
+                                state="error",
+                                expanded=True,
+                            )
+                            st.error(
+                                "No source could be recognized. See the "
+                                "messages above."
+                            )
+
+                        for name, msg in failures:
+                            st.warning(f"{name}: {msg}")
+
+                    except ImportError as exc:
+                        status.update(
+                            label="Pix2Text dependency missing",
+                            state="error",
+                        )
+                        st.error(
+                            f"pix2text is not installed or failed to import: {exc}"
+                        )
+                    except Exception as exc:
+                        status.update(
+                            label="Recognition failed", state="error"
+                        )
+                        st.error(f"{type(exc).__name__}: {exc}")
+
+        if st.session_state.get("page_ocr_output"):
             st.text_area(
-                "Review and edit reconstructed document text / LaTeX",
-                key="document_ocr_text",
-                height=260,
+                "Page OCR Markdown (editable)",
+                key="page_ocr_output",
+                height=320,
+                help=(
+                    "Pix2Text returns Markdown with LaTeX embedded inline. "
+                    "You can edit it here before appending."
+                ),
             )
-            document_target = st.radio(
-                "Append reviewed document text to",
+
+            insert_target = st.radio(
+                "Append recognized text to",
                 ["Proof", "Question / theorem statement"],
                 horizontal=True,
-                key="document_ocr_target",
+                key="page_ocr_insert_target",
             )
-            if st.button("Append reviewed document to input", key="append_document_ocr", use_container_width=True):
-                target_key = "proof_input" if document_target == "Proof" else "question_input"
-                try:
-                    st.session_state[target_key] = append_document_text(
-                        st.session_state.get(target_key, ""),
-                        st.session_state.get("document_ocr_text", ""),
+
+            col_append, col_clear = st.columns(2)
+            with col_append:
+                if st.button(
+                    "Append to text box",
+                    key="append_page_ocr",
+                    width='stretch',
+                    type="primary",
+                ):
+                    target_key = (
+                        "proof_input"
+                        if insert_target == "Proof"
+                        else "question_input"
                     )
-                    st.success(f"Reviewed document text appended to {document_target.lower()}.")
-                except DocumentOCRInputError as exc:
-                    st.warning(str(exc))
+                    existing = st.session_state.get(target_key, "")
+                    addition = st.session_state.get(
+                        "page_ocr_output", ""
+                    ).strip()
+                    if not addition:
+                        st.warning("There is nothing to append.")
+                    elif addition in existing:
+                        st.info(
+                            "This content is already present in the target "
+                            "text box; not appended again."
+                        )
+                    else:
+                        st.session_state[target_key] = (
+                            f"{existing.rstrip()}\n\n{addition}"
+                            if existing.strip()
+                            else addition
+                        )
+                        st.success(
+                            f"Appended to {insert_target.lower()}."
+                        )
+            with col_clear:
+                if st.button(
+                    "Clear Page OCR result",
+                    key="clear_page_ocr",
+                    width='stretch',
+                ):
+                    st.session_state.pop("page_ocr_output", None)
+                    st.rerun()
 
 # --- Card 1: Theorem & Proof Input ---
 with st.container(border=True):
@@ -504,7 +906,7 @@ with st.container(border=True):
         on_change=_load_sample_input,
     )
 
-    if st.button("Analyze proof and prepare Manim parameters", type="primary", use_container_width=True):
+    if st.button("Analyze proof and prepare Manim parameters", type="primary", width='stretch'):
         if not question.strip() and not proof.strip():
             st.warning("Enter at least a question or a proof.")
         else:
@@ -602,14 +1004,14 @@ if analysis:
                     st.dataframe(
                         pd.DataFrame(result["subject_probabilities"].items(), columns=["Subject", "Score"]),
                         hide_index=True,
-                        use_container_width=True,
+                        width='stretch',
                     )
                 with c_prob2:
                     st.write("**Family scores**")
                     st.dataframe(
                         pd.DataFrame(result["family_probabilities"].items(), columns=["Proof family", "Score"]),
                         hide_index=True,
-                        use_container_width=True,
+                        width='stretch',
                     )
 
         if extraction.get("ner_enabled") and extraction.get("family_supported"):
@@ -618,7 +1020,7 @@ if analysis:
                     {key: value for key, value in entity.items() if key != "source"}
                     for entity in extraction["entities"]
                 ]
-                st.dataframe(pd.DataFrame(entity_display), hide_index=True, use_container_width=True)
+                st.dataframe(pd.DataFrame(entity_display), hide_index=True, width='stretch')
             else:
                 st.warning("NER returned no parameter spans above the selected confidence threshold.")
         elif not extraction.get("ner_enabled"):
@@ -716,7 +1118,7 @@ if analysis:
                             ]
                         ),
                         hide_index=True,
-                        use_container_width=True,
+                        width='stretch',
                     )
                     remove_index = st.selectbox(
                         "Remove an annotation",
@@ -745,7 +1147,7 @@ if analysis:
                     if st.button(
                         "Save manual BIO annotations for NER training",
                         disabled=not confirm_manual,
-                        use_container_width=True,
+                        width='stretch',
                         key=f"manual_span_save_{manual_state_id}",
                     ):
                         try:
@@ -802,7 +1204,7 @@ if analysis:
                                 ]
                             ),
                             hide_index=True,
-                            use_container_width=True,
+                            width='stretch',
                         )
                     else:
                         st.warning("No training spans aligned.")
@@ -816,7 +1218,7 @@ if analysis:
                 if st.button(
                     "Save reviewed example",
                     disabled=not reviewed,
-                    use_container_width=True,
+                    width='stretch',
                     key="save_ner_feedback",
                 ):
                     try:
@@ -858,7 +1260,7 @@ if analysis:
                     help="Examples: CurvatureCurve2D, CurvatureCurve3D, EigenDiagonal2D.",
                 )
 
-        if st.button("Generate Manim animation", type="primary", use_container_width=True):
+        if st.button("Generate Manim animation", type="primary", width='stretch'):
             try:
                 params = json.loads(params_text)
                 if not isinstance(params, dict):
@@ -942,7 +1344,7 @@ if render:
                             file_name=f"{render['run_id']}.mp4",
                             mime="video/mp4",
                             type="primary",
-                            use_container_width=True,
+                            width='stretch',
                         )
             with btn_dl_col2:
                 st.download_button(
@@ -954,7 +1356,7 @@ if render:
                     ),
                     file_name="manim_render_report.json",
                     mime="application/json",
-                    use_container_width=True,
+                    width='stretch',
                 )
 
         with st.expander("Full Manim console log", expanded=not render["success"]):
