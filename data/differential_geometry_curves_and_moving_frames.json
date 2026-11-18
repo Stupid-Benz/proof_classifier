@@ -1,0 +1,2942 @@
+[
+  {
+    "id": "F001",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of y=x^2 at x=1",
+    "question": "Compute the curvature of the parabola gamma(t) = (t, t^2) at t = 1.",
+    "proof": "The first derivatives are 1 and 2t, and the second derivatives are 0 and 2. The plane curvature formula gives two divided by the three halves power of one plus four t squared. At t equal to 1 this is two divided by five times the square root of five.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Draw the parabola, animate the moving point with tangent, freeze at t=1 and draw the osculating circle."
+  },
+  {
+    "id": "F002",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=x^2 at the vertex",
+    "question": "Find the curvature of $\\gamma(t)=(t,t^2)$ at the point where $t=0$.",
+    "proof": "For $\\gamma(t)=(t,t^2)$ we have $\\kappa(t)=\\frac{2}{(1+4t^2)^{3/2}}$. At $t=0$ this gives $\\kappa(0)=2$, so the osculating radius is $1/2$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Show curvature maximal at the vertex; osculating circle of radius 1/2."
+  },
+  {
+    "id": "F003",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "mixed",
+    "theorem": "Curvature of y=x^2 at x=2",
+    "question": "Given that the parabola $\\gamma(t)=(t,t^2)$ is symmetric about the y-axis, find its curvature $\\kappa(2)$.",
+    "proof": "The general formula is $\\kappa(t)=2/(1+4t^2)^{3/2}$. At $t=2$ this is $2/(17)^{3/2}=2/(17\\sqrt{17})\\approx 0.0285$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Compare with t=1; curvature decays rapidly as the parabola flattens."
+  },
+  {
+    "id": "F004",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of y=x^2 at x=-1",
+    "question": "Using the standard parametric curvature formula, calculate the curvature of gamma(t) = (t, t^2) at t = -1.",
+    "proof": "Because the parabola is symmetric about the y-axis, curvature depends only on t squared. The formula gives two over the three halves power of one plus four t squared. At t equal to minus one the squared term is again one, so the curvature is two divided by five times the square root of five, the same as at t = 1.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": -1
+    },
+    "animation_notes": "Show the mirror symmetry and equal curvatures at ±1."
+  },
+  {
+    "id": "F005",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=x^2 at x=-2",
+    "question": "Let $\\gamma:\\mathbb{R}\\to\\mathbb{R}^2$ be given by $\\gamma(t)=(t,t^2)$. Determine its scalar curvature at $t=-2$.",
+    "proof": "Since $\\kappa(t)=2/(1+4t^2)^{3/2}$ is even, $\\kappa(-2)=\\kappa(2)=2/(17\\sqrt{17})$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": -2
+    },
+    "animation_notes": "Highlight the symmetry of curvature about the y-axis."
+  },
+  {
+    "id": "F006",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "mixed",
+    "theorem": "Curvature of y=x^2 at x=3",
+    "question": "How do we find the curvature of the curve gamma(t) = (t, t^2) at t = 3?",
+    "proof": "Using $\\kappa(t)=2/(1+4t^2)^{3/2}$, at $t=3$ we get $2/(37)^{3/2}=2/(37\\sqrt{37})\\approx 0.00888$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 3
+    },
+    "animation_notes": "Annotate the value on the flattening arm of the parabola."
+  },
+  {
+    "id": "F007",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of y=x^2 at x=1/2",
+    "question": "For gamma(t) = (t, t^2), compute its velocity and acceleration at t = 1/2 and use them to determine the curvature there.",
+    "proof": "The velocity is (1, 1) and the acceleration is (0, 2). The cross determinant is 2 and the speed is the square root of 2, so the curvature is 2 over 2 to the three halves, which is one over the square root of two.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": "1/2"
+    },
+    "animation_notes": "Osculating circle of radius sqrt(2) at t=0.5."
+  },
+  {
+    "id": "F008",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=x^2 at x=1/3",
+    "question": "Consider the graph of $f(t)=t^2$ as the parametric curve $\\gamma(t)=(t,t^2)$. Evaluate its curvature at $t=1/3$.",
+    "proof": "At $t=1/3$, $1+4t^2=1+4/9=13/9$. Hence $\\kappa(1/3)=2/(13/9)^{3/2}=54/(13\\sqrt{13})$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": "1/3"
+    },
+    "animation_notes": "Steeper region of the parabola, larger curvature."
+  },
+  {
+    "id": "F009",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "mixed",
+    "theorem": "Curvature of y=x^2 at x=2/3",
+    "question": "Compute the curvature of $\\gamma(t)=(t,t^2)$ at $t=2/3$.",
+    "proof": "Here $1+4t^2=1+16/9=25/9$, so $\\kappa=(2)/(25/9)^{3/2}=54/125$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": "2/3"
+    },
+    "animation_notes": "Annotate 0.432 on screen."
+  },
+  {
+    "id": "F010",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of y=x^2 at x=-1/2",
+    "question": "Given the symmetry of gamma(t) = (t, t^2), find its curvature at t = -1/2.",
+    "proof": "Curvature depends only on t squared, so the value at minus one half equals that at one half, namely one over the square root of two.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": "-1/2"
+    },
+    "animation_notes": "Mirror the point and osculating circle across the y-axis."
+  },
+  {
+    "id": "F011",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "latex",
+    "theorem": "Curvature of a scaled parabola at the vertex",
+    "question": "Let $\\gamma(t)=(t,ct^2)$ with $c\\neq 0$. Determine the scalar curvature at $t=0$.",
+    "proof": "At $t=0$, $\\gamma'=(1,0)$ and $\\gamma''=(0,2c)$, so $\\kappa(0)=|2c|/1=2|c|$.",
+    "parameters": {
+      "curve": ["t", "ct^2"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Slider on c; peak curvature scales linearly with |c|."
+  },
+  {
+    "id": "F012",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "mixed",
+    "theorem": "Curvature of a scaled parabola at t=1",
+    "question": "How do we compute the curvature of $\\gamma(t)=(t,ct^2)$ at $t=1$?",
+    "proof": "$\\kappa(t)=|2c|/(1+4c^2t^2)^{3/2}$, so at $t=1$, $\\kappa=|2c|/(1+4c^2)^{3/2}$.",
+    "parameters": {
+      "curve": ["t", "ct^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Slider on c; curvature at t=1 updates live."
+  },
+  {
+    "id": "F013",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "latex",
+    "theorem": "Curvature of a general parabola at the vertex",
+    "question": "For $\\gamma(t)=(at,bt^2)$ with $a>0$, find the curvature at $t=0$.",
+    "proof": "At $t=0$, $\\gamma'=(a,0)$, $\\gamma''=(0,2b)$, so $\\kappa(0)=2|b|/a^2$.",
+    "parameters": {
+      "curve": ["at", "bt^2"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Sliders on a and b; vertex curvature 2|b|/a^2."
+  },
+  {
+    "id": "F014",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of a general parabola at t=1",
+    "question": "Compute the curvature of gamma(t) = (a t, b t^2) at t = 1.",
+    "proof": "The first derivatives are a and 2bt, the second are 0 and 2b. The numerator is 2ab and the denominator is a squared plus four b squared t squared to the three halves. At t equal to one this is 2ab over (a squared plus four b squared) to the three halves.",
+    "parameters": {
+      "curve": ["at", "bt^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Sliders update the curvature profile live."
+  },
+  {
+    "id": "F015",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "latex",
+    "theorem": "Curvature of the horizontal parabola at t=1",
+    "question": "Using $\\kappa=|\\dot\\gamma\\times\\ddot\\gamma|/|\\dot\\gamma|^3$, calculate the curvature of $\\gamma(t)=(t^2,t)$ at $t=1$.",
+    "proof": "$\\gamma'=(2,1)$, $\\gamma''=(2,0)$, so $|\\gamma'\\times\\gamma''|=2$ and $|\\gamma'|=\\sqrt5$. Hence $\\kappa=2/(5\\sqrt5)$.",
+    "parameters": {
+      "curve": ["t^2", "t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "The horizontal parabola is F001 rotated by ninety degrees."
+  },
+  {
+    "id": "F016",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of x=y^2 at the vertex",
+    "question": "Compute the curvature of gamma(t) = (t^2, t) at t = 0.",
+    "proof": "The first derivatives are 2t and 1, the second are 2 and 0. The cross determinant has magnitude 2 and the speed is the square root of four t squared plus one. At t equal to zero the curvature is two.",
+    "parameters": {
+      "curve": ["t^2", "t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Vertex of the sideways parabola; osculating radius 1/2."
+  },
+  {
+    "id": "F017",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "mixed",
+    "theorem": "Curvature of a horizontally scaled parabola",
+    "question": "Compute the curvature of $\\gamma(t)=(2t,t^2)$ at $t=1$.",
+    "proof": "Here $x'=2$, $y'=2t$, $y''=2$, so the numerator is 4. The speed squared is $4+4t^2=8$ at $t=1$, giving $\\kappa=4/8^{3/2}=1/(2\\sqrt2)$.",
+    "parameters": {
+      "curve": ["2t", "t^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Horizontal stretching halves the curvature relative to F001."
+  },
+  {
+    "id": "F018",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "latex",
+    "theorem": "Curvature of a compressed parabola",
+    "question": "Let $\\gamma(t)=(t/2,t^2)$. Determine the scalar curvature at $t=1$.",
+    "proof": "$\\gamma'=(1/2,2)$, $\\gamma''=(0,2)$, so the numerator is $1$ and $|\\gamma'|^2=17/4$. Hence $\\kappa=8/(17\\sqrt{17})$.",
+    "parameters": {
+      "curve": ["t/2", "t^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Narrow parabola, curvature increased."
+  },
+  {
+    "id": "F019",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of a steep parabola",
+    "question": "How do we find the curvature of gamma(t) = (t, 3t^2) at t = 1/3?",
+    "proof": "The first derivatives are one and six t, the second is six. At t equal to one third the slope is two and the speed is the square root of five, so the curvature is six divided by five times the square root of five.",
+    "parameters": {
+      "curve": ["t", "3t^2"],
+      "evaluation_point": "1/3"
+    },
+    "animation_notes": "Steep parabola with the osculating circle at t=1/3."
+  },
+  {
+    "id": "F020",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "latex",
+    "theorem": "Curvature of a vertically shifted parabola",
+    "question": "Find the curvature of $\\gamma(t)=(t,t^2+1)$ at $t=2$.",
+    "proof": "Vertical shifts do not change derivatives, so the curvature equals that of the standard parabola at $t=2$, namely $2/(17\\sqrt{17})$.",
+    "parameters": {
+      "curve": ["t", "t^2+1"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Curvature is invariant under vertical translation."
+  },
+  {
+    "id": "F021",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "mixed",
+    "theorem": "Curvature of a horizontally shifted parabola",
+    "question": "Compute the curvature of $\\gamma(t)=(t+1,t^2)$ at $t=1$.",
+    "proof": "Horizontal shifts do not change derivatives, so the curvature equals the standard parabola's value at $t=1$, namely $2/(5\\sqrt5)$.",
+    "parameters": {
+      "curve": ["t+1", "t^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Translation invariance of curvature."
+  },
+  {
+    "id": "F022",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of a shifted vertex parabola",
+    "question": "For gamma(t) = (t, (t-1)^2), compute velocity, acceleration, and curvature at t = 2.",
+    "proof": "The velocity is (1, 2(t-1)) which is (1,2) at t equal to two, and the acceleration is (0,2). This is the same data as the standard parabola at t equal to one, so the curvature is two divided by five times the square root of five.",
+    "parameters": {
+      "curve": ["t", "(t-1)^2"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "The vertex sits at t=1; evaluate one unit later."
+  },
+  {
+    "id": "F023",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=x^2 at x=1/4",
+    "question": "Consider the graph of $f(t)=t^2$ as $\\gamma(t)=(t,t^2)$. Evaluate the curvature at $t=1/4$.",
+    "proof": "$1+4t^2=5/4$ at $t=1/4$, so $\\kappa=2/(5/4)^{3/2}=16/(5\\sqrt5)$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": "1/4"
+    },
+    "animation_notes": "Near-vertex region with large curvature."
+  },
+  {
+    "id": "F024",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "mixed",
+    "theorem": "Curvature of y=x^2 at x=3/2",
+    "question": "How do we compute the curvature of $\\gamma(t)=(t,t^2)$ at $t=3/2$?",
+    "proof": "$1+4t^2=10$ at $t=3/2$, so $\\kappa=2/10^{3/2}=1/(5\\sqrt{10})$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": "3/2"
+    },
+    "animation_notes": "Annotate the value 0.0632."
+  },
+  {
+    "id": "F025",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_parabola",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of y=x^2 at x=-3",
+    "question": "Let gamma(t) = (t, t^2). Determine the scalar curvature at t = -3.",
+    "proof": "The curvature is even in t, so the value at minus three equals that at three, namely two divided by thirty-seven times the square root of thirty-seven.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": -3
+    },
+    "animation_notes": "Far left arm; curvature nearly negligible."
+  },
+  {
+    "id": "F026",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "latex",
+    "theorem": "Zero curvature of y=x^3 at the origin",
+    "question": "Using the standard parametric curvature formula, calculate the curvature of $\\gamma(t)=(t,t^3)$ at $t=0$.",
+    "proof": "$\\gamma'=(1,0)$, $\\gamma''=(0,0)$, so the cross determinant vanishes. Hence $\\kappa(0)=0$; the origin is an inflection point.",
+    "parameters": {
+      "curve": ["t", "t^3"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Inflection at the origin; osculating radius infinite."
+  },
+  {
+    "id": "F027",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of y=x^3 at x=1",
+    "question": "Compute the curvature of gamma(t) = (t, t^3) at t = 1.",
+    "proof": "The first derivatives are one and three t squared, the second derivatives are zero and six t. The numerator is six t and the denominator is one plus nine t to the fourth, to the three halves. At t equal to one the curvature is six divided by ten times the square root of ten.",
+    "parameters": {
+      "curve": ["t", "t^3"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Compare with the parabola: the cubic bends less sharply here."
+  },
+  {
+    "id": "F028",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "mixed",
+    "theorem": "Curvature of y=x^3 at x=2",
+    "question": "How do we find the curvature of $\\gamma(t)=(t,t^3)$ at $t=2$?",
+    "proof": "With $\\kappa(t)=6|t|/(1+9t^4)^{3/2}$, at $t=2$ we get $12/(145)^{3/2}=12/(145\\sqrt{145})$.",
+    "parameters": {
+      "curve": ["t", "t^3"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Rapid decay of curvature as the cubic flattens."
+  },
+  {
+    "id": "F029",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=x^3 at x=-1",
+    "question": "Find the curvature of $\\gamma(t)=(t,t^3)$ at $t=-1$.",
+    "proof": "The curvature $\\kappa(t)=6|t|/(1+9t^4)^{3/2}$ is even, so $\\kappa(-1)=\\kappa(1)=6/(10\\sqrt{10})$.",
+    "parameters": {
+      "curve": ["t", "t^3"],
+      "evaluation_point": -1
+    },
+    "animation_notes": "Symmetry of curvature about the y-axis."
+  },
+  {
+    "id": "F030",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of y=x^3 at x=1/2",
+    "question": "For gamma(t) = (t, t^3), compute its velocity and acceleration at t = 1/2 and use them to find the curvature.",
+    "proof": "The velocity is one and three quarters, and the acceleration is zero and three. The numerator is three and the speed is five quarters, so the curvature is three divided by five quarters to the three halves, which is one hundred ninety-two over one hundred twenty-five.",
+    "parameters": {
+      "curve": ["t", "t^3"],
+      "evaluation_point": "1/2"
+    },
+    "animation_notes": "Annotate 1.536 on screen."
+  },
+  {
+    "id": "F031",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=x^3 at x=1/3",
+    "question": "Consider the graph of $f(t)=t^3$ as $\\gamma(t)=(t,t^3)$. Evaluate the curvature at $t=1/3$.",
+    "proof": "At $t=1/3$, $1+9t^4=10/9$ and $6|t|=2$, so $\\kappa=2/(10/9)^{3/2}=27/(5\\sqrt{10})$.",
+    "parameters": {
+      "curve": ["t", "t^3"],
+      "evaluation_point": "1/3"
+    },
+    "animation_notes": "Rising part of the cubic near the inflection."
+  },
+  {
+    "id": "F032",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "mixed",
+    "theorem": "Curvature of y=x^3 at x=3",
+    "question": "Compute the curvature of $\\gamma(t)=(t,t^3)$ at $t=3$.",
+    "proof": "At $t=3$, $6|t|=18$ and $1+9t^4=730$, so $\\kappa=18/(730\\sqrt{730})=9/(365\\sqrt{730})$.",
+    "parameters": {
+      "curve": ["t", "t^3"],
+      "evaluation_point": 3
+    },
+    "animation_notes": "Very flat region; tiny curvature."
+  },
+  {
+    "id": "F033",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of y=x^3 at x=-2",
+    "question": "Given the symmetry of gamma(t) = (t, t^3), find its curvature at t = -2.",
+    "proof": "Curvature uses the absolute value of t, so the value at minus two equals that at two, namely twelve divided by one hundred forty-five times the square root of one hundred forty-five.",
+    "parameters": {
+      "curve": ["t", "t^3"],
+      "evaluation_point": -2
+    },
+    "animation_notes": "Left branch mirrors the right."
+  },
+  {
+    "id": "F034",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "latex",
+    "theorem": "Curvature of the horizontal cubic at t=1",
+    "question": "Using $\\kappa=|\\dot\\gamma\\times\\ddot\\gamma|/|\\dot\\gamma|^3$, calculate the curvature of $\\gamma(t)=(t^3,t)$ at $t=1$.",
+    "proof": "$\\gamma'=(3,1)$, $\\gamma''=(6,0)$, so the cross determinant has magnitude $6$ and $|\\gamma'|=\\sqrt{10}$. Hence $\\kappa=6/(10\\sqrt{10})$.",
+    "parameters": {
+      "curve": ["t^3", "t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Horizontal mirror of F027."
+  },
+  {
+    "id": "F035",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "mixed",
+    "theorem": "Curvature of a scaled cubic",
+    "question": "How do we compute the curvature of $\\gamma(t)=(2t,t^3)$ at $t=1$?",
+    "proof": "$x'=2$, $y'=3$, $y''=6$, so the numerator is $12$ and $|\\gamma'|^2=13$. Thus $\\kappa=12/(13\\sqrt{13})$.",
+    "parameters": {
+      "curve": ["2t", "t^3"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Horizontal scaling lowers the curvature relative to F027."
+  },
+  {
+    "id": "F036",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=x^3-x at x=1",
+    "question": "Find the curvature of $\\gamma(t)=(t,t^3-t)$ at $t=1$.",
+    "proof": "At $t=1$, $y'=2$, $y''=6$, so $\\kappa=6/(1+4)^{3/2}=6/(5\\sqrt5)$.",
+    "parameters": {
+      "curve": ["t", "t^3-t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "The curve has two extrema and an inflection at the origin."
+  },
+  {
+    "id": "F037",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "natural_language",
+    "theorem": "Zero curvature of y=x^3-x at the origin",
+    "question": "Compute the curvature of gamma(t) = (t, t^3 - t) at t = 0.",
+    "proof": "At the origin the first derivative is minus one and the second derivative is zero, so the cross determinant vanishes. Hence the curvature is zero and the origin is an inflection point.",
+    "parameters": {
+      "curve": ["t", "t^3-t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Inflection at the origin; osculating circle degenerates to a line."
+  },
+  {
+    "id": "F038",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "mixed",
+    "theorem": "Curvature of y=x^3-x at x=2",
+    "question": "Compute the curvature of $\\gamma(t)=(t,t^3-t)$ at $t=2$.",
+    "proof": "At $t=2$, $y'=11$, $y''=12$, so $\\kappa=12/(1+121)^{3/2}=6/(61\\sqrt{122})$.",
+    "parameters": {
+      "curve": ["t", "t^3-t"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Outer branch; curvature nearly zero."
+  },
+  {
+    "id": "F039",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=x^3-3x at its critical point",
+    "question": "Let $\\gamma(t)=(t,t^3-3t)$. Determine the scalar curvature at $t=1$.",
+    "proof": "At $t=1$, $y'=0$ and $y''=6$, so $\\kappa=6/1^{3/2}=6$.",
+    "parameters": {
+      "curve": ["t", "t^3-3t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Local maximum of the S-curve; curvature peaks at 6."
+  },
+  {
+    "id": "F040",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "natural_language",
+    "theorem": "Zero curvature of y=x^3-3x at the origin",
+    "question": "Using the standard curvature formula, calculate the curvature of gamma(t) = (t, t^3 - 3t) at t = 0.",
+    "proof": "At t equal to zero the first derivative is minus three and the second derivative is zero, so the numerator vanishes and the curvature is zero.",
+    "parameters": {
+      "curve": ["t", "t^3-3t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Inflection at the origin."
+  },
+  {
+    "id": "F041",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "mixed",
+    "theorem": "Curvature of y=x^3-3x at x=2",
+    "question": "How do we find the curvature of $\\gamma(t)=(t,t^3-3t)$ at $t=2$?",
+    "proof": "At $t=2$, $y'=9$, $y''=12$, so $\\kappa=12/(1+81)^{3/2}=6/(41\\sqrt{82})$.",
+    "parameters": {
+      "curve": ["t", "t^3-3t"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Far right branch; curvature small."
+  },
+  {
+    "id": "F042",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=x^4 at x=1",
+    "question": "Find the curvature of $\\gamma(t)=(t,t^4)$ at $t=1$.",
+    "proof": "$y'=4t^3=4$, $y''=12t^2=12$ at $t=1$, so $\\kappa=12/(17)^{3/2}=12/(17\\sqrt{17})$.",
+    "parameters": {
+      "curve": ["t", "t^4"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Quartic rises faster than the cubic."
+  },
+  {
+    "id": "F043",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of y=x^4 at x=1/2",
+    "question": "For gamma(t) = (t, t^4), compute its velocity and acceleration at t = 1/2 and use them to determine the curvature.",
+    "proof": "The velocity is one and one half, and the acceleration is zero and three. The numerator is three and the speed squared is five quarters, so the curvature is three divided by five quarters to the three halves, which is twenty-four over five times the square root of five.",
+    "parameters": {
+      "curve": ["t", "t^4"],
+      "evaluation_point": "1/2"
+    },
+    "animation_notes": "Near-vertex quartic with high curvature."
+  },
+  {
+    "id": "F044",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "mixed",
+    "theorem": "Zero curvature of y=x^4 at the origin",
+    "question": "Compute the curvature of $\\gamma(t)=(t,t^4)$ at $t=0$.",
+    "proof": "At $t=0$, $y'=0$ and $y''=0$, so $\\kappa=0$. The quartic is flatter than the parabola at the origin.",
+    "parameters": {
+      "curve": ["t", "t^4"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Fourth-order contact with the x-axis."
+  },
+  {
+    "id": "F045",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cubic",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=x^2+x^4 at x=1",
+    "question": "Let $\\gamma(t)=(t,t^2+t^4)$. Determine the scalar curvature at $t=1$.",
+    "proof": "At $t=1$, $y'=2+4=6$ and $y''=2+12=14$, so $\\kappa=14/(1+36)^{3/2}=14/(37\\sqrt{37})$.",
+    "parameters": {
+      "curve": ["t", "t^2+t^4"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Higher-order correction to the parabola."
+  },
+  {
+    "id": "F046",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "latex",
+    "theorem": "Curvature of the unit circle",
+    "question": "Find the curvature of $\\gamma(t)=(\\cos t,\\sin t)$ at $t=0$.",
+    "proof": "$\\gamma'=(-\\sin t,\\cos t)$ and $\\gamma''=(-\\cos t,-\\sin t)$, so the cross determinant has magnitude $1$ and the speed is $1$. Hence $\\kappa=1$.",
+    "parameters": {
+      "curve": ["cos t", "sin t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Osculating circle coincides with the curve."
+  },
+  {
+    "id": "F047",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of a radius-2 circle",
+    "question": "Compute the curvature of gamma(t) = (2cos t, 2sin t) at t = pi/2.",
+    "proof": "For a circle of radius two the curvature is one over the radius, that is one half, at every point. The direct computation gives a numerator of four and a denominator of eight, again one half.",
+    "parameters": {
+      "curve": ["2cos t", "2sin t"],
+      "evaluation_point": "pi/2"
+    },
+    "animation_notes": "Radius-2 circle; osculating circle equals the curve."
+  },
+  {
+    "id": "F048",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "mixed",
+    "theorem": "Curvature of a radius-5 circle",
+    "question": "Given the rotational symmetry of $\\gamma(t)=(5\\cos t,5\\sin t)$, find its curvature at $t=\\pi$.",
+    "proof": "The curvature of a circle of radius $5$ is $1/5$ everywhere, so $\\kappa(\\pi)=1/5$.",
+    "parameters": {
+      "curve": ["5cos t", "5sin t"],
+      "evaluation_point": "pi"
+    },
+    "animation_notes": "Large circle, small curvature."
+  },
+  {
+    "id": "F049",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "latex",
+    "theorem": "Curvature of a radius-1/2 circle",
+    "question": "Find the curvature of $\\gamma(t)=(1/2\\cos t,1/2\\sin t)$ at $t=\\pi/4$.",
+    "proof": "The curvature is $1/(1/2)=2$ everywhere, so $\\kappa(\\pi/4)=2$.",
+    "parameters": {
+      "curve": ["1/2cos t", "1/2sin t"],
+      "evaluation_point": "pi/4"
+    },
+    "animation_notes": "Small circle, high curvature."
+  },
+  {
+    "id": "F050",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of a radius-7 circle",
+    "question": "How do we find the curvature of gamma(t) = (7cos t, 7sin t) at t = 1?",
+    "proof": "The curvature of a circle of radius seven is one over seven at every parameter value, so at t equal to one it is one seventh.",
+    "parameters": {
+      "curve": ["7cos t", "7sin t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Radius-7 circle with its osculating circle."
+  },
+  {
+    "id": "F051",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "latex",
+    "theorem": "Curvature of a radius-10 circle",
+    "question": "Using the standard parametric curvature formula, calculate the curvature of $\\gamma(t)=(10\\cos t,10\\sin t)$ at $t=0$.",
+    "proof": "The numerator is $100$ and the denominator is $100^{3/2}=1000$, so $\\kappa=1/10$.",
+    "parameters": {
+      "curve": ["10cos t", "10sin t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Large circle; curvature 0.1."
+  },
+  {
+    "id": "F052",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "mixed",
+    "theorem": "Curvature of a radius-1/3 circle",
+    "question": "Compute the curvature of $\\gamma(t)=(1/3\\cos t,1/3\\sin t)$ at $t=\\pi/6$.",
+    "proof": "By the radius rule $\\kappa=1/(1/3)=3$, so $\\kappa(\\pi/6)=3$.",
+    "parameters": {
+      "curve": ["1/3cos t", "1/3sin t"],
+      "evaluation_point": "pi/6"
+    },
+    "animation_notes": "Tight circle; curvature 3."
+  },
+  {
+    "id": "F053",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of a clockwise unit circle",
+    "question": "Compute the curvature of gamma(t) = (cos t, -sin t) at t = pi/3.",
+    "proof": "The first derivative is minus sine and minus cosine, and the second is minus cosine and sine. The numerator is sine squared plus cosine squared, which is one, and the speed is one, so the curvature is one. Orientation does not change the magnitude.",
+    "parameters": {
+      "curve": ["cos t", "-sin t"],
+      "evaluation_point": "pi/3"
+    },
+    "animation_notes": "Clockwise traversal; curvature magnitude unchanged."
+  },
+  {
+    "id": "F054",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "latex",
+    "theorem": "Curvature of a scaled clockwise circle",
+    "question": "Let $\\gamma(t)=(2\\cos t,-2\\sin t)$. Determine the scalar curvature at $t=\\pi/4$.",
+    "proof": "The unsigned curvature of a radius-2 circle is $1/2$; the clockwise orientation only changes the sign of the signed curvature.",
+    "parameters": {
+      "curve": ["2cos t", "-2sin t"],
+      "evaluation_point": "pi/4"
+    },
+    "animation_notes": "Clockwise radius-2 circle."
+  },
+  {
+    "id": "F056",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "latex",
+    "theorem": "Curvature of an ellipse at a major-axis vertex",
+    "question": "Find the curvature of $\\gamma(t)=(2\\cos t,\\sin t)$ at $t=0$.",
+    "proof": "$\\gamma'=(0,1)$ and $\\gamma''=(-2,0)$ at $t=0$, so the cross determinant is $2$ and the speed is $1$. Hence $\\kappa=2$.",
+    "parameters": {
+      "curve": ["2cos t", "sin t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Ellipse with curvature spike along the minor axis."
+  },
+  {
+    "id": "F057",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of an ellipse at a minor-axis vertex",
+    "question": "Compute the curvature of gamma(t) = (2cos t, sin t) at t = pi/2.",
+    "proof": "At the top of the ellipse the velocity is minus two and zero, and the acceleration is zero and minus one. The cross determinant has magnitude two and the speed is two, so the curvature is two over eight, which is one quarter.",
+    "parameters": {
+      "curve": ["2cos t", "sin t"],
+      "evaluation_point": "pi/2"
+    },
+    "animation_notes": "Flatter end of the ellipse; curvature 1/4."
+  },
+  {
+    "id": "F058",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "mixed",
+    "theorem": "Curvature of a 3-by-2 ellipse at t=0",
+    "question": "For $\\gamma(t)=(3\\cos t,2\\sin t)$, compute velocity and acceleration at $t=0$ and use them to find the curvature.",
+    "proof": "The velocity is $(0,2)$ and the acceleration is $(-3,0)$, so the cross determinant is $6$ and the speed is $2$. Hence $\\kappa=6/8=3/4$.",
+    "parameters": {
+      "curve": ["3cos t", "2sin t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "3-by-2 ellipse; curvature 0.75 at the long-axis vertex."
+  },
+  {
+    "id": "F059",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "latex",
+    "theorem": "Curvature of a 3-by-2 ellipse at t=pi/2",
+    "question": "Using $\\kappa=|\\dot\\gamma\\times\\ddot\\gamma|/|\\dot\\gamma|^3$, calculate the curvature of $\\gamma(t)=(3\\cos t,2\\sin t)$ at $t=\\pi/2$.",
+    "proof": "At $t=\\pi/2$, $\\gamma'=(-3,0)$ and $\\gamma''=(0,-2)$, so the cross determinant is $6$ and the speed is $3$. Hence $\\kappa=6/27=2/9$.",
+    "parameters": {
+      "curve": ["3cos t", "2sin t"],
+      "evaluation_point": "pi/2"
+    },
+    "animation_notes": "Short-axis vertex; curvature 2/9."
+  },
+  {
+    "id": "F060",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_circle",
+    "proof_format": "mixed",
+    "theorem": "Curvature of a sqrt(2)-by-1 ellipse at a diagonal point",
+    "question": "Compute the curvature of $\\gamma(t)=(\\sqrt2\\cos t,\\sin t)$ at $t=\\pi/4$.",
+    "proof": "At $t=\\pi/4$ we have $\\sin^2t=\\cos^2t=1/2$, so the denominator of $\\kappa=ab/(a^2\\sin^2t+b^2\\cos^2t)^{3/2}$ is $(3/2)^{3/2}$. With $ab=\\sqrt2$ this gives $\\kappa=4/(3\\sqrt3)$.",
+    "parameters": {
+      "curve": ["sqrt(2)cos t", "sin t"],
+      "evaluation_point": "pi/4"
+    },
+    "animation_notes": "Diagonal point of the ellipse; curvature 0.770."
+  },
+  {
+    "id": "F061",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "latex",
+    "theorem": "Curvature of the sine curve at the origin",
+    "question": "Find the curvature of $\\gamma(t)=(t,\\sin t)$ at $t=0$.",
+    "proof": "$\\gamma'=(1,1)$ and $\\gamma''=(0,0)$ at $t=0$, so the cross determinant vanishes and $\\kappa(0)=0$.",
+    "parameters": {
+      "curve": ["t", "sin t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Inflection at the origin; osculating radius infinite."
+  },
+  {
+    "id": "F062",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of the sine curve at its peak",
+    "question": "Compute the curvature of gamma(t) = (t, sin t) at t = pi/2.",
+    "proof": "The first derivative is one and cosine of t, the second is zero and minus sine of t. At pi over two the numerator is one and the speed is one, so the curvature is one, the maximum for the sine curve.",
+    "parameters": {
+      "curve": ["t", "sin t"],
+      "evaluation_point": "pi/2"
+    },
+    "animation_notes": "Peak of the arch with osculating circle of radius 1."
+  },
+  {
+    "id": "F063",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "mixed",
+    "theorem": "Curvature of the sine curve at pi",
+    "question": "Given the symmetry of $\\gamma(t)=(t,\\sin t)$, find its curvature at $t=\\pi$.",
+    "proof": "$\\kappa(t)=|\\sin t|/(1+\\cos^2t)^{3/2}$, so $\\kappa(\\pi)=0/2^{3/2}=0$.",
+    "parameters": {
+      "curve": ["t", "sin t"],
+      "evaluation_point": "pi"
+    },
+    "animation_notes": "Inflection at the end of the arch."
+  },
+  {
+    "id": "F064",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "latex",
+    "theorem": "Curvature of sin x at pi/6",
+    "question": "Consider the graph of $f(t)=\\sin t$ as $\\gamma(t)=(t,\\sin t)$. Evaluate the curvature at $t=\\pi/6$.",
+    "proof": "At $t=\\pi/6$, $\\sin t=1/2$ and $\\cos^2t=3/4$, so $\\kappa=(1/2)/(7/4)^{3/2}=4/(7\\sqrt7)$.",
+    "parameters": {
+      "curve": ["t", "sin t"],
+      "evaluation_point": "pi/6"
+    },
+    "animation_notes": "Rising part of the sine near x ≈ 0.52."
+  },
+  {
+    "id": "F065",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of sin x at pi/4",
+    "question": "For gamma(t) = (t, sin t), compute velocity and acceleration at t = pi/4 and use them to determine the curvature.",
+    "proof": "The velocity is one and one over the square root of two, and the acceleration is zero and minus one over the square root of two. The numerator is one over the square root of two and the speed squared is three halves, so the curvature is two over three times the square root of three.",
+    "parameters": {
+      "curve": ["t", "sin t"],
+      "evaluation_point": "pi/4"
+    },
+    "animation_notes": "Annotate 0.385 on screen."
+  },
+  {
+    "id": "F066",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "latex",
+    "theorem": "Curvature of sin x at pi/3",
+    "question": "Find the curvature of $\\gamma(t)=(t,\\sin t)$ at $t=\\pi/3$.",
+    "proof": "At $t=\\pi/3$, $\\sin t=\\sqrt3/2$ and $\\cos t=1/2$, so $\\kappa=(\\sqrt3/2)/(5/4)^{3/2}=4\\sqrt3/(5\\sqrt5)$.",
+    "parameters": {
+      "curve": ["t", "sin t"],
+      "evaluation_point": "pi/3"
+    },
+    "animation_notes": "Steeper part of the sine arch."
+  },
+  {
+    "id": "F067",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "mixed",
+    "theorem": "Curvature of sin x at 3pi/2",
+    "question": "How do we compute the curvature of $\\gamma(t)=(t,\\sin t)$ at $t=3\\pi/2$?",
+    "proof": "At $t=3\\pi/2$, $\\sin t=-1$ and $\\cos t=0$, so $|\\sin t|/ (1+\\cos^2t)^{3/2}=1$. The trough has the same curvature as the peak.",
+    "parameters": {
+      "curve": ["t", "sin t"],
+      "evaluation_point": "3pi/2"
+    },
+    "animation_notes": "Trough of the sine with osculating circle of radius 1."
+  },
+  {
+    "id": "F068",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "latex",
+    "theorem": "Curvature of sin x at 2pi",
+    "question": "Let $\\gamma(t)=(t,\\sin t)$. Determine the scalar curvature at $t=2\\pi$.",
+    "proof": "Since $\\sin(2\\pi)=0$, $\\kappa(2\\pi)=0$; this is an inflection of the sine curve.",
+    "parameters": {
+      "curve": ["t", "sin t"],
+      "evaluation_point": "2pi"
+    },
+    "animation_notes": "Inflection at 2pi."
+  },
+  {
+    "id": "F069",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of the cosine at the origin",
+    "question": "Compute the curvature of gamma(t) = (t, cos t) at t = 0.",
+    "proof": "The first derivative is one and minus sine, the second is zero and minus cosine. At t equal to zero the numerator is one and the speed is one, so the curvature is one.",
+    "parameters": {
+      "curve": ["t", "cos t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Peak of the cosine at the origin."
+  },
+  {
+    "id": "F070",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "latex",
+    "theorem": "Curvature of the cosine at pi/2",
+    "question": "Using the standard parametric curvature formula, calculate the curvature of $\\gamma(t)=(t,\\cos t)$ at $t=\\pi/2$.",
+    "proof": "$\\kappa(t)=|\\cos t|/(1+\\sin^2t)^{3/2}$, so $\\kappa(\\pi/2)=0/2^{3/2}=0$.",
+    "parameters": {
+      "curve": ["t", "cos t"],
+      "evaluation_point": "pi/2"
+    },
+    "animation_notes": "Inflection of the cosine at pi/2."
+  },
+  {
+    "id": "F071",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "mixed",
+    "theorem": "Curvature of the cosine at its trough",
+    "question": "Given the symmetry of $\\gamma(t)=(t,\\cos t)$, find its curvature at $t=\\pi$.",
+    "proof": "At $t=\\pi$, $|\\cos t|=1$ and $\\sin t=0$, so $\\kappa=1$.",
+    "parameters": {
+      "curve": ["t", "cos t"],
+      "evaluation_point": "pi"
+    },
+    "animation_notes": "Trough at pi with osculating circle of radius 1."
+  },
+  {
+    "id": "F072",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "latex",
+    "theorem": "Curvature of the cosine at pi/3",
+    "question": "Find the curvature of $\\gamma(t)=(t,\\cos t)$ at $t=\\pi/3$.",
+    "proof": "At $t=\\pi/3$, $\\cos t=1/2$ and $\\sin^2t=3/4$, so $\\kappa=(1/2)/(7/4)^{3/2}=4/(7\\sqrt7)$.",
+    "parameters": {
+      "curve": ["t", "cos t"],
+      "evaluation_point": "pi/3"
+    },
+    "animation_notes": "Descending part of the cosine."
+  },
+  {
+    "id": "F073",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of the cosine at pi/4",
+    "question": "For gamma(t) = (t, cos t), compute velocity and acceleration at t = pi/4 and use them to determine the curvature.",
+    "proof": "The velocity is one and minus one over the square root of two, the acceleration is zero and minus one over the square root of two. The numerator is one over the square root of two and the speed squared is three halves, giving two over three times the square root of three.",
+    "parameters": {
+      "curve": ["t", "cos t"],
+      "evaluation_point": "pi/4"
+    },
+    "animation_notes": "Annotate 0.385."
+  },
+  {
+    "id": "F074",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "latex",
+    "theorem": "Curvature of sin(2x) at the origin",
+    "question": "Let $\\gamma(t)=(t,\\sin 2t)$. Determine the scalar curvature at $t=0$.",
+    "proof": "$y'=2\\cos2t$ and $y''=-4\\sin2t$; at $t=0$, $y'=2$ and $y''=0$, so $\\kappa=0$.",
+    "parameters": {
+      "curve": ["t", "sin(2t)"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Inflection at the origin."
+  },
+  {
+    "id": "F075",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "mixed",
+    "theorem": "Curvature of sin(2x) at its peak",
+    "question": "How do we compute the curvature of $\\gamma(t)=(t,\\sin2t)$ at $t=\\pi/4$?",
+    "proof": "At $t=\\pi/4$, $y'=2\\cos(\\pi/2)=0$ and $y''=-4\\sin(\\pi/2)=-4$, so the numerator is 4 and the speed is 1. Hence $\\kappa=4$.",
+    "parameters": {
+      "curve": ["t", "sin(2t)"],
+      "evaluation_point": "pi/4"
+    },
+    "animation_notes": "Sharp peak of sin(2x)."
+  },
+  {
+    "id": "F076",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "latex",
+    "theorem": "Curvature of sin(2x) at pi/8",
+    "question": "Find the curvature of $\\gamma(t)=(t,\\sin2t)$ at $t=\\pi/8$.",
+    "proof": "At $t=\\pi/8$, $\\sin2t=\\sqrt2/2$ and $\\cos2t=\\sqrt2/2$, so $\\kappa=2\\sqrt2/(1+2)^{3/2}=2\\sqrt2/(3\\sqrt3)$.",
+    "parameters": {
+      "curve": ["t", "sin(2t)"],
+      "evaluation_point": "pi/8"
+    },
+    "animation_notes": "Rising flank of sin(2x)."
+  },
+  {
+    "id": "F077",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of sin x + cos x at the origin",
+    "question": "Compute the curvature of gamma(t) = (t, sin t + cos t) at t = 0.",
+    "proof": "The first derivative is one and one, and the second is zero and minus one. The numerator is one and the speed squared is two, so the curvature is one over two times the square root of two.",
+    "parameters": {
+      "curve": ["t", "sin t + cos t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Combined curve at the origin."
+  },
+  {
+    "id": "F078",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_trig",
+    "proof_format": "mixed",
+    "theorem": "Curvature of sin x + cos x at pi/4",
+    "question": "Given the symmetry of $\\gamma(t)=(t,\\sin t+\\cos t)$, find its curvature at $t=\\pi/4$.",
+    "proof": "At $t=\\pi/4$, $y'=\\cos t-\\sin t=0$ and $y''=-\\sin t-\\cos t=-\\sqrt2$, so $\\kappa=\\sqrt2$.",
+    "parameters": {
+      "curve": ["t", "sin t+cos t"],
+      "evaluation_point": "pi/4"
+    },
+    "animation_notes": "Peak of the combined curve."
+  },
+  {
+    "id": "F079",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_exponential",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=e^x at x=0",
+    "question": "Find the curvature of $\\gamma(t)=(t,e^t)$ at $t=0$.",
+    "proof": "$\\kappa(t)=e^t/(1+e^{2t})^{3/2}$, so $\\kappa(0)=1/2^{3/2}=1/(2\\sqrt2)$.",
+    "parameters": {
+      "curve": ["t", "e^t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Osculating circle of radius 2sqrt(2) at t=0."
+  },
+  {
+    "id": "F080",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_exponential",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of y=e^x at x=1",
+    "question": "Compute the curvature of gamma(t) = (t, e^t) at t = 1.",
+    "proof": "The first derivative is one and e, and the second is zero and e. The numerator is e and the speed squared is one plus e squared, so the curvature is e divided by one plus e squared to the three halves.",
+    "parameters": {
+      "curve": ["t", "e^t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Annotate 0.112 on screen."
+  },
+  {
+    "id": "F081",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_exponential",
+    "proof_format": "mixed",
+    "theorem": "Curvature of y=e^x at x=-1",
+    "question": "How do we compute the curvature of $\\gamma(t)=(t,e^t)$ at $t=-1$?",
+    "proof": "Using $\\kappa(t)=e^t/(1+e^{2t})^{3/2}$ with $t=-1$ gives $e^{-1}/(1+e^{-2})^{3/2}\\approx 0.304$.",
+    "parameters": {
+      "curve": ["t", "e^t"],
+      "evaluation_point": -1
+    },
+    "animation_notes": "Flattening left arm of the exponential."
+  },
+  {
+    "id": "F082",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_exponential",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=e^x at x=2",
+    "question": "Let $\\gamma(t)=(t,e^t)$. Determine the scalar curvature at $t=2$.",
+    "proof": "$\\kappa(2)=e^2/(1+e^4)^{3/2}\\approx 0.0178$.",
+    "parameters": {
+      "curve": ["t", "e^t"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Steep region; curvature already tiny."
+  },
+  {
+    "id": "F083",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_exponential",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of e^x at ln 2",
+    "question": "For gamma(t) = (t, e^t), compute velocity and acceleration at t = ln 2 and use them to determine the curvature.",
+    "proof": "At t equal to natural log of two the value is two, the velocity is one and two, and the acceleration is zero and two. The numerator is two and the speed squared is five, so the curvature is two divided by five times the square root of five.",
+    "parameters": {
+      "curve": ["t", "e^t"],
+      "evaluation_point": "ln 2"
+    },
+    "animation_notes": "Annotate 0.179."
+  },
+  {
+    "id": "F084",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_exponential",
+    "proof_format": "latex",
+    "theorem": "Curvature of e^x at x=1/2",
+    "question": "Find the curvature of $\\gamma(t)=(t,e^t)$ at $t=1/2$.",
+    "proof": "$\\kappa(1/2)=\\sqrt e/(1+e)^{3/2}\\approx 0.230$.",
+    "parameters": {
+      "curve": ["t", "e^t"],
+      "evaluation_point": "1/2"
+    },
+    "animation_notes": "Mid-rising exponential."
+  },
+  {
+    "id": "F086",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_exponential",
+    "proof_format": "latex",
+    "theorem": "Asymptotic curvature of e^x",
+    "question": "Using the curvature formula, show the curvature of $\\gamma(t)=(t,e^t)$ is essentially zero at $t=10$.",
+    "proof": "$\\kappa(10)=e^{10}/(1+e^{20})^{3/2}\\approx e^{-20}\\approx 2\\times 10^{-9}$.",
+    "parameters": {
+      "curve": ["t", "e^t"],
+      "evaluation_point": 10
+    },
+    "animation_notes": "Curve is a straight line at this scale."
+  },
+  {
+    "id": "F087",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_exponential",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of e^(2t) at the origin",
+    "question": "Compute the curvature of gamma(t) = (t, e^(2t)) at t = 0.",
+    "proof": "The first derivative is one and two, and the second is zero and four. The numerator is four and the speed squared is five, so the curvature is four over five times the square root of five.",
+    "parameters": {
+      "curve": ["t", "e^(2t)"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Steeper exponential than e^t."
+  },
+  {
+    "id": "F088",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_exponential",
+    "proof_format": "mixed",
+    "theorem": "Curvature of e^(-t) at the origin",
+    "question": "Compute the curvature of $\\gamma(t)=(t,e^{-t})$ at $t=0$.",
+    "proof": "At $t=0$, $y'=-1$ and $y''=1$, so $\\kappa=1/(1+1)^{3/2}=1/(2\\sqrt2)$.",
+    "parameters": {
+      "curve": ["t", "e^{-t}"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Mirror image of the upward exponential."
+  },
+  {
+    "id": "F089",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_exponential",
+    "proof_format": "latex",
+    "theorem": "Curvature of e^(-2t) at the origin",
+    "question": "Find the curvature of $\\gamma(t)=(t,e^{-2t})$ at $t=0$.",
+    "proof": "At $t=0$, $y'=-2$ and $y''=4$, so $\\kappa=4/(1+4)^{3/2}=4/(5\\sqrt5)$.",
+    "parameters": {
+      "curve": ["t", "e^{-2t}"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Mirror image of e^(2t)."
+  },
+  {
+    "id": "F090",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_exponential",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of a vertically stretched catenary-like exponential",
+    "question": "Compute the curvature of gamma(t) = (t, e^t + e^(-t)) at t = 0.",
+    "proof": "The curve is twice the hyperbolic cosine. At the origin the first derivative is zero and the second is two, so the curvature is two.",
+    "parameters": {
+      "curve": ["t", "e^t+e^(-t)"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Wide curve with vertex curvature 2."
+  },
+  {
+    "id": "F091",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_log",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=ln x at x=1",
+    "question": "Find the curvature of $\\gamma(t)=(t,\\ln t)$ at $t=1$.",
+    "proof": "$\\kappa(t)=(1/t^2)/(1+1/t^2)^{3/2}$, so $\\kappa(1)=1/2^{3/2}=1/(2\\sqrt2)$.",
+    "parameters": {
+      "curve": ["t", "ln(t)"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Osculating circle at (1,0)."
+  },
+  {
+    "id": "F092",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_log",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of ln x at x=2",
+    "question": "Compute the curvature of gamma(t) = (t, ln t) at t = 2.",
+    "proof": "The curvature is one over t squared divided by the three halves power of one plus one over t squared. At t equal to two this is one quarter divided by five quarters to the three halves, which is two over five times the square root of five.",
+    "parameters": {
+      "curve": ["t", "ln(t)"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Flattening log curve."
+  },
+  {
+    "id": "F093",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_log",
+    "proof_format": "mixed",
+    "theorem": "Curvature of ln x at x=3",
+    "question": "How do we compute the curvature of $\\gamma(t)=(t,\\ln t)$ at $t=3$?",
+    "proof": "Using $\\kappa(t)=t/(t^2+1)^{3/2}$, at $t=3$ we get $3/(10)^{3/2}=3/(10\\sqrt{10})$.",
+    "parameters": {
+      "curve": ["t", "ln(t)"],
+      "evaluation_point": 3
+    },
+    "animation_notes": "Annotate 0.0949."
+  },
+  {
+    "id": "F094",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_log",
+    "proof_format": "latex",
+    "theorem": "Curvature of ln x at x=1/2",
+    "question": "Let $\\gamma(t)=(t,\\ln t)$. Determine the scalar curvature at $t=1/2$.",
+    "proof": "At $t=1/2$, $\\kappa=t/(t^2+1)^{3/2}=(1/2)/(5/4)^{3/2}=4/(5\\sqrt5)$.",
+    "parameters": {
+      "curve": ["t", "ln(t)"],
+      "evaluation_point": "1/2"
+    },
+    "animation_notes": "Steep left branch of the logarithm."
+  },
+  {
+    "id": "F095",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_log",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of ln x at x = e",
+    "question": "For gamma(t) = (t, ln t), compute velocity and acceleration at t = e and use them to determine the curvature.",
+    "proof": "At t equal to e the velocity is one and one over e, and the acceleration is zero and minus one over e squared. The numerator is one over e squared and the speed squared is one plus one over e squared, so the curvature is about 0.112.",
+    "parameters": {
+      "curve": ["t", "ln t"],
+      "evaluation_point": "e"
+    },
+    "animation_notes": "Log curve nearly flat at x = e."
+  },
+  {
+    "id": "F097",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_log",
+    "proof_format": "mixed",
+    "theorem": "Asymptotic curvature of ln x at large x",
+    "question": "Show that the curvature of $\\gamma(t)=(t,\\ln t)$ is small at $t=10$.",
+    "proof": "$\\kappa(10)=10/(101)^{3/2}\\approx 0.00985$, consistent with the $1/t^2$ asymptotic decay.",
+    "parameters": {
+      "curve": ["t", "ln(t)"],
+      "evaluation_point": 10
+    },
+    "animation_notes": "Log curve almost straight at x=10."
+  },
+  {
+    "id": "F098",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_log",
+    "proof_format": "latex",
+    "theorem": "Curvature of ln(2x) at x=1",
+    "question": "Find the curvature of $\\gamma(t)=(t,\\ln 2t)$ at $t=1$.",
+    "proof": "Vertical shifts do not change curvature, so the value equals that of $\\ln t$ at $t=1$, namely $1/(2\\sqrt2)$.",
+    "parameters": {
+      "curve": ["t", "ln(2t)"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Vertical shift leaves curvature unchanged."
+  },
+  {
+    "id": "F099",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_log",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of log base 2 at x=1",
+    "question": "Compute the curvature of gamma(t) = (t, log_2 t) at t = 1.",
+    "proof": "The derivative is one over t times natural log of two, and the second derivative is minus one over t squared times natural log of two. At t equal to one the curvature is the square of the natural log of two divided by the square of the natural log of two plus one, all to the three halves, which is approximately 0.267.",
+    "parameters": {
+      "curve": ["t", "log_2 t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Log base 2 grows faster than the natural log."
+  },
+  {
+    "id": "F100",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_log",
+    "proof_format": "latex",
+    "theorem": "Curvature of ln(1+t^2) at the origin",
+    "question": "Let $\\gamma(t)=(t,\\ln(1+t^2))$. Determine the scalar curvature at $t=0$.",
+    "proof": "At $t=0$, $y'=0$ and $y''=2$, so $\\kappa=2$.",
+    "parameters": {
+      "curve": ["t", "ln(1+t^2)"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Curvature peak at the symmetric vertex."
+  },
+  {
+    "id": "F101",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_log",
+    "proof_format": "mixed",
+    "theorem": "Curvature of ln(1+t^2) at an inflection",
+    "question": "Compute the curvature of $\\gamma(t)=(t,\\ln(1+t^2))$ at $t=1$.",
+    "proof": "At $t=1$, $y'=1$ and $y''=0$, so the curvature is $0/2^{3/2}=0$.",
+    "parameters": {
+      "curve": ["t", "ln(1+t^2)"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Inflection at t=1 where curvature vanishes."
+  },
+  {
+    "id": "F102",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_log",
+    "proof_format": "latex",
+    "theorem": "Curvature of ln(1+t^2) at t=2",
+    "question": "Find the curvature of $\\gamma(t)=(t,\\ln(1+t^2))$ at $t=2$.",
+    "proof": "At $t=2$, $y'=4/5$ and $y''=-6/25$, so the numerator is $6/25$ and the speed squared is $41/25$. Hence $\\kappa=30/(41\\sqrt{41})$.",
+    "parameters": {
+      "curve": ["t", "ln(1+t^2)"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Outer branch with very small curvature."
+  },
+  {
+    "id": "F103",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "latex",
+    "theorem": "Curvature of the catenary at the vertex",
+    "question": "Find the curvature of $\\gamma(t)=(t,\\cosh t)$ at $t=0$.",
+    "proof": "$\\kappa(t)=1/\\cosh^2t$, so $\\kappa(0)=1$.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Osculating circle of radius 1 at the vertex."
+  },
+  {
+    "id": "F104",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of the catenary at t=1",
+    "question": "Compute the curvature of gamma(t) = (t, cosh t) at t = 1.",
+    "proof": "The curvature of the catenary is one over the hyperbolic cosine squared. At t equal to one this is one over cosh of one squared, approximately 0.420.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Annotate 0.420."
+  },
+  {
+    "id": "F105",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "mixed",
+    "theorem": "Curvature of the catenary at t=2",
+    "question": "How do we compute the curvature of $\\gamma(t)=(t,\\cosh t)$ at $t=2$?",
+    "proof": "Using $\\kappa(t)=1/\\cosh^2t$, at $t=2$ we get $1/\\cosh^22\\approx 0.0707$.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Strong flattening away from the vertex."
+  },
+  {
+    "id": "F106",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "latex",
+    "theorem": "Curvature of the catenary at t=3",
+    "question": "Let $\\gamma(t)=(t,\\cosh t)$. Determine the scalar curvature at $t=3$.",
+    "proof": "Since $\\cosh3\\approx 10.068$, $\\kappa(3)=1/\\cosh^23\\approx 0.00987$.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": 3
+    },
+    "animation_notes": "Far branch of the catenary."
+  },
+  {
+    "id": "F107",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of the catenary at t=-2",
+    "question": "Given the symmetry of gamma(t) = (t, cosh t), find its curvature at t = -2.",
+    "proof": "The hyperbolic cosine is even, so the curvature at minus two equals that at two, approximately 0.0707.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": -2
+    },
+    "animation_notes": "Symmetric left branch."
+  },
+  {
+    "id": "F108",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "latex",
+    "theorem": "Curvature of the catenary at t=1/2",
+    "question": "Find the curvature of $\\gamma(t)=(t,\\cosh t)$ at $t=1/2$.",
+    "proof": "At $t=1/2$, $\\cosh(1/2)\\approx 1.1276$, so $\\kappa=1/\\cosh^2(1/2)\\approx 0.786$.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": "1/2"
+    },
+    "animation_notes": "Close to the vertex; large curvature."
+  },
+  {
+    "id": "F109",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "mixed",
+    "theorem": "Curvature of the catenary at t=ln 2",
+    "question": "Compute the curvature of $\\gamma(t)=(t,\\cosh t)$ at $t=\\ln2$.",
+    "proof": "Using $\\cosh(\\ln2)=5/4$, we get $\\kappa=1/(5/4)^2=16/25$.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": "ln 2"
+    },
+    "animation_notes": "Exact rational value 0.64."
+  },
+  {
+    "id": "F110",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "latex",
+    "theorem": "Curvature of a scaled catenary at its vertex",
+    "question": "Let $\\gamma(t)=(t,3\\cosh(t/3))$. Determine the scalar curvature at $t=0$.",
+    "proof": "For $\\gamma(t)=(t,a\\cosh(t/a))$ the curvature is $1/(a\\cosh^2(t/a))$; at $t=0$ with $a=3$ this is $1/3$.",
+    "parameters": {
+      "curve": ["t", "3cosh(t/3)"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Wider catenary with vertex curvature 1/3."
+  },
+  {
+    "id": "F111",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of a scaled catenary at t=3",
+    "question": "For gamma(t) = (t, 3 cosh(t/3)), compute velocity and acceleration at t = 3 and use them to determine the curvature.",
+    "proof": "The velocity is one and hyperbolic sine of one, and the acceleration is zero and one third hyperbolic cosine of one. The numerator is one third cosh one and the speed squared is cosh squared one, so the curvature is one over three cosh squared one.",
+    "parameters": {
+      "curve": ["t", "3cosh(t/3)"],
+      "evaluation_point": 3
+    },
+    "animation_notes": "Annotate 0.140."
+  },
+  {
+    "id": "F112",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "mixed",
+    "theorem": "Curvature of a moderately scaled catenary at its vertex",
+    "question": "Compute the curvature of $\\gamma(t)=(t,2\\cosh(t/2))$ at $t=0$.",
+    "proof": "Here $a=2$, so the vertex curvature is $1/a=1/2$.",
+    "parameters": {
+      "curve": ["t", "2cosh(t/2)"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Vertex curvature 0.5."
+  },
+  {
+    "id": "F113",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "latex",
+    "theorem": "Curvature of cosh(2t) at the origin",
+    "question": "Find the curvature of $\\gamma(t)=(t,\\cosh2t)$ at $t=0$.",
+    "proof": "At $t=0$, $y'=2\\sinh0=0$ and $y''=4\\cosh0=4$, so $\\kappa=4$.",
+    "parameters": {
+      "curve": ["t", "cosh(2t)"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Sharper catenary; vertex curvature 4."
+  },
+  {
+    "id": "F114",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_catenary",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of a vertically shifted catenary",
+    "question": "Compute the curvature of gamma(t) = (t, cosh t + c) at t = 0.",
+    "proof": "Adding a constant does not change derivatives, so the curvature at the vertex equals that of the standard catenary, namely one.",
+    "parameters": {
+      "curve": ["t", "cosh(t)+c"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Vertical shift leaves curvature unchanged."
+  },
+  {
+    "id": "F115",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cycloid",
+    "proof_format": "latex",
+    "theorem": "Curvature of the cycloid at its peak",
+    "question": "Find the curvature of $\\gamma(t)=(t-\\sin t,1-\\cos t)$ at $t=\\pi$.",
+    "proof": "For the cycloid $\\kappa(t)=1/(4|\\sin(t/2)|)$. At $t=\\pi$, $\\sin(\\pi/2)=1$, so $\\kappa=1/4$.",
+    "parameters": {
+      "curve": ["t-sin t", "1-cos t"],
+      "evaluation_point": "pi"
+    },
+    "animation_notes": "Peak of the cycloid arch; osculating radius 4."
+  },
+  {
+    "id": "F116",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cycloid",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of the cycloid at t=pi/2",
+    "question": "Compute the curvature of gamma(t) = (t - sin t, 1 - cos t) at t = pi/2.",
+    "proof": "The curvature of the cycloid is one over four times the absolute value of sine of t over two. At pi over two the sine is one over the square root of two, so the curvature is one over two times the square root of two.",
+    "parameters": {
+      "curve": ["t-sin t", "1-cos t"],
+      "evaluation_point": "pi/2"
+    },
+    "animation_notes": "Rising flank with curvature 0.354."
+  },
+  {
+    "id": "F117",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cycloid",
+    "proof_format": "mixed",
+    "theorem": "Curvature of the cycloid at t=pi/3",
+    "question": "How do we compute the curvature of $\\gamma(t)=(t-\\sin t,1-\\cos t)$ at $t=\\pi/3$?",
+    "proof": "Using $\\kappa=1/(4|\\sin(t/2)|)$ and $\\sin(\\pi/6)=1/2$, we get $\\kappa(\\pi/3)=1/2$.",
+    "parameters": {
+      "curve": ["t-sin t", "1-cos t"],
+      "evaluation_point": "pi/3"
+    },
+    "animation_notes": "Annotate 0.5."
+  },
+  {
+    "id": "F118",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cycloid",
+    "proof_format": "latex",
+    "theorem": "Curvature of the cycloid at t=pi/4",
+    "question": "Consider the cycloid $\\gamma(t)=(t-\\sin t,1-\\cos t)$. Evaluate its curvature at $t=\\pi/4$.",
+    "proof": "At $t=\\pi/4$, $\\sin(\\pi/8)\\approx 0.3827$, so $\\kappa=1/(4\\cdot0.3827)\\approx 0.653$.",
+    "parameters": {
+      "curve": ["t-sin t", "1-cos t"],
+      "evaluation_point": "pi/4"
+    },
+    "animation_notes": "Steep part near the cusp."
+  },
+  {
+    "id": "F119",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cycloid",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of the cycloid at t=pi/6",
+    "question": "For gamma(t) = (t - sin t, 1 - cos t), compute velocity and acceleration at t = pi/6 and use them to determine the curvature.",
+    "proof": "The speed is two sine of t over two, and the curvature is one over four times that sine. At pi over six the sine of pi over twelve is about 0.259, so the curvature is about 0.966.",
+    "parameters": {
+      "curve": ["t-sin t", "1-cos t"],
+      "evaluation_point": "pi/6"
+    },
+    "animation_notes": "Near the cusp; large curvature."
+  },
+  {
+    "id": "F120",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cycloid",
+    "proof_format": "latex",
+    "theorem": "Curvature of the cycloid on the falling side",
+    "question": "Find the curvature of $\\gamma(t)=(t-\\sin t,1-\\cos t)$ at $t=3\\pi/2$.",
+    "proof": "At $t=3\\pi/2$, $\\sin(3\\pi/4)=\\sqrt2/2$, so $\\kappa=1/(4\\cdot\\sqrt2/2)=1/(2\\sqrt2)$.",
+    "parameters": {
+      "curve": ["t-sin t", "1-cos t"],
+      "evaluation_point": "3pi/2"
+    },
+    "animation_notes": "Falling flank; matches the pi/2 value by symmetry."
+  },
+  {
+    "id": "F121",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cycloid",
+    "proof_format": "mixed",
+    "theorem": "Curvature of the cycloid at t=2pi/3",
+    "question": "Compute the curvature of $\\gamma(t)=(t-\\sin t,1-\\cos t)$ at $t=2\\pi/3$.",
+    "proof": "At $t=2\\pi/3$, $\\sin(\\pi/3)=\\sqrt3/2$, so $\\kappa=1/(4\\cdot\\sqrt3/2)=1/(2\\sqrt3)$.",
+    "parameters": {
+      "curve": ["t-sin t", "1-cos t"],
+      "evaluation_point": "2pi/3"
+    },
+    "animation_notes": "Upper part of the arch."
+  },
+  {
+    "id": "F122",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cycloid",
+    "proof_format": "latex",
+    "theorem": "Curvature of the cycloid at t=5pi/6",
+    "question": "Let $\\gamma(t)=(t-\\sin t,1-\\cos t)$. Determine the scalar curvature at $t=5\\pi/6$.",
+    "proof": "At $t=5\\pi/6$, $\\sin(5\\pi/12)\\approx 0.9659$, so $\\kappa\\approx 1/3.8637\\approx 0.259$.",
+    "parameters": {
+      "curve": ["t-sin t", "1-cos t"],
+      "evaluation_point": "5pi/6"
+    },
+    "animation_notes": "Approaching the left cusp; curvature rising."
+  },
+  {
+    "id": "F123",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cycloid",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of a scaled cycloid",
+    "question": "Compute the curvature of the cycloid scaled by 3, gamma(t) = (3(t - sin t), 3(1 - cos t)), at t = pi.",
+    "proof": "Uniform scaling by three divides curvature by three, so the scaled curvature is one over twelve times the absolute sine of t over two. At pi this is one twelfth.",
+    "parameters": {
+      "curve": ["3(t-sin t)", "3(1-cos t)"],
+      "evaluation_point": "pi"
+    },
+    "animation_notes": "Larger arch; curvature is one third of the original."
+  },
+  {
+    "id": "F124",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_cycloid",
+    "proof_format": "mixed",
+    "theorem": "Curvature blow-up at a cycloid cusp",
+    "question": "Given the cusp of $\\gamma(t)=(t-\\sin t,1-\\cos t)$ at $t=0$, describe its curvature there.",
+    "proof": "Since $\\kappa(t)=1/(4|\\sin(t/2)|)$ and $\\sin(t/2)\\to0$ as $t\\to0$, the curvature diverges to infinity at the cusp.",
+    "parameters": {
+      "curve": ["t-sin t", "1-cos t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Osculating circle shrinks to zero radius as t approaches 0."
+  },
+  {
+    "id": "F125",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_other",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=1/x at x=1",
+    "question": "Find the curvature of $\\gamma(t)=(t,1/t)$ at $t=1$.",
+    "proof": "At $t=1$, $y'=-1$ and $y''=2$, so $\\kappa=2/(1+1)^{3/2}=1/\\sqrt2$.",
+    "parameters": {
+      "curve": ["t", "1/t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Osculating circle at the point (1,1)."
+  },
+  {
+    "id": "F126",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_other",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of y=1/x at x=2",
+    "question": "Compute the curvature of gamma(t) = (t, 1/t) at t = 2.",
+    "proof": "At t equal to two the first derivative is minus one quarter and the second is one quarter. The numerator is one quarter and the speed squared is seventeen sixteenths, so the curvature is sixteen over seventeen times the square root of seventeen.",
+    "parameters": {
+      "curve": ["t", "1/t"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Flattening right branch of the hyperbola."
+  },
+  {
+    "id": "F127",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_other",
+    "proof_format": "mixed",
+    "theorem": "Curvature of y=1/x at x=1/2",
+    "question": "How do we compute the curvature of $\\gamma(t)=(t,1/t)$ at $t=1/2$?",
+    "proof": "At $t=1/2$, $y'=-4$ and $y''=8$, so $\\kappa=8/(17)^{3/2}=8/(17\\sqrt{17})$.",
+    "parameters": {
+      "curve": ["t", "1/t"],
+      "evaluation_point": "1/2"
+    },
+    "animation_notes": "Steep left branch of the hyperbola."
+  },
+  {
+    "id": "F128",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_other",
+    "proof_format": "latex",
+    "theorem": "Curvature of y=sqrt(x) at x=1",
+    "question": "Let $\\gamma(t)=(t,\\sqrt t)$. Determine the scalar curvature at $t=1$.",
+    "proof": "At $t=1$, $y'=1/2$ and $y''=-1/4$, so $\\kappa=(1/4)/(5/4)^{3/2}=2/(5\\sqrt5)$.",
+    "parameters": {
+      "curve": ["t", "sqrt(t)"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Square-root curve near its point (1,1)."
+  },
+  {
+    "id": "F129",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_other",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of t^(3/2) at t=1",
+    "question": "Compute the curvature of gamma(t) = (t, t^(3/2)) at t = 1.",
+    "proof": "The first derivative is one and three halves, and the second is zero and three quarters. The numerator is three quarters and the speed squared is thirteen quarters, so the curvature is six over thirteen times the square root of thirteen.",
+    "parameters": {
+      "curve": ["t", "t^(3/2)"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Fractional-power curve with moderate curvature."
+  },
+  {
+    "id": "F130",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_other",
+    "proof_format": "latex",
+    "theorem": "Curvature of arctan x at x=1",
+    "question": "Find the curvature of $\\gamma(t)=(t,\\arctan t)$ at $t=1$.",
+    "proof": "At $t=1$, $y'=1/2$ and $y''=-1/2$, so $\\kappa=(1/2)/(5/4)^{3/2}=4/(5\\sqrt5)$.",
+    "parameters": {
+      "curve": ["t", "arctan t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Arctangent curve at its steepest point."
+  },
+  {
+    "id": "F131",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_other",
+    "proof_format": "mixed",
+    "theorem": "Curvature of arctan x at the origin",
+    "question": "Given the symmetry of $\\gamma(t)=(t,\\arctan t)$, find its curvature at $t=0$.",
+    "proof": "At $t=0$, $y'=1$ and $y''=0$, so the curvature vanishes; the origin is an inflection of the arctangent.",
+    "parameters": {
+      "curve": ["t", "arctan t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Inflection at the origin."
+  },
+  {
+    "id": "F132",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_other",
+    "proof_format": "latex",
+    "theorem": "Curvature of sinh x at x=1",
+    "question": "Let $\\gamma(t)=(t,\\sinh t)$. Determine the scalar curvature at $t=1$.",
+    "proof": "$\\kappa(t)=\\sinh t/(1+\\cosh^2t)^{3/2}$; at $t=1$ this is $\\sinh1/(1+\\cosh^21)^{3/2}\\approx 0.189$.",
+    "parameters": {
+      "curve": ["t", "sinh(t)"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Hyperbolic sine curve at t=1."
+  },
+  {
+    "id": "F133",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_other",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of t^5 at t=1",
+    "question": "Compute the curvature of gamma(t) = (t, t^5) at t = 1.",
+    "proof": "The first derivative is one and five, and the second is zero and twenty. The numerator is twenty and the speed squared is twenty-six, so the curvature is twenty over twenty-six times the square root of twenty-six, which simplifies to ten over thirteen times the square root of twenty-six.",
+    "parameters": {
+      "curve": ["t", "t^5"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "High-order contact curve."
+  },
+  {
+    "id": "F134",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "plane_other",
+    "proof_format": "mixed",
+    "theorem": "Curvature of the astroid at a diagonal point",
+    "question": "How do we compute the curvature of the astroid $\\gamma(t)=(\\cos^3 t,\\sin^3 t)$ at $t=\\pi/4$?",
+    "proof": "For the astroid $\\kappa(t)=1/(3|\\sin t\\cos t|)$. At $t=\\pi/4$ this is $1/(3\\cdot1/2)=2/3$.",
+    "parameters": {
+      "curve": ["cos^3 t", "sin^3 t"],
+      "evaluation_point": "pi/4"
+    },
+    "animation_notes": "Astroid with four cusps; curvature at the diagonal point."
+  },
+  {
+    "id": "F135",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "latex",
+    "theorem": "Frenet frame of the parabola at t=1",
+    "question": "Find the unit tangent and principal normal of $\\gamma(t)=(t,t^2)$ at $t=1$.",
+    "proof": "$\\gamma'=(1,2t)$ has norm $\\sqrt{1+4t^2}$, so $T=(1,2t)/\\sqrt{1+4t^2}$. Differentiating and normalising gives $N=(-2t,1)/\\sqrt{1+4t^2}$. At $t=1$: $T=(1,2)/\\sqrt5$, $N=(-2,1)/\\sqrt5$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "T and N attached at (1,1)."
+  },
+  {
+    "id": "F136",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "natural_language",
+    "theorem": "Frenet frame of the parabola at the vertex",
+    "question": "Compute the unit tangent and principal normal of gamma(t) = (t, t^2) at t = 0.",
+    "proof": "At the vertex the velocity is one and zero, so the unit tangent is one and zero. The derivative of the tangent is zero and one, so the unit normal is zero and one, pointing upward toward the concave side.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Frame at the vertex."
+  },
+  {
+    "id": "F137",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "mixed",
+    "theorem": "Frenet frame of the parabola at t=2",
+    "question": "Compute the unit tangent and principal normal of $\\gamma(t)=(t,t^2)$ at $t=2$.",
+    "proof": "Using $T=(1,2t)/\\sqrt{1+4t^2}$ and $N=(-2t,1)/\\sqrt{1+4t^2}$ at $t=2$ gives $T=(1,4)/\\sqrt{17}$ and $N=(-4,1)/\\sqrt{17}$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Frame at (2,4)."
+  },
+  {
+    "id": "F138",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "latex",
+    "theorem": "Frenet frame of the unit circle at t=0",
+    "question": "Find the unit tangent and principal normal of $\\gamma(t)=(\\cos t,\\sin t)$ at $t=0$.",
+    "proof": "$\\gamma'=(-\\sin t,\\cos t)$ has unit length, so $T=(-\\sin t,\\cos t)$. Then $T'=(-\\cos t,-\\sin t)$ also has unit length, so $N=(-\\cos t,-\\sin t)$. At $t=0$: $T=(0,1)$, $N=(-1,0)$.",
+    "parameters": {
+      "curve": ["cos t", "sin t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Normal points toward the centre."
+  },
+  {
+    "id": "F139",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "natural_language",
+    "theorem": "Frenet frame of the circle at pi/4",
+    "question": "Compute the unit tangent and principal normal of gamma(t) = (cos t, sin t) at t = pi/4.",
+    "proof": "The unit tangent is minus sine of t and cosine of t, and the unit normal is minus cosine of t and minus sine of t. At pi over four both components are plus or minus one over the square root of two.",
+    "parameters": {
+      "curve": ["cos t", "sin t"],
+      "evaluation_point": "pi/4"
+    },
+    "animation_notes": "Frame at 45 degrees on the circle."
+  },
+  {
+    "id": "F140",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "latex",
+    "theorem": "Frenet frame of the circle at pi",
+    "question": "Let $\\gamma(t)=(\\cos t,\\sin t)$. Determine $T$ and $N$ at $t=\\pi$.",
+    "proof": "At $t=\\pi$, $T=(-\\sin\\pi,\\cos\\pi)=(0,-1)$ and $N=(-\\cos\\pi,-\\sin\\pi)=(1,0)$.",
+    "parameters": {
+      "curve": ["cos t", "sin t"],
+      "evaluation_point": "pi"
+    },
+    "animation_notes": "Frame at the leftmost point."
+  },
+  {
+    "id": "F141",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "mixed",
+    "theorem": "Frenet frame of the catenary at the vertex",
+    "question": "How do we compute $T$ and $N$ for $\\gamma(t)=(t,\\cosh t)$ at $t=0$?",
+    "proof": "$\\gamma'=(1,\\sinh t)$ and $\\lVert\\gamma'\\rVert=\\cosh t$, so $T=(1,\\sinh t)/\\cosh t$ and $N=(-\\tanh t,1/\\cosh t)$. At $t=0$: $T=(1,0)$, $N=(0,1)$.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Frame at the catenary vertex."
+  },
+  {
+    "id": "F142",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "latex",
+    "theorem": "Frenet frame of the catenary at t=1",
+    "question": "Find $T$ and $N$ for $\\gamma(t)=(t,\\cosh t)$ at $t=1$.",
+    "proof": "At $t=1$, $T=(\\operatorname{sech}1,\\tanh1)$ and $N=(-\\tanh1,\\operatorname{sech}1)\\approx(-0.762,0.648)$.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Frame at t=1 on the catenary."
+  },
+  {
+    "id": "F143",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "natural_language",
+    "theorem": "Frenet frame of the exponential at the origin",
+    "question": "Compute the unit tangent and principal normal of gamma(t) = (t, e^t) at t = 0.",
+    "proof": "The velocity is one and one, whose length is the square root of two, so the tangent is one over the square root of two in both components. Differentiating and normalising gives a normal pointing up and to the left, namely minus one and one over the square root of two.",
+    "parameters": {
+      "curve": ["t", "e^t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Frame at the point (0,1)."
+  },
+  {
+    "id": "F144",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "latex",
+    "theorem": "Frenet frame of the exponential at t=1",
+    "question": "Let $\\gamma(t)=(t,e^t)$. Determine $T$ and $N$ at $t=1$.",
+    "proof": "$T=(1,e)/\\sqrt{1+e^2}$ and $N=(-e,1)/\\sqrt{1+e^2}$.",
+    "parameters": {
+      "curve": ["t", "e^t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Frame at t=1 on the exponential."
+  },
+  {
+    "id": "F145",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "mixed",
+    "theorem": "Frenet frame of the cubic at t=1",
+    "question": "How do we compute $T$ and $N$ for $\\gamma(t)=(t,t^3)$ at $t=1$?",
+    "proof": "$\\gamma'=(1,3t^2)$ gives $T=(1,3t^2)/\\sqrt{1+9t^4}$ and $N=(-3t^2,1)/\\sqrt{1+9t^4}$. At $t=1$: $T=(1,3)/\\sqrt{10}$, $N=(-3,1)/\\sqrt{10}$.",
+    "parameters": {
+      "curve": ["t", "t^3"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Frame at (1,1) on the cubic."
+  },
+  {
+    "id": "F146",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "frenet_frame",
+    "proof_format": "latex",
+    "theorem": "Frenet frame of the helix at t=0",
+    "question": "Find $T$, $N$, and $B$ for $\\gamma(t)=(\\cos t,\\sin t,t)$ at $t=0$.",
+    "proof": "$T=(-\\sin t,\\cos t,1)/\\sqrt2$, $N=(-\\cos t,-\\sin t,0)$, $B=T\\times N=(\\sin t,-\\cos t,1)/\\sqrt2$. At $t=0$: $T=(0,1,1)/\\sqrt2$, $N=(-1,0,0)$, $B=(0,-1,1)/\\sqrt2$.",
+    "parameters": {
+      "curve": ["cos t", "sin t", "t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "3D Frenet frame at the start of the helix."
+  },
+  {
+    "id": "F147",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "normal_vector",
+    "proof_format": "latex",
+    "theorem": "Unit normal of the parabola at t=1",
+    "question": "Show that the unit normal of $\\gamma(t)=(t,t^2)$ at $t=1$ points toward the concave side.",
+    "proof": "$T=(1,2)/\\sqrt5$ and $N=(-2,1)/\\sqrt5$; since $N$ has positive $y$-component, it points into the concave side of the upward parabola.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "N at (1,1) points up and to the left."
+  },
+  {
+    "id": "F148",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "normal_vector",
+    "proof_format": "natural_language",
+    "theorem": "Unit normal of the parabola at the vertex",
+    "question": "Compute the unit normal of gamma(t) = (t, t^2) at t = 0.",
+    "proof": "The unit tangent at the vertex is one and zero, and its derivative is zero and one. So the unit normal is zero and one, pointing straight up.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Normal at the vertex."
+  },
+  {
+    "id": "F149",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "normal_vector",
+    "proof_format": "mixed",
+    "theorem": "Unit normal of the parabola at t=2",
+    "question": "Compute the unit normal of $\\gamma(t)=(t,t^2)$ at $t=2$.",
+    "proof": "Using $N(t)=(-2t,1)/\\sqrt{1+4t^2}$, at $t=2$ we get $N=(-4,1)/\\sqrt{17}$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Normal at (2,4)."
+  },
+  {
+    "id": "F150",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "normal_vector",
+    "proof_format": "latex",
+    "theorem": "Unit normal of the circle at pi/4",
+    "question": "Compute the unit normal of $\\gamma(t)=(\\cos t,\\sin t)$ at $t=\\pi/4$.",
+    "proof": "$N=(-\\cos t,-\\sin t)$, so at $t=\\pi/4$ we get $N=(-\\sqrt2/2,-\\sqrt2/2)$, pointing toward the centre.",
+    "parameters": {
+      "curve": ["cos t", "sin t"],
+      "evaluation_point": "pi/4"
+    },
+    "animation_notes": "Inward normal at 45 degrees."
+  },
+  {
+    "id": "F151",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "normal_vector",
+    "proof_format": "natural_language",
+    "theorem": "Unit normal of the circle at pi",
+    "question": "Compute the unit normal of gamma(t) = (cos t, sin t) at t = pi.",
+    "proof": "The normal is minus cosine of t and minus sine of t. At pi this is one and zero, pointing rightward from the leftmost point toward the centre.",
+    "parameters": {
+      "curve": ["cos t", "sin t"],
+      "evaluation_point": "pi"
+    },
+    "animation_notes": "Normal from the leftmost point."
+  },
+  {
+    "id": "F152",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "normal_vector",
+    "proof_format": "mixed",
+    "theorem": "Unit normal of the catenary at t=1",
+    "question": "How do we compute the unit normal of $\\gamma(t)=(t,\\cosh t)$ at $t=1$?",
+    "proof": "Using $N=(-\\tanh t,\\operatorname{sech}t)$, at $t=1$ we get $N\\approx(-0.762,0.648)$.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Normal at t=1 on the catenary."
+  },
+  {
+    "id": "F153",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "normal_vector",
+    "proof_format": "natural_language",
+    "theorem": "Degenerate normal of the cubic at the origin",
+    "question": "Discuss the unit normal of gamma(t) = (t, t^3) at t = 0.",
+    "proof": "At the origin the first derivative is one and zero while the second derivative is zero and zero. The derivative of the unit tangent vanishes, so the normal cannot be normalised in the usual way. Geometrically the curve is locally a straight line, so there is no distinguished inward normal.",
+    "parameters": {
+      "curve": ["t", "t^3"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Inflection point; the normal degenerates."
+  },
+  {
+    "id": "F155",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "osculating_circle",
+    "proof_format": "latex",
+    "theorem": "Osculating circle of the parabola at the vertex",
+    "question": "Find the osculating circle of $\\gamma(t)=(t,t^2)$ at $t=0$.",
+    "proof": "$\\kappa(0)=2$, so the osculating radius is $1/2$. The inward normal is $(0,1)$, so the centre is $(0,1/2)$ and the circle has radius $1/2$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Circle tangent to the parabola at the vertex."
+  },
+  {
+    "id": "F156",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "osculating_circle",
+    "proof_format": "natural_language",
+    "theorem": "Osculating circle of the parabola at t=1",
+    "question": "Find the osculating circle of gamma(t) = (t, t^2) at t = 1.",
+    "proof": "The curvature at t equal to one is two over five times the square root of five, so the osculating radius is five times the square root of five over two. The inward normal is minus two and one over the square root of five, so the centre is at minus four and seven halves.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Circle tangent at (1,1) with centre (-4, 3.5)."
+  },
+  {
+    "id": "F157",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "osculating_circle",
+    "proof_format": "mixed",
+    "theorem": "Osculating circle of the parabola at t=1/2",
+    "question": "Compute the osculating circle of $\\gamma(t)=(t,t^2)$ at $t=1/2$.",
+    "proof": "The curvature at $t=1/2$ is $1/\\sqrt2$, so the radius is $\\sqrt2$. With $N=(-1,1)/\\sqrt2$, the centre is $(1/2,1/4)+\\sqrt2\\,N=(-1/2,5/4)$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": "1/2"
+    },
+    "animation_notes": "Osculating circle centred at (-0.5, 1.25)."
+  },
+  {
+    "id": "F158",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "osculating_circle",
+    "proof_format": "latex",
+    "theorem": "Osculating circle of the parabola at t=2",
+    "question": "Find the osculating circle of $\\gamma(t)=(t,t^2)$ at $t=2$.",
+    "proof": "$\\kappa(2)=2/(17\\sqrt{17})$, so the radius is $17\\sqrt{17}/2$. With $N=(-4,1)/\\sqrt{17}$ the centre is $(-32,25/2)$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Large osculating circle far from the vertex."
+  },
+  {
+    "id": "F159",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "osculating_circle",
+    "proof_format": "natural_language",
+    "theorem": "Osculating circle of the catenary at the vertex",
+    "question": "Find the osculating circle of gamma(t) = (t, cosh t) at t = 0.",
+    "proof": "The curvature at the vertex is one, so the osculating radius is one. The inward normal points upward, so the centre is zero and one.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Circle of radius 1 at the vertex."
+  },
+  {
+    "id": "F160",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "osculating_circle",
+    "proof_format": "mixed",
+    "theorem": "Osculating circle of the catenary at t=1",
+    "question": "Compute the osculating circle of $\\gamma(t)=(t,\\cosh t)$ at $t=1$.",
+    "proof": "The curvature is $1/\\cosh^21$, so the radius is $\\cosh^21\\approx 2.381$. With $N=(-\\tanh1,\\operatorname{sech}1)$ the centre is $(-\\sinh1\\cosh1,2\\cosh1)\\approx(-1.813,3.086)$.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Osculating circle at t=1 on the catenary."
+  },
+  {
+    "id": "F161",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "osculating_circle",
+    "proof_format": "latex",
+    "theorem": "Osculating circle of a circle",
+    "question": "Find the osculating circle of $\\gamma(t)=(\\cos t,\\sin t)$ at $t=\\pi/3$.",
+    "proof": "The curvature is $1$, so the osculating radius is $1$, and the osculating centre is the origin. The osculating circle therefore coincides with the original circle.",
+    "parameters": {
+      "curve": ["cos t", "sin t"],
+      "evaluation_point": "pi/3"
+    },
+    "animation_notes": "The osculating circle is the curve itself."
+  },
+  {
+    "id": "F162",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "osculating_circle",
+    "proof_format": "natural_language",
+    "theorem": "Osculating circle of the sine peak",
+    "question": "Find the osculating circle of gamma(t) = (t, sin t) at t = pi/2.",
+    "proof": "At the peak the curvature is one, so the radius is one. The inward normal points downward, so the centre is pi over two and zero.",
+    "parameters": {
+      "curve": ["t", "sin t"],
+      "evaluation_point": "pi/2"
+    },
+    "animation_notes": "Circle tangent to the sine peak from below."
+  },
+  {
+    "id": "F163",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "osculating_circle",
+    "proof_format": "mixed",
+    "theorem": "Osculating circle of the exponential at t=0",
+    "question": "Compute the osculating circle of $\\gamma(t)=(t,e^t)$ at $t=0$.",
+    "proof": "The curvature at $t=0$ is $1/(2\\sqrt2)$, so the radius is $2\\sqrt2$. With $N=(-1,1)/\\sqrt2$ the centre is $(-2,3)$.",
+    "parameters": {
+      "curve": ["t", "e^t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Circle of radius 2sqrt(2) centred at (-2,3)."
+  },
+  {
+    "id": "F164",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "osculating_circle",
+    "proof_format": "latex",
+    "theorem": "Osculating circle of the logarithm at x=1",
+    "question": "Find the osculating circle of $\\gamma(t)=(t,\\ln t)$ at $t=1$.",
+    "proof": "The curvature is $1/(2\\sqrt2)$, so the radius is $2\\sqrt2$. The inward normal is $(-1,1)/\\sqrt2$, giving centre $(-1,2)$.",
+    "parameters": {
+      "curve": ["t", "ln(t)"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Osculating circle at the point (1,0)."
+  },
+  {
+    "id": "F165",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "arc_length_param",
+    "proof_format": "latex",
+    "theorem": "Arc-length parametrisation of a line",
+    "question": "Reparametrise $\\gamma(t)=(2t,3t,6t)$ by arc length and evaluate the new parametrisation at $s=7$.",
+    "proof": "The speed is $\\sqrt{4+9+36}=7$, so $s=7t$ and $\\gamma(s)=(2s/7,3s/7,6s/7)$. At $s=7$ this is $(2,3,6)$.",
+    "parameters": {
+      "curve": ["2t", "3t", "6t"],
+      "evaluation_point": 7
+    },
+    "animation_notes": "Line traversed at unit speed."
+  },
+  {
+    "id": "F166",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "arc_length_param",
+    "proof_format": "natural_language",
+    "theorem": "Arc-length parametrisation of a circle of radius 3",
+    "question": "Reparametrise gamma(t) = (3cos t, 3sin t) by arc length and evaluate at s = 3 pi/2.",
+    "proof": "The speed is three, so the arc length is three t and t equals s over three. Substituting gives the arc-length parametrisation, and at s equal to three pi over two the point is at angle pi over two.",
+    "parameters": {
+      "curve": ["3cos t", "3sin t"],
+      "evaluation_point": "3pi/2"
+    },
+    "animation_notes": "Circle traversed at unit speed."
+  },
+  {
+    "id": "F167",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "arc_length_param",
+    "proof_format": "mixed",
+    "theorem": "Arc-length parametrisation of the helix",
+    "question": "Reparametrise $\\gamma(t)=(\\cos t,\\sin t,t)$ by arc length and evaluate at $s=\\sqrt2$.",
+    "proof": "The speed is $\\sqrt2$, so $t=s/\\sqrt2$ and $\\gamma(s)=(\\cos(s/\\sqrt2),\\sin(s/\\sqrt2),s/\\sqrt2)$. At $s=\\sqrt2$ this is $(\\cos1,\\sin1,1)$.",
+    "parameters": {
+      "curve": ["cos t", "sin t", "t"],
+      "evaluation_point": "sqrt2"
+    },
+    "animation_notes": "Helix traversed at unit speed."
+  },
+  {
+    "id": "F168",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "arc_length_param",
+    "proof_format": "latex",
+    "theorem": "Arc-length parametrisation of the catenary",
+    "question": "Reparametrise $\\gamma(t)=(t,\\cosh t)$ by arc length and evaluate at $s=\\sinh1$.",
+    "proof": "The speed is $\\cosh t$, so $s=\\sinh t$ and $t=\\operatorname{arcsinh}s$. The arc-length parametrisation is $(\\operatorname{arcsinh}s,\\sqrt{1+s^2})$, which at $s=\\sinh1$ gives $(1,\\cosh1)$.",
+    "parameters": {
+      "curve": ["t", "cosh(t)"],
+      "evaluation_point": "sinh1"
+    },
+    "animation_notes": "Catenary traversed at unit speed."
+  },
+  {
+    "id": "F169",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "arc_length_param",
+    "proof_format": "mixed",
+    "theorem": "Arc length of the parabola on [0,1]",
+    "question": "Compute the arc length of $\\gamma(t)=(t,t^2)$ from $t=0$ to $t=1$.",
+    "proof": "The speed is $\\sqrt{1+4t^2}$, so the arc length is $\\int_0^1\\sqrt{1+4t^2}\\,dt=(\\sqrt5+\\frac12\\ln(2+\\sqrt5))/2$.",
+    "parameters": {
+      "curve": ["t", "t^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Arc being integrated along the parabola."
+  },
+  {
+    "id": "F170",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "arc_length_param",
+    "proof_format": "natural_language",
+    "theorem": "Arc length of one cycloid arch",
+    "question": "Compute the arc length of gamma(t) = (t - sin t, 1 - cos t) from t = 0 to t = 2 pi.",
+    "proof": "The speed is two times sine of t over two, and integrating that from zero to two pi gives eight. This is the classical result that one cycloid arch has length eight times the generating radius.",
+    "parameters": {
+      "curve": ["t-sin t", "1-cos t"],
+      "evaluation_point": "2pi"
+    },
+    "animation_notes": "Arch of length 8 unrolled."
+  },
+  {
+    "id": "F171",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "arc_length_param",
+    "proof_format": "latex",
+    "theorem": "Arc length of the cubic on [0,1]",
+    "question": "Compute the arc length of $\\gamma(t)=(t,t^3)$ from $t=0$ to $t=1$.",
+    "proof": "The speed is $\\sqrt{1+9t^4}$, so the arc length is $\\int_0^1\\sqrt{1+9t^4}\\,dt\\approx1.548$, which has no elementary closed form.",
+    "parameters": {
+      "curve": ["t", "t^3"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Numerical integration of the arc length."
+  },
+  {
+    "id": "F172",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "arc_length_param",
+    "proof_format": "mixed",
+    "theorem": "Arc length of one helix turn",
+    "question": "Compute the arc length of $\\gamma(t)=(\\cos t,\\sin t,t)$ for $t$ from $0$ to $2\\pi$.",
+    "proof": "The speed is $\\sqrt2$, so the arc length over $[0,2\\pi]$ is $2\\pi\\sqrt2$.",
+    "parameters": {
+      "curve": ["cos t", "sin t", "t"],
+      "evaluation_point": "2pi"
+    },
+    "animation_notes": "One full turn of the helix."
+  },
+  {
+    "id": "F173",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "arc_length_param",
+    "proof_format": "latex",
+    "theorem": "Arc length of a quarter unit circle",
+    "question": "Compute the arc length of $\\gamma(t)=(\\cos t,\\sin t)$ from $t=0$ to $t=\\pi/2$.",
+    "proof": "The speed is $1$, so the arc length equals the parameter interval length $\\pi/2$.",
+    "parameters": {
+      "curve": ["cos t", "sin t"],
+      "evaluation_point": "pi/2"
+    },
+    "animation_notes": "Quarter-circle arc of length pi/2."
+  },
+  {
+    "id": "F174",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "arc_length_param",
+    "proof_format": "natural_language",
+    "theorem": "Non-constant speed of a diagonal parametrisation",
+    "question": "Show that gamma(t) = (t^2, t^2) is not unit speed, and evaluate its speed at t = 1.",
+    "proof": "The derivative is two t and two t, whose length is two times the square root of two times the absolute value of t. At t equal to one this is two times the square root of two, so the parametrisation is not unit speed.",
+    "parameters": {
+      "curve": ["t^2", "t^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Point accelerates along the diagonal."
+  },
+  {
+    "id": "F175",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "unit_speed",
+    "proof_format": "latex",
+    "theorem": "Unit-speed diagonal line",
+    "question": "Show that $\\gamma(s)=(s/\\sqrt2,s/\\sqrt2)$ is unit speed, and evaluate at $s=2$.",
+    "proof": "$\\gamma'(s)=(1/\\sqrt2,1/\\sqrt2)$ has norm $1$, so the parametrisation is unit speed. At $s=2$ the point is $(\\sqrt2,\\sqrt2)$.",
+    "parameters": {
+      "curve": ["s/sqrt(2)", "s/sqrt(2)"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Diagonal line traversed at unit speed."
+  },
+  {
+    "id": "F176",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "unit_speed",
+    "proof_format": "natural_language",
+    "theorem": "Unit speed of the planar circle",
+    "question": "Show that gamma(s) = (cos s, sin s, 0) is unit speed, and evaluate at s = pi/3.",
+    "proof": "The derivative is minus sine of s, cosine of s, and zero, whose length is one everywhere. So the parametrisation is unit speed, and at s equal to pi over three the point is one half, square root of three over two, zero.",
+    "parameters": {
+      "curve": ["cos(s)", "sin(s)", "0"],
+      "evaluation_point": "pi/3"
+    },
+    "animation_notes": "Planar circle traversed at unit speed."
+  },
+  {
+    "id": "F177",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "unit_speed",
+    "proof_format": "mixed",
+    "theorem": "Unit speed of the reparametrised helix",
+    "question": "Show that $\\gamma(s)=(\\cos(s/\\sqrt2),\\sin(s/\\sqrt2),s/\\sqrt2)$ is unit speed, and evaluate at $s=\\sqrt2$.",
+    "proof": "Differentiating gives $(-\\sin(s/\\sqrt2),\\cos(s/\\sqrt2),1)/\\sqrt2$, whose squared norm is $1/2+1/2=1$. At $s=\\sqrt2$ the point is $(\\cos1,\\sin1,1)$.",
+    "parameters": {
+      "curve": ["cos(s/sqrt2)", "sin(s/sqrt2)", "s/sqrt2"],
+      "evaluation_point": "\\sqrt2"
+    },
+    "animation_notes": "Helix traversed at unit speed."
+  },
+  {
+    "id": "F178",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "unit_speed",
+    "proof_format": "latex",
+    "theorem": "Unit speed of a radius-3 circle",
+    "question": "Show that $\\gamma(s)=(3\\cos(s/3),3\\sin(s/3))$ is unit speed, and evaluate at $s = 3$.",
+    "proof": "Differentiating gives $(-\\sin(s/3),\\cos(s/3))$, whose norm is $1$. At $s=3$ the point is $(3\\cos1,3\\sin1)$.",
+    "parameters": {
+      "curve": ["3cos(s/3)", "3sin(s/3)"],
+      "evaluation_point": 3
+    },
+    "animation_notes": "Radius-3 circle traversed at unit speed."
+  },
+  {
+    "id": "F179",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "unit_speed",
+    "proof_format": "natural_language",
+    "theorem": "Non-unit-speed circle parametrisation",
+    "question": "Show that gamma(t) = (cos t^2, sin t^2) is not unit speed, and evaluate its speed at t = 1.",
+    "proof": "Differentiating gives minus two t sine of t squared and two t cosine of t squared, whose norm is two times the absolute value of t. At t equal to one the speed is two, so the parametrisation is not unit speed.",
+    "parameters": {
+      "curve": ["cos t^2", "sin t^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Point accelerates around the circle."
+  },
+  {
+    "id": "F180",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "unit_speed",
+    "proof_format": "mixed",
+    "theorem": "Non-unit-speed diagonal line",
+    "question": "Show that $\\gamma(t)=(t^2,t^2)$ is not unit speed, and evaluate its speed at $t=1$.",
+    "proof": "The speed is $2\\sqrt2|t|$, which equals one only at $t=\\pm1/(2\\sqrt2)$. At $t=1$ the speed is $2\\sqrt2$, so the parametrisation is not unit speed.",
+    "parameters": {
+      "curve": ["t^2", "t^2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Diagonal line traversed with increasing speed."
+  },
+  {
+    "id": "F181",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "unit_speed",
+    "proof_format": "latex",
+    "theorem": "Speed of a shallow parabola",
+    "question": "Show that $\\gamma(t)=(t,t^2/2)$ is not unit speed, and evaluate its speed at $t=1$.",
+    "proof": "The derivative is $(1,t)$, whose norm is $\\sqrt{1+t^2}$. At $t=1$ the speed is $\\sqrt2$, so the parametrisation is not unit speed.",
+    "parameters": {
+      "curve": ["t", "t^2/2"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Point accelerates away from the vertex."
+  },
+  {
+    "id": "F182",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "helix",
+    "proof_format": "latex",
+    "theorem": "Curvature and torsion of the standard helix",
+    "question": "Find the curvature and torsion of $\\gamma(t)=(\\cos t,\\sin t,t)$ at $t=0$.",
+    "proof": "For a helix with $a=b=1$, $\\kappa=a/(a^2+b^2)=1/2$ and $\\tau=b/(a^2+b^2)=1/2$, constant in $t$; so both equal $1/2$ at $t=0$.",
+    "parameters": {
+      "curve": ["cos t", "sin t", "t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Canonical helix with equal curvature and torsion."
+  },
+  {
+    "id": "F183",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "helix",
+    "proof_format": "natural_language",
+    "theorem": "Curvature and torsion of a triple-radius helix",
+    "question": "Compute the curvature and torsion of gamma(t) = (3cos t, 3sin t, t) at t = pi/2.",
+    "proof": "The radius is three and the vertical scaling is one. The curvature is three over ten and the torsion is one over ten, both constant along the helix, so they take these values at pi over two as well.",
+    "parameters": {
+      "curve": ["3cos t", "3sin t", "t"],
+      "evaluation_point": "pi/2"
+    },
+    "animation_notes": "Wider helix with smaller curvature and torsion."
+  },
+  {
+    "id": "F184",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "helix",
+    "proof_format": "mixed",
+    "theorem": "Curvature and torsion of a steep helix",
+    "question": "Compute the curvature and torsion of $\\gamma(t)=(\\cos t,\\sin t,5t)$ at $t=1$.",
+    "proof": "Here $a=1$ and $b=5$, so $\\kappa=1/26$ and $\\tau=5/26$; both are constant, hence they hold at $t=1$.",
+    "parameters": {
+      "curve": ["cos t", "sin t", "5t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Steeply rising helix."
+  },
+  {
+    "id": "F185",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "helix",
+    "proof_format": "latex",
+    "theorem": "Curvature and torsion of the 2-3 helix",
+    "question": "Find the curvature and torsion of $\\gamma(t)=(2\\cos t,2\\sin t,3t)$ at $t=0$.",
+    "proof": "$\\kappa=a/(a^2+b^2)=2/13$ and $\\tau=b/(a^2+b^2)=3/13$, so at $t=0$ these constants are $2/13$ and $3/13$.",
+    "parameters": {
+      "curve": ["2cos t", "2sin t", "3t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Medium-width helix."
+  },
+  {
+    "id": "F186",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "helix",
+    "proof_format": "natural_language",
+    "theorem": "Curvature and torsion of the 4-3 helix",
+    "question": "Compute the curvature and torsion of gamma(t) = (4cos t, 4sin t, 3t) at t = pi.",
+    "proof": "With radius four and vertical scaling three, the curvature is four over twenty-five and the torsion is three over twenty-five. Both are constant, so they take these values at pi.",
+    "parameters": {
+      "curve": ["4cos t", "4sin t", "3t"],
+      "evaluation_point": "pi"
+    },
+    "animation_notes": "Wide helix with moderate rise."
+  },
+  {
+    "id": "F187",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "helix",
+    "proof_format": "latex",
+    "theorem": "Torsion of the 2-1 helix",
+    "question": "Find the torsion of $\\gamma(t)=(2\\cos t,2\\sin t,t)$ at $t=1$.",
+    "proof": "With $a=2$ and $b=1$, $\\tau=b/(a^2+b^2)=1/5$, constant along the curve.",
+    "parameters": {
+      "curve": ["2cos t", "2sin t", "t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Wider helix has smaller torsion."
+  },
+  {
+    "id": "F188",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "helix",
+    "proof_format": "mixed",
+    "theorem": "Torsion of the 1-2 helix",
+    "question": "Compute the torsion of $\\gamma(t)=(\\cos t,\\sin t,2t)$ at $t=0$.",
+    "proof": "With $a=1$ and $b=2$, $\\tau=2/(1+4)=2/5$, constant, so at $t=0$ it is $2/5$.",
+    "parameters": {
+      "curve": ["cos t", "sin t", "2t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Steeper helix has larger torsion."
+  },
+  {
+    "id": "F189",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "helix",
+    "proof_format": "latex",
+    "theorem": "Torsion of a left-handed helix",
+    "question": "Determine the torsion of $\\gamma(t)=(\\cos t,\\sin t,-t)$ at $t=\\pi$.",
+    "proof": "With $a=1$ and $b=-1$, $\\tau=b/(a^2+b^2)=-1/2$. The magnitude matches the right-handed case, but the sign is negative.",
+    "parameters": {
+      "curve": ["cos t", "sin t", "-t"],
+      "evaluation_point": "pi"
+    },
+    "animation_notes": "Left-handed helix in 3D."
+  },
+  {
+    "id": "F190",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "helix",
+    "proof_format": "natural_language",
+    "theorem": "Curvature and torsion of the 5-12 helix",
+    "question": "Compute the curvature and torsion of gamma(t) = (5cos t, 5sin t, 12 t) at t = 0.",
+    "proof": "The radius is five and the vertical scaling twelve. The denominator is one hundred sixty-nine, so the curvature is five over one hundred sixty-nine and the torsion is twelve over one hundred sixty-nine, constant along the curve.",
+    "parameters": {
+      "curve": ["5cos t", "5sin t", "12t"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Pythagorean 5-12-13 helix."
+  },
+  {
+    "id": "F191",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "helix",
+    "proof_format": "mixed",
+    "theorem": "Curvature and torsion of the sqrt(3) helix",
+    "question": "Compute the curvature and torsion of $\\gamma(t)=(\\cos t,\\sin t,\\sqrt3 t)$ at $t=\\pi/2$.",
+    "proof": "Here $a=1$ and $b=\\sqrt3$, so $a^2+b^2=4$ and $\\kappa=1/4$, $\\tau=\\sqrt3/4$. These are constants, so they hold at $t=\\pi/2$.",
+    "parameters": {
+      "curve": ["cos t", "sin t", "sqrt3 t"],
+      "evaluation_point": "pi/2"
+    },
+    "animation_notes": "Helix rising at 60 degrees."
+  },
+  {
+    "id": "F192",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "helix",
+    "proof_format": "latex",
+    "theorem": "Curvature and torsion of a very steep helix",
+    "question": "Find the curvature and torsion of $\\gamma(t)=(\\cos t,\\sin t,100t)$ at $t=1$.",
+    "proof": "$\\kappa=1/(1+10000)=1/10001$ and $\\tau=100/10001$; both are constant, so at $t=1$ they take these values.",
+    "parameters": {
+      "curve": ["cos t", "sin t", "100t"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Near-straight helix; curvature almost invisible."
+  },
+  {
+    "id": "F193",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "twisted_cubic",
+    "proof_format": "latex",
+    "theorem": "Curvature of the twisted cubic at t=0",
+    "question": "Find the curvature of $\\gamma(t)=(t,t^2,t^3)$ at $t=0$.",
+    "proof": "At $t=0$, $\\gamma'=(1,0,0)$ and $\\gamma''=(0,2,0)$, so $\\gamma'\\times\\gamma''=(0,0,2)$ and $\\kappa=|\\gamma'\\times\\gamma''|/|\\gamma'|^3=2/1=2$.",
+    "parameters": {
+      "curve": ["t", "t^2", "t^3"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "3D Frenet frame at the origin."
+  },
+  {
+    "id": "F194",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "twisted_cubic",
+    "proof_format": "natural_language",
+    "theorem": "Curvature of the twisted cubic at t=1",
+    "question": "Compute the curvature of gamma(t) = (t, t^2, t^3) at t = 1.",
+    "proof": "At t equal to one the first derivative is one, two, three and the second is zero, two, six. Their cross product is six, minus six, two, whose norm is two times the square root of nineteen. The first derivative has norm the square root of fourteen, so the curvature is two times the square root of nineteen divided by fourteen to the three halves.",
+    "parameters": {
+      "curve": ["t", "t^2", "t^3"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Annotate the cross-product computation."
+  },
+  {
+    "id": "F195",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "twisted_cubic",
+    "proof_format": "mixed",
+    "theorem": "Curvature of the twisted cubic at t=2",
+    "question": "How do we compute the curvature of $\\gamma(t)=(t,t^2,t^3)$ at $t=2$?",
+    "proof": "At $t=2$, $\\gamma'=(1,4,12)$, $\\gamma''=(0,2,12)$ and $\\gamma'\\times\\gamma''=(24,-12,2)$ with norm $2\\sqrt{181}$. Since $|\\gamma'|=\\sqrt{161}$, $\\kappa=2\\sqrt{181}/(161\\sqrt{161})$.",
+    "parameters": {
+      "curve": ["t", "t^2", "t^3"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Annotate cross product and norms."
+  },
+  {
+    "id": "F196",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "twisted_cubic",
+    "proof_format": "latex",
+    "theorem": "Torsion of the twisted cubic at t=0",
+    "question": "Find the torsion of $\\gamma(t)=(t,t^2,t^3)$ at $t=0$.",
+    "proof": "Using $\\tau=(\\gamma'\\times\\gamma'')\\cdot\\gamma'''/|\\gamma'\\times\\gamma''|^2$ with $(\\gamma'\\times\\gamma'')=(0,0,2)$ and $\\gamma'''=(0,0,6)$, we get $\\tau=12/4=3$.",
+    "parameters": {
+      "curve": ["t", "t^2", "t^3"],
+      "evaluation_point": 0
+    },
+    "animation_notes": "Annotate the triple product."
+  },
+  {
+    "id": "F197",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "twisted_cubic",
+    "proof_format": "natural_language",
+    "theorem": "Torsion of the twisted cubic at t=1",
+    "question": "Compute the torsion of gamma(t) = (t, t^2, t^3) at t = 1.",
+    "proof": "At t equal to one the cross product is six, minus six, two, with squared norm seventy-six. The triple product with the third derivative is twelve, so the torsion is twelve over seventy-six, which simplifies to three over nineteen.",
+    "parameters": {
+      "curve": ["t", "t^2", "t^3"],
+      "evaluation_point": 1
+    },
+    "animation_notes": "Display the triple-product computation."
+  },
+  {
+    "id": "F198",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "twisted_cubic",
+    "proof_format": "mixed",
+    "theorem": "Torsion of the twisted cubic at t=2",
+    "question": "Compute the torsion of $\\gamma(t)=(t,t^2,t^3)$ at $t=2$.",
+    "proof": "The general torsion is $\\tau(t)=3/(1+9t^2+9t^4)$, so at $t=2$ we get $3/(1+36+144)=3/181$.",
+    "parameters": {
+      "curve": ["t", "t^2", "t^3"],
+      "evaluation_point": 2
+    },
+    "animation_notes": "Annotate 3/181."
+  },
+  {
+    "id": "F199",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "twisted_cubic",
+    "proof_format": "latex",
+    "theorem": "Torsion of the twisted cubic at t=1/2",
+    "question": "Let $\\gamma(t)=(t,t^2,t^3)$. Determine the torsion at $t=1/2$.",
+    "proof": "$\\tau(1/2)=3/(1+9/4+9/16)=3/((16+36+9)/16)=48/61$.",
+    "parameters": {
+      "curve": ["t", "t^2", "t^3"],
+      "evaluation_point": "1/2"
+    },
+    "animation_notes": "Annotate 0.787."
+  },
+  {
+    "id": "F200",
+    "subject": "Differential Geometry",
+    "proof_family": "Curves and Moving Frames",
+    "proof_style": "twisted_cubic",
+    "proof_format": "natural_language",
+    "theorem": "Evenness of the twisted cubic torsion",
+    "question": "Given the symmetry of gamma(t) = (t, t^2, t^3), compare its torsion at t = 1 and t = -1.",
+    "proof": "The torsion formula is three divided by one plus nine t squared plus nine t to the fourth, which depends only on t squared. Hence the torsion at minus one equals the torsion at one, namely three over nineteen.",
+    "parameters": {
+      "curve": ["t", "t^2", "t^3"],
+      "evaluation_point": -1
+    },
+    "animation_notes": "Torsion is even in t; plot it symmetric about the vertical axis."
+  }
+]

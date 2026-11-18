@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.venv/
+venv/
+
+# Model outputs and training artifacts
+models/
+*.log
+
+# Local editor/system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Manim render artifacts (videos and intermediate TeX files)
+generated/*
+!generated/.gitkeep
+
+media/*
+
+# Locally collected reviewer feedback (keep only the empty folder marker)
+feedback/*.json
+!feedback/.gitkeep

@@ -1,0 +1,2628 @@
+[
+  {
+    "record_id": "A01",
+    "proof_style": "direct_epsilon_N",
+    "question": "Prove that a_n = 3/n converges to 0.",
+    "proof": "Take any positive eps. Choose N as a natural number greater than 3/eps. Then for any n from N onwards, 3/n is at most 3/N, which is less than eps. Hence the sequence 3/n approaches 0.",
+    "targets": {
+      "sequence": "3/n",
+      "limit": 0,
+      "bound": "Choose N as a natural number greater than 3/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "3/n",
+        "start": 27,
+        "end": 30,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 44,
+        "end": 45,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "Choose N as a natural number greater than 3/eps",
+        "start": 77,
+        "end": 124,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A02",
+    "proof_style": "direct_epsilon_N",
+    "question": "Prove that a_n = (2n+1)/n converges to 2.",
+    "proof": "Let $\\varepsilon > 0$ and choose $N \\in \\mathbb{N}$ with $N > 1/\\varepsilon$. Then for every $n \\geq N$,\n\\[\n\\left|\\frac{2n+1}{n} - 2\\right| = \\frac{1}{n} \\leq \\frac{1}{N} < \\varepsilon.\n\\]\nHence $a_n \\to 2$.",
+    "targets": {
+      "sequence": "(2n+1)/n",
+      "limit": 2,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(2n+1)/n",
+        "start": 27,
+        "end": 35,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 49,
+        "end": 50,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 117,
+        "end": 134,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A03",
+    "proof_style": "direct_epsilon_N",
+    "question": "Prove that a_n = 1/(n+2) converges to 0.",
+    "proof": "Fix $\\varepsilon > 0$ and pick $N$ with $N > 1/\\varepsilon$. For any $n \\geq N$, the expression $1/(n+2)$ is smaller than $1/n$, which is at most $1/N$, which is in turn less than $\\varepsilon$. Therefore the sequence converges to 0.",
+    "targets": {
+      "sequence": "1/(n+2)",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/(n+2)",
+        "start": 27,
+        "end": 34,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 48,
+        "end": 49,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 99,
+        "end": 116,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A04",
+    "proof_style": "direct_epsilon_N",
+    "question": "Prove that a_n = 5/(2n+1) converges to 0.",
+    "proof": "Let eps be any positive number. Choose N greater than 5/eps. For n at least N, 5/(2n+1) is smaller than 5/n, which is at most 5/N, which is less than eps. Hence the sequence approaches 0.",
+    "targets": {
+      "sequence": "5/(2n+1)",
+      "limit": 0,
+      "bound": "Choose N greater than 5/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "5/(2n+1)",
+        "start": 27,
+        "end": 35,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 49,
+        "end": 50,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "Choose N greater than 5/eps",
+        "start": 91,
+        "end": 118,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A05",
+    "proof_style": "direct_epsilon_N",
+    "question": "Prove that a_n = (n+4)/(n+1) converges to 1.",
+    "proof": "Let $\\varepsilon > 0$. Choose $N \\in \\mathbb{N}$ such that $N > 3/\\varepsilon$. Then for every $n \\geq N$,\n\\[\n\\left|\\frac{n+4}{n+1} - 1\\right| = \\frac{3}{n+1} < \\frac{3}{n} \\leq \\frac{3}{N} < \\varepsilon.\n\\]\nThus $a_n \\to 1$.",
+    "targets": {
+      "sequence": "(n+4)/(n+1)",
+      "limit": 1,
+      "bound": "N > 3/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n+4)/(n+1)",
+        "start": 27,
+        "end": 38,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 52,
+        "end": 53,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 3/\\varepsilon",
+        "start": 122,
+        "end": 139,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A06",
+    "proof_style": "algebraic_first",
+    "question": "Prove that a_n = (3n+2)/(n+1) converges to 3.",
+    "proof": "First simplify the difference: (3n+2)/(n+1) - 3 equals (3n+2-3n-3)/(n+1) = -1/(n+1), so its absolute value is 1/(n+1). Given eps > 0, choose N with N > 1/eps. Then for all n >= N, the difference 1/(n+1) is less than 1/N, which is less than eps. Hence the sequence approaches 3.",
+    "targets": {
+      "sequence": "(3n+2)/(n+1)",
+      "limit": 3,
+      "bound": "choose N with N > 1/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(3n+2)/(n+1)",
+        "start": 27,
+        "end": 39,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "3",
+        "start": 53,
+        "end": 54,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "choose N with N > 1/eps",
+        "start": 197,
+        "end": 220,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A07",
+    "proof_style": "algebraic_first",
+    "question": "Prove that a_n = (4n-1)/(2n+3) converges to 2.",
+    "proof": "Write\n\\[\n\\left|\\frac{4n-1}{2n+3} - 2\\right| = \\frac{|4n-1-4n-6|}{2n+3} = \\frac{7}{2n+3}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > \\frac{7}{2\\varepsilon}$. Then for $n \\geq N$,\n\\[\n\\frac{7}{2n+3} \\leq \\frac{7}{2N} < \\varepsilon,\n\\]\nso $a_n \\to 2$.",
+    "targets": {
+      "sequence": "(4n-1)/(2n+3)",
+      "limit": 2,
+      "bound": "N > \\frac{7}{2\\varepsilon}$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(4n-1)/(2n+3)",
+        "start": 27,
+        "end": 40,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 54,
+        "end": 55,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > \\frac{7}{2\\varepsilon}",
+        "start": 190,
+        "end": 216,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A08",
+    "proof_style": "algebraic_first",
+    "question": "Prove that a_n = (n^2+2)/(n^2+n) converges to 1.",
+    "proof": "Simplify $\\left|\\frac{n^2+2}{n^2+n} - 1\\right|$ to get $\\frac{|2-n|}{n^2+n}$. When $n \\geq 2$ this is at most $n/n^2 = 1/n$. Let $\\varepsilon > 0$ and choose $N > \\max(2, 1/\\varepsilon)$. For $n \\geq N$ the difference is less than eps, so $a_n \\to 1$.",
+    "targets": {
+      "sequence": "(n^2+2)/(n^2+n)",
+      "limit": 1,
+      "bound": "N > \\max(2, 1/\\varepsilon)$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n^2+2)/(n^2+n)",
+        "start": 27,
+        "end": 42,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 56,
+        "end": 57,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(2, 1/\\varepsilon)",
+        "start": 225,
+        "end": 251,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A09",
+    "proof_style": "algebraic_first",
+    "question": "Prove that a_n = (2n^2+n+1)/(n^2+1) converges to 2.",
+    "proof": "Working out the difference gives |2n^2+n+1 - 2(n^2+1)|/(n^2+1) = |n-1|/(n^2+1). For n at least 1 this is at most n/n^2, that is 1/n. For eps > 0, pick N greater than 1/eps. Then for every n from N on, the difference is below eps. Thus the sequence tends to 2.",
+    "targets": {
+      "sequence": "(2n^2+n+1)/(n^2+1)",
+      "limit": 2,
+      "bound": "pick N greater than 1/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(2n^2+n+1)/(n^2+1)",
+        "start": 27,
+        "end": 45,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 59,
+        "end": 60,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "pick N greater than 1/eps",
+        "start": 215,
+        "end": 240,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A10",
+    "proof_style": "algebraic_first",
+    "question": "Prove that a_n = (5n+2)/(2n-1) converges to 5/2.",
+    "proof": "Compute\n\\[\n\\left|\\frac{5n+2}{2n-1} - \\frac{5}{2}\\right| = \\frac{|10n+4-10n+5|}{2(2n-1)} = \\frac{9}{2(2n-1)}.\n\\]\nFor $n \\geq 1$ we have $2n-1 \\geq n$, so this is at most $\\frac{9}{2n}$. Given $\\varepsilon > 0$, choose $N > \\frac{9}{2\\varepsilon}$; then for $n \\geq N$ the difference is less than $\\varepsilon$. Hence $a_n \\to 5/2$.",
+    "targets": {
+      "sequence": "(5n+2)/(2n-1)",
+      "limit": "5/2",
+      "bound": "N > \\frac{9}{2\\varepsilon}$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(5n+2)/(2n-1)",
+        "start": 27,
+        "end": 40,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "5/2",
+        "start": 54,
+        "end": 57,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > \\frac{9}{2\\varepsilon}",
+        "start": 284,
+        "end": 310,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A11",
+    "proof_style": "comparison",
+    "question": "Prove that a_n = sin(n)/n converges to 0.",
+    "proof": "Since sine is bounded between -1 and 1, the absolute value of sin(n)/n is at most 1/n. Choose N greater than 1/eps. Then for all n from N on, we have |sin(n)/n| at most 1/n, which is at most 1/N, which is less than eps. Hence the sequence approaches 0.",
+    "targets": {
+      "sequence": "sin(n)/n",
+      "limit": 0,
+      "bound": "Choose N greater than 1/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sin(n)/n",
+        "start": 27,
+        "end": 35,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 49,
+        "end": 50,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "Choose N greater than 1/eps",
+        "start": 146,
+        "end": 173,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A12",
+    "proof_style": "comparison",
+    "question": "Prove that a_n = cos(n)/n^2 converges to 0.",
+    "proof": "For every $n \\geq 1$,\n\\[\n\\left|\\frac{\\cos(n)}{n^2}\\right| \\leq \\frac{1}{n^2} \\leq \\frac{1}{n}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > 1/\\varepsilon$. For $n \\geq N$ we have $|a_n| \\leq 1/n < \\varepsilon$, so $a_n \\to 0$.",
+    "targets": {
+      "sequence": "cos(n)/n^2",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "cos(n)/n^2",
+        "start": 27,
+        "end": 37,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 51,
+        "end": 52,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 193,
+        "end": 210,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A13",
+    "proof_style": "comparison",
+    "question": "Prove that a_n = (-1)^n/(2n+3) converges to 0.",
+    "proof": "For every $n$, $|(-1)^n/(2n+3)| = 1/(2n+3) \\leq 1/n$. Given $\\varepsilon > 0$, pick $N > 1/\\varepsilon$. Then for $n \\geq N$ the absolute value is less than $\\varepsilon$, so the sequence goes to 0.",
+    "targets": {
+      "sequence": "(-1)^n/(2n+3)",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/(2n+3)",
+        "start": 27,
+        "end": 40,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 54,
+        "end": 55,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 149,
+        "end": 166,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A14",
+    "proof_style": "comparison",
+    "question": "Prove that a_n = (sin(n)+cos(n))/n converges to 0.",
+    "proof": "Applying the triangle inequality, the absolute value of (sin(n)+cos(n))/n is at most (|sin(n)|+|cos(n)|)/n, which is at most 2/n. For eps > 0, choose N greater than 2/eps. Then for all n >= N the size of the terms is below eps, so the sequence converges to 0.",
+    "targets": {
+      "sequence": "(sin(n)+cos(n))/n",
+      "limit": 0,
+      "bound": "choose N greater than 2/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(sin(n)+cos(n))/n",
+        "start": 27,
+        "end": 44,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 58,
+        "end": 59,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 2/eps",
+        "start": 211,
+        "end": 238,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A15",
+    "proof_style": "comparison",
+    "question": "Prove that a_n = arctan(n)/n converges to 0.",
+    "proof": "Since $0 < \\arctan(n) < \\pi/2$ for every $n \\geq 1$,\n\\[\n\\left|\\frac{\\arctan(n)}{n}\\right| \\leq \\frac{\\pi/2}{n}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > \\pi/(2\\varepsilon)$. Then for $n \\geq N$, $|a_n| < \\varepsilon$, so $a_n \\to 0$.",
+    "targets": {
+      "sequence": "arctan(n)/n",
+      "limit": 0,
+      "bound": "N > \\pi/(2\\varepsilon)$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "arctan(n)/n",
+        "start": 27,
+        "end": 38,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 52,
+        "end": 53,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > \\pi/(2\\varepsilon)",
+        "start": 211,
+        "end": 233,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A16",
+    "proof_style": "squeeze",
+    "question": "Prove that a_n = (-1)^n/n converges to 0.",
+    "proof": "The alternating sequence is trapped between -1/n and 1/n, that is -1/n is at most (-1)^n/n which is at most 1/n. Since both bounding sequences go to 0, the squeeze theorem tells us the middle sequence also converges to 0.",
+    "targets": {
+      "sequence": "(-1)^n/n",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/n",
+        "start": 27,
+        "end": 35,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 49,
+        "end": 50,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A17",
+    "proof_style": "squeeze",
+    "question": "Prove that a_n = sin(n)/n converges to 0.",
+    "proof": "For every $n \\geq 1$,\n\\[\n-\\frac{1}{n} \\leq \\frac{\\sin(n)}{n} \\leq \\frac{1}{n}.\n\\]\nBoth bounding sequences tend to $0$, so by the squeeze theorem $a_n \\to 0$.",
+    "targets": {
+      "sequence": "sin(n)/n",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sin(n)/n",
+        "start": 27,
+        "end": 35,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 49,
+        "end": 50,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A18",
+    "proof_style": "squeeze",
+    "question": "Prove that a_n = n/(n^2+1) converges to 0.",
+    "proof": "Since $0 \\leq n/(n^2+1) \\leq n/n^2 = 1/n$ for every $n \\geq 1$, and $1/n \\to 0$, the squeeze theorem gives $a_n \\to 0$.",
+    "targets": {
+      "sequence": "n/(n^2+1)",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "n/(n^2+1)",
+        "start": 27,
+        "end": 36,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 50,
+        "end": 51,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A19",
+    "proof_style": "squeeze",
+    "question": "Prove that a_n = (cos(n)+2)/n converges to 0.",
+    "proof": "Because cos(n) is between -1 and 1, the numerator cos(n)+2 is between 1 and 3. Dividing by n, the terms are between 1/n and 3/n. Both of these approach 0, so the squeeze theorem gives convergence to 0.",
+    "targets": {
+      "sequence": "(cos(n)+2)/n",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(cos(n)+2)/n",
+        "start": 27,
+        "end": 39,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 53,
+        "end": 54,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A20",
+    "proof_style": "squeeze",
+    "question": "Prove that a_n = 1/(n+sin(n)) converges to 0.",
+    "proof": "For $n \\geq 2$ we have $n + \\sin(n) \\geq n-1 > 0$, hence\n\\[\n0 \\leq \\frac{1}{n+\\sin(n)} \\leq \\frac{1}{n-1}.\n\\]\nSince $1/(n-1) \\to 0$, the squeeze theorem yields $a_n \\to 0$.",
+    "targets": {
+      "sequence": "1/(n+sin(n))",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/(n+sin(n))",
+        "start": 27,
+        "end": 39,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 53,
+        "end": 54,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A21",
+    "proof_style": "monotone_bounded",
+    "question": "Prove that a_n = 1 - 1/2^n converges to 1 using monotone convergence.",
+    "proof": "The difference between consecutive terms is 1/2^(n+1), which is positive, so the sequence is increasing. Every term is smaller than 1, so the sequence is bounded above. Since 1 - a_n equals 1/2^n, which tends to 0, the supremum is 1. By the Monotone Convergence Theorem, the sequence converges to 1.",
+    "targets": {
+      "sequence": "1 - 1/2^n",
+      "limit": 1
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1 - 1/2^n",
+        "start": 27,
+        "end": 36,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 50,
+        "end": 51,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A22",
+    "proof_style": "monotone_bounded",
+    "question": "Prove that a_n = n/(n+1) converges to 1 using monotone convergence.",
+    "proof": "Write $a_n = 1 - 1/(n+1)$. Then\n\\[\na_{n+1} - a_n = \\frac{1}{n+1} - \\frac{1}{n+2} > 0,\n\\]\nso the sequence is increasing. It is bounded above by $1$, and $1 - a_n = 1/(n+1) \\to 0$, so the supremum is $1$. The Monotone Convergence Theorem gives $a_n \\to 1$.",
+    "targets": {
+      "sequence": "n/(n+1)",
+      "limit": 1
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "n/(n+1)",
+        "start": 27,
+        "end": 34,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 48,
+        "end": 49,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A23",
+    "proof_style": "monotone_bounded",
+    "question": "Prove that a_n = 1 - 1/n^2 converges to 1 using monotone convergence.",
+    "proof": "For $n \\geq 1$ the difference $a_{n+1} - a_n$ equals $1/n^2 - 1/(n+1)^2$, which is positive. So the sequence is increasing. Also $a_n < 1$, so it is bounded above. Since $1 - a_n = 1/n^2 \\to 0$, the supremum is $1$ and the Monotone Convergence Theorem gives convergence to $1$.",
+    "targets": {
+      "sequence": "1 - 1/n^2",
+      "limit": 1
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1 - 1/n^2",
+        "start": 27,
+        "end": 36,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 50,
+        "end": 51,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A24",
+    "proof_style": "monotone_bounded",
+    "question": "Prove that a_n = sqrt(n+1)-sqrt(n) converges using monotone convergence.",
+    "proof": "Rationalising gives a_n = 1/(sqrt(n+1)+sqrt(n)). This shows the terms are positive and decreasing, so the sequence is decreasing and bounded below by 0. From the same formula, the terms tend to 0, so the limit is 0.",
+    "targets": {
+      "sequence": "sqrt(n+1)-sqrt(n)",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sqrt(n+1)-sqrt(n)",
+        "start": 27,
+        "end": 44,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 303,
+        "end": 304,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A25",
+    "proof_style": "monotone_bounded",
+    "question": "Prove that a_n = 1/2^n converges to 0 using monotone convergence.",
+    "proof": "We have $a_{n+1} = a_n/2 < a_n$, so the sequence is decreasing and bounded below by $0$. It therefore converges to some limit $L$. Taking limits in $a_{n+1} = a_n/2$ gives $L = L/2$, so $L = 0$.",
+    "targets": {
+      "sequence": "1/2^n",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/2^n",
+        "start": 27,
+        "end": 32,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 46,
+        "end": 47,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A26",
+    "proof_style": "definition_verbatim",
+    "question": "Prove that the constant sequence a_n = 7 converges to 7.",
+    "proof": "Take any eps > 0. With N equal to 1, every term of the sequence is exactly 7, so the distance from the limit is 0, which is less than eps. This is precisely what convergence means.",
+    "targets": {
+      "sequence": "7",
+      "limit": 7
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "7",
+        "start": 49,
+        "end": 50,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "7",
+        "start": 64,
+        "end": 65,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A27",
+    "proof_style": "definition_verbatim",
+    "question": "Prove that a_n = 0 converges to 0.",
+    "proof": "Let $\\varepsilon > 0$ and take $N = 1$. For every $n \\geq N$,\n\\[\n|a_n - 0| = 0 < \\varepsilon.\n\\]\nHence $a_n \\to 0$.",
+    "targets": {
+      "sequence": "0",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "0",
+        "start": 27,
+        "end": 28,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 42,
+        "end": 43,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A28",
+    "proof_style": "definition_verbatim",
+    "question": "Prove that a_n = 2/n converges to 0.",
+    "proof": "Given $\\varepsilon > 0$, choose $N$ with $N > 2/\\varepsilon$. For $n \\geq N$, $|2/n| = 2/n \\leq 2/N < \\varepsilon$. This directly verifies the definition of convergence to 0.",
+    "targets": {
+      "sequence": "2/n",
+      "limit": 0,
+      "bound": "N > 2/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "2/n",
+        "start": 27,
+        "end": 30,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 44,
+        "end": 45,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon",
+        "start": 96,
+        "end": 113,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A29",
+    "proof_style": "definition_verbatim",
+    "question": "Prove that a_n = (n+1)/n converges to 1.",
+    "proof": "Let eps > 0. Choose N greater than 1/eps. Then for n at least N, the difference |(n+1)/n - 1| equals 1/n, which is at most 1/N, which is less than eps. Hence the sequence approaches 1 by the very definition of convergence.",
+    "targets": {
+      "sequence": "(n+1)/n",
+      "limit": 1,
+      "bound": "Choose N greater than 1/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n+1)/n",
+        "start": 27,
+        "end": 34,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 48,
+        "end": 49,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "Choose N greater than 1/eps",
+        "start": 71,
+        "end": 98,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A30",
+    "proof_style": "definition_verbatim",
+    "question": "Prove that a_n = 1/n^3 converges to 0.",
+    "proof": "Let $\\varepsilon > 0$ and choose $N \\in \\mathbb{N}$ with $N > \\varepsilon^{-1/3}$. For every $n \\geq N$,\n\\[\n\\left|\\frac{1}{n^3} - 0\\right| = \\frac{1}{n^3} \\leq \\frac{1}{N^3} < \\varepsilon.\n\\]\nHence $a_n \\to 0$.",
+    "targets": {
+      "sequence": "1/n^3",
+      "limit": 0,
+      "bound": "N > \\varepsilon^{-1/3}$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/n^3",
+        "start": 27,
+        "end": 32,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 46,
+        "end": 47,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > \\varepsilon^{-1/3",
+        "start": 114,
+        "end": 135,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A31",
+    "proof_style": "telescoping",
+    "question": "Prove that a_n = sum_{k=1}^n 1/(k(k+1)) converges to 1.",
+    "proof": "Each term 1/(k(k+1)) can be written as 1/k - 1/(k+1). When we add the first n terms, the intermediate pieces cancel, leaving 1 - 1/(n+1). This tends to 1.",
+    "targets": {
+      "sequence": "sum_{k=1}^n 1/(k(k+1))",
+      "limit": 1
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n 1/(k(k+1))",
+        "start": 27,
+        "end": 49,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 63,
+        "end": 64,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A32",
+    "proof_style": "telescoping",
+    "question": "Prove that a_n = sum_{k=1}^n 1/((2k-1)(2k+1)) converges to 1/2.",
+    "proof": "Use the decomposition\n\\[\n\\frac{1}{(2k-1)(2k+1)} = \\frac{1}{2}\\left(\\frac{1}{2k-1} - \\frac{1}{2k+1}\\right).\n\\]\nThe sum telescopes to $\\frac{1}{2}(1 - 1/(2n+1))$, which tends to $1/2$.",
+    "targets": {
+      "sequence": "sum_{k=1}^n 1/((2k-1)(2k+1))",
+      "limit": "1/2"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n 1/((2k-1)(2k+1))",
+        "start": 27,
+        "end": 55,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 69,
+        "end": 72,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A33",
+    "proof_style": "telescoping",
+    "question": "Prove that a_n = sum_{k=1}^n (1/k - 1/(k+1)) converges to 1.",
+    "proof": "The sum $\\sum_{k=1}^n (1/k - 1/(k+1))$ telescopes directly, leaving only $1 - 1/(n+1)$. Since $1/(n+1) \\to 0$, the sequence converges to $1$.",
+    "targets": {
+      "sequence": "sum_{k=1}^n (1/k - 1/(k+1))",
+      "limit": 1
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n (1/k - 1/(k+1))",
+        "start": 27,
+        "end": 54,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 68,
+        "end": 69,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A34",
+    "proof_style": "telescoping",
+    "question": "Prove that a_n = sum_{k=1}^n 1/(k(k+2)) converges to 3/4.",
+    "proof": "Write 1/(k(k+2)) as half of (1/k - 1/(k+2)). Summing from k=1 to n, most terms cancel, and we are left with half of (1 + 1/2 - 1/(n+1) - 1/(n+2)). This tends to half of 3/2, which is 3/4.",
+    "targets": {
+      "sequence": "sum_{k=1}^n 1/(k(k+2))",
+      "limit": "3/4"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n 1/(k(k+2))",
+        "start": 27,
+        "end": 49,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "3/4",
+        "start": 63,
+        "end": 66,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A35",
+    "proof_style": "telescoping",
+    "question": "Prove that a_n = sum_{k=1}^n (1/sqrt(k) - 1/sqrt(k+1)) converges to 1.",
+    "proof": "The sum telescopes:\n\\[\n\\sum_{k=1}^n \\left(\\frac{1}{\\sqrt{k}} - \\frac{1}{\\sqrt{k+1}}\\right) = 1 - \\frac{1}{\\sqrt{n+1}}.\n\\]\nSince $1/\\sqrt{n+1} \\to 0$, the sequence converges to $1$.",
+    "targets": {
+      "sequence": "sum_{k=1}^n (1/sqrt(k)-1/sqrt(k+1))",
+      "limit": 1
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n (1/sqrt(k) - 1/sqrt(k+1))",
+        "start": 27,
+        "end": 64,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 78,
+        "end": 79,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A36",
+    "proof_style": "geometric",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (1/2)^k converges to 2.",
+    "proof": "By the geometric series formula, the partial sum is (1 - (1/2)^n)/(1 - 1/2), which simplifies to 2(1 - 1/2^n). As n grows, 1/2^n tends to 0, so the sum tends to 2.",
+    "targets": {
+      "sequence": "sum_{k=0}^{n-1} (1/2)^k",
+      "limit": 2
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=0}^{n-1} (1/2)^k",
+        "start": 27,
+        "end": 50,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 64,
+        "end": 65,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A37",
+    "proof_style": "geometric",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (1/3)^k converges to 3/2.",
+    "proof": "By the geometric sum formula,\n\\[\n\\sum_{k=0}^{n-1} \\left(\\frac{1}{3}\\right)^k = \\frac{1 - (1/3)^n}{1 - 1/3} = \\frac{3}{2}\\left(1 - \\left(\\frac{1}{3}\\right)^n\\right).\n\\]\nSince $(1/3)^n \\to 0$, the limit is $3/2$.",
+    "targets": {
+      "sequence": "sum_{k=0}^{n-1} (1/3)^k",
+      "limit": "3/2"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=0}^{n-1} (1/3)^k",
+        "start": 27,
+        "end": 50,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "3/2",
+        "start": 64,
+        "end": 67,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A38",
+    "proof_style": "geometric",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (-1/2)^k converges to 2/3.",
+    "proof": "The ratio of the geometric series is $-1/2$, so\n\\[\n\\sum_{k=0}^{n-1} \\left(-\\frac{1}{2}\\right)^k = \\frac{1 - (-1/2)^n}{1 + 1/2} = \\frac{2}{3}\\left(1 - \\left(-\\frac{1}{2}\\right)^n\\right).\n\\]\nSince $(-1/2)^n \\to 0$, the limit is $2/3$.",
+    "targets": {
+      "sequence": "sum_{k=0}^{n-1} (-1/2)^k",
+      "limit": "2/3"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=0}^{n-1} (-1/2)^k",
+        "start": 27,
+        "end": 51,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "2/3",
+        "start": 65,
+        "end": 68,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A39",
+    "proof_style": "geometric",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (2/3)^k converges to 3.",
+    "proof": "The geometric formula gives the partial sum as (1 - (2/3)^n)/(1 - 2/3), which equals 3(1 - (2/3)^n). As n increases, (2/3)^n goes to 0, so the partial sums approach 3.",
+    "targets": {
+      "sequence": "sum_{k=0}^{n-1} (2/3)^k",
+      "limit": 3
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=0}^{n-1} (2/3)^k",
+        "start": 27,
+        "end": 50,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "3",
+        "start": 64,
+        "end": 65,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A40",
+    "proof_style": "geometric",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (1/4)^k converges to 4/3.",
+    "proof": "By the geometric formula,\n\\[\n\\sum_{k=0}^{n-1} \\left(\\frac{1}{4}\\right)^k = \\frac{1 - (1/4)^n}{1 - 1/4} = \\frac{4}{3}\\left(1 - \\left(\\frac{1}{4}\\right)^n\\right).\n\\]\nSince $(1/4)^n \\to 0$, the limit is $4/3$.",
+    "targets": {
+      "sequence": "sum_{k=0}^{n-1} (1/4)^k",
+      "limit": "4/3"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=0}^{n-1} (1/4)^k",
+        "start": 27,
+        "end": 50,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "4/3",
+        "start": 64,
+        "end": 67,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A41",
+    "proof_style": "induction",
+    "question": "Prove that a_n = 1/2^n converges to 0.",
+    "proof": "By an easy induction, 2^n is at least n for every n. So 1/2^n is at most 1/n. Given eps > 0, choose N greater than 1/eps. For all n from N on, the terms are at most 1/n, which is below eps. Hence the sequence goes to 0.",
+    "targets": {
+      "sequence": "1/2^n",
+      "limit": 0,
+      "bound": "choose N greater than 1/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/2^n",
+        "start": 27,
+        "end": 32,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 46,
+        "end": 47,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 1/eps",
+        "start": 149,
+        "end": 176,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A42",
+    "proof_style": "induction",
+    "question": "Prove that a_n = 1/n! converges to 0.",
+    "proof": "By induction, $n! \\geq n$ for all $n \\geq 1$. Hence\n\\[\n0 < \\frac{1}{n!} \\leq \\frac{1}{n}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > 1/\\varepsilon$; then for $n \\geq N$ we have $1/n! \\leq 1/n < \\varepsilon$. Therefore $a_n \\to 0$.",
+    "targets": {
+      "sequence": "1/n!",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/n!",
+        "start": 27,
+        "end": 31,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 45,
+        "end": 46,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 182,
+        "end": 199,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A43",
+    "proof_style": "induction",
+    "question": "Prove that a_n = n/3^n converges to 0.",
+    "proof": "An induction argument shows $3^n \\geq n^2$ for $n \\geq 2$, hence $n/3^n \\leq 1/n$. Given $\\varepsilon > 0$, choose $N > \\max(2, 1/\\varepsilon)$. Then for $n \\geq N$, $|a_n| \\leq 1/n < \\varepsilon$, so $a_n \\to 0$.",
+    "targets": {
+      "sequence": "n/3^n",
+      "limit": 0,
+      "bound": "N > \\max(2, 1/\\varepsilon)$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "n/3^n",
+        "start": 27,
+        "end": 32,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 46,
+        "end": 47,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(2, 1/\\varepsilon)",
+        "start": 172,
+        "end": 198,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A44",
+    "proof_style": "induction",
+    "question": "Prove that a_n = 1/(n 2^n) converges to 0.",
+    "proof": "By induction, 2^n is at least n, so n*2^n is at least n^2, and therefore 1/(n*2^n) is at most 1/n^2, which is at most 1/n. Take N greater than 1/eps. For all n from N on, the terms are below eps, so the sequence approaches 0.",
+    "targets": {
+      "sequence": "1/(n 2^n)",
+      "limit": 0,
+      "bound": "Take N greater than 1/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/(n 2^n)",
+        "start": 27,
+        "end": 36,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 50,
+        "end": 51,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "Take N greater than 1/eps",
+        "start": 183,
+        "end": 208,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A45",
+    "proof_style": "induction",
+    "question": "Prove that a_n = 1/(2^n+1) converges to 0.",
+    "proof": "By induction, $2^n \\geq n$, so $2^n + 1 \\geq n$, and\n\\[\n0 < \\frac{1}{2^n+1} \\leq \\frac{1}{n}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > 1/\\varepsilon$. Then $|a_n| < \\varepsilon$ for all $n \\geq N$, so $a_n \\to 0$.",
+    "targets": {
+      "sequence": "1/(2^n+1)",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/(2^n+1)",
+        "start": 27,
+        "end": 36,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 50,
+        "end": 51,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 191,
+        "end": 208,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A46",
+    "proof_style": "contradiction",
+    "question": "Prove by contradiction that a_n = 1/n converges to 0.",
+    "proof": "Suppose the sequence did not converge to 0. Then there would be some eps > 0 such that no matter how large we take N, there would be an n at least N with |1/n| at least eps. But if we choose N greater than 1/eps, then any n at least N satisfies 1/n at most 1/N, which is below eps. That is a contradiction, so the sequence must converge to 0.",
+    "targets": {
+      "sequence": "1/n",
+      "limit": 0,
+      "bound": "choose N greater than 1/eps, then any n at least N satisfies 1/n at most 1/N, which is below eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/n",
+        "start": 44,
+        "end": 47,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 61,
+        "end": 62,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 1/eps, then any n at least N satisfies 1/n at most 1/N, which is below eps",
+        "start": 255,
+        "end": 351,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A47",
+    "proof_style": "contradiction",
+    "question": "Prove by contradiction that a_n = 1/n^2 converges to 0.",
+    "proof": "Assume $a_n \\not\\to 0$. Then there is $\\varepsilon > 0$ such that, for every $N$, some $n \\geq N$ has $1/n^2 \\geq \\varepsilon$. Choose $N > 1/\\sqrt{\\varepsilon}$; then for $n \\geq N$ we have $1/n^2 \\leq 1/N^2 < \\varepsilon$, contradiction. Hence $a_n \\to 0$.",
+    "targets": {
+      "sequence": "1/n^2",
+      "limit": 0,
+      "bound": "N > 1/\\sqrt{\\varepsilon}$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/n^2",
+        "start": 44,
+        "end": 49,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 63,
+        "end": 64,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\sqrt{\\varepsilon",
+        "start": 209,
+        "end": 232,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A48",
+    "proof_style": "contradiction",
+    "question": "Prove by contradiction that a_n = (-1)^n/n converges to 0.",
+    "proof": "Suppose not. Then for some $\\varepsilon > 0$ and every $N$ there is $n \\geq N$ with $|(-1)^n/n| \\geq \\varepsilon$. But $|(-1)^n/n| = 1/n$. Taking $N > 1/\\varepsilon$ gives $1/n \\leq 1/N < \\varepsilon$ for all $n \\geq N$, a contradiction. So $a_n \\to 0$.",
+    "targets": {
+      "sequence": "(-1)^n/n",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$ gives $1/n \\leq 1/N < \\varepsilon$ for all $n \\geq N$, a contradiction"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/n",
+        "start": 44,
+        "end": 52,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 66,
+        "end": 67,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon$ gives $1/n \\leq 1/N < \\varepsilon$ for all $n \\geq N$, a contradiction",
+        "start": 223,
+        "end": 312,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A49",
+    "proof_style": "contradiction",
+    "question": "Prove by contradiction that a_n = (n+1)/n converges to 1.",
+    "proof": "Suppose the sequence did not converge to 1. Then there is eps > 0 such that for every N there is some n at least N with |(n+1)/n - 1| at least eps. But that difference equals 1/n. Taking N greater than 1/eps gives 1/n at most 1/N, which is below eps, contradicting the supposition. Hence the sequence converges to 1.",
+    "targets": {
+      "sequence": "(n+1)/n",
+      "limit": 1,
+      "bound": "Taking N greater than 1/eps gives 1/n at most 1/N, which is below eps, contradicting the supposition"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n+1)/n",
+        "start": 44,
+        "end": 51,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 65,
+        "end": 66,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "Taking N greater than 1/eps gives 1/n at most 1/N, which is below eps, contradicting the supposition",
+        "start": 255,
+        "end": 355,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A50",
+    "proof_style": "contradiction",
+    "question": "Prove by contradiction that a_n = 3/(n+2) converges to 0.",
+    "proof": "Assume $a_n \\not\\to 0$. Then there is $\\varepsilon > 0$ such that, for every $N$, some $n \\geq N$ has $3/(n+2) \\geq \\varepsilon$. Choose $N > 3/\\varepsilon$. Then for $n \\geq N$,\n\\[\n\\frac{3}{n+2} < \\frac{3}{n} \\leq \\frac{3}{N} < \\varepsilon,\n\\]\na contradiction. Hence $a_n \\to 0$.",
+    "targets": {
+      "sequence": "3/(n+2)",
+      "limit": 0,
+      "bound": "N > 3/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "3/(n+2)",
+        "start": 44,
+        "end": 51,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 65,
+        "end": 66,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 3/\\varepsilon",
+        "start": 213,
+        "end": 230,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A51",
+    "proof_style": "subsequence",
+    "question": "Prove that a_n = (-1)^n/n converges to 0 by using subsequences.",
+    "proof": "Look at the even-indexed and odd-indexed terms separately. The even terms are 1/(2k), which goes to 0. The odd terms are -1/(2k-1), which also goes to 0. Since every term is in one of these two subsequences and both converge to 0, the whole sequence converges to 0.",
+    "targets": {
+      "sequence": "(-1)^n/n",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/n",
+        "start": 27,
+        "end": 35,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 49,
+        "end": 50,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A52",
+    "proof_style": "subsequence",
+    "question": "Prove that a_n = sin(n pi/2)/n converges to 0.",
+    "proof": "Split into residues modulo $4$. For $n = 4k$, $4k+1$, $4k+2$, $4k+3$, the values are respectively $0$, $\\frac{1}{4k+1}$, $0$, $-\\frac{1}{4k+3}$. Each subsequence tends to $0$, so the full sequence converges to $0$.",
+    "targets": {
+      "sequence": "sin(n pi/2)/n",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sin(n pi/2)/n",
+        "start": 27,
+        "end": 40,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 54,
+        "end": 55,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A53",
+    "proof_style": "subsequence",
+    "question": "Prove that a_n = (1+(-1)^n)/n converges to 0.",
+    "proof": "For even $n = 2k$ we have $a_{2k} = 2/(2k) = 1/k \\to 0$. For odd $n = 2k-1$ we have $a_{2k-1} = 0$. Both parity subsequences tend to $0$, so the sequence converges to $0$.",
+    "targets": {
+      "sequence": "(1+(-1)^n)/n",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(1+(-1)^n)/n",
+        "start": 27,
+        "end": 39,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 53,
+        "end": 54,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A54",
+    "proof_style": "subsequence",
+    "question": "Prove that a_n = cos(n pi)/n converges to 0.",
+    "proof": "Because cos(n pi) is (-1)^n, the sequence is just the alternating sequence (-1)^n/n. Looking at even terms gives 1/(2k) and at odd terms gives -1/(2k-1), and both tend to 0. Hence the whole sequence converges to 0.",
+    "targets": {
+      "sequence": "cos(n pi)/n",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "cos(n pi)/n",
+        "start": 27,
+        "end": 38,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 52,
+        "end": 53,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A55",
+    "proof_style": "subsequence",
+    "question": "Prove that a_n = (-1)^n/(n+1)+1/n converges to 0.",
+    "proof": "For even $n = 2k$,\n\\[\na_{2k} = \\frac{1}{2k+1} + \\frac{1}{2k} \\to 0,\n\\]\nand for odd $n = 2k-1$,\n\\[\na_{2k-1} = -\\frac{1}{2k} + \\frac{1}{2k-1} \\to 0.\n\\]\nBoth parity subsequences converge to $0$, so $a_n \\to 0$.",
+    "targets": {
+      "sequence": "(-1)^n/(n+1)+1/n",
+      "limit": 0
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/(n+1)+1/n",
+        "start": 27,
+        "end": 43,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 57,
+        "end": 58,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A56",
+    "proof_style": "tail_bound",
+    "question": "Prove that a_n = (n+3)/(2n+1) converges to 1/2.",
+    "proof": "The difference from 1/2 simplifies to 5/[2(2n+1)], which is at most 5/(4n). Given eps > 0, choose N greater than 5/(4eps). Then for every n at least N the tail of the sequence is within eps of 1/2, so the sequence converges to 1/2.",
+    "targets": {
+      "sequence": "(n+3)/(2n+1)",
+      "limit": "1/2",
+      "bound": "choose N greater than 5/(4eps)"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n+3)/(2n+1)",
+        "start": 27,
+        "end": 39,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 53,
+        "end": 56,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 5/(4eps)",
+        "start": 156,
+        "end": 186,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A57",
+    "proof_style": "tail_bound",
+    "question": "Prove that a_n = (2n^2+1)/(n^2+3) converges to 2.",
+    "proof": "Compute\n\\[\n\\left|\\frac{2n^2+1}{n^2+3} - 2\\right| = \\frac{5}{n^2+3} \\leq \\frac{5}{n^2} \\leq \\frac{5}{n}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > 5/\\varepsilon$. For $n \\geq N$ the tail bound is below $\\varepsilon$, so $a_n \\to 2$.",
+    "targets": {
+      "sequence": "(2n^2+1)/(n^2+3)",
+      "limit": 2,
+      "bound": "N > 5/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(2n^2+1)/(n^2+3)",
+        "start": 27,
+        "end": 43,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 57,
+        "end": 58,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 5/\\varepsilon",
+        "start": 208,
+        "end": 225,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A58",
+    "proof_style": "tail_bound",
+    "question": "Prove that a_n = (3n-2)/(n+1) converges to 3.",
+    "proof": "The difference from $3$ is $\\frac{5}{n+1} \\leq \\frac{5}{n}$. Given $\\varepsilon > 0$, choose $N > 5/\\varepsilon$. Then for every $n \\geq N$ the tail of the sequence lies within $\\varepsilon$ of $3$, so $a_n \\to 3$.",
+    "targets": {
+      "sequence": "(3n-2)/(n+1)",
+      "limit": 3,
+      "bound": "N > 5/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(3n-2)/(n+1)",
+        "start": 27,
+        "end": 39,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "3",
+        "start": 53,
+        "end": 54,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 5/\\varepsilon",
+        "start": 157,
+        "end": 174,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A59",
+    "proof_style": "tail_bound",
+    "question": "Prove that a_n = (n^2+2n)/(3n^2+1) converges to 1/3.",
+    "proof": "Subtracting 1/3 and simplifying gives |6n - 1|/[3(3n^2+1)]. The numerator is at most 6n, and the denominator is at least 9n^2, so the whole expression is at most 2/(3n). For eps > 0, choose N greater than 2/(3eps). Then for every n from N on, the tail is within eps of 1/3, so the sequence converges to 1/3.",
+    "targets": {
+      "sequence": "(n^2+2n)/(3n^2+1)",
+      "limit": "1/3",
+      "bound": "choose N greater than 2/(3eps)"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n^2+2n)/(3n^2+1)",
+        "start": 27,
+        "end": 44,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1/3",
+        "start": 58,
+        "end": 61,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 2/(3eps)",
+        "start": 253,
+        "end": 283,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A60",
+    "proof_style": "tail_bound",
+    "question": "Prove that a_n = 1/(sqrt(n)+1) converges to 0.",
+    "proof": "For $n \\geq 1$,\n\\[\n0 < \\frac{1}{\\sqrt{n}+1} \\leq \\frac{1}{\\sqrt{n}}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > 1/\\varepsilon^2$. Then for $n \\geq N$,\n\\[\n\\frac{1}{\\sqrt{n}} \\leq \\frac{1}{\\sqrt{N}} < \\varepsilon,\n\\]\nso $a_n \\to 0$.",
+    "targets": {
+      "sequence": "1/(sqrt(n)+1)",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon^2$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/(sqrt(n)+1)",
+        "start": 27,
+        "end": 40,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 54,
+        "end": 55,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon^2",
+        "start": 170,
+        "end": 189,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A61",
+    "proof_style": "dominant_term",
+    "question": "Prove that a_n = (3n^2+2n+1)/(n^2+5) converges to 3.",
+    "proof": "The leading terms give 3n^2/n^2, which is 3. Making that precise, the difference from 3 equals |2n - 14|/(n^2+5). Once n is at least 7, the numerator is at most 2n, so the difference is at most 2/n. Choosing N above max(7, 2/eps) guarantees the tail is within eps of 3, so the sequence converges to 3.",
+    "targets": {
+      "sequence": "(3n^2+2n+1)/(n^2+5)",
+      "limit": 3,
+      "bound": "Choosing N above max(7, 2/eps) guarantees the tail is within eps of 3, so the sequence converges to 3"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(3n^2+2n+1)/(n^2+5)",
+        "start": 27,
+        "end": 46,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "3",
+        "start": 60,
+        "end": 61,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "Choosing N above max(7, 2/eps) guarantees the tail is within eps of 3, so the sequence converges to 3",
+        "start": 269,
+        "end": 370,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A62",
+    "proof_style": "dominant_term",
+    "question": "Prove that a_n = (2n^3-1)/(4n^3+n) converges to 1/2.",
+    "proof": "The leading terms give $2n^3/4n^3 = 1/2$. Indeed,\n\\[\n\\left|\\frac{2n^3-1}{4n^3+n} - \\frac{1}{2}\\right| = \\frac{n+2}{2(4n^3+n)}.\n\\]\nFor $n \\geq 1$ this is at most $\\frac{3n}{8n^3} = \\frac{3}{8n^2} \\leq \\frac{3}{8n}$. Choosing $N > 3/(8\\varepsilon)$ gives $a_n \\to 1/2$.",
+    "targets": {
+      "sequence": "(2n^3-1)/(4n^3+n)",
+      "limit": "1/2",
+      "bound": "N > 3/(8\\varepsilon)$ gives $a_n \\to 1/2$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(2n^3-1)/(4n^3+n)",
+        "start": 27,
+        "end": 44,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 58,
+        "end": 61,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 3/(8\\varepsilon)$ gives $a_n \\to 1/2",
+        "start": 295,
+        "end": 335,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A63",
+    "proof_style": "dominant_term",
+    "question": "Prove that a_n = (5n^2+n)/(2n^2+3) converges to 5/2.",
+    "proof": "The dominant terms give the candidate limit $5/2$. The difference from $5/2$ is $\\frac{|2n-15|}{2(2n^2+3)}$, which for $n \\geq 8$ is at most $\\frac{2n}{4n^2} = \\frac{1}{2n}$. Take $N > \\max(8, 1/(2\\varepsilon))$; then the tail is within $\\varepsilon$ of $5/2$.",
+    "targets": {
+      "sequence": "(5n^2+n)/(2n^2+3)",
+      "limit": "5/2",
+      "bound": "N > \\max(8, 1/(2\\varepsilon))$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(5n^2+n)/(2n^2+3)",
+        "start": 27,
+        "end": 44,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "5/2",
+        "start": 58,
+        "end": 61,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(8, 1/(2\\varepsilon))",
+        "start": 251,
+        "end": 280,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A64",
+    "proof_style": "dominant_term",
+    "question": "Prove that a_n = (n^3+2n)/(2n^3+n^2+1) converges to 1/2.",
+    "proof": "The dominant terms in numerator and denominator are n^3 and 2n^3, so the candidate limit is 1/2. Working out the difference gives |n^2 - 4n + 1|/[2(2n^3+n^2+1)]. For n at least 5, this is at most 2n^2/(4n^3), that is 1/(2n). Taking N above max(5, 1/(2eps)) makes the tail lie within eps of 1/2, so the sequence converges to 1/2.",
+    "targets": {
+      "sequence": "(n^3+2n)/(2n^3+n^2+1)",
+      "limit": "1/2",
+      "bound": "Taking N above max(5, 1/(2eps)) makes the tail lie within eps of 1/2, so the sequence converges to 1/2"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n^3+2n)/(2n^3+n^2+1)",
+        "start": 27,
+        "end": 48,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 62,
+        "end": 65,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "Taking N above max(5, 1/(2eps)) makes the tail lie within eps of 1/2, so the sequence converges to 1/2",
+        "start": 299,
+        "end": 401,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A65",
+    "proof_style": "dominant_term",
+    "question": "Prove that a_n = (4n^4+n^2)/(2n^4+3n) converges to 2.",
+    "proof": "The dominant terms give $4n^4/2n^4 = 2$. In fact,\n\\[\n\\left|\\frac{4n^4+n^2}{2n^4+3n} - 2\\right| = \\frac{|n^2-6n|}{2n^4+3n}.\n\\]\nFor $n \\geq 6$ this is at most $\\frac{n^2}{2n^4} = \\frac{1}{2n^2}$. Choosing $N > \\max(6, \\sqrt{1/(2\\varepsilon)})$ gives $a_n \\to 2$.",
+    "targets": {
+      "sequence": "(4n^4+n^2)/(2n^4+3n)",
+      "limit": 2,
+      "bound": "N > \\max(6, \\sqrt{1/(2\\varepsilon)})$ gives $a_n \\to 2$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(4n^4+n^2)/(2n^4+3n)",
+        "start": 27,
+        "end": 47,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 61,
+        "end": 62,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(6, \\sqrt{1/(2\\varepsilon)})$ gives $a_n \\to 2",
+        "start": 275,
+        "end": 329,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A66",
+    "proof_style": "limit_algebra",
+    "question": "Prove that a_n = (1+1/n)(2-1/n) converges to 2.",
+    "proof": "Since 1 + 1/n tends to 1 and 2 - 1/n tends to 2, the product rule for limits shows that the product of these two sequences tends to 1 times 2, which is 2.",
+    "targets": {
+      "sequence": "(1+1/n)(2-1/n)",
+      "limit": 2
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(1+1/n)(2-1/n)",
+        "start": 27,
+        "end": 41,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 55,
+        "end": 56,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A67",
+    "proof_style": "limit_algebra",
+    "question": "Prove that a_n = (n+1)/n + 1/n^2 converges to 1.",
+    "proof": "Write $a_n = 1 + 1/n + 1/n^2$. Since $1/n \\to 0$ and $1/n^2 \\to 0$, the sum rule gives\n\\[\na_n \\to 1 + 0 + 0 = 1.\n\\]",
+    "targets": {
+      "sequence": "(n+1)/n + 1/n^2",
+      "limit": 1
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n+1)/n + 1/n^2",
+        "start": 27,
+        "end": 42,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 56,
+        "end": 57,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A68",
+    "proof_style": "limit_algebra",
+    "question": "Prove that a_n = (2+3/n)/(1-1/n) converges to 2.",
+    "proof": "The numerator $2 + 3/n$ tends to $2$, and the denominator $1 - 1/n$ tends to $1$, which is nonzero. By the quotient rule for limits, $a_n \\to 2/1 = 2$.",
+    "targets": {
+      "sequence": "(2+3/n)/(1-1/n)",
+      "limit": 2
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(2+3/n)/(1-1/n)",
+        "start": 27,
+        "end": 42,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 56,
+        "end": 57,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A69",
+    "proof_style": "limit_algebra",
+    "question": "Prove that a_n = sqrt(1+1/n) converges to 1.",
+    "proof": "As n grows, 1 + 1/n approaches 1. Because the square-root function is continuous at 1, taking square roots preserves the limit, so sqrt(1 + 1/n) approaches sqrt(1), which is 1.",
+    "targets": {
+      "sequence": "sqrt(1+1/n)",
+      "limit": 1
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sqrt(1+1/n)",
+        "start": 27,
+        "end": 38,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 52,
+        "end": 53,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A70",
+    "proof_style": "limit_algebra",
+    "question": "Prove that a_n = (n/(n+1))^2 converges to 1.",
+    "proof": "First note that\n\\[\n\\frac{n}{n+1} = 1 - \\frac{1}{n+1} \\to 1.\n\\]\nBy the product rule, the square also converges to $1^2 = 1$.",
+    "targets": {
+      "sequence": "(n/(n+1))^2",
+      "limit": 1
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n/(n+1))^2",
+        "start": 27,
+        "end": 38,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 52,
+        "end": 53,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A71",
+    "proof_style": "absolute_value",
+    "question": "Prove that a_n = (-1)^n/n + 1/n converges to 0.",
+    "proof": "Using the triangle inequality, the absolute value of the sum is at most the sum of the absolute values, which is 1/n + 1/n, that is 2/n. Given eps > 0, choose N greater than 2/eps. For every n at least N the absolute value is below eps, so the sequence converges to 0.",
+    "targets": {
+      "sequence": "(-1)^n/n + 1/n",
+      "limit": 0,
+      "bound": "choose N greater than 2/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/n + 1/n",
+        "start": 27,
+        "end": 41,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 55,
+        "end": 56,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 2/eps",
+        "start": 217,
+        "end": 244,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A72",
+    "proof_style": "absolute_value",
+    "question": "Prove that a_n = sin(n)/n + cos(n)/n^2 converges to 0.",
+    "proof": "By the triangle inequality,\n\\[\n|a_n| \\leq \\frac{|\\sin(n)|}{n} + \\frac{|\\cos(n)|}{n^2} \\leq \\frac{1}{n} + \\frac{1}{n^2} \\leq \\frac{2}{n}\n\\]\nfor every $n \\geq 1$. Choose $N > 2/\\varepsilon$; then $|a_n| < \\varepsilon$ for $n \\geq N$, so $a_n \\to 0$.",
+    "targets": {
+      "sequence": "sin(n)/n + cos(n)/n^2",
+      "limit": 0,
+      "bound": "N > 2/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sin(n)/n + cos(n)/n^2",
+        "start": 27,
+        "end": 48,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 62,
+        "end": 63,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon",
+        "start": 241,
+        "end": 258,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A73",
+    "proof_style": "absolute_value",
+    "question": "Prove that a_n = (n+(-1)^n)/(n+1) converges to 1.",
+    "proof": "Compute the difference from $1$:\n\\[\n|a_n - 1| = \\frac{|n + (-1)^n - n - 1|}{n+1} = \\frac{|(-1)^n - 1|}{n+1} \\leq \\frac{2}{n+1} \\leq \\frac{2}{n}.\n\\]\nTaking $N > 2/\\varepsilon$ gives $|a_n - 1| < \\varepsilon$, so $a_n \\to 1$.",
+    "targets": {
+      "sequence": "(n+(-1)^n)/(n+1)",
+      "limit": 1,
+      "bound": "N > 2/\\varepsilon$ gives $|a_n - 1| < \\varepsilon$, so $a_n \\to 1$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n+(-1)^n)/(n+1)",
+        "start": 27,
+        "end": 43,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 57,
+        "end": 58,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon$ gives $|a_n - 1| < \\varepsilon$, so $a_n \\to 1",
+        "start": 223,
+        "end": 288,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A74",
+    "proof_style": "absolute_value",
+    "question": "Prove that a_n = 1/n - 1/(n+1) converges to 0.",
+    "proof": "Combining the two fractions gives the absolute value as 1/[n(n+1)], which is at most 1/n. Given eps > 0, choose N greater than 1/eps. Then for every n at least N the terms are below eps, so the sequence approaches 0.",
+    "targets": {
+      "sequence": "1/n - 1/(n+1)",
+      "limit": 0,
+      "bound": "choose N greater than 1/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/n - 1/(n+1)",
+        "start": 27,
+        "end": 40,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 54,
+        "end": 55,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 1/eps",
+        "start": 169,
+        "end": 196,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A75",
+    "proof_style": "absolute_value",
+    "question": "Prove that a_n = (-1)^n/(n+1) + (-1)^(n+1)/(n+2) converges to 0.",
+    "proof": "By the triangle inequality,\n\\[\n|a_n| \\leq \\frac{1}{n+1} + \\frac{1}{n+2} \\leq \\frac{2}{n}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > 2/\\varepsilon$. Then $|a_n| < \\varepsilon$ for $n \\geq N$, so $a_n \\to 0$.",
+    "targets": {
+      "sequence": "(-1)^n/(n+1) + (-1)^(n+1)/(n+2)",
+      "limit": 0,
+      "bound": "N > 2/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/(n+1) + (-1)^(n+1)/(n+2)",
+        "start": 27,
+        "end": 58,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 72,
+        "end": 73,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon",
+        "start": 209,
+        "end": 226,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A76",
+    "proof_style": "cauchy_criterion",
+    "question": "Prove that a_n = 1/n is Cauchy.",
+    "proof": "Suppose m > n. The difference |1/m - 1/n| is at most 1/n + 1/m, which is at most 2/n. Given eps > 0, choose N greater than 2/eps. Then whenever m and n are both at least N, the difference is below eps. So the sequence is Cauchy, and therefore converges to 0.",
+    "targets": {
+      "sequence": "1/n",
+      "limit": 0,
+      "bound": "choose N greater than 2/eps"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/n",
+        "start": 27,
+        "end": 30,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 2/eps",
+        "start": 150,
+        "end": 177,
+        "annotation_source": "weak_rule_label"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 305,
+        "end": 306,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A77",
+    "proof_style": "cauchy_criterion",
+    "question": "Prove that a_n = 1/n^2 is Cauchy.",
+    "proof": "For $m > n$,\n\\[\n\\left|\\frac{1}{m^2} - \\frac{1}{n^2}\\right| \\leq \\frac{1}{n^2} + \\frac{1}{m^2} \\leq \\frac{2}{n^2} \\leq \\frac{2}{n}.\n\\]\nChoose $N > 2/\\varepsilon$. Then for $m, n \\geq N$ the difference is less than $\\varepsilon$, so $a_n$ is Cauchy and converges to $0$.",
+    "targets": {
+      "sequence": "1/n^2",
+      "limit": 0,
+      "bound": "N > 2/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "1/n^2",
+        "start": 27,
+        "end": 32,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon",
+        "start": 193,
+        "end": 210,
+        "annotation_source": "weak_rule_label"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 316,
+        "end": 317,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A78",
+    "proof_style": "cauchy_criterion",
+    "question": "Prove that a_n = (-1)^n/n is Cauchy.",
+    "proof": "For $m > n$,\n\\[\n|a_m - a_n| \\leq \\frac{1}{m} + \\frac{1}{n} \\leq \\frac{2}{n}.\n\\]\nGiven $\\varepsilon > 0$, pick $N > 2/\\varepsilon$. Then for all $m, n \\geq N$ the difference is less than $\\varepsilon$, so the sequence is Cauchy and converges to $0$.",
+    "targets": {
+      "sequence": "(-1)^n/n",
+      "limit": 0,
+      "bound": "N > 2/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/n",
+        "start": 27,
+        "end": 35,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 155,
+        "end": 156,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon",
+        "start": 165,
+        "end": 182,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A79",
+    "proof_style": "cauchy_criterion",
+    "question": "Prove that a_n = (n+1)/n is Cauchy.",
+    "proof": "Writing the terms as 1 + 1/n, the difference between any two terms reduces to |1/m - 1/n|, which is at most 1/m + 1/n, and hence at most 2 divided by the smaller of m and n. Taking N greater than 2/eps ensures that the difference is below eps whenever both m and n are at least N. So the sequence is Cauchy and converges to 1.",
+    "targets": {
+      "sequence": "(n+1)/n",
+      "limit": 1,
+      "bound": "Taking N greater than 2/eps ensures that the difference is below eps whenever both m and n are at least N"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n+1)/n",
+        "start": 27,
+        "end": 34,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "Taking N greater than 2/eps ensures that the difference is below eps whenever both m and n are at least N",
+        "start": 227,
+        "end": 332,
+        "annotation_source": "weak_rule_label"
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 377,
+        "end": 378,
+        "annotation_source": "dataset_parameter"
+      }
+    ]
+  },
+  {
+    "record_id": "A80",
+    "proof_style": "cauchy_criterion",
+    "question": "Prove that a_n = sum_{k=1}^n 1/k^2 is Cauchy.",
+    "proof": "For $m > n$,\n\\[\na_m - a_n = \\sum_{k=n+1}^m \\frac{1}{k^2} \\leq \\sum_{k=n+1}^m \\frac{1}{k(k-1)} = \\frac{1}{n} - \\frac{1}{m} \\leq \\frac{1}{n}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > 1/\\varepsilon$. Then for $m, n \\geq N$, $|a_m - a_n| < \\varepsilon$, so the sequence is Cauchy and converges.",
+    "targets": {
+      "sequence": "sum_{k=1}^n 1/k^2",
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n 1/k^2",
+        "start": 27,
+        "end": 44,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 240,
+        "end": 257,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A81",
+    "proof_style": "rational_rewrite",
+    "question": "Prove that a_n = (n+2)/(2n+1) converges to 1/2.",
+    "proof": "Putting the difference over a common denominator gives |2n + 4 - 2n - 1| divided by 2(2n+1), which simplifies to 3/[2(2n+1)]. This is at most 3/(4n). Given eps > 0, choose N greater than 3/(4eps); then for every n at least N the tail is within eps of 1/2, so the sequence converges to 1/2.",
+    "targets": {
+      "sequence": "(n+2)/(2n+1)",
+      "limit": "1/2",
+      "bound": "choose N greater than 3/(4eps)"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n+2)/(2n+1)",
+        "start": 27,
+        "end": 39,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 53,
+        "end": 56,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 3/(4eps)",
+        "start": 230,
+        "end": 260,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A82",
+    "proof_style": "rational_rewrite",
+    "question": "Prove that a_n = (3n^2+n)/(n^2+2) converges to 3.",
+    "proof": "Rewrite\n\\[\n\\left|\\frac{3n^2+n}{n^2+2} - 3\\right| = \\frac{|3n^2+n-3n^2-6|}{n^2+2} = \\frac{|n-6|}{n^2+2}.\n\\]\nFor $n \\geq 6$ this is at most $n/n^2 = 1/n$. Choosing $N > \\max(6, 1/\\varepsilon)$ gives $a_n \\to 3$.",
+    "targets": {
+      "sequence": "(3n^2+n)/(n^2+2)",
+      "limit": 3,
+      "bound": "N > \\max(6, 1/\\varepsilon)$ gives $a_n \\to 3$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(3n^2+n)/(n^2+2)",
+        "start": 27,
+        "end": 43,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "3",
+        "start": 57,
+        "end": 58,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(6, 1/\\varepsilon)$ gives $a_n \\to 3",
+        "start": 230,
+        "end": 274,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A83",
+    "proof_style": "rational_rewrite",
+    "question": "Prove that a_n = (2n^2+3n+1)/(4n^2+n) converges to 1/2.",
+    "proof": "Subtracting $1/2$ and putting over a common denominator gives\n\\[\n\\frac{|4n^2+6n+2-4n^2-n|}{2(4n^2+n)} = \\frac{5n+2}{2(4n^2+n)}.\n\\]\nFor $n \\geq 2$ this is at most $\\frac{7n}{8n^2} = \\frac{7}{8n}$. So taking $N > \\max(2, 7/(8\\varepsilon))$ gives $a_n \\to 1/2$.",
+    "targets": {
+      "sequence": "(2n^2+3n+1)/(4n^2+n)",
+      "limit": "1/2",
+      "bound": "N > \\max(2, 7/(8\\varepsilon))$ gives $a_n \\to 1/2$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(2n^2+3n+1)/(4n^2+n)",
+        "start": 27,
+        "end": 47,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 61,
+        "end": 64,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(2, 7/(8\\varepsilon))$ gives $a_n \\to 1/2",
+        "start": 280,
+        "end": 329,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A84",
+    "proof_style": "rational_rewrite",
+    "question": "Prove that a_n = (n^2-1)/(2n^2+n) converges to 1/2.",
+    "proof": "Subtracting 1/2 and simplifying the numerator gives n + 2, while the denominator becomes 2(2n^2 + n). For n at least 2, the expression is at most 3n/(4n^2), that is 3/(4n). For eps > 0, taking N greater than max(2, 3/(4eps)) makes the tail lie within eps of 1/2, so the sequence converges to 1/2.",
+    "targets": {
+      "sequence": "(n^2-1)/(2n^2+n)",
+      "limit": "1/2",
+      "bound": "taking N greater than max(2, 3/(4eps)) makes the tail lie within eps of 1/2, so the sequence converges to 1/2"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(n^2-1)/(2n^2+n)",
+        "start": 27,
+        "end": 43,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 57,
+        "end": 60,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "taking N greater than max(2, 3/(4eps)) makes the tail lie within eps of 1/2, so the sequence converges to 1/2",
+        "start": 255,
+        "end": 364,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  },
+  {
+    "record_id": "A85",
+    "proof_style": "rational_rewrite",
+    "question": "Prove that a_n = (5n^3+2n)/(2n^3+n^2) converges to 5/2.",
+    "proof": "Rewrite\n\\[\n\\left|\\frac{5n^3+2n}{2n^3+n^2} - \\frac{5}{2}\\right| = \\frac{|4n - 5n^2|}{2n^2(2n+1)}.\n\\]\nFor $n \\geq 1$ this is at most $\\frac{5n^2}{2n^2(2n+1)} = \\frac{5}{2(2n+1)} \\leq \\frac{5}{4n}$. Choosing $N > 5/(4\\varepsilon)$ gives $a_n \\to 5/2$.",
+    "targets": {
+      "sequence": "(5n^3+2n)/(2n^3+n^2)",
+      "limit": "5/2",
+      "bound": "N > 5/(4\\varepsilon)$ gives $a_n \\to 5/2$"
+    },
+    "entities": [
+      {
+        "field": "sequence",
+        "text": "(5n^3+2n)/(2n^3+n^2)",
+        "start": 27,
+        "end": 47,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "limit",
+        "text": "5/2",
+        "start": 61,
+        "end": 64,
+        "annotation_source": "dataset_parameter"
+      },
+      {
+        "field": "bound",
+        "text": "N > 5/(4\\varepsilon)$ gives $a_n \\to 5/2",
+        "start": 279,
+        "end": 319,
+        "annotation_source": "weak_rule_label"
+      }
+    ]
+  }
+]

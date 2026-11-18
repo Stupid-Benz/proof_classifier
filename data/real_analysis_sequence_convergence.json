@@ -1,0 +1,3602 @@
+[
+  {
+    "id": "A01",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 3/n",
+    "question": "Prove that a_n = 3/n converges to 0.",
+    "proof": "Take any positive eps. Choose N as a natural number greater than 3/eps. Then for any n from N onwards, we have |3/n - 0| = 3/n ≤ 3/N < eps. Hence the sequence 3/n approaches 0.",
+    "parameters": {
+      "sequence": "3/n",
+      "limit": 0,
+      "bound": "3/N"
+    },
+    "animation_notes": "Show an eps-band around 0 and mark the first index after which all terms lie inside."
+  },
+  {
+    "id": "A02",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "latex",
+    "theorem": "Limit of (2n+1)/n",
+    "question": "Prove that a_n = (2n+1)/n converges to 2.",
+    "proof": "Let $\\varepsilon > 0$ and choose $N \\in \\mathbb{N}$ with $N > 1/\\varepsilon$. Then for every $n \\geq N$,\n\\[\n\\left|\\frac{2n+1}{n} - 2\\right| = \\frac{1}{n} \\leq \\frac{1}{N} < \\varepsilon.\n\\]\nHence $a_n \\to 2$.",
+    "parameters": {
+      "sequence": "(2n+1)/n",
+      "limit": 2,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Plot terms approaching 2 from above and display the difference 1/n."
+  },
+  {
+    "id": "A03",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "mixed",
+    "theorem": "Limit of 1/(n+2)",
+    "question": "Prove that a_n = 1/(n+2) converges to 0.",
+    "proof": "Fix $\\varepsilon > 0$ and pick $N$ with $N > 1/\\varepsilon$. For any $n \\geq N$, the expression $1/(n+2)$ is smaller than $1/n$, which is at most $1/N$, which is in turn less than $\\varepsilon$. Thus $|1/(n+2) - 0| \\leq 1/N < \\varepsilon$. Therefore the sequence converges to 0.",
+    "parameters": {
+      "sequence": "1/(n+2)",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Use the same eps-band template with shifted index labels."
+  },
+  {
+    "id": "A04",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 5/(2n+1)",
+    "question": "Prove that a_n = 5/(2n+1) converges to 0.",
+    "proof": "Let eps be any positive number. Choose N greater than 5/eps. For n at least N, 5/(2n+1) is smaller than 5/n, which is at most 5/N. Hence |5/(2n+1) - 0| ≤ 5/N < eps. Hence the sequence approaches 0.",
+    "parameters": {
+      "sequence": "5/(2n+1)",
+      "limit": 0,
+      "bound": "5/N"
+    },
+    "animation_notes": "Show the decreasing terms crossing into the eps-band."
+  },
+  {
+    "id": "A05",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "latex",
+    "theorem": "Limit of (n+4)/(n+1)",
+    "question": "Prove that a_n = (n+4)/(n+1) converges to 1.",
+    "proof": "Let $\\varepsilon > 0$. Choose $N \\in \\mathbb{N}$ such that $N > 3/\\varepsilon$. Then for every $n \\geq N$,\n\\[\n\\left|\\frac{n+4}{n+1} - 1\\right| = \\frac{3}{n+1} < \\frac{3}{n} \\leq \\frac{3}{N} < \\varepsilon.\n\\]\nThus $a_n \\to 1$.",
+    "parameters": {
+      "sequence": "(n+4)/(n+1)",
+      "limit": 1,
+      "bound": "\\frac{3}{N}"
+    },
+    "animation_notes": "Mark the limit 1 and show the terms approaching it from above."
+  },
+  {
+    "id": "A06",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "natural_language",
+    "theorem": "Limit of (3n+2)/(n+1)",
+    "question": "Prove that a_n = (3n+2)/(n+1) converges to 3.",
+    "proof": "First simplify the difference: (3n+2)/(n+1) - 3 equals (3n+2-3n-3)/(n+1) = -1/(n+1), so its absolute value is 1/(n+1). Given eps > 0, choose N with N > 1/eps. Then for all n >= N, the difference is 1/(n+1) < 1/n ≤ 1/N < eps. Hence the sequence approaches 3.",
+    "parameters": {
+      "sequence": "(3n+2)/(n+1)",
+      "limit": 3,
+      "bound": "1/N"
+    },
+    "animation_notes": "Display the algebraic simplification before the eps-band animation."
+  },
+  {
+    "id": "A07",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "latex",
+    "theorem": "Limit of (4n-1)/(2n+3)",
+    "question": "Prove that a_n = (4n-1)/(2n+3) converges to 2.",
+    "proof": "Write\n\\[\n\\left|\\frac{4n-1}{2n+3} - 2\\right| = \\frac{|4n-1-4n-6|}{2n+3} = \\frac{7}{2n+3}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > \\frac{7}{2\\varepsilon}$. Then for $n \\geq N$,\n\\[\n\\frac{7}{2n+3} \\leq \\frac{7}{2N} < \\varepsilon,\n\\]\nso $a_n \\to 2$.",
+    "parameters": {
+      "sequence": "(4n-1)/(2n+3)",
+      "limit": 2,
+      "bound": "\\frac{7}{2N}"
+    },
+    "animation_notes": "Show the numerator cancellation and the resulting bound."
+  },
+  {
+    "id": "A08",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "mixed",
+    "theorem": "Limit of (n^2+2)/(n^2+n)",
+    "question": "Prove that a_n = (n^2+2)/(n^2+n) converges to 1.",
+    "proof": "Simplify $\\left|\\frac{n^2+2}{n^2+n} - 1\\right|$ to get $\\frac{|2-n|}{n^2+n}$. When $n \\geq 2$ this is at most $n/n^2 = 1/n$. Let $\\varepsilon > 0$ and choose $N > \\max(2, 1/\\varepsilon)$. For $n \\geq N$ the difference is at most $1/n \\leq 1/N < \\varepsilon$, so $a_n \\to 1$.",
+    "parameters": {
+      "sequence": "(n^2+2)/(n^2+n)",
+      "limit": 1,
+      "bound": "1/N"
+    },
+    "animation_notes": "Highlight the case split n >= 2 before applying the bound."
+  },
+  {
+    "id": "A09",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "natural_language",
+    "theorem": "Limit of (2n^2+n+1)/(n^2+1)",
+    "question": "Prove that a_n = (2n^2+n+1)/(n^2+1) converges to 2.",
+    "proof": "Working out the difference gives |2n^2+n+1 - 2(n^2+1)|/(n^2+1) = |n-1|/(n^2+1). For n at least 1 this is at most n/n^2, that is 1/n. For eps > 0, pick N greater than 1/eps. Then for every n from N on, the difference is at most 1/n ≤ 1/N < eps. Thus the sequence tends to 2.",
+    "parameters": {
+      "sequence": "(2n^2+n+1)/(n^2+1)",
+      "limit": 2,
+      "bound": "1/N"
+    },
+    "animation_notes": "Show the cancellation leaving |n-1|/(n^2+1)."
+  },
+  {
+    "id": "A10",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "latex",
+    "theorem": "Limit of (5n+2)/(2n-1)",
+    "question": "Prove that a_n = (5n+2)/(2n-1) converges to 5/2.",
+    "proof": "Compute\n\\[\n\\left|\\frac{5n+2}{2n-1} - \\frac{5}{2}\\right| = \\frac{|10n+4-10n+5|}{2(2n-1)} = \\frac{9}{2(2n-1)}.\n\\]\nFor $n \\geq 1$ we have $2n-1 \\geq n$, so this is at most $\\frac{9}{2n} \\leq \\frac{9}{2N}$. Given $\\varepsilon > 0$, choose $N > \\frac{9}{2\\varepsilon}$; then for $n \\geq N$ the difference is at most $\\frac{9}{2N} < \\varepsilon$. Hence $a_n \\to 5/2$.",
+    "parameters": {
+      "sequence": "(5n+2)/(2n-1)",
+      "limit": "5/2",
+      "bound": "\\frac{9}{2N}"
+    },
+    "animation_notes": "Show the denominator comparison 2n-1 >= n."
+  },
+  {
+    "id": "A11",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "natural_language",
+    "theorem": "Limit of sin(n)/n",
+    "question": "Prove that a_n = sin(n)/n converges to 0.",
+    "proof": "Since sine is bounded between -1 and 1, the absolute value of sin(n)/n is at most 1/n. Choose N greater than 1/eps. Then for all n from N on, we have |sin(n)/n - 0| ≤ 1/n ≤ 1/N < eps. Hence the sequence approaches 0.",
+    "parameters": {
+      "sequence": "sin(n)/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Overlay the envelope curves y = 1/n and y = -1/n."
+  },
+  {
+    "id": "A12",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "latex",
+    "theorem": "Limit of cos(n)/n^2",
+    "question": "Prove that a_n = cos(n)/n^2 converges to 0.",
+    "proof": "For every $n \\geq 1$,\n\\[\n\\left|\\frac{\\cos(n)}{n^2} - 0\\right| \\leq \\frac{1}{n^2} \\leq \\frac{1}{n} \\leq \\frac{1}{N}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > 1/\\varepsilon$. For $n \\geq N$ we have $|a_n| \\leq \\frac{1}{N} < \\varepsilon$, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "cos(n)/n^2",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Show the faster decay of 1/n^2 while using 1/n as a comparison bound."
+  },
+  {
+    "id": "A13",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "mixed",
+    "theorem": "Limit of (-1)^n/(2n+3)",
+    "question": "Prove that a_n = (-1)^n/(2n+3) converges to 0.",
+    "proof": "For every $n$, $|(-1)^n/(2n+3) - 0| = 1/(2n+3) \\leq 1/n \\leq 1/N$. Given $\\varepsilon > 0$, pick $N > 1/\\varepsilon$. Then for $n \\geq N$ the absolute value is at most $1/N < \\varepsilon$, so the sequence goes to 0.",
+    "parameters": {
+      "sequence": "(-1)^n/(2n+3)",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Display both signs of the alternating terms inside the comparison envelope."
+  },
+  {
+    "id": "A14",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "natural_language",
+    "theorem": "Limit of (sin(n)+cos(n))/n",
+    "question": "Prove that a_n = (sin(n)+cos(n))/n converges to 0.",
+    "proof": "Applying the triangle inequality, the absolute value of (sin(n)+cos(n))/n is at most (|sin(n)|+|cos(n)|)/n, which is at most 2/n ≤ 2/N. For eps > 0, choose N greater than 2/eps. Then for all n >= N the size of the terms is at most 2/N < eps, so the sequence converges to 0.",
+    "parameters": {
+      "sequence": "(sin(n)+cos(n))/n",
+      "limit": 0,
+      "bound": "2/N"
+    },
+    "animation_notes": "Use the triangle inequality as an on-screen comparison step."
+  },
+  {
+    "id": "A15",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "latex",
+    "theorem": "Limit of arctan(n)/n",
+    "question": "Prove that a_n = arctan(n)/n converges to 0.",
+    "proof": "Since $0 < \\arctan(n) < \\pi/2$ for every $n \\geq 1$,\n\\[\n\\left|\\frac{\\arctan(n)}{n} - 0\\right| \\leq \\frac{\\pi/2}{n} \\leq \\frac{\\pi}{2N}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > \\pi/(2\\varepsilon)$. Then for $n \\geq N$, $|a_n| \\leq \\frac{\\pi}{2N} < \\varepsilon$, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "arctan(n)/n",
+      "limit": 0,
+      "bound": "\\frac{\\pi}{2N}"
+    },
+    "animation_notes": "Mark the horizontal bound pi/2 for the numerator."
+  },
+  {
+    "id": "A16",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "natural_language",
+    "theorem": "Squeeze for (-1)^n/n",
+    "question": "Prove that a_n = (-1)^n/n converges to 0.",
+    "proof": "The alternating sequence is trapped between -1/n and 1/n, that is -1/n is at most (-1)^n/n which is at most 1/n. For any eps > 0, choose N > 1/eps. Then for n ≥ N, we have |(-1)^n/n - 0| ≤ 1/n ≤ 1/N < eps. Since both bounding sequences go to 0, the squeeze theorem tells us the middle sequence also converges to 0.",
+    "parameters": {
+      "sequence": "(-1)^n/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Animate the two bounding sequences closing in on 0."
+  },
+  {
+    "id": "A17",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "latex",
+    "theorem": "Squeeze for sin(n)/n",
+    "question": "Prove that a_n = sin(n)/n converges to 0.",
+    "proof": "For every $n \\geq 1$,\n\\[\n-\\frac{1}{n} \\leq \\frac{\\sin(n)}{n} \\leq \\frac{1}{n}.\n\\]\nFor any $\\varepsilon > 0$, choose $N > 1/\\varepsilon$. Then for $n \\geq N$, $|\\sin(n)/n - 0| \\leq 1/n \\leq 1/N < \\varepsilon$. Both bounding sequences tend to $0$, so by the squeeze theorem $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "sin(n)/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Show the sine terms trapped between the two harmonic envelopes."
+  },
+  {
+    "id": "A18",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "mixed",
+    "theorem": "Squeeze for n/(n^2+1)",
+    "question": "Prove that a_n = n/(n^2+1) converges to 0.",
+    "proof": "Since $0 \\leq n/(n^2+1) \\leq n/n^2 = 1/n$ for every $n \\geq 1$. Given $\\varepsilon > 0$, choose $N > 1/\\varepsilon$; then for $n \\geq N$, $0 \\leq a_n \\leq 1/n \\leq 1/N < \\varepsilon$. Since $1/n \\to 0$, the squeeze theorem gives $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "n/(n^2+1)",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Highlight the positive lower bound 0 and the upper bound 1/n."
+  },
+  {
+    "id": "A19",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "natural_language",
+    "theorem": "Squeeze for (cos(n)+2)/n",
+    "question": "Prove that a_n = (cos(n)+2)/n converges to 0.",
+    "proof": "Because cos(n) is between -1 and 1, the numerator cos(n)+2 is between 1 and 3. Dividing by n, the terms satisfy 1/n ≤ a_n ≤ 3/n ≤ 3/N. Given eps > 0, choose N > 3/eps; then for n ≥ N, |a_n - 0| ≤ 3/N < eps. Both of these approach 0, so the squeeze theorem gives convergence to 0.",
+    "parameters": {
+      "sequence": "(cos(n)+2)/n",
+      "limit": 0,
+      "bound": "3/N"
+    },
+    "animation_notes": "Show the numerator bounded between 1 and 3."
+  },
+  {
+    "id": "A20",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "latex",
+    "theorem": "Squeeze for 1/(n+sin(n))",
+    "question": "Prove that a_n = 1/(n+sin(n)) converges to 0.",
+    "proof": "For $n \\geq 2$ we have $n + \\sin(n) \\geq n-1 > 0$, hence\n\\[\n0 \\leq \\frac{1}{n+\\sin(n)} \\leq \\frac{1}{n-1} \\leq \\frac{1}{N-1}\n\\]\nfor $n \\geq N \\geq 2$. Given $\\varepsilon > 0$, choose $N > 1/\\varepsilon + 1$ so that $1/(N-1) < \\varepsilon$. Then for $n \\geq N$, $a_n \\leq \\frac{1}{N-1} < \\varepsilon$. Since $1/(n-1) \\to 0$, the squeeze theorem yields $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "1/(n+sin(n))",
+      "limit": 0,
+      "bound": "\\frac{1}{N-1}"
+    },
+    "animation_notes": "Note the harmless shift in the denominator and the comparison with 1/(n-1)."
+  },
+  {
+    "id": "A21",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "natural_language",
+    "theorem": "MCT for 1 - 1/2^n",
+    "question": "Prove that a_n = 1 - 1/2^n converges to 1 using monotone convergence.",
+    "proof": "The difference between consecutive terms is 1/2^(n+1), which is positive, so the sequence is increasing. Every term is smaller than 1, so the sequence is bounded above. For n ≥ N the gap satisfies 1 - a_n = 1/2^n ≤ 1/2^N, and 1/2^N tends to 0, so the supremum is 1. By the Monotone Convergence Theorem, the sequence converges to 1.",
+    "parameters": {
+      "sequence": "1 - 1/2^n",
+      "limit": 1,
+      "bound": "1/2^N"
+    },
+    "animation_notes": "Show increasing terms below a horizontal bound at 1."
+  },
+  {
+    "id": "A22",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "latex",
+    "theorem": "MCT for n/(n+1)",
+    "question": "Prove that a_n = n/(n+1) converges to 1 using monotone convergence.",
+    "proof": "Write $a_n = 1 - 1/(n+1)$. Then\n\\[\na_{n+1} - a_n = \\frac{1}{n+1} - \\frac{1}{n+2} > 0,\n\\]\nso the sequence is increasing. It is bounded above by $1$, and for $n \\geq N$ the gap is $1 - a_n = 1/(n+1) \\leq \\frac{1}{N+1}$, which tends to $0$. The supremum is therefore $1$, and the Monotone Convergence Theorem gives $a_n \\to 1$.",
+    "parameters": {
+      "sequence": "n/(n+1)",
+      "limit": 1,
+      "bound": "\\frac{1}{N+1}"
+    },
+    "animation_notes": "Animate the monotone approach to 1 from below."
+  },
+  {
+    "id": "A23",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "mixed",
+    "theorem": "MCT for 1 - 1/n^2",
+    "question": "Prove that a_n = 1 - 1/n^2 converges to 1 using monotone convergence.",
+    "proof": "For $n \\geq 1$ the difference $a_{n+1} - a_n$ equals $1/n^2 - 1/(n+1)^2$, which is positive. So the sequence is increasing. Also $a_n < 1$, so it is bounded above. For $n \\geq N$ the gap satisfies $1 - a_n = 1/n^2 \\leq 1/N^2$, which tends to $0$; hence the supremum is $1$ and the Monotone Convergence Theorem gives convergence to $1$.",
+    "parameters": {
+      "sequence": "1 - 1/n^2",
+      "limit": 1,
+      "bound": "1/N^2"
+    },
+    "animation_notes": "Show the difference formula a_(n+1)-a_n in a side panel."
+  },
+  {
+    "id": "A24",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "natural_language",
+    "theorem": "MCT for sqrt(n+1)-sqrt(n)",
+    "question": "Prove that a_n = sqrt(n+1)-sqrt(n) converges using monotone convergence.",
+    "proof": "Rationalising gives a_n = 1/(sqrt(n+1)+sqrt(n)), so for n ≥ N we have 0 < a_n ≤ 1/(sqrt(N+1)+sqrt(N)). This shows the terms are positive and decreasing, so the sequence is decreasing and bounded below by 0. Since 1/(sqrt(N+1)+sqrt(N)) tends to 0, the terms tend to 0, so the limit is 0.",
+    "parameters": {
+      "sequence": "sqrt(n+1)-sqrt(n)",
+      "limit": 0,
+      "bound": "1/(sqrt(N+1)+sqrt(N))"
+    },
+    "animation_notes": "Show the decreasing positive terms shrinking toward 0."
+  },
+  {
+    "id": "A25",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "latex",
+    "theorem": "MCT for 1/2^n",
+    "question": "Prove that a_n = 1/2^n converges to 0 using monotone convergence.",
+    "proof": "We have $a_{n+1} = a_n/2 < a_n$, so the sequence is decreasing and bounded below by $0$. For $n \\geq N$ the gap from $0$ satisfies $a_n = 1/2^n \\leq 1/2^N$, which tends to $0$. The sequence therefore converges to some limit $L$. Taking limits in $a_{n+1} = a_n/2$ gives $L = L/2$, so $L = 0$.",
+    "parameters": {
+      "sequence": "1/2^n",
+      "limit": 0,
+      "bound": "1/2^N"
+    },
+    "animation_notes": "Show the fixed-point argument L = L/2 as an on-screen annotation."
+  },
+  {
+    "id": "A26",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "natural_language",
+    "theorem": "Constant sequence 7",
+    "question": "Prove that the constant sequence a_n = 7 converges to 7.",
+    "proof": "Take any eps > 0. With N equal to 1, every term of the sequence is exactly 7, so for n ≥ N we have |a_n - 7| = 0 < eps. The bound 0 is already below eps. This is precisely what convergence means.",
+    "parameters": {
+      "sequence": "7",
+      "limit": 7,
+      "bound": "0"
+    },
+    "animation_notes": "Show that every term already lies at the limit."
+  },
+  {
+    "id": "A27",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "latex",
+    "theorem": "Zero sequence",
+    "question": "Prove that a_n = 0 converges to 0.",
+    "proof": "Let $\\varepsilon > 0$ and take $N = 1$. For every $n \\geq N$,\n\\[\n|a_n - 0| = 0 < \\varepsilon.\n\\]\nHence $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "0",
+      "limit": 0,
+      "bound": "0"
+    },
+    "animation_notes": "All points coincide with the limit point."
+  },
+  {
+    "id": "A28",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "mixed",
+    "theorem": "Limit of 2/n",
+    "question": "Prove that a_n = 2/n converges to 0.",
+    "proof": "Given $\\varepsilon > 0$, choose $N$ with $N > 2/\\varepsilon$. For $n \\geq N$,\n\\[\n|2/n - 0| = 2/n \\leq 2/N < \\varepsilon.\n\\]\nThis directly verifies the definition of convergence to 0.",
+    "parameters": {
+      "sequence": "2/n",
+      "limit": 0,
+      "bound": "2/N"
+    },
+    "animation_notes": "Display the quantified statement with the chosen N."
+  },
+  {
+    "id": "A29",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "natural_language",
+    "theorem": "Limit of (n+1)/n",
+    "question": "Prove that a_n = (n+1)/n converges to 1.",
+    "proof": "Let eps > 0. Choose N greater than 1/eps. Then for n at least N, the difference |(n+1)/n - 1| equals 1/n, which is at most 1/N < eps. Hence the sequence approaches 1 by the very definition of convergence.",
+    "parameters": {
+      "sequence": "(n+1)/n",
+      "limit": 1,
+      "bound": "1/N"
+    },
+    "animation_notes": "Highlight the exact definition of convergence in a side panel."
+  },
+  {
+    "id": "A30",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "latex",
+    "theorem": "Limit of 1/n^3",
+    "question": "Prove that a_n = 1/n^3 converges to 0.",
+    "proof": "Let $\\varepsilon > 0$ and choose $N \\in \\mathbb{N}$ with $N > \\varepsilon^{-1/3}$. For every $n \\geq N$,\n\\[\n\\left|\\frac{1}{n^3} - 0\\right| = \\frac{1}{n^3} \\leq \\frac{1}{N^3} < \\varepsilon.\n\\]\nHence $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "1/n^3",
+      "limit": 0,
+      "bound": "\\frac{1}{N^3}"
+    },
+    "animation_notes": "Show the cubic decay and the choice of N."
+  },
+  {
+    "id": "A31",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "natural_language",
+    "theorem": "Telescoping sum 1/(k(k+1))",
+    "question": "Prove that a_n = sum_{k=1}^n 1/(k(k+1)) converges to 1.",
+    "proof": "Each term 1/(k(k+1)) can be written as 1/k - 1/(k+1). When we add the first n terms, the intermediate pieces cancel, leaving a_n = 1 - 1/(n+1). Hence |a_n - 1| = 1/(n+1) ≤ 1/(N+1) < eps for n ≥ N. This tends to 1.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n 1/(k(k+1))",
+      "limit": 1,
+      "bound": "1/(N+1)"
+    },
+    "animation_notes": "Animate the cancellation of consecutive terms."
+  },
+  {
+    "id": "A32",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "latex",
+    "theorem": "Telescoping sum 1/((2k-1)(2k+1))",
+    "question": "Prove that a_n = sum_{k=1}^n 1/((2k-1)(2k+1)) converges to 1/2.",
+    "proof": "Use the decomposition\n\\[\n\\frac{1}{(2k-1)(2k+1)} = \\frac{1}{2}\\left(\\frac{1}{2k-1} - \\frac{1}{2k+1}\\right).\n\\]\nThe sum telescopes to $a_n = \\frac{1}{2}(1 - 1/(2n+1))$, so\n\\[\n\\left|a_n - \\frac{1}{2}\\right| = \\frac{1}{2(2n+1)} \\leq \\frac{1}{2(2N+1)} < \\varepsilon,\n\\]\nwhich tends to $1/2$.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n 1/((2k-1)(2k+1))",
+      "limit": "1/2",
+      "bound": "\\frac{1}{2(2N+1)}"
+    },
+    "animation_notes": "Show the half-factor and the telescoping cancellation."
+  },
+  {
+    "id": "A33",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "mixed",
+    "theorem": "Telescoping sum 1/k - 1/(k+1)",
+    "question": "Prove that a_n = sum_{k=1}^n (1/k - 1/(k+1)) converges to 1.",
+    "proof": "The sum $\\sum_{k=1}^n (1/k - 1/(k+1))$ telescopes directly, leaving only $a_n = 1 - 1/(n+1)$. Since $|a_n - 1| = 1/(n+1) \\leq 1/(N+1) < \\varepsilon$ for $n \\geq N$, the sequence converges to $1$.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n (1/k - 1/(k+1))",
+      "limit": 1,
+      "bound": "1/(N+1)"
+    },
+    "animation_notes": "Display the fully collapsed sum 1 - 1/(n+1)."
+  },
+  {
+    "id": "A34",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "natural_language",
+    "theorem": "Telescoping sum 1/(k(k+2))",
+    "question": "Prove that a_n = sum_{k=1}^n 1/(k(k+2)) converges to 3/4.",
+    "proof": "Write 1/(k(k+2)) as half of (1/k - 1/(k+2)). Summing from k=1 to n, most terms cancel, and we are left with half of (1 + 1/2 - 1/(n+1) - 1/(n+2)). The gap from 3/4 is therefore half of (1/(n+1) + 1/(n+2)), which is at most 1/N for n ≥ N. This tends to 3/4.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n 1/(k(k+2))",
+      "limit": "3/4",
+      "bound": "1/N"
+    },
+    "animation_notes": "Show the two surviving initial terms and the two vanishing tail terms."
+  },
+  {
+    "id": "A35",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "latex",
+    "theorem": "Telescoping sum of reciprocal square-root differences",
+    "question": "Prove that a_n = sum_{k=1}^n (1/sqrt(k) - 1/sqrt(k+1)) converges to 1.",
+    "proof": "The sum telescopes:\n\\[\n\\sum_{k=1}^n \\left(\\frac{1}{\\sqrt{k}} - \\frac{1}{\\sqrt{k+1}}\\right) = 1 - \\frac{1}{\\sqrt{n+1}},\n\\]\nso for $n \\geq N$,\n\\[\n|a_n - 1| = \\frac{1}{\\sqrt{n+1}} \\leq \\frac{1}{\\sqrt{N+1}} < \\varepsilon.\n\\]\nSince $1/\\sqrt{n+1} \\to 0$, the sequence converges to $1$.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n (1/sqrt(k)-1/sqrt(k+1))",
+      "limit": 1,
+      "bound": "\\frac{1}{\\sqrt{N+1}}"
+    },
+    "animation_notes": "Show the square-root terms cancelling in sequence."
+  },
+  {
+    "id": "A36",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "natural_language",
+    "theorem": "Geometric sum with ratio 1/2",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (1/2)^k converges to 2.",
+    "proof": "By the geometric series formula, the partial sum is (1 - (1/2)^n)/(1 - 1/2), which simplifies to a_n = 2(1 - 1/2^n). Hence |a_n - 2| = 1/2^(n-1) ≤ 1/2^(N-1) < eps for n ≥ N. As n grows, 1/2^n tends to 0, so the sum tends to 2.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (1/2)^k",
+      "limit": 2,
+      "bound": "1/2^(N-1)"
+    },
+    "animation_notes": "Show partial sums approaching 2 on a number line."
+  },
+  {
+    "id": "A37",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "latex",
+    "theorem": "Geometric sum with ratio 1/3",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (1/3)^k converges to 3/2.",
+    "proof": "By the geometric sum formula,\n\\[\n\\sum_{k=0}^{n-1} \\left(\\frac{1}{3}\\right)^k = \\frac{1 - (1/3)^n}{1 - 1/3} = \\frac{3}{2}\\left(1 - \\left(\\frac{1}{3}\\right)^n\\right).\n\\]\nHence for $n \\geq N$,\n\\[\n\\left|a_n - \\frac{3}{2}\\right| = \\frac{3}{2}\\left(\\frac{1}{3}\\right)^n \\leq \\frac{3}{2}\\left(\\frac{1}{3}\\right)^N < \\varepsilon,\n\\]\nso the limit is $3/2$.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (1/3)^k",
+      "limit": "3/2",
+      "bound": "\\frac{3}{2}\\left(\\frac{1}{3}\\right)^N"
+    },
+    "animation_notes": "Display the geometric formula and the vanishing power."
+  },
+  {
+    "id": "A38",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "mixed",
+    "theorem": "Alternating geometric sum",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (-1/2)^k converges to 2/3.",
+    "proof": "The ratio of the geometric series is $-1/2$, so\n\\[\n\\sum_{k=0}^{n-1} \\left(-\\frac{1}{2}\\right)^k = \\frac{1 - (-1/2)^n}{1 + 1/2} = \\frac{2}{3}\\left(1 - \\left(-\\frac{1}{2}\\right)^n\\right).\n\\]\nThus for $n \\geq N$,\n\\[\n\\left|a_n - \\frac{2}{3}\\right| = \\frac{2}{3}\\left(\\frac{1}{2}\\right)^n \\leq \\frac{2}{3}\\left(\\frac{1}{2}\\right)^N < \\varepsilon,\n\\]\nso the limit is $2/3$.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (-1/2)^k",
+      "limit": "2/3",
+      "bound": "\\frac{2}{3}\\left(\\frac{1}{2}\\right)^N"
+    },
+    "animation_notes": "Show the alternating partial sums oscillating toward 2/3."
+  },
+  {
+    "id": "A39",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "natural_language",
+    "theorem": "Geometric sum with ratio 2/3",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (2/3)^k converges to 3.",
+    "proof": "The geometric formula gives the partial sum as (1 - (2/3)^n)/(1 - 2/3), which equals a_n = 3(1 - (2/3)^n). Hence |a_n - 3| = 3(2/3)^n ≤ 3(2/3)^N < eps for n ≥ N. As n increases, (2/3)^n goes to 0, so the partial sums approach 3.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (2/3)^k",
+      "limit": 3,
+      "bound": "3(2/3)^N"
+    },
+    "animation_notes": "Show the partial sums increasing to 3."
+  },
+  {
+    "id": "A40",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "latex",
+    "theorem": "Geometric sum with ratio 1/4",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (1/4)^k converges to 4/3.",
+    "proof": "By the geometric formula,\n\\[\n\\sum_{k=0}^{n-1} \\left(\\frac{1}{4}\\right)^k = \\frac{1 - (1/4)^n}{1 - 1/4} = \\frac{4}{3}\\left(1 - \\left(\\frac{1}{4}\\right)^n\\right).\n\\]\nHence for $n \\geq N$,\n\\[\n\\left|a_n - \\frac{4}{3}\\right| = \\frac{4}{3}\\left(\\frac{1}{4}\\right)^n \\leq \\frac{4}{3}\\left(\\frac{1}{4}\\right)^N < \\varepsilon,\n\\]\nso the limit is $4/3$.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (1/4)^k",
+      "limit": "4/3",
+      "bound": "\\frac{4}{3}\\left(\\frac{1}{4}\\right)^N"
+    },
+    "animation_notes": "Animate the rapidly converging partial sums."
+  },
+  {
+    "id": "A41",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 1/2^n using induction",
+    "question": "Prove that a_n = 1/2^n converges to 0.",
+    "proof": "By an easy induction, 2^n is at least n for every n. So 1/2^n is at most 1/n. Given eps > 0, choose N greater than 1/eps. For all n from N on, we have |a_n - 0| = 1/2^n ≤ 1/n ≤ 1/N < eps. Hence the sequence goes to 0.",
+    "parameters": {
+      "sequence": "1/2^n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Display the induction step for 2^n >= n before the epsilon argument."
+  },
+  {
+    "id": "A42",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "latex",
+    "theorem": "Limit of 1/n! using induction",
+    "question": "Prove that a_n = 1/n! converges to 0.",
+    "proof": "By induction, $n! \\geq n$ for all $n \\geq 1$. Hence for $n \\geq N$,\n\\[\n0 < \\left|\\frac{1}{n!} - 0\\right| = \\frac{1}{n!} \\leq \\frac{1}{n} \\leq \\frac{1}{N} < \\varepsilon.\n\\]\nTherefore $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "1/n!",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Show factorial growth and the comparison with 1/n."
+  },
+  {
+    "id": "A43",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "mixed",
+    "theorem": "Limit of n/3^n using induction",
+    "question": "Prove that a_n = n/3^n converges to 0.",
+    "proof": "An induction argument shows $3^n \\geq n^2$ for $n \\geq 2$, hence $n/3^n \\leq 1/n$. Given $\\varepsilon > 0$, choose $N > \\max(2, 1/\\varepsilon)$. Then for $n \\geq N$,\n\\[\n|a_n - 0| = \\frac{n}{3^n} \\leq \\frac{1}{n} \\leq \\frac{1}{N} < \\varepsilon,\n\\]\nso $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "n/3^n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Show the induction proving 3^n >= n^2."
+  },
+  {
+    "id": "A44",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 1/(n 2^n) using induction",
+    "question": "Prove that a_n = 1/(n 2^n) converges to 0.",
+    "proof": "By induction, 2^n is at least n, so n*2^n is at least n^2, and therefore 1/(n*2^n) is at most 1/n^2, which is at most 1/n. Take N greater than 1/eps. For all n from N on, we have |a_n - 0| ≤ 1/n ≤ 1/N < eps, so the sequence approaches 0.",
+    "parameters": {
+      "sequence": "1/(n 2^n)",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Highlight the denominator bound n 2^n >= n^2."
+  },
+  {
+    "id": "A45",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "latex",
+    "theorem": "Limit of 1/(2^n+1) using induction",
+    "question": "Prove that a_n = 1/(2^n+1) converges to 0.",
+    "proof": "By induction, $2^n \\geq n$, so $2^n + 1 \\geq n$, and for $n \\geq N$,\n\\[\n0 < \\left|\\frac{1}{2^n+1} - 0\\right| = \\frac{1}{2^n+1} \\leq \\frac{1}{n} \\leq \\frac{1}{N} < \\varepsilon.\n\\]\nLet $\\varepsilon > 0$ and choose $N > 1/\\varepsilon$, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "1/(2^n+1)",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Show the comparison denominator 2^n+1 >= n."
+  },
+  {
+    "id": "A46",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "natural_language",
+    "theorem": "Contradiction proof for 1/n",
+    "question": "Prove by contradiction that a_n = 1/n converges to 0.",
+    "proof": "Suppose the sequence did not converge to 0. Then there would be some eps > 0 such that no matter how large we take N, there would be an n at least N with |1/n - 0| at least eps. But if we choose N greater than 1/eps, then any n at least N satisfies |1/n - 0| = 1/n ≤ 1/N < eps. That is a contradiction, so the sequence must converge to 0.",
+    "parameters": {
+      "sequence": "1/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Display the negation of the epsilon-N definition and the contradiction."
+  },
+  {
+    "id": "A47",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "latex",
+    "theorem": "Contradiction proof for 1/n^2",
+    "question": "Prove by contradiction that a_n = 1/n^2 converges to 0.",
+    "proof": "Assume $a_n \\not\\to 0$. Then there is $\\varepsilon > 0$ such that, for every $N$, some $n \\geq N$ has $1/n^2 \\geq \\varepsilon$. Choose $N > 1/\\sqrt{\\varepsilon}$; then for $n \\geq N$ we have\n\\[\n\\left|\\frac{1}{n^2} - 0\\right| = \\frac{1}{n^2} \\leq \\frac{1}{N^2} < \\varepsilon,\n\\]\na contradiction. Hence $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "1/n^2",
+      "limit": 0,
+      "bound": "\\frac{1}{N^2}"
+    },
+    "animation_notes": "Show the choice N > 1/sqrt(eps) resolving the contradiction."
+  },
+  {
+    "id": "A48",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "mixed",
+    "theorem": "Contradiction proof for (-1)^n/n",
+    "question": "Prove by contradiction that a_n = (-1)^n/n converges to 0.",
+    "proof": "Suppose not. Then for some $\\varepsilon > 0$ and every $N$ there is $n \\geq N$ with $|(-1)^n/n - 0| \\geq \\varepsilon$. But $|(-1)^n/n| = 1/n$. Taking $N > 1/\\varepsilon$ gives $1/n \\leq 1/N < \\varepsilon$ for all $n \\geq N$, a contradiction. So $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "(-1)^n/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Highlight the absolute value removing the sign alternation."
+  },
+  {
+    "id": "A49",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "natural_language",
+    "theorem": "Contradiction proof for (n+1)/n",
+    "question": "Prove by contradiction that a_n = (n+1)/n converges to 1.",
+    "proof": "Suppose the sequence did not converge to 1. Then there is eps > 0 such that for every N there is some n at least N with |(n+1)/n - 1| at least eps. But that difference equals 1/n. Taking N greater than 1/eps gives 1/n ≤ 1/N < eps, contradicting the supposition. Hence the sequence converges to 1.",
+    "parameters": {
+      "sequence": "(n+1)/n",
+      "limit": 1,
+      "bound": "1/N"
+    },
+    "animation_notes": "Show the simplified difference 1/n in the contradiction setup."
+  },
+  {
+    "id": "A50",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "latex",
+    "theorem": "Contradiction proof for 3/(n+2)",
+    "question": "Prove by contradiction that a_n = 3/(n+2) converges to 0.",
+    "proof": "Assume $a_n \\not\\to 0$. Then there is $\\varepsilon > 0$ such that, for every $N$, some $n \\geq N$ has $3/(n+2) \\geq \\varepsilon$. Choose $N > 3/\\varepsilon$. Then for $n \\geq N$,\n\\[\n\\left|\\frac{3}{n+2} - 0\\right| = \\frac{3}{n+2} < \\frac{3}{n} \\leq \\frac{3}{N} < \\varepsilon,\n\\]\na contradiction. Hence $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "3/(n+2)",
+      "limit": 0,
+      "bound": "\\frac{3}{N}"
+    },
+    "animation_notes": "Display the strict comparison with 3/n."
+  },
+  {
+    "id": "A51",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "natural_language",
+    "theorem": "Subsequence proof for (-1)^n/n",
+    "question": "Prove that a_n = (-1)^n/n converges to 0 by using subsequences.",
+    "proof": "Look at the even-indexed and odd-indexed terms separately. The even terms are 1/(2k), which go to 0; for n ≥ N we have |1/(2k) - 0| ≤ 1/N. The odd terms are -1/(2k-1), which also go to 0, and |−1/(2k−1) − 0| ≤ 1/N. Since every term is in one of these two subsequences and both converge to 0, the whole sequence converges to 0.",
+    "parameters": {
+      "sequence": "(-1)^n/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Color even and odd terms differently and show both tending to 0."
+  },
+  {
+    "id": "A52",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "latex",
+    "theorem": "Subsequence proof for sin(n pi/2)/n",
+    "question": "Prove that a_n = sin(n pi/2)/n converges to 0.",
+    "proof": "Split into residues modulo $4$. For $n = 4k$, $4k+1$, $4k+2$, $4k+3$, the values are respectively $0$, $\\frac{1}{4k+1}$, $0$, $-\\frac{1}{4k+3}$. Each of these is at most $\\frac{1}{N}$ in absolute value once $n \\geq N$. Each subsequence tends to $0$, so the full sequence converges to $0$.",
+    "parameters": {
+      "sequence": "sin(n pi/2)/n",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Show the four residue classes as four colored point sets."
+  },
+  {
+    "id": "A53",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "mixed",
+    "theorem": "Subsequence proof for (1+(-1)^n)/n",
+    "question": "Prove that a_n = (1+(-1)^n)/n converges to 0.",
+    "proof": "For even $n = 2k$ we have $a_{2k} = 2/(2k) = 1/k \\leq 1/N$. For odd $n = 2k-1$ we have $a_{2k-1} = 0 \\leq 1/N$. Both parity subsequences tend to $0$, so the sequence converges to $0$.",
+    "parameters": {
+      "sequence": "(1+(-1)^n)/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Show the odd terms already at 0 and the even terms decaying."
+  },
+  {
+    "id": "A54",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "natural_language",
+    "theorem": "Subsequence proof for cos(n pi)/n",
+    "question": "Prove that a_n = cos(n pi)/n converges to 0.",
+    "proof": "Because cos(n pi) is (-1)^n, the sequence is just the alternating sequence (-1)^n/n. Looking at even terms gives 1/(2k), with |1/(2k) - 0| ≤ 1/N, and at odd terms gives -1/(2k-1), with |−1/(2k−1) − 0| ≤ 1/N. Both tend to 0. Hence the whole sequence converges to 0.",
+    "parameters": {
+      "sequence": "cos(n pi)/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Reduce to the alternating sequence and split by parity."
+  },
+  {
+    "id": "A55",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "latex",
+    "theorem": "Subsequence proof for (-1)^n/(n+1)+1/n",
+    "question": "Prove that a_n = (-1)^n/(n+1)+1/n converges to 0.",
+    "proof": "For even $n = 2k$,\n\\[\na_{2k} = \\frac{1}{2k+1} + \\frac{1}{2k} \\to 0,\n\\]\nand for odd $n = 2k-1$,\n\\[\na_{2k-1} = -\\frac{1}{2k} + \\frac{1}{2k-1} \\to 0.\n\\]\nIn both cases $|a_n - 0| \\leq \\frac{2}{N}$ for $n \\geq N$. Both parity subsequences converge to $0$, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "(-1)^n/(n+1)+1/n",
+      "limit": 0,
+      "bound": "\\frac{2}{N}"
+    },
+    "animation_notes": "Show both parity formulas and their limits."
+  },
+  {
+    "id": "A56",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "natural_language",
+    "theorem": "Tail bound for (n+3)/(2n+1)",
+    "question": "Prove that a_n = (n+3)/(2n+1) converges to 1/2.",
+    "proof": "The difference from 1/2 simplifies to 5/[2(2n+1)], which is at most 5/(4n). Given eps > 0, choose N greater than 5/(4eps). Then for every n at least N, |a_n - 1/2| ≤ 5/(4n) ≤ 5/(4N) < eps. So the sequence converges to 1/2.",
+    "parameters": {
+      "sequence": "(n+3)/(2n+1)",
+      "limit": "1/2",
+      "bound": "5/(4N)"
+    },
+    "animation_notes": "Emphasize that only the tail n >= N is controlled."
+  },
+  {
+    "id": "A57",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "latex",
+    "theorem": "Tail bound for (2n^2+1)/(n^2+3)",
+    "question": "Prove that a_n = (2n^2+1)/(n^2+3) converges to 2.",
+    "proof": "Compute\n\\[\n\\left|\\frac{2n^2+1}{n^2+3} - 2\\right| = \\frac{5}{n^2+3} \\leq \\frac{5}{n^2} \\leq \\frac{5}{N^2}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > \\sqrt{5/\\varepsilon}$. For $n \\geq N$ the tail bound satisfies $\\frac{5}{N^2} < \\varepsilon$, so $a_n \\to 2$.",
+    "parameters": {
+      "sequence": "(2n^2+1)/(n^2+3)",
+      "limit": 2,
+      "bound": "\\frac{5}{N^2}"
+    },
+    "animation_notes": "Show the tail bound 5/(n^2+3) decreasing rapidly."
+  },
+  {
+    "id": "A58",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "mixed",
+    "theorem": "Tail bound for (3n-2)/(n+1)",
+    "question": "Prove that a_n = (3n-2)/(n+1) converges to 3.",
+    "proof": "The difference from $3$ is $\\frac{5}{n+1} \\leq \\frac{5}{n} \\leq \\frac{5}{N}$. Given $\\varepsilon > 0$, choose $N > 5/\\varepsilon$. Then for every $n \\geq N$ the tail of the sequence lies within $\\varepsilon$ since $\\frac{5}{N} < \\varepsilon$, so $a_n \\to 3$.",
+    "parameters": {
+      "sequence": "(3n-2)/(n+1)",
+      "limit": 3,
+      "bound": "\\frac{5}{N}"
+    },
+    "animation_notes": "Display the simplified tail difference 5/(n+1)."
+  },
+  {
+    "id": "A59",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "natural_language",
+    "theorem": "Tail bound for (n^2+2n)/(3n^2+1)",
+    "question": "Prove that a_n = (n^2+2n)/(3n^2+1) converges to 1/3.",
+    "proof": "Subtracting 1/3 and simplifying gives |6n - 1|/[3(3n^2+1)]. The numerator is at most 6n, and the denominator is at least 9n^2, so the whole expression is at most 2/(3n). For eps > 0, choose N greater than 2/(3eps). Then for every n from N on, |a_n - 1/3| ≤ 2/(3n) ≤ 2/(3N) < eps. So the sequence converges to 1/3.",
+    "parameters": {
+      "sequence": "(n^2+2n)/(3n^2+1)",
+      "limit": "1/3",
+      "bound": "2/(3N)"
+    },
+    "animation_notes": "Show the bound |6n-1| <= 6n and denominator >= 9n^2."
+  },
+  {
+    "id": "A60",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "latex",
+    "theorem": "Tail bound for 1/(sqrt(n)+1)",
+    "question": "Prove that a_n = 1/(sqrt(n)+1) converges to 0.",
+    "proof": "For $n \\geq 1$,\n\\[\n0 < \\frac{1}{\\sqrt{n}+1} \\leq \\frac{1}{\\sqrt{n}}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > 1/\\varepsilon^2$. Then for $n \\geq N$,\n\\[\n\\left|\\frac{1}{\\sqrt{n}+1} - 0\\right| \\leq \\frac{1}{\\sqrt{n}} \\leq \\frac{1}{\\sqrt{N}} < \\varepsilon,\n\\]\nso $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "1/(sqrt(n)+1)",
+      "limit": 0,
+      "bound": "\\frac{1}{\\sqrt{N}}"
+    },
+    "animation_notes": "Show the nonlinear tail bound 1/sqrt(n)."
+  },
+  {
+    "id": "A61",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "natural_language",
+    "theorem": "Dominant term for (3n^2+2n+1)/(n^2+5)",
+    "question": "Prove that a_n = (3n^2+2n+1)/(n^2+5) converges to 3.",
+    "proof": "The leading terms give 3n^2/n^2, which is 3. Making that precise, the difference from 3 equals |2n - 14|/(n^2+5). Once n is at least 7, the numerator is at most 2n, so the difference is at most 2/n ≤ 2/N. Choosing N above max(7, 2/eps) guarantees |a_n - 3| ≤ 2/N < eps, so the sequence converges to 3.",
+    "parameters": {
+      "sequence": "(3n^2+2n+1)/(n^2+5)",
+      "limit": 3,
+      "bound": "2/N"
+    },
+    "animation_notes": "Highlight leading coefficients in numerator and denominator."
+  },
+  {
+    "id": "A62",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "latex",
+    "theorem": "Dominant term for (2n^3-1)/(4n^3+n)",
+    "question": "Prove that a_n = (2n^3-1)/(4n^3+n) converges to 1/2.",
+    "proof": "The leading terms give $2n^3/4n^3 = 1/2$. Indeed,\n\\[\n\\left|\\frac{2n^3-1}{4n^3+n} - \\frac{1}{2}\\right| = \\frac{n+2}{2(4n^3+n)}.\n\\]\nFor $n \\geq 1$ this is at most $\\frac{3n}{8n^3} = \\frac{3}{8n^2} \\leq \\frac{3}{8n} \\leq \\frac{3}{8N}$. Choosing $N > 3/(8\\varepsilon)$ gives $a_n \\to 1/2$.",
+    "parameters": {
+      "sequence": "(2n^3-1)/(4n^3+n)",
+      "limit": "1/2",
+      "bound": "\\frac{3}{8N}"
+    },
+    "animation_notes": "Show the degree-three dominant term cancellation."
+  },
+  {
+    "id": "A63",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "mixed",
+    "theorem": "Dominant term for (5n^2+n)/(2n^2+3)",
+    "question": "Prove that a_n = (5n^2+n)/(2n^2+3) converges to 5/2.",
+    "proof": "The dominant terms give the candidate limit $5/2$. The difference from $5/2$ is $\\frac{|2n-15|}{2(2n^2+3)}$, which for $n \\geq 8$ is at most $\\frac{2n}{4n^2} = \\frac{1}{2n} \\leq \\frac{1}{2N}$. Take $N > \\max(8, 1/(2\\varepsilon))$; then the tail satisfies $\\frac{1}{2N} < \\varepsilon$ and $a_n \\to 5/2$.",
+    "parameters": {
+      "sequence": "(5n^2+n)/(2n^2+3)",
+      "limit": "5/2",
+      "bound": "\\frac{1}{2N}"
+    },
+    "animation_notes": "Display the leading-coefficient ratio before the epsilon bound."
+  },
+  {
+    "id": "A64",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "natural_language",
+    "theorem": "Dominant term for (n^3+2n)/(2n^3+n^2+1)",
+    "question": "Prove that a_n = (n^3+2n)/(2n^3+n^2+1) converges to 1/2.",
+    "proof": "The dominant terms in numerator and denominator are n^3 and 2n^3, so the candidate limit is 1/2. Working out the difference gives |n^2 - 4n + 1|/[2(2n^3+n^2+1)]. For n at least 5, this is at most 2n^2/(4n^3), that is 1/(2n) ≤ 1/(2N). Taking N above max(5, 1/(2eps)) makes |a_n - 1/2| ≤ 1/(2N) < eps, so the sequence converges to 1/2.",
+    "parameters": {
+      "sequence": "(n^3+2n)/(2n^3+n^2+1)",
+      "limit": "1/2",
+      "bound": "1/(2N)"
+    },
+    "animation_notes": "Show the lower-degree terms are dominated by n^3."
+  },
+  {
+    "id": "A65",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "latex",
+    "theorem": "Dominant term for (4n^4+n^2)/(2n^4+3n)",
+    "question": "Prove that a_n = (4n^4+n^2)/(2n^4+3n) converges to 2.",
+    "proof": "The dominant terms give $4n^4/2n^4 = 2$. In fact,\n\\[\n\\left|\\frac{4n^4+n^2}{2n^4+3n} - 2\\right| = \\frac{|n^2-6n|}{2n^4+3n}.\n\\]\nFor $n \\geq 6$ this is at most $\\frac{n^2}{2n^4} = \\frac{1}{2n^2} \\leq \\frac{1}{2N^2}$. Choosing $N > \\max(6, \\sqrt{1/(2\\varepsilon)})$ gives $a_n \\to 2$.",
+    "parameters": {
+      "sequence": "(4n^4+n^2)/(2n^4+3n)",
+      "limit": 2,
+      "bound": "\\frac{1}{2N^2}"
+    },
+    "animation_notes": "Show the degree-four leading terms and the rapid tail decay."
+  },
+  {
+    "id": "A71",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "natural_language",
+    "theorem": "Absolute-value bound for (-1)^n/n+1/n",
+    "question": "Prove that a_n = (-1)^n/n + 1/n converges to 0.",
+    "proof": "Using the triangle inequality, the absolute value of the sum is at most the sum of the absolute values, which is 1/n + 1/n, that is 2/n. Given eps > 0, choose N greater than 2/eps. For every n at least N, |a_n - 0| ≤ 2/n ≤ 2/N < eps, so the sequence converges to 0.",
+    "parameters": {
+      "sequence": "(-1)^n/n + 1/n",
+      "limit": 0,
+      "bound": "2/N"
+    },
+    "animation_notes": "Show the triangle inequality as the key step."
+  },
+  {
+    "id": "A72",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "latex",
+    "theorem": "Absolute-value bound for sin(n)/n+cos(n)/n^2",
+    "question": "Prove that a_n = sin(n)/n + cos(n)/n^2 converges to 0.",
+    "proof": "By the triangle inequality,\n\\[\n|a_n - 0| \\leq \\frac{|\\sin(n)|}{n} + \\frac{|\\cos(n)|}{n^2} \\leq \\frac{1}{n} + \\frac{1}{n^2} \\leq \\frac{2}{n} \\leq \\frac{2}{N}\n\\]\nfor every $n \\geq 1$. Choose $N > 2/\\varepsilon$; then $|a_n| \\leq \\frac{2}{N} < \\varepsilon$ for $n \\geq N$, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "sin(n)/n + cos(n)/n^2",
+      "limit": 0,
+      "bound": "\\frac{2}{N}"
+    },
+    "animation_notes": "Display both absolute-value estimates before combining them."
+  },
+  {
+    "id": "A73",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "mixed",
+    "theorem": "Absolute-value bound for (n+(-1)^n)/(n+1)",
+    "question": "Prove that a_n = (n+(-1)^n)/(n+1) converges to 1.",
+    "proof": "Compute the difference from $1$:\n\\[\n|a_n - 1| = \\frac{|n + (-1)^n - n - 1|}{n+1} = \\frac{|(-1)^n - 1|}{n+1} \\leq \\frac{2}{n+1} \\leq \\frac{2}{N}.\n\\]\nTaking $N > 2/\\varepsilon$ gives $|a_n - 1| \\leq \\frac{2}{N} < \\varepsilon$, so $a_n \\to 1$.",
+    "parameters": {
+      "sequence": "(n+(-1)^n)/(n+1)",
+      "limit": 1,
+      "bound": "\\frac{2}{N}"
+    },
+    "animation_notes": "Show the absolute value of (-1)^n-1 is at most 2."
+  },
+  {
+    "id": "A74",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "natural_language",
+    "theorem": "Absolute-value bound for 1/n-1/(n+1)",
+    "question": "Prove that a_n = 1/n - 1/(n+1) converges to 0.",
+    "proof": "Combining the two fractions gives the absolute value as 1/[n(n+1)], which is at most 1/n. Given eps > 0, choose N greater than 1/eps. Then for every n at least N, |a_n - 0| ≤ 1/n ≤ 1/N < eps, so the sequence approaches 0.",
+    "parameters": {
+      "sequence": "1/n - 1/(n+1)",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Simplify the absolute value to a single fraction."
+  },
+  {
+    "id": "A75",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "latex",
+    "theorem": "Absolute-value bound for alternating reciprocal terms",
+    "question": "Prove that a_n = (-1)^n/(n+1) + (-1)^(n+1)/(n+2) converges to 0.",
+    "proof": "By the triangle inequality,\n\\[\n|a_n - 0| \\leq \\frac{1}{n+1} + \\frac{1}{n+2} \\leq \\frac{2}{n} \\leq \\frac{2}{N}.\n\\]\nLet $\\varepsilon > 0$ and choose $N > 2/\\varepsilon$. Then $|a_n| \\leq \\frac{2}{N} < \\varepsilon$ for $n \\geq N$, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "(-1)^n/(n+1) + (-1)^(n+1)/(n+2)",
+      "limit": 0,
+      "bound": "\\frac{2}{N}"
+    },
+    "animation_notes": "Show the two alternating terms with opposite signs."
+  },
+  {
+    "id": "A81",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "natural_language",
+    "theorem": "Rational rewrite for (n+2)/(2n+1)",
+    "question": "Prove that a_n = (n+2)/(2n+1) converges to 1/2.",
+    "proof": "Putting the difference over a common denominator gives |2n + 4 - 2n - 1| divided by 2(2n+1), which simplifies to 3/[2(2n+1)]. This is at most 3/(4n). Given eps > 0, choose N greater than 3/(4eps); then for every n at least N, |a_n - 1/2| ≤ 3/(4n) ≤ 3/(4N) < eps, so the sequence converges to 1/2.",
+    "parameters": {
+      "sequence": "(n+2)/(2n+1)",
+      "limit": "1/2",
+      "bound": "3/(4N)"
+    },
+    "animation_notes": "Show the common-denominator rewrite before bounding."
+  },
+  {
+    "id": "A82",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "latex",
+    "theorem": "Rational rewrite for (3n^2+n)/(n^2+2)",
+    "question": "Prove that a_n = (3n^2+n)/(n^2+2) converges to 3.",
+    "proof": "Rewrite\n\\[\n\\left|\\frac{3n^2+n}{n^2+2} - 3\\right| = \\frac{|3n^2+n-3n^2-6|}{n^2+2} = \\frac{|n-6|}{n^2+2}.\n\\]\nFor $n \\geq 6$ this is at most $n/n^2 = 1/n \\leq 1/N$. Choosing $N > \\max(6, 1/\\varepsilon)$ gives $a_n \\to 3$.",
+    "parameters": {
+      "sequence": "(3n^2+n)/(n^2+2)",
+      "limit": 3,
+      "bound": "1/N"
+    },
+    "animation_notes": "Show the cancellation of the leading quadratic terms."
+  },
+  {
+    "id": "A83",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "mixed",
+    "theorem": "Rational rewrite for (2n^2+3n+1)/(4n^2+n)",
+    "question": "Prove that a_n = (2n^2+3n+1)/(4n^2+n) converges to 1/2.",
+    "proof": "Subtracting $1/2$ and putting over a common denominator gives\n\\[\n\\frac{|4n^2+6n+2-4n^2-n|}{2(4n^2+n)} = \\frac{5n+2}{2(4n^2+n)}.\n\\]\nFor $n \\geq 2$ this is at most $\\frac{7n}{8n^2} = \\frac{7}{8n} \\leq \\frac{7}{8N}$. So taking $N > \\max(2, 7/(8\\varepsilon))$ gives $a_n \\to 1/2$.",
+    "parameters": {
+      "sequence": "(2n^2+3n+1)/(4n^2+n)",
+      "limit": "1/2",
+      "bound": "\\frac{7}{8N}"
+    },
+    "animation_notes": "Display the numerator and denominator after clearing fractions."
+  },
+  {
+    "id": "A84",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "natural_language",
+    "theorem": "Rational rewrite for (n^2-1)/(2n^2+n)",
+    "question": "Prove that a_n = (n^2-1)/(2n^2+n) converges to 1/2.",
+    "proof": "Subtracting 1/2 and simplifying the numerator gives n + 2, while the denominator becomes 2(2n^2 + n). For n at least 2, the expression is at most 3n/(4n^2), that is 3/(4n). For eps > 0, taking N greater than max(2, 3/(4eps)) makes |a_n - 1/2| ≤ 3/(4N) < eps, so the sequence converges to 1/2.",
+    "parameters": {
+      "sequence": "(n^2-1)/(2n^2+n)",
+      "limit": "1/2",
+      "bound": "3/(4N)"
+    },
+    "animation_notes": "Show the common denominator 2(2n^2+n)."
+  },
+  {
+    "id": "A85",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "latex",
+    "theorem": "Rational rewrite for (5n^3+2n)/(2n^3+n^2)",
+    "question": "Prove that a_n = (5n^3+2n)/(2n^3+n^2) converges to 5/2.",
+    "proof": "Rewrite\n\\[\n\\left|\\frac{5n^3+2n}{2n^3+n^2} - \\frac{5}{2}\\right| = \\frac{|4n - 5n^2|}{2n^2(2n+1)}.\n\\]\nFor $n \\geq 1$ this is at most $\\frac{5n^2}{2n^2(2n+1)} = \\frac{5}{2(2n+1)} \\leq \\frac{5}{4n} \\leq \\frac{5}{4N}$. Choosing $N > 5/(4\\varepsilon)$ gives $a_n \\to 5/2$.",
+    "parameters": {
+      "sequence": "(5n^3+2n)/(2n^3+n^2)",
+      "limit": "5/2",
+      "bound": "\\frac{5}{4N}"
+    },
+    "animation_notes": "Show the final rational bound 5/(4n)."
+  },
+  {
+    "id": "A86",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 7/n",
+    "question": "Prove that a_n = 7/n converges to 0.",
+    "proof": "Given a tolerance eps, we want 7/n to dip below it. This happens once n exceeds 7/eps, so set N to any integer past that threshold. For every subsequent index the terms satisfy |a_n - 0| = 7/n ≤ 7/N < eps. Therefore 7/n approaches 0.",
+    "parameters": {
+      "sequence": "7/n",
+      "limit": 0,
+      "bound": "7/N"
+    },
+    "animation_notes": "Eps-band around 0; highlight the crossing index N."
+  },
+  {
+    "id": "A87",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "latex",
+    "theorem": "Limit of (3n+1)/n",
+    "question": "Prove that a_n = (3n+1)/n converges to 3.",
+    "proof": "Fix an arbitrary $\\varepsilon > 0$. Any $N \\in \\mathbb{N}$ exceeding $1/\\varepsilon$ will do. Indeed, splitting the fraction, $(3n+1)/n = 3 + 1/n$, so for $n \\geq N$ we obtain\n\\[\n|a_n - 3| = \\frac{1}{n} \\leq \\frac{1}{N} < \\varepsilon,\n\\]\nwhich completes the argument.",
+    "parameters": {
+      "sequence": "(3n+1)/n",
+      "limit": 3,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Terms approaching 3 from above; show the difference 1/n."
+  },
+  {
+    "id": "A88",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "mixed",
+    "theorem": "Limit of 1/(n+5)",
+    "question": "Prove that a_n = 1/(n+5) converges to 0.",
+    "proof": "Take $\\varepsilon > 0$. Choose $N$ so that $N > 1/\\varepsilon$. Since the denominator grows, $1/(n+5) < 1/n$, and this last quantity is already below $1/N$, hence below $\\varepsilon$, once $n \\geq N$. Thus $|a_n - 0| \\leq 1/N < \\varepsilon$, so the sequence pinches down to zero.",
+    "parameters": {
+      "sequence": "1/(n+5)",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Same template as A1 with shifted indices."
+  },
+  {
+    "id": "A89",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 4/(3n+2)",
+    "question": "Prove that a_n = 4/(3n+2) converges to 0.",
+    "proof": "We need the term to drop below a given eps. Since the denominator is at least 3n, the fraction is at most 4/(3n), and to make this smaller than eps it suffices that n is larger than 4/(3eps). Set N accordingly and the required bound holds for every later index: |a_n - 0| ≤ 4/(3N) < eps. This shows convergence to zero.",
+    "parameters": {
+      "sequence": "4/(3n+2)",
+      "limit": 0,
+      "bound": "4/(3N)"
+    },
+    "animation_notes": "Show terms decaying into the eps-band."
+  },
+  {
+    "id": "A90",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "latex",
+    "theorem": "Limit of (5n+3)/(2n+1)",
+    "question": "Prove that a_n = (5n+3)/(2n+1) converges to 5/2.",
+    "proof": "Observe first that\n\\[\n\\frac{5n+3}{2n+1} - \\frac{5}{2} = \\frac{1}{2(2n+1)}.\n\\]\nThe right-hand side is smaller than $1/(2n) \\leq 1/(2N)$. Therefore picking $N > 1/(2\\varepsilon)$ gives $|a_n - 5/2| \\leq 1/(2N) < \\varepsilon$ for all $n \\geq N$.",
+    "parameters": {
+      "sequence": "(5n+3)/(2n+1)",
+      "limit": "5/2",
+      "bound": "1/(2N)"
+    },
+    "animation_notes": "Show the difference formula and the bound."
+  },
+  {
+    "id": "A91",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "mixed",
+    "theorem": "Limit of 1/(n^2+1)",
+    "question": "Prove that a_n = 1/(n^2+1) converges to 0.",
+    "proof": "Because $n^2 + 1 \\geq n^2$, the reciprocal is at most $1/n^2$. Requiring $1/n^2 < \\varepsilon$ amounts to $n > 1/\\sqrt{\\varepsilon}$, and so setting $N$ above $1/\\sqrt{\\varepsilon}$ produces\n\\[\n|a_n - 0| \\leq \\frac{1}{n^2} \\leq \\frac{1}{N^2} < \\varepsilon\n\\]\nfrom that index onward. Hence $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "1/(n^2+1)",
+      "limit": 0,
+      "bound": "\\frac{1}{N^2}"
+    },
+    "animation_notes": "Show the faster decay than 1/n."
+  },
+  {
+    "id": "A92",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 2n/(n^2+1)",
+    "question": "Prove that a_n = 2n/(n^2+1) converges to 0.",
+    "proof": "Divide the numerator and denominator of the fraction by n and notice that the denominator is at least n, so the whole expression is bounded above by 2/n. For any positive eps, once n passes 2/eps the bound is below eps: |a_n - 0| ≤ 2/n ≤ 2/N < eps. Therefore the sequence decays to zero.",
+    "parameters": {
+      "sequence": "2n/(n^2+1)",
+      "limit": 0,
+      "bound": "2/N"
+    },
+    "animation_notes": "Highlight the bound 2n/n^2 = 2/n."
+  },
+  {
+    "id": "A93",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "latex",
+    "theorem": "Limit of (n+7)/(n+3)",
+    "question": "Prove that a_n = (n+7)/(n+3) converges to 1.",
+    "proof": "Write $a_n = 1 + 4/(n+3)$. The distance to the proposed limit is thus $4/(n+3)$, which is bounded by $4/n \\leq 4/N$. Selecting $N$ with $N > 4/\\varepsilon$ yields $|a_n - 1| \\leq 4/N < \\varepsilon$ whenever $n \\geq N$.",
+    "parameters": {
+      "sequence": "(n+7)/(n+3)",
+      "limit": 1,
+      "bound": "4/N"
+    },
+    "animation_notes": "Terms approaching 1 from above."
+  },
+  {
+    "id": "A94",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "mixed",
+    "theorem": "Limit of (n^2+n)/(3n^2)",
+    "question": "Prove that a_n = (n^2+n)/(3n^2) converges to 1/3.",
+    "proof": "After cancelling one factor of $n$, the term reads $1/3 + 1/(3n)$. The distance from $1/3$ is therefore $1/(3n) \\leq 1/(3N)$, which drops below $\\varepsilon$ as soon as $n$ exceeds $1/(3\\varepsilon)$. Choosing $N$ past that point finishes the argument.",
+    "parameters": {
+      "sequence": "(n^2+n)/(3n^2)",
+      "limit": "1/3",
+      "bound": "1/(3N)"
+    },
+    "animation_notes": "Show the split into constant + 1/(3n)."
+  },
+  {
+    "id": "A95",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "direct_epsilon_N",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 3/(n^2+2)",
+    "question": "Prove that a_n = 3/(n^2+2) converges to 0.",
+    "proof": "Since the denominator is at least n squared, the fraction does not exceed 3 over n squared. To push this below eps we need n to be greater than the square root of 3 over eps. Take N accordingly; then for all later indices |a_n - 0| ≤ 3/n^2 ≤ 3/N^2 < eps, so all later terms are already inside the eps-band.",
+    "parameters": {
+      "sequence": "3/(n^2+2)",
+      "limit": 0,
+      "bound": "3/N^2"
+    },
+    "animation_notes": "Quadratic decay crossed with the eps-band."
+  },
+  {
+    "id": "A96",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "latex",
+    "theorem": "Limit of (7n+5)/(n+2)",
+    "question": "Prove that a_n = (7n+5)/(n+2) converges to 7.",
+    "proof": "Before invoking epsilons, simplify the difference from $7$:\n\\[\n\\frac{7n+5}{n+2} - 7 = \\frac{-9}{n+2}.\n\\]\nIts absolute value is at most $9/n \\leq 9/N$, and $9/N < \\varepsilon$ once $N > 9/\\varepsilon$. Choosing $N$ past this threshold does the job.",
+    "parameters": {
+      "sequence": "(7n+5)/(n+2)",
+      "limit": 7,
+      "bound": "9/N"
+    },
+    "animation_notes": "Display the algebraic simplification first."
+  },
+  {
+    "id": "A97",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "natural_language",
+    "theorem": "Limit of (2n^2+n)/(n^2+n+1)",
+    "question": "Prove that a_n = (2n^2+n)/(n^2+n+1) converges to 2.",
+    "proof": "Start by subtracting two and combining: the numerator becomes minus n minus two, and after dividing by n squared plus n plus one we obtain an absolute value that is bounded, for n at least two, by n over n squared, that is one over n. Pick N beyond the larger of 2 and 1/eps, and the tail satisfies |a_n - 2| ≤ 1/n ≤ 1/N < eps, so it is within eps of 2.",
+    "parameters": {
+      "sequence": "(2n^2+n)/(n^2+n+1)",
+      "limit": 2,
+      "bound": "1/N"
+    },
+    "animation_notes": "Show the numerator cancellation leaving |-n-2|."
+  },
+  {
+    "id": "A98",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "mixed",
+    "theorem": "Limit of (3n^2-1)/(n^2+4)",
+    "question": "Prove that a_n = (3n^2-1)/(n^2+4) converges to 3.",
+    "proof": "The numerator of $a_n - 3$, after combining, equals $-13$. Its absolute value divided by the denominator is thus $13/(n^2+4)$, which is smaller than $13/n^2 \\leq 13/N^2$. Picking $N$ above $\\sqrt{13/\\varepsilon}$ gives $|a_n - 3| \\leq 13/N^2 < \\varepsilon$, so the sequence converges to 3.",
+    "parameters": {
+      "sequence": "(3n^2-1)/(n^2+4)",
+      "limit": 3,
+      "bound": "13/N^2"
+    },
+    "animation_notes": "Show 13/(n^2+4) and its rapid decay."
+  },
+  {
+    "id": "A99",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "latex",
+    "theorem": "Limit of (4n+1)/(2n-3)",
+    "question": "Prove that a_n = (4n+1)/(2n-3) converges to 2.",
+    "proof": "Compute the difference from the candidate limit:\n\\[\n\\frac{4n+1}{2n-3} - 2 = \\frac{7}{2n-3}.\n\\]\nOnce $n \\geq 3$ the denominator satisfies $2n - 3 \\geq n$, giving a bound of $7/n \\leq 7/N$. So take $N$ past $\\max(3, 7/\\varepsilon)$.",
+    "parameters": {
+      "sequence": "(4n+1)/(2n-3)",
+      "limit": 2,
+      "bound": "7/N"
+    },
+    "animation_notes": "Show denominator bound 2n-3 >= n for n>=3."
+  },
+  {
+    "id": "A100",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "natural_language",
+    "theorem": "Limit of (n^3+1)/(2n^3+5)",
+    "question": "Prove that a_n = (n^3+1)/(2n^3+5) converges to 1/2.",
+    "proof": "Subtracting one half gives a numerator equal to two n cubed plus two minus two n cubed minus five, which is minus three. So the difference is three over twice the quantity two n cubed plus five. This is bounded by three over four n cubed, which is at most 3/(4N^3) and tends to zero. Hence the sequence approaches one half.",
+    "parameters": {
+      "sequence": "(n^3+1)/(2n^3+5)",
+      "limit": "1/2",
+      "bound": "3/(4N^3)"
+    },
+    "animation_notes": "Display the cancellation leaving |-3|/(2(2n^3+5))."
+  },
+  {
+    "id": "A101",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "mixed",
+    "theorem": "Limit of (6n+5)/(3n+1)",
+    "question": "Prove that a_n = (6n+5)/(3n+1) converges to 2.",
+    "proof": "Forming $a_n - 2$ yields a numerator of $6n+5-6n-2$, which is $3$, over $3n+1$. The absolute value is therefore bounded above by $1/n \\leq 1/N$, and choosing $N$ past $1/\\varepsilon$ suffices: $|a_n - 2| \\leq 1/N < \\varepsilon$. So $a_n \\to 2$.",
+    "parameters": {
+      "sequence": "(6n+5)/(3n+1)",
+      "limit": 2,
+      "bound": "1/N"
+    },
+    "animation_notes": "Highlight the cancellation and the bound 1/n."
+  },
+  {
+    "id": "A102",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "latex",
+    "theorem": "Limit of (n^2-3)/(2n^2+n)",
+    "question": "Prove that a_n = (n^2-3)/(2n^2+n) converges to 1/2.",
+    "proof": "Writing everything over a common denominator,\n\\[\n\\frac{n^2-3}{2n^2+n} - \\frac{1}{2} = \\frac{2n^2-6-2n^2-n}{2(2n^2+n)} = \\frac{-n-6}{2(2n^2+n)}.\n\\]\nFor $n \\geq 1$ the numerator has size at most $7n$ and the denominator at least $4n^2$, so the quotient is at most $7/(4n) \\leq 7/(4N)$. Take $N > 7/(4\\varepsilon)$.",
+    "parameters": {
+      "sequence": "(n^2-3)/(2n^2+n)",
+      "limit": "1/2",
+      "bound": "7/(4N)"
+    },
+    "animation_notes": "Show the common-denominator rewrite."
+  },
+  {
+    "id": "A103",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "natural_language",
+    "theorem": "Limit of (n+10)/(2n+5)",
+    "question": "Prove that a_n = (n+10)/(2n+5) converges to 1/2.",
+    "proof": "Subtracting one half produces 2n plus twenty minus 2n minus five, which reduces to fifteen, over twice the quantity two n plus five. For positive n the denominator is at least six n, so the quotient is bounded by fifteen over six n, which is at most 15/(6N) = 5/(2N), and decays to zero. The sequence therefore tends to one half.",
+    "parameters": {
+      "sequence": "(n+10)/(2n+5)",
+      "limit": "1/2",
+      "bound": "5/(2N)"
+    },
+    "animation_notes": "Show the numerator constant 15."
+  },
+  {
+    "id": "A104",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "latex",
+    "theorem": "Limit of (5n^2+3)/(2n^2-n)",
+    "question": "Prove that a_n = (5n^2+3)/(2n^2-n) converges to 5/2.",
+    "proof": "Combining the difference from $5/2$ into a single fraction,\n\\[\n\\frac{5n^2+3}{2n^2-n} - \\frac{5}{2} = \\frac{5n+6}{2(2n^2-n)}.\n\\]\nFor $n \\geq 2$ the numerator is at most $11n$ while the denominator is at least $4n^2$, so the quotient is at most $11/(4n) \\leq 11/(4N)$. Hence taking $N > 11/(4\\varepsilon)$ suffices.",
+    "parameters": {
+      "sequence": "(5n^2+3)/(2n^2-n)",
+      "limit": "5/2",
+      "bound": "11/(4N)"
+    },
+    "animation_notes": "Display the numerator and denominator after clearing."
+  },
+  {
+    "id": "A105",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "algebraic_first",
+    "proof_format": "mixed",
+    "theorem": "Limit of (n^2+4n)/(n^2+1)",
+    "question": "Prove that a_n = (n^2+4n)/(n^2+1) converges to 1.",
+    "proof": "The difference from $1$ simplifies to $(4n-1)/(n^2+1)$, which is at most $4n/n^2 = 4/n \\leq 4/N$. Choosing $N$ past $4/\\varepsilon$ guarantees that $|a_n - 1| \\leq 4/N < \\varepsilon$, so the tail lies within $\\varepsilon$ of $1$.",
+    "parameters": {
+      "sequence": "(n^2+4n)/(n^2+1)",
+      "limit": 1,
+      "bound": "4/N"
+    },
+    "animation_notes": "Show 4/n as the comparison bound."
+  },
+  {
+    "id": "A106",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "natural_language",
+    "theorem": "Limit of cos(n)/(n+1)",
+    "question": "Prove that a_n = cos(n)/(n+1) converges to 0.",
+    "proof": "The numerator is bounded by one in absolute value, so the whole expression is dominated by 1 over n plus one, which in turn is at most 1 over n. Once n passes 1 over eps, every subsequent term satisfies |a_n - 0| ≤ 1/n ≤ 1/N < eps, showing convergence to zero.",
+    "parameters": {
+      "sequence": "cos(n)/(n+1)",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Envelope curves ±1/(n+1)."
+  },
+  {
+    "id": "A107",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "latex",
+    "theorem": "Limit of sin(3n)/n^2",
+    "question": "Prove that a_n = sin(3n)/n^2 converges to 0.",
+    "proof": "Because $|\\sin(3n)| \\leq 1$, we have\n\\[\n|a_n - 0| \\leq \\frac{1}{n^2} \\leq \\frac{1}{n} \\leq \\frac{1}{N}.\n\\]\nTaking $N$ past $1/\\varepsilon$ forces $|a_n| \\leq \\frac{1}{N} < \\varepsilon$ for all $n \\geq N$.",
+    "parameters": {
+      "sequence": "sin(3n)/n^2",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Show the faster 1/n^2 decay."
+  },
+  {
+    "id": "A108",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "mixed",
+    "theorem": "Limit of cos(n)/n^3",
+    "question": "Prove that a_n = cos(n)/n^3 converges to 0.",
+    "proof": "The numerator is bounded by one, so $|a_n - 0|$ is at most $1/n^3$, which itself is smaller than $1/n \\leq 1/N$. Picking $N$ beyond $1/\\varepsilon$ makes the tail satisfy $1/N < \\varepsilon$, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "cos(n)/n^3",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Rapid cubic decay."
+  },
+  {
+    "id": "A109",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "natural_language",
+    "theorem": "Limit of arctan(n)/n^2",
+    "question": "Prove that a_n = arctan(n)/n^2 converges to 0.",
+    "proof": "Since the arctangent always lies between minus pi over two and plus pi over two, its magnitude is at most pi over two. Dividing by n squared then bounds the term by pi over two divided by n squared, which is below pi over two divided by n. Any N larger than pi over two eps puts every term inside the eps-band with |a_n - 0| ≤ pi/(2N) < eps.",
+    "parameters": {
+      "sequence": "arctan(n)/n^2",
+      "limit": 0,
+      "bound": "pi/(2N)"
+    },
+    "animation_notes": "Mark the horizontal bound pi/2."
+  },
+  {
+    "id": "A110",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "latex",
+    "theorem": "Limit of (2+cos(n))/n",
+    "question": "Prove that a_n = (2+cos(n))/n converges to 0.",
+    "proof": "The numerator is trapped between $1$ and $3$, so\n\\[\n\\frac{1}{n} \\leq a_n \\leq \\frac{3}{n} \\leq \\frac{3}{N}.\n\\]\nChoosing $N > 3/\\varepsilon$ ensures $|a_n| \\leq \\frac{3}{N} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(2+cos(n))/n",
+      "limit": 0,
+      "bound": "\\frac{3}{N}"
+    },
+    "animation_notes": "Show the numerator bounded between 1 and 3."
+  },
+  {
+    "id": "A111",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "mixed",
+    "theorem": "Limit of sin(n)^2/n",
+    "question": "Prove that a_n = sin^2(n)/n converges to 0.",
+    "proof": "Since the square of a sine value lies between zero and one, the ratio satisfies $0 \\leq a_n \\leq 1/n \\leq 1/N$. Once $n$ passes $1/\\varepsilon$ the upper bound falls below $\\varepsilon$: $|a_n| \\leq 1/N < \\varepsilon$. Hence $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "sin^2(n)/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Envelope bounded by 1/n."
+  },
+  {
+    "id": "A112",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "natural_language",
+    "theorem": "Limit of (n+1)/(n^2+1)",
+    "question": "Prove that a_n = (n+1)/(n^2+1) converges to 0.",
+    "proof": "For any n at least one, the numerator is bounded by 2n while the denominator is at least n squared. So the fraction is no bigger than 2 over n ≤ 2/N. Choosing N beyond 2 over eps gives a tail with |a_n - 0| ≤ 2/N < eps, within eps of zero.",
+    "parameters": {
+      "sequence": "(n+1)/(n^2+1)",
+      "limit": 0,
+      "bound": "2/N"
+    },
+    "animation_notes": "Highlight the bound 2n/n^2 = 2/n."
+  },
+  {
+    "id": "A113",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "latex",
+    "theorem": "Limit of 3^n/n!",
+    "question": "Prove that a_n = 3^n/n! converges to 0.",
+    "proof": "Look at the ratio of consecutive terms:\n\\[\n\\frac{a_{n+1}}{a_n} = \\frac{3}{n+1}.\n\\]\nOnce $n \\geq 3$ this ratio is at most $3/4$, so $a_n$ decreases geometrically from $a_3 = 27/6$. The terms are therefore dominated by a constant times $(3/4)^n$ and, for $n \\geq N$, are at most $(3/4)^N$, which forces $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "3^n/n!",
+      "limit": 0,
+      "bound": "(3/4)^N"
+    },
+    "animation_notes": "Show factorial overtaking the exponential."
+  },
+  {
+    "id": "A114",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "mixed",
+    "theorem": "Limit of sin(n^2)/n",
+    "question": "Prove that a_n = sin(n^2)/n converges to 0.",
+    "proof": "The sine is bounded by one, so $|a_n - 0| \\leq 1/n \\leq 1/N$. For any $\\varepsilon > 0$ pick $N > 1/\\varepsilon$; then $|a_n| \\leq 1/N < \\varepsilon$ throughout the tail.",
+    "parameters": {
+      "sequence": "sin(n^2)/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Envelope curves ±1/n."
+  },
+  {
+    "id": "A115",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "comparison",
+    "proof_format": "natural_language",
+    "theorem": "Limit of cos(n^2)/n^4",
+    "question": "Prove that a_n = cos(n^2)/n^4 converges to 0.",
+    "proof": "Bounding the cosine by one gives an upper bound of 1 over n to the fourth for the absolute value, and this is certainly less than 1 over n. Taking N past 1 over eps makes the tail satisfy |a_n - 0| ≤ 1/n ≤ 1/N < eps and tiny, so the sequence converges to zero.",
+    "parameters": {
+      "sequence": "cos(n^2)/n^4",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Very rapid decay; emphasise 1/n^4."
+  },
+  {
+    "id": "A116",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "latex",
+    "theorem": "Squeeze for sin(n)/n^2",
+    "question": "Prove that a_n = sin(n)/n^2 converges to 0.",
+    "proof": "The term is caught between the two sequences\n\\[\n-\\frac{1}{n^2} \\leq \\frac{\\sin n}{n^2} \\leq \\frac{1}{n^2} \\leq \\frac{1}{N^2}.\n\\]\nSince both bounding sequences go to $0$, so does the middle one, and for $n \\geq N$, $|a_n| \\leq \\frac{1}{N^2} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "sin(n)/n^2",
+      "limit": 0,
+      "bound": "\\frac{1}{N^2}"
+    },
+    "animation_notes": "Show the two envelopes closing on 0."
+  },
+  {
+    "id": "A117",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "natural_language",
+    "theorem": "Squeeze for cos(n)/n",
+    "question": "Prove that a_n = cos(n)/n converges to 0.",
+    "proof": "Both minus 1 over n and plus 1 over n bracket the cosine-over-n sequence. These two brackets both tend to zero, and for n ≥ N we have |a_n - 0| ≤ 1/n ≤ 1/N. By the squeeze principle the middle term must share the same limit.",
+    "parameters": {
+      "sequence": "cos(n)/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Harmonic envelopes."
+  },
+  {
+    "id": "A118",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "mixed",
+    "theorem": "Squeeze for n/(2n^2+1)",
+    "question": "Prove that a_n = n/(2n^2+1) converges to 0.",
+    "proof": "The lower bound is trivially $0$, and replacing the denominator by $2n^2$ gives an upper bound of $1/(2n) \\leq 1/(2N)$. Since both bounds shrink to zero, the squeeze theorem applies and $|a_n - 0| \\leq 1/(2N) < \\varepsilon$.",
+    "parameters": {
+      "sequence": "n/(2n^2+1)",
+      "limit": 0,
+      "bound": "1/(2N)"
+    },
+    "animation_notes": "Emphasise the upper bound 1/(2n)."
+  },
+  {
+    "id": "A119",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "natural_language",
+    "theorem": "Squeeze for (sin(n)+1)/n",
+    "question": "Prove that a_n = (sin(n)+1)/n converges to 0.",
+    "proof": "Adding one to sine gives a numerator between zero and two. Dividing by n keeps the sequence inside the interval from 0 to 2 over n, so |a_n - 0| ≤ 2/n ≤ 2/N. The two ends of this interval converge to zero, so the middle term does as well.",
+    "parameters": {
+      "sequence": "(sin(n)+1)/n",
+      "limit": 0,
+      "bound": "2/N"
+    },
+    "animation_notes": "Lower bound 0 and upper bound 2/n."
+  },
+  {
+    "id": "A120",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "latex",
+    "theorem": "Squeeze for arctan(n)/(n+1)",
+    "question": "Prove that a_n = arctan(n)/(n+1) converges to 0.",
+    "proof": "For every $n \\geq 1$,\n\\[\n0 < \\frac{\\arctan n}{n+1} < \\frac{\\pi/2}{n+1} < \\frac{\\pi}{2n} \\leq \\frac{\\pi}{2N}.\n\\]\nBoth $0$ and $\\pi/(2n)$ approach $0$, forcing $|a_n| \\leq \\frac{\\pi}{2N} < \\varepsilon$, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "arctan(n)/(n+1)",
+      "limit": 0,
+      "bound": "\\frac{\\pi}{2N}"
+    },
+    "animation_notes": "Show the pi/(2n) envelope."
+  },
+  {
+    "id": "A121",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "mixed",
+    "theorem": "Squeeze for (-1)^n/(2n)",
+    "question": "Prove that a_n = (-1)^n/(2n) converges to 0.",
+    "proof": "The alternating term lies between $-1/(2n)$ and $1/(2n)$, so $|a_n - 0| \\leq 1/(2n) \\leq 1/(2N)$. Both bounds shrink to $0$, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "(-1)^n/(2n)",
+      "limit": 0,
+      "bound": "1/(2N)"
+    },
+    "animation_notes": "Alternating terms trapped between ±1/(2n)."
+  },
+  {
+    "id": "A122",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "natural_language",
+    "theorem": "Squeeze for 1/(n+cos(n))",
+    "question": "Prove that a_n = 1/(n+cos(n)) converges to 0.",
+    "proof": "Adding cosine to n shifts the denominator between n minus one and n plus one. For n at least two, this gives bounds of 1 over n plus one and 1 over n minus one, so |a_n - 0| ≤ 1/(n-1) ≤ 1/(N-1). Both bounds decay to zero, and the squeeze theorem applies.",
+    "parameters": {
+      "sequence": "1/(n+cos(n))",
+      "limit": 0,
+      "bound": "1/(N-1)"
+    },
+    "animation_notes": "Note the harmless shift in the denominator."
+  },
+  {
+    "id": "A123",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "latex",
+    "theorem": "Squeeze for n/(n^2+n+1)",
+    "question": "Prove that a_n = n/(n^2+n+1) converges to 0.",
+    "proof": "Since the denominator exceeds $n^2$,\n\\[\n0 \\leq \\frac{n}{n^2+n+1} \\leq \\frac{1}{n} \\leq \\frac{1}{N}.\n\\]\nThe right bound tends to $0$, so the squeeze principle gives $a_n \\to 0$ with $|a_n| \\leq \\frac{1}{N} < \\varepsilon$ for $n \\geq N$.",
+    "parameters": {
+      "sequence": "n/(n^2+n+1)",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Highlight the two-sided bound."
+  },
+  {
+    "id": "A124",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "mixed",
+    "theorem": "Squeeze for (2+sin(n))/(n^2)",
+    "question": "Prove that a_n = (2+sin(n))/n^2 converges to 0.",
+    "proof": "The numerator $2+\\sin n$ ranges between $1$ and $3$, so $1/n^2 \\leq a_n \\leq 3/n^2 \\leq 3/N^2$. Both bounds go to $0$, forcing $|a_n| \\leq \\frac{3}{N^2} < \\varepsilon$, hence $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "(2+sin(n))/n^2",
+      "limit": 0,
+      "bound": "3/N^2"
+    },
+    "animation_notes": "Highlight the numerator range 1 to 3."
+  },
+  {
+    "id": "A125",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "squeeze",
+    "proof_format": "natural_language",
+    "theorem": "Squeeze for cos(n)/(n+2)",
+    "question": "Prove that a_n = cos(n)/(n+2) converges to 0.",
+    "proof": "The cosine factor lies between minus one and one, so the sequence is bracketed by minus 1 over n plus two and plus 1 over n plus two. Both of these brackets decay to zero, and |a_n - 0| ≤ 1/(n+2) ≤ 1/(N+2). So the squeeze theorem gives the claimed limit.",
+    "parameters": {
+      "sequence": "cos(n)/(n+2)",
+      "limit": 0,
+      "bound": "1/(N+2)"
+    },
+    "animation_notes": "Symmetrical envelope curves."
+  },
+  {
+    "id": "A126",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "latex",
+    "theorem": "MCT for 1 - 1/(n+1)",
+    "question": "Prove that a_n = 1 - 1/(n+1) converges to 1.",
+    "proof": "The difference between consecutive terms is\n\\[\na_{n+1} - a_n = \\frac{1}{n+1} - \\frac{1}{n+2} > 0,\n\\]\nso the sequence is strictly increasing. Every term is below $1$, and the gap satisfies $1 - a_n = 1/(n+1) \\leq \\frac{1}{N+1}$ for $n \\geq N$, which tends to zero. The supremum is therefore $1$, and by monotone convergence $a_n \\to 1$.",
+    "parameters": {
+      "sequence": "1 - 1/(n+1)",
+      "limit": 1,
+      "bound": "\\frac{1}{N+1}"
+    },
+    "animation_notes": "Increasing terms below 1."
+  },
+  {
+    "id": "A127",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "natural_language",
+    "theorem": "MCT for 2 - 1/n",
+    "question": "Prove that a_n = 2 - 1/n converges to 2 using monotone convergence.",
+    "proof": "The sequence climbs because each term adds back a bit of the positive quantity 1 over n minus 1 over n plus one. It is bounded above by 2, since 1 over n is always positive. For n ≥ N the gap from 2 satisfies 2 - a_n = 1/n ≤ 1/N, which tends to zero, so the least upper bound is 2 and monotone convergence gives the claim.",
+    "parameters": {
+      "sequence": "2 - 1/n",
+      "limit": 2,
+      "bound": "1/N"
+    },
+    "animation_notes": "Increasing terms below 2."
+  },
+  {
+    "id": "A128",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "mixed",
+    "theorem": "MCT for 1 - 1/sqrt(n)",
+    "question": "Prove that a_n = 1 - 1/sqrt(n) converges to 1.",
+    "proof": "The gap between successive terms equals $1/\\sqrt{n} - 1/\\sqrt{n+1}$, which is positive, so the sequence is monotone increasing. It is bounded above by $1$, and for $n \\geq N$ the difference satisfies $1 - a_n = 1/\\sqrt{n} \\leq \\frac{1}{\\sqrt{N}}$, which tends to $0$, so by the monotone convergence theorem the limit is $1$.",
+    "parameters": {
+      "sequence": "1 - 1/sqrt(n)",
+      "limit": 1,
+      "bound": "\\frac{1}{\\sqrt{N}}"
+    },
+    "animation_notes": "Show the monotone approach to 1 from below."
+  },
+  {
+    "id": "A129",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "latex",
+    "theorem": "MCT for n/(2n+1)",
+    "question": "Prove that a_n = n/(2n+1) converges to 1/2.",
+    "proof": "Rewriting the term as $\\tfrac{1}{2} - \\tfrac{1}{2(2n+1)}$ reveals an increasing sequence whose distance from $1/2$ is $1/(2(2n+1))$, which for $n \\geq N$ satisfies $\\frac{1}{2(2n+1)} \\leq \\frac{1}{2(2N+1)}$ and shrinks to zero. The term is bounded above by $1/2$. By the monotone convergence theorem, $a_n \\to 1/2$.",
+    "parameters": {
+      "sequence": "n/(2n+1)",
+      "limit": "1/2",
+      "bound": "\\frac{1}{2(2N+1)}"
+    },
+    "animation_notes": "Increasing terms below 1/2."
+  },
+  {
+    "id": "A130",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "natural_language",
+    "theorem": "MCT for 1 - 1/(2n)",
+    "question": "Prove that a_n = 1 - 1/(2n) converges to 1 using monotone convergence.",
+    "proof": "Each term is a bit larger than the one before, because 1 over 2n is bigger than 1 over 2n plus 2. The terms never reach 1, so 1 is an upper bound. For n ≥ N the gap from 1 satisfies 1 - a_n = 1/(2n) ≤ 1/(2N), so the supremum is exactly 1 and the sequence converges to it.",
+    "parameters": {
+      "sequence": "1 - 1/(2n)",
+      "limit": 1,
+      "bound": "1/(2N)"
+    },
+    "animation_notes": "Increasing terms bounded above by 1."
+  },
+  {
+    "id": "A131",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "mixed",
+    "theorem": "MCT for 1/2 + 1/(2^n)",
+    "question": "Prove that a_n = 1/2 + 1/2^n converges to 1/2.",
+    "proof": "Each step halves the extra contribution $1/2^n$, so the sequence is strictly decreasing. It stays above $1/2$, and for $n \\geq N$ the gap satisfies $a_n - 1/2 = 1/2^n \\leq 1/2^N$, which tends to zero. By monotone convergence, the limit is $1/2$.",
+    "parameters": {
+      "sequence": "1/2 + 1/2^n",
+      "limit": "1/2",
+      "bound": "1/2^N"
+    },
+    "animation_notes": "Decreasing terms approaching 1/2 from above."
+  },
+  {
+    "id": "A132",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "latex",
+    "theorem": "MCT for 2 - 1/n^2",
+    "question": "Prove that a_n = 2 - 1/n^2 converges to 2.",
+    "proof": "Comparing consecutive terms,\n\\[\na_{n+1} - a_n = \\frac{1}{n^2} - \\frac{1}{(n+1)^2} > 0,\n\\]\nso the sequence increases. It is bounded above by $2$, and for $n \\geq N$ the gap satisfies $2 - a_n = 1/n^2 \\leq 1/N^2$, which vanishes as $n$ grows. Hence the supremum is $2$ and $a_n \\to 2$ by monotone convergence.",
+    "parameters": {
+      "sequence": "2 - 1/n^2",
+      "limit": 2,
+      "bound": "1/N^2"
+    },
+    "animation_notes": "Increasing terms below 2."
+  },
+  {
+    "id": "A133",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "natural_language",
+    "theorem": "MCT for sqrt(n)/(sqrt(n)+1)",
+    "question": "Prove that a_n = sqrt(n)/(sqrt(n)+1) converges to 1.",
+    "proof": "After rewriting the term as 1 minus 1 over square root of n plus one, we see that each step brings the value closer to 1. It never reaches 1, so 1 is an upper bound, and for n ≥ N the gap satisfies 1 - a_n = 1/(sqrt(n)+1) ≤ 1/(sqrt(N)+1), which shrinks to zero. The monotone convergence theorem then tells us that the sequence goes to 1.",
+    "parameters": {
+      "sequence": "sqrt(n)/(sqrt(n)+1)",
+      "limit": 1,
+      "bound": "1/(sqrt(N)+1)"
+    },
+    "animation_notes": "Slow monotone approach to 1."
+  },
+  {
+    "id": "A134",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "mixed",
+    "theorem": "MCT for n/(n+2)",
+    "question": "Prove that a_n = n/(n+2) converges to 1.",
+    "proof": "Rewrite the term as $1 - 2/(n+2)$. The subtracted piece becomes smaller as $n$ grows, so the sequence is increasing and bounded above by $1$. Since for $n \\geq N$ the gap satisfies $1 - a_n = 2/(n+2) \\leq \\frac{2}{N+2} \\to 0$, the supremum is $1$ and the sequence converges to $1$.",
+    "parameters": {
+      "sequence": "n/(n+2)",
+      "limit": 1,
+      "bound": "\\frac{2}{N+2}"
+    },
+    "animation_notes": "Increasing approach to 1."
+  },
+  {
+    "id": "A135",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "monotone_bounded",
+    "proof_format": "latex",
+    "theorem": "MCT for 3 - 2/n",
+    "question": "Prove that a_n = 3 - 2/n converges to 3.",
+    "proof": "Successive differences equal $2/n - 2/(n+1) > 0$, so the sequence climbs. It never exceeds $3$, and for $n \\geq N$ the gap satisfies $3 - a_n = 2/n \\leq 2/N$, which tends to zero. By monotone convergence, the limit is $3$.",
+    "parameters": {
+      "sequence": "3 - 2/n",
+      "limit": 3,
+      "bound": "2/N"
+    },
+    "animation_notes": "Increasing terms below 3."
+  },
+  {
+    "id": "A136",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "natural_language",
+    "theorem": "Constant sequence 42",
+    "question": "Prove that the constant sequence a_n = 42 converges to 42.",
+    "proof": "Pick any eps greater than zero and simply set N to be one. Every term of the sequence equals 42, so its distance to 42 is exactly zero for every index: |a_n - 42| = 0 < eps. The definition of convergence is satisfied.",
+    "parameters": {
+      "sequence": "42",
+      "limit": 42,
+      "bound": "0"
+    },
+    "animation_notes": "All points coincide with the limit 42."
+  },
+  {
+    "id": "A137",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "latex",
+    "theorem": "Constant sequence -3",
+    "question": "Prove that a_n = -3 converges to -3.",
+    "proof": "Given any $\\varepsilon > 0$, we may take $N = 1$. For each $n \\geq N$ the distance $|a_n + 3| = |-3+3|$ is literally $0 < \\varepsilon$. Convergence to $-3$ is therefore established.",
+    "parameters": {
+      "sequence": "-3",
+      "limit": -3,
+      "bound": "0"
+    },
+    "animation_notes": "All points sit at -3."
+  },
+  {
+    "id": "A138",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "mixed",
+    "theorem": "Limit of 5/n",
+    "question": "Prove that a_n = 5/n converges to 0.",
+    "proof": "Take $\\varepsilon > 0$. Select $N$ larger than $5/\\varepsilon$. For $n \\geq N$ we have\n\\[\n|a_n - 0| = 5/n \\leq 5/N < \\varepsilon,\n\\]\nso the definition is directly verified.",
+    "parameters": {
+      "sequence": "5/n",
+      "limit": 0,
+      "bound": "5/N"
+    },
+    "animation_notes": "Eps-band around 0."
+  },
+  {
+    "id": "A139",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 1/(2n)",
+    "question": "Prove that a_n = 1/(2n) converges to 0.",
+    "proof": "Given a positive eps, choose N past 1 over twice eps. Then for every subsequent index the term satisfies |a_n - 0| = 1/(2n) ≤ 1/(2N) < eps. This matches the epsilon-definition of convergence to zero.",
+    "parameters": {
+      "sequence": "1/(2n)",
+      "limit": 0,
+      "bound": "1/(2N)"
+    },
+    "animation_notes": "Eps-band around 0 with halved terms."
+  },
+  {
+    "id": "A140",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "latex",
+    "theorem": "Limit of 1/(n+10)",
+    "question": "Prove that a_n = 1/(n+10) converges to 0.",
+    "proof": "Let $\\varepsilon > 0$ be given. Choose $N$ with $N > 1/\\varepsilon$. For $n \\geq N$,\n\\[\n\\left|\\frac{1}{n+10} - 0\\right| = \\frac{1}{n+10} < \\frac{1}{n} \\leq \\frac{1}{N} < \\varepsilon,\n\\]\ndirectly confirming the definition of the limit.",
+    "parameters": {
+      "sequence": "1/(n+10)",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Shifted-index version of 1/n."
+  },
+  {
+    "id": "A141",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "mixed",
+    "theorem": "Limit of 1/sqrt(n)",
+    "question": "Prove that a_n = 1/sqrt(n) converges to 0.",
+    "proof": "For a given $\\varepsilon$, take $N$ beyond $1/\\varepsilon^2$. Then for $n \\geq N$,\n\\[\n\\left|\\frac{1}{\\sqrt{n}} - 0\\right| = \\frac{1}{\\sqrt{n}} \\leq \\frac{1}{\\sqrt{N}} < \\varepsilon.\n\\]\nThe definition of convergence is thus satisfied.",
+    "parameters": {
+      "sequence": "1/sqrt(n)",
+      "limit": 0,
+      "bound": "\\frac{1}{\\sqrt{N}}"
+    },
+    "animation_notes": "Nonlinear N selection shown on screen."
+  },
+  {
+    "id": "A142",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 1/n^4",
+    "question": "Prove that a_n = 1/n^4 converges to 0.",
+    "proof": "Given eps greater than zero, take N beyond the fourth root of 1 over eps. Then for n ≥ N, |a_n - 0| = 1/n^4 ≤ 1/N^4 < eps. So the sequence meets the definition of convergence to zero.",
+    "parameters": {
+      "sequence": "1/n^4",
+      "limit": 0,
+      "bound": "1/N^4"
+    },
+    "animation_notes": "Rapid quartic decay."
+  },
+  {
+    "id": "A143",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "latex",
+    "theorem": "Limit of (2n+3)/(n+2)",
+    "question": "Prove that a_n = (2n+3)/(n+2) converges to 2.",
+    "proof": "Given $\\varepsilon > 0$, choose $N$ so that $N > 1/\\varepsilon$. Then for all $n \\geq N$ the difference from $2$ is\n\\[\n\\left|\\frac{2n+3}{n+2} - 2\\right| = \\frac{1}{n+2} \\leq \\frac{1}{N} < \\varepsilon,\n\\]\nverifying the definition.",
+    "parameters": {
+      "sequence": "(2n+3)/(n+2)",
+      "limit": 2,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Direct epsilon-N verification."
+  },
+  {
+    "id": "A144",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "mixed",
+    "theorem": "Limit of 1/ln(n+1)",
+    "question": "Prove that a_n = 1/ln(n+1) converges to 0.",
+    "proof": "Given any $\\varepsilon > 0$, choose $N$ large enough that $\\ln(N+1) > 1/\\varepsilon$. For $n \\geq N$,\n\\[\n\\left|\\frac{1}{\\ln(n+1)} - 0\\right| = \\frac{1}{\\ln(n+1)} \\leq \\frac{1}{\\ln(N+1)} < \\varepsilon.\n\\]\nThe definition is satisfied.",
+    "parameters": {
+      "sequence": "1/ln(n+1)",
+      "limit": 0,
+      "bound": "\\frac{1}{\\ln(N+1)}"
+    },
+    "animation_notes": "Very slow logarithmic decay; many terms needed."
+  },
+  {
+    "id": "A145",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "definition_verbatim",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 4/(n+3)",
+    "question": "Prove that a_n = 4/(n+3) converges to 0.",
+    "proof": "Choose N beyond 4 over eps. For every index from N onward the term satisfies |a_n - 0| ≤ 4/n ≤ 4/N < eps. The epsilon-definition of convergence to zero is therefore satisfied.",
+    "parameters": {
+      "sequence": "4/(n+3)",
+      "limit": 0,
+      "bound": "4/N"
+    },
+    "animation_notes": "Eps-band around 0."
+  },
+  {
+    "id": "A146",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "latex",
+    "theorem": "Telescoping sum 1/((2k)(2k+2))",
+    "question": "Prove that a_n = sum_{k=1}^n 1/((2k)(2k+2)) converges to 1/4.",
+    "proof": "Split the summand as $\\tfrac{1}{4}(1/k - 1/(k+1))$. Summing from $k=1$ to $n$ leaves only the first and last pieces of the telescoping tail:\n\\[\na_n = \\tfrac{1}{4}\\left(1 - \\frac{1}{n+1}\\right).\n\\]\nHence for $n \\geq N$, $|a_n - 1/4| = \\frac{1}{4(n+1)} \\leq \\frac{1}{4(N+1)} < \\varepsilon$, so the sum tends to $1/4$.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n 1/((2k)(2k+2))",
+      "limit": "1/4",
+      "bound": "\\frac{1}{4(N+1)}"
+    },
+    "animation_notes": "Show the half-factor cancellation."
+  },
+  {
+    "id": "A147",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "natural_language",
+    "theorem": "Telescoping sum 1/((3k-1)(3k+2))",
+    "question": "Prove that a_n = sum_{k=1}^n 1/((3k-1)(3k+2)) converges to 1/6.",
+    "proof": "The gap between the two linear factors is three, so the summand equals one third of the difference between the reciprocals of those factors. When we add the first n terms, everything in the middle cancels and we are left with one third times (one half minus 1 over 3n plus 2). The gap from 1/6 satisfies |a_n - 1/6| = 1/(3(3n+2)) ≤ 1/(3(3N+2)), which goes to zero, so the sum goes to one sixth.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n 1/((3k-1)(3k+2))",
+      "limit": "1/6",
+      "bound": "1/(3(3N+2))"
+    },
+    "animation_notes": "Show the surviving first and last terms."
+  },
+  {
+    "id": "A148",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "mixed",
+    "theorem": "Telescoping sum 1/(k(k+3))",
+    "question": "Prove that a_n = sum_{k=1}^n 1/(k(k+3)) converges to 11/18.",
+    "proof": "Writing $1/(k(k+3)) = \\tfrac{1}{3}(1/k - 1/(k+3))$ and summing, only the three leading and three trailing terms survive:\n\\[\na_n = \\tfrac{1}{3}\\left(1 + \\tfrac{1}{2} + \\tfrac{1}{3} - \\text{tail}\\right).\n\\]\nThe tail vanishes; for $n \\geq N$ the surviving tail is at most $1/N$. So the expression converges to $\\tfrac{1}{3}(11/6) = 11/18$.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n 1/(k(k+3))",
+      "limit": "11/18",
+      "bound": "1/N"
+    },
+    "animation_notes": "Three initial terms survive; three vanish."
+  },
+  {
+    "id": "A149",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "latex",
+    "theorem": "Telescoping sum 1/(k+1) - 1/(k+2)",
+    "question": "Prove that a_n = sum_{k=1}^n (1/(k+1) - 1/(k+2)) converges to 1/2.",
+    "proof": "This sum collapses immediately because consecutive denominators cancel. What remains is\n\\[\na_n = \\frac{1}{2} - \\frac{1}{n+2},\n\\]\nso for $n \\geq N$, $|a_n - 1/2| = \\frac{1}{n+2} \\leq \\frac{1}{N+2}$, which tends to $1/2$.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n (1/(k+1)-1/(k+2))",
+      "limit": "1/2",
+      "bound": "\\frac{1}{N+2}"
+    },
+    "animation_notes": "Fully collapsed sum."
+  },
+  {
+    "id": "A150",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "natural_language",
+    "theorem": "Telescoping sum 1/((k+1)(k+3))",
+    "question": "Prove that a_n = sum_{k=1}^n 1/((k+1)(k+3)) converges to 5/12.",
+    "proof": "Each term equals one half of (1 over k plus 1 minus 1 over k plus 3). Summing from 1 to n, all but four terms cancel, leaving one half times (1/2 plus 1/3 minus 1/(n+2) minus 1/(n+3)). In the limit the last two pieces vanish, so |a_n - 5/12| ≤ 1/N for n ≥ N. The sum tends to one half of 5/6, that is 5/12.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n 1/((k+1)(k+3))",
+      "limit": "5/12",
+      "bound": "1/N"
+    },
+    "animation_notes": "Two surviving and two vanishing terms."
+  },
+  {
+    "id": "A151",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "mixed",
+    "theorem": "Telescoping sum k/(k+1)! - (k+1)/(k+2)!",
+    "question": "Prove that a_n = sum_{k=1}^n (k/(k+1)! - (k+1)/(k+2)!) converges to 1/2.",
+    "proof": "The sum is telescoping by design: the first output of each term becomes the negative part of the next. So the surviving pieces are simply $a_n = 1/2 - (n+1)/(n+2)!$, which for $n \\geq N$ satisfies $|a_n - 1/2| = (n+1)/(n+2)! \\leq 1/N$ since factorials grow extremely fast, so the sum tends to $1/2$.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n (k/(k+1)! - (k+1)/(k+2)!)",
+      "limit": "1/2",
+      "bound": "1/N"
+    },
+    "animation_notes": "Show first and last surviving terms."
+  },
+  {
+    "id": "A152",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "latex",
+    "theorem": "Telescoping sum arctan differences",
+    "question": "Suppose a_n = sum_{k=1}^n (arctan(k+1) - arctan(k)). Prove that a_n = arctan(n+1) - pi/4.",
+    "proof": "Telescoping kills all but the first and last arctangent terms:\n\\[\na_n = \\arctan(n+1) - \\arctan(1) = \\arctan(n+1) - \\pi/4.\n\\]\nSince $\\arctan(n+1) \\to \\pi/2$, the sequence converges to $\\pi/4$, and for $n \\geq N$ we have $|a_n - \\pi/4| \\leq \\arctan(1/N) < \\varepsilon$.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n (arctan(k+1)-arctan(k))",
+      "limit": "pi/4",
+      "bound": "\\arctan(1/N)"
+    },
+    "animation_notes": "Show arctan values collapsing."
+  },
+  {
+    "id": "A153",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "natural_language",
+    "theorem": "Telescoping sum 1/k^2 - 1/(k+1)^2",
+    "question": "Prove that a_n = sum_{k=1}^n (1/k^2 - 1/(k+1)^2) converges to 1.",
+    "proof": "Telescoping here is particularly clean: the positive part of each term disappears against the negative part of the term after it. What survives is simply a_n = 1 minus 1 over (n plus 1) squared, so for n ≥ N we have |a_n - 1| = 1/(n+1)^2 ≤ 1/N^2, which approaches 1.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n (1/k^2-1/(k+1)^2)",
+      "limit": 1,
+      "bound": "1/N^2"
+    },
+    "animation_notes": "Fully collapsed sum."
+  },
+  {
+    "id": "A154",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "mixed",
+    "theorem": "Telescoping sum (2k+1)/(k^2(k+1)^2)",
+    "question": "Prove that a_n = sum_{k=1}^n (2k+1)/(k^2(k+1)^2) converges to 1.",
+    "proof": "Spotting that the summand is exactly $1/k^2 - 1/(k+1)^2$, the sum collapses to $a_n = 1 - 1/(n+1)^2$. Hence for $n \\geq N$, $|a_n - 1| = 1/(n+1)^2 \\leq 1/N^2$, whose limit is $1$.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n (2k+1)/(k^2(k+1)^2)",
+      "limit": 1,
+      "bound": "1/N^2"
+    },
+    "animation_notes": "Show the algebraic identity on screen."
+  },
+  {
+    "id": "A155",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "telescoping",
+    "proof_format": "latex",
+    "theorem": "Telescoping sum 1/(k(k+4))",
+    "question": "Prove that a_n = sum_{k=1}^n 1/(k(k+4)) converges to 25/48.",
+    "proof": "Because the two factors differ by four, the summand is $\\tfrac{1}{4}(1/k - 1/(k+4))$. The sum telescopes to\n\\[\n\\tfrac{1}{4}\\left(1 + \\tfrac{1}{2} + \\tfrac{1}{3} + \\tfrac{1}{4} - \\text{tail}\\right),\n\\]\nwhere the tail vanishes; for $n \\geq N$ the surviving tail is at most $1/N$. The bracket tends to $25/12$, giving $25/48$.",
+    "parameters": {
+      "sequence": "sum_{k=1}^n 1/(k(k+4))",
+      "limit": "25/48",
+      "bound": "1/N"
+    },
+    "animation_notes": "Four initial terms survive."
+  },
+  {
+    "id": "A156",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "latex",
+    "theorem": "Geometric sum with ratio 3/4",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (3/4)^k converges to 4.",
+    "proof": "The finite geometric sum formula yields\n\\[\na_n = \\frac{1-(3/4)^n}{1-3/4} = 4(1-(3/4)^n).\n\\]\nHence for $n \\geq N$, $|a_n - 4| = 4(3/4)^n \\leq 4\\left(\\frac{3}{4}\\right)^N < \\varepsilon$, so the limit is $4$.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (3/4)^k",
+      "limit": 4,
+      "bound": "4\\left(\\frac{3}{4}\\right)^N"
+    },
+    "animation_notes": "Partial sums approaching 4."
+  },
+  {
+    "id": "A157",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "natural_language",
+    "theorem": "Geometric sum with ratio 1/5",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (1/5)^k converges to 5/4.",
+    "proof": "Applying the standard formula for the sum of a finite geometric series, the total equals (1 minus 1/5 to the n) divided by 4/5, which simplifies to a_n = five quarters times the same bracket. Hence |a_n - 5/4| = (5/4)(1/5)^n ≤ (5/4)(1/5)^N < eps for n ≥ N. The decaying power pushes the bracket to one, so the sum converges to five quarters.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (1/5)^k",
+      "limit": "5/4",
+      "bound": "(5/4)(1/5)^N"
+    },
+    "animation_notes": "Show partial sums approaching 5/4."
+  },
+  {
+    "id": "A158",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "mixed",
+    "theorem": "Geometric sum with ratio -1/3",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (-1/3)^k converges to 3/4.",
+    "proof": "Here the ratio is $-1/3$, giving $a_n = (1-(-1/3)^n)/(4/3) = \\tfrac{3}{4}(1-(-1/3)^n)$. Hence for $n \\geq N$,\n\\[\n\\left|a_n - \\frac{3}{4}\\right| = \\frac{3}{4}\\left(\\frac{1}{3}\\right)^n \\leq \\frac{3}{4}\\left(\\frac{1}{3}\\right)^N < \\varepsilon,\n\\]\nleaving $3/4$.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (-1/3)^k",
+      "limit": "3/4",
+      "bound": "\\frac{3}{4}\\left(\\frac{1}{3}\\right)^N"
+    },
+    "animation_notes": "Oscillating partial sums."
+  },
+  {
+    "id": "A159",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "latex",
+    "theorem": "Geometric sum with ratio 3/5",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (3/5)^k converges to 5/2.",
+    "proof": "The sum formula yields\n\\[\na_n = \\frac{1-(3/5)^n}{2/5} = \\frac{5}{2}(1-(3/5)^n),\n\\]\nso for $n \\geq N$,\n\\[\n\\left|a_n - \\frac{5}{2}\\right| = \\frac{5}{2}\\left(\\frac{3}{5}\\right)^n \\leq \\frac{5}{2}\\left(\\frac{3}{5}\\right)^N < \\varepsilon,\n\\]\nand the limit is $5/2$.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (3/5)^k",
+      "limit": "5/2",
+      "bound": "\\frac{5}{2}\\left(\\frac{3}{5}\\right)^N"
+    },
+    "animation_notes": "Partial sums increasing to 5/2."
+  },
+  {
+    "id": "A160",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "natural_language",
+    "theorem": "Geometric sum with ratio 2/5",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (2/5)^k converges to 5/3.",
+    "proof": "The geometric sum formula gives 1 minus (2/5) to the n, all divided by 3/5, which simplifies to a_n = five thirds times the bracket. Hence |a_n - 5/3| = (5/3)(2/5)^n ≤ (5/3)(2/5)^N < eps for n ≥ N. The bracket tends to one, so the sequence tends to five thirds.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (2/5)^k",
+      "limit": "5/3",
+      "bound": "(5/3)(2/5)^N"
+    },
+    "animation_notes": "Partial sums to 5/3."
+  },
+  {
+    "id": "A161",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "mixed",
+    "theorem": "Geometric sum with ratio 4/5",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (4/5)^k converges to 5.",
+    "proof": "The partial sum equals $a_n = (1-(4/5)^n)/(1-4/5) = 5(1-(4/5)^n)$, so for $n \\geq N$,\n\\[\n|a_n - 5| = 5\\left(\\frac{4}{5}\\right)^n \\leq 5\\left(\\frac{4}{5}\\right)^N < \\varepsilon,\n\\]\nwhose limit is $5$.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (4/5)^k",
+      "limit": 5,
+      "bound": "5\\left(\\frac{4}{5}\\right)^N"
+    },
+    "animation_notes": "Partial sums to 5."
+  },
+  {
+    "id": "A162",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "latex",
+    "theorem": "Geometric sum with ratio 7/10",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (7/10)^k converges to 10/3.",
+    "proof": "We compute\n\\[\na_n = \\frac{1-(7/10)^n}{3/10} = \\frac{10}{3}(1-(7/10)^n),\n\\]\nso for $n \\geq N$,\n\\[\n\\left|a_n - \\frac{10}{3}\\right| = \\frac{10}{3}\\left(\\frac{7}{10}\\right)^n \\leq \\frac{10}{3}\\left(\\frac{7}{10}\\right)^N < \\varepsilon.\n\\]",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (7/10)^k",
+      "limit": "10/3",
+      "bound": "\\frac{10}{3}\\left(\\frac{7}{10}\\right)^N"
+    },
+    "animation_notes": "Show partial sums rising to 10/3."
+  },
+  {
+    "id": "A163",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "natural_language",
+    "theorem": "Geometric sum with ratio -1/4",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (-1/4)^k converges to 4/5.",
+    "proof": "With ratio minus one quarter, the finite geometric sum equals the bracket (1 minus the power) divided by 5/4, which simplifies to four fifths of the bracket. Hence |a_n - 4/5| = (4/5)(1/4)^n ≤ (4/5)(1/4)^N < eps for n ≥ N. The oscillating power shrinks to zero, so the sequence converges to four fifths.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (-1/4)^k",
+      "limit": "4/5",
+      "bound": "(4/5)(1/4)^N"
+    },
+    "animation_notes": "Oscillating partial sums to 4/5."
+  },
+  {
+    "id": "A164",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "mixed",
+    "theorem": "Geometric sum with ratio 5/6",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (5/6)^k converges to 6.",
+    "proof": "Inserting into the geometric sum formula gives $a_n = (1-(5/6)^n)/(1/6) = 6(1-(5/6)^n)$, so for $n \\geq N$,\n\\[\n|a_n - 6| = 6\\left(\\frac{5}{6}\\right)^n \\leq 6\\left(\\frac{5}{6}\\right)^N < \\varepsilon,\n\\]\nwhich has limit $6$.",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (5/6)^k",
+      "limit": 6,
+      "bound": "6\\left(\\frac{5}{6}\\right)^N"
+    },
+    "animation_notes": "Partial sums to 6."
+  },
+  {
+    "id": "A165",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "geometric",
+    "proof_format": "latex",
+    "theorem": "Geometric sum with ratio 1/10",
+    "question": "Prove that a_n = sum_{k=0}^{n-1} (1/10)^k converges to 10/9.",
+    "proof": "Applying the formula,\n\\[\na_n = \\frac{1-(1/10)^n}{9/10} = \\frac{10}{9}(1-(1/10)^n),\n\\]\nso for $n \\geq N$,\n\\[\n\\left|a_n - \\frac{10}{9}\\right| = \\frac{10}{9}\\left(\\frac{1}{10}\\right)^n \\leq \\frac{10}{9}\\left(\\frac{1}{10}\\right)^N < \\varepsilon.\n\\]",
+    "parameters": {
+      "sequence": "sum_{k=0}^{n-1} (1/10)^k",
+      "limit": "10/9",
+      "bound": "\\frac{10}{9}\\left(\\frac{1}{10}\\right)^N"
+    },
+    "animation_notes": "Decimal-expansion intuition: 1.111... = 10/9."
+  },
+  {
+    "id": "A166",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 1/3^n",
+    "question": "Prove that a_n = 1/3^n converges to 0.",
+    "proof": "A simple induction shows that 3 to the n is at least n for every positive integer. Hence 1 over 3 to the n is at most 1 over n. For a given eps, choosing N past 1 over eps makes |a_n - 0| ≤ 1/n ≤ 1/N < eps for the whole tail, so the sequence tends to zero.",
+    "parameters": {
+      "sequence": "1/3^n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Exponential decay vs 1/n."
+  },
+  {
+    "id": "A167",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "latex",
+    "theorem": "Limit of 1/(2^n n^2)",
+    "question": "Prove that a_n = 1/(2^n n^2) converges to 0.",
+    "proof": "Induction on $n$ gives $2^n \\geq n$ for $n \\geq 1$. Hence $2^n n^2 \\geq n^3$, giving the bound\n\\[\n\\left|\\frac{1}{2^n n^2} - 0\\right| \\leq \\frac{1}{n^3} \\leq \\frac{1}{n} \\leq \\frac{1}{N}.\n\\]\nGiven $\\varepsilon > 0$, choose $N > 1/\\varepsilon$ and the tail satisfies $\\frac{1}{N} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "1/(2^n n^2)",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Very rapid decay."
+  },
+  {
+    "id": "A168",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "mixed",
+    "theorem": "Limit of n^2/2^n",
+    "question": "Prove that a_n = n^2/2^n converges to 0.",
+    "proof": "An induction starting at $n = 10$ shows $2^n \\geq n^3$, so for $n \\geq 10$ the term is at most $1/n \\leq 1/N$. Taking $N$ beyond the larger of $10$ and $1/\\varepsilon$ then pushes $|a_n| \\leq 1/N < \\varepsilon$, giving the limit.",
+    "parameters": {
+      "sequence": "n^2/2^n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Exponential overtakes polynomial."
+  },
+  {
+    "id": "A169",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 1/(n!)",
+    "question": "Prove that a_n = 1/(n!) converges to 0 using induction.",
+    "proof": "An easy induction establishes that the factorial of n is at least n for every n at least one. Therefore 1 over n factorial is bounded by 1 over n. Any N beyond 1 over eps makes the tail satisfy |a_n - 0| ≤ 1/n ≤ 1/N < eps, so the sequence goes to zero.",
+    "parameters": {
+      "sequence": "1/(n!)",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Factorial growth vs linear."
+  },
+  {
+    "id": "A170",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "latex",
+    "theorem": "Limit of 1/(n! 2^n)",
+    "question": "Prove that a_n = 1/(n! 2^n) converges to 0.",
+    "proof": "Using the induction fact $n! \\geq n$ we have $n! \\cdot 2^n \\geq n$, which gives\n\\[\n\\left|\\frac{1}{n! 2^n} - 0\\right| \\leq \\frac{1}{n} \\leq \\frac{1}{N}.\n\\]\nGiven $\\varepsilon$, choose $N > 1/\\varepsilon$ to obtain $\\frac{1}{N} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "1/(n! 2^n)",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Combined factorial and exponential decay."
+  },
+  {
+    "id": "A171",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "mixed",
+    "theorem": "Limit of 1/(n^2 2^n)",
+    "question": "Prove that a_n = 1/(n^2 2^n) converges to 0.",
+    "proof": "Because $2^n \\geq 1$, we have $n^2 \\cdot 2^n \\geq n^2$, giving $1/(n^2 2^n) \\leq 1/n^2 \\leq 1/n \\leq 1/N$. Thus taking $N > 1/\\varepsilon$ is enough to make $|a_n - 0| \\leq 1/N < \\varepsilon$ on the tail.",
+    "parameters": {
+      "sequence": "1/(n^2 2^n)",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Very fast decay."
+  },
+  {
+    "id": "A172",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 2^n/n!",
+    "question": "Prove that a_n = 2^n/n! converges to 0.",
+    "proof": "The ratio of consecutive terms is 2 over n plus one, which falls below 1/2 for n at least four. So the terms shrink geometrically beyond that point and for n ≥ N satisfy |a_n - 0| ≤ (1/2)^N, and (1/2)^N eventually drops below any threshold. Hence the sequence tends to zero.",
+    "parameters": {
+      "sequence": "2^n/n!",
+      "limit": 0,
+      "bound": "(1/2)^N"
+    },
+    "animation_notes": "Show factorial overtaking exponential."
+  },
+  {
+    "id": "A173",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "latex",
+    "theorem": "Limit of 1/(n ln(n+1))",
+    "question": "Prove that a_n = 1/(n ln(n+1)) converges to 0.",
+    "proof": "For $n \\geq 2$ we have $\\ln(n+1) \\geq 1$, so $1/(n \\ln(n+1)) \\leq 1/n \\leq 1/N$. Given $\\varepsilon > 0$, choose $N$ beyond the larger of $2$ and $1/\\varepsilon$; then for $n \\geq N$ we have $|a_n - 0| \\leq \\frac{1}{N} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "1/(n*ln(n+1))",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Slow decay toward 0."
+  },
+  {
+    "id": "A174",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "mixed",
+    "theorem": "Limit of n/n!",
+    "question": "Prove that a_n = n/n! converges to 0.",
+    "proof": "Cancelling one factor of $n$ from numerator and denominator leaves $1/(n-1)!$, which for $n \\geq 2$ is at most $1/n \\leq 1/N$. Choose $N$ past the larger of 2 and $1/\\varepsilon$ to make $|a_n - 0| \\leq 1/N < \\varepsilon$; hence the limit is 0.",
+    "parameters": {
+      "sequence": "n/n!",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Algebraic simplification to 1/(n-1)!."
+  },
+  {
+    "id": "A175",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "induction",
+    "proof_format": "natural_language",
+    "theorem": "Limit of 1/(2^n + 3^n)",
+    "question": "Prove that a_n = 1/(2^n + 3^n) converges to 0.",
+    "proof": "Since both powers are at least one, the denominator is dominated by 3 to the n, and by induction 3 to the n is at least n. Thus the whole expression is at most 1 over n. Any N past 1 over eps makes |a_n - 0| ≤ 1/n ≤ 1/N below eps.",
+    "parameters": {
+      "sequence": "1/(2^n+3^n)",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Two exponentials; the bigger one dominates."
+  },
+  {
+    "id": "A176",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "latex",
+    "theorem": "Contradiction for 5/n",
+    "question": "Prove by contradiction that a_n = 5/n converges to 0.",
+    "proof": "Suppose not. Then some $\\varepsilon > 0$ and every $N$ admit $n \\geq N$ with $5/n \\geq \\varepsilon$. Take $N > 5/\\varepsilon$; then for $n \\geq N$,\n\\[\n\\left|\\frac{5}{n} - 0\\right| = \\frac{5}{n} \\leq \\frac{5}{N} < \\varepsilon,\n\\]\ncontradicting the hypothesis.",
+    "parameters": {
+      "sequence": "5/n",
+      "limit": 0,
+      "bound": "\\frac{5}{N}"
+    },
+    "animation_notes": "Display the negation of epsilon-N."
+  },
+  {
+    "id": "A177",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "natural_language",
+    "theorem": "Contradiction for 1/n^3",
+    "question": "Prove by contradiction that a_n = 1/n^3 converges to 0.",
+    "proof": "If the sequence failed to approach zero, some positive eps would frustrate every N, meaning that for arbitrarily large n the term would exceed eps. But choosing N past the cube root of 1 over eps forces |a_n - 0| = 1/n^3 ≤ 1/N^3 < eps from that index on, contradicting the assumption. So the limit must be zero.",
+    "parameters": {
+      "sequence": "1/n^3",
+      "limit": 0,
+      "bound": "1/N^3"
+    },
+    "animation_notes": "Display the choice of N explicitly."
+  },
+  {
+    "id": "A178",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "mixed",
+    "theorem": "Contradiction for 2n/(n+1)",
+    "question": "Prove by contradiction that a_n = 2n/(n+1) converges to 2.",
+    "proof": "Assume the sequence does not converge to 2. Then for some $\\varepsilon > 0$ and every $N$ there is $n \\geq N$ with $|2n/(n+1) - 2| \\geq \\varepsilon$, i.e. $2/(n+1) \\geq \\varepsilon$. Taking $N > 2/\\varepsilon$ gives\n\\[\n\\left|\\frac{2n}{n+1} - 2\\right| = \\frac{2}{n+1} \\leq \\frac{2}{N} < \\varepsilon\n\\]\nfor all such $n$, contradiction.",
+    "parameters": {
+      "sequence": "2n/(n+1)",
+      "limit": 2,
+      "bound": "\\frac{2}{N}"
+    },
+    "animation_notes": "Show the simplified difference."
+  },
+  {
+    "id": "A179",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "latex",
+    "theorem": "Contradiction for 1/(2n+1)",
+    "question": "Prove by contradiction that a_n = 1/(2n+1) converges to 0.",
+    "proof": "If $a_n \\not\\to 0$, some $\\varepsilon > 0$ and every $N$ admit $n \\geq N$ with $1/(2n+1) \\geq \\varepsilon$. Choosing $N > 1/\\varepsilon$ gives\n\\[\n\\left|\\frac{1}{2n+1} - 0\\right| = \\frac{1}{2n+1} < \\frac{1}{n} \\leq \\frac{1}{N} < \\varepsilon,\n\\]\ncontradicting the assumption.",
+    "parameters": {
+      "sequence": "1/(2n+1)",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Highlight the strict comparison."
+  },
+  {
+    "id": "A180",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "natural_language",
+    "theorem": "Contradiction for 3/(n^2+1)",
+    "question": "Prove by contradiction that a_n = 3/(n^2+1) converges to 0.",
+    "proof": "Suppose some eps is unattainable for the tail. Then for every N there is an index beyond N whose term exceeds eps. But choosing N past the square root of 3 over eps makes |a_n - 0| ≤ 3/n^2 ≤ 3/N^2 < eps, contradiction. Hence the sequence goes to zero.",
+    "parameters": {
+      "sequence": "3/(n^2+1)",
+      "limit": 0,
+      "bound": "3/N^2"
+    },
+    "animation_notes": "Display the choice N > sqrt(3/eps)."
+  },
+  {
+    "id": "A181",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "mixed",
+    "theorem": "Contradiction for sin(n)/n",
+    "question": "Prove by contradiction that a_n = sin(n)/n converges to 0.",
+    "proof": "If not, some $\\varepsilon > 0$ and every $N$ would admit $n \\geq N$ with $|\\sin(n)/n| \\geq \\varepsilon$. Since $|\\sin(n)/n| \\leq 1/n \\leq 1/N$, this forces $1/N \\geq \\varepsilon$, that is $N \\leq 1/\\varepsilon$, which cannot hold for arbitrarily large $n$, contradiction.",
+    "parameters": {
+      "sequence": "sin(n)/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Highlight the bounded numerator."
+  },
+  {
+    "id": "A182",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "latex",
+    "theorem": "Contradiction for 1/(n+sqrt(n))",
+    "question": "Prove by contradiction that a_n = 1/(n+sqrt(n)) converges to 0.",
+    "proof": "Assume $a_n \\not\\to 0$; then some $\\varepsilon > 0$ and every $N$ admit $n \\geq N$ with $1/(n+\\sqrt{n}) \\geq \\varepsilon$. Taking $N > 1/\\varepsilon$ forces\n\\[\n\\left|\\frac{1}{n+\\sqrt{n}} - 0\\right| = \\frac{1}{n+\\sqrt{n}} < \\frac{1}{n} \\leq \\frac{1}{N} < \\varepsilon,\n\\]\na contradiction.",
+    "parameters": {
+      "sequence": "1/(n+sqrt(n))",
+      "limit": 0,
+      "bound": "\\frac{1}{N}"
+    },
+    "animation_notes": "Highlight the bound 1/n."
+  },
+  {
+    "id": "A183",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "natural_language",
+    "theorem": "Contradiction for 4/(3n+1)",
+    "question": "Prove by contradiction that a_n = 4/(3n+1) converges to 0.",
+    "proof": "Suppose convergence to zero failed. Then some eps would be violated infinitely often in the tail. But picking N beyond 4 over eps makes the term at most 4 over n, which is at most 4/N < eps, contradiction. So the limit must be zero.",
+    "parameters": {
+      "sequence": "4/(3n+1)",
+      "limit": 0,
+      "bound": "4/N"
+    },
+    "animation_notes": "Display the bound 4/n."
+  },
+  {
+    "id": "A184",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "mixed",
+    "theorem": "Contradiction for (n+2)/n^2",
+    "question": "Prove by contradiction that a_n = (n+2)/n^2 converges to 0.",
+    "proof": "Suppose some $\\varepsilon > 0$ escaped the tail. Then for every $N$ there would be an index with $(n+2)/n^2 \\geq \\varepsilon$. But this ratio is at most $3n/n^2 = 3/n \\leq 3/N$, and choosing $N > 3/\\varepsilon$ forces $3/N < \\varepsilon$, a contradiction.",
+    "parameters": {
+      "sequence": "(n+2)/n^2",
+      "limit": 0,
+      "bound": "3/N"
+    },
+    "animation_notes": "Highlight 3n/n^2 = 3/n."
+  },
+  {
+    "id": "A185",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "contradiction",
+    "proof_format": "latex",
+    "theorem": "Contradiction for 1/sqrt(n+1)",
+    "question": "Prove by contradiction that a_n = 1/sqrt(n+1) converges to 0.",
+    "proof": "If $a_n \\not\\to 0$, some $\\varepsilon > 0$ and every $N$ give $n \\geq N$ with $1/\\sqrt{n+1} \\geq \\varepsilon$, i.e. $n+1 \\leq 1/\\varepsilon^2$. Taking $N > 1/\\varepsilon^2$ makes $|a_n - 0| \\leq \\frac{1}{\\sqrt{N+1}} < \\varepsilon$ for $n \\geq N$, contradiction.",
+    "parameters": {
+      "sequence": "1/sqrt(n+1)",
+      "limit": 0,
+      "bound": "\\frac{1}{\\sqrt{N+1}}"
+    },
+    "animation_notes": "Display the choice N > 1/eps^2."
+  },
+  {
+    "id": "A186",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "latex",
+    "theorem": "Subsequence proof for sin(n pi)/n",
+    "question": "Prove that a_n = sin(n pi)/n converges to 0 using subsequences.",
+    "proof": "Since $\\sin(n\\pi) = 0$ for every integer $n$, the sequence is the constant zero sequence and trivially converges to $0$: $|a_n - 0| = 0 < \\varepsilon$. Every subsequence shares this behaviour.",
+    "parameters": {
+      "sequence": "sin(n pi)/n",
+      "limit": 0,
+      "bound": "0"
+    },
+    "animation_notes": "All terms are 0."
+  },
+  {
+    "id": "A187",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "natural_language",
+    "theorem": "Subsequence proof for (-1)^n/n^2",
+    "question": "Prove that a_n = (-1)^n/n^2 converges to 0 using subsequences.",
+    "proof": "Split by parity. The even subsequence is 1 over (2k) squared, which goes to zero with |1/(2k)^2 - 0| ≤ 1/N^2; the odd subsequence is minus 1 over (2k minus one) squared, which also satisfies |−1/(2k−1)^2 − 0| ≤ 1/N^2. Since both parity halves converge to zero, the full sequence does as well.",
+    "parameters": {
+      "sequence": "(-1)^n/n^2",
+      "limit": 0,
+      "bound": "1/N^2"
+    },
+    "animation_notes": "Parity colouring; both subsequences to 0."
+  },
+  {
+    "id": "A188",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "mixed",
+    "theorem": "Subsequence proof for (-1)^n/(2n+1)",
+    "question": "Prove that a_n = (-1)^n/(2n+1) converges to 0.",
+    "proof": "Along even indices the term equals $1/(4k+1)$, which decays to zero with $|1/(4k+1) - 0| \\leq 1/N$; along odd indices it equals $-1/(4k+3)$, also satisfying $|-1/(4k+3) - 0| \\leq 1/N$. Both parity subsequences converge to $0$, so the whole sequence does too.",
+    "parameters": {
+      "sequence": "(-1)^n/(2n+1)",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Colour even and odd terms."
+  },
+  {
+    "id": "A189",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "latex",
+    "theorem": "Subsequence proof for cos(n pi)/(2n)",
+    "question": "Prove that a_n = cos(n pi)/(2n) converges to 0.",
+    "proof": "Since $\\cos(n\\pi) = (-1)^n$, the sequence is $(-1)^n/(2n)$. Even indices contribute $1/(4k)$ with $|1/(4k) - 0| \\leq \\frac{1}{2N}$ and odd indices contribute $-1/(4k-2)$ with $|-1/(4k-2) - 0| \\leq \\frac{1}{2N}$; both vanish in the limit, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "cos(n pi)/(2n)",
+      "limit": 0,
+      "bound": "\\frac{1}{2N}"
+    },
+    "animation_notes": "Reduce to alternating sequence."
+  },
+  {
+    "id": "A190",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "natural_language",
+    "theorem": "Subsequence proof for sin(n pi/3)/n",
+    "question": "Prove that a_n = sin(n pi/3)/n converges to 0.",
+    "proof": "Group terms according to their residue modulo six. Within each class the sine takes one of the fixed values zero, plus or minus the square root of three over two. Each subsequence is that constant divided by n, so for n ≥ N each satisfies |a_n - 0| ≤ 1/N, hence tends to zero. The whole sequence therefore converges to zero.",
+    "parameters": {
+      "sequence": "sin(n pi/3)/n",
+      "limit": 0,
+      "bound": "1/N"
+    },
+    "animation_notes": "Six residue classes all decaying to 0."
+  },
+  {
+    "id": "A191",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "mixed",
+    "theorem": "Subsequence proof for sin(n pi/2)/n^2",
+    "question": "Prove that a_n = sin(n pi/2)/n^2 converges to 0.",
+    "proof": "Split into four classes according to n mod 4. Depending on the class the sine is either 0, $1$, 0, or $-1$, so each term satisfies $|a_n - 0| \\leq 1/N^2$. Each of the four corresponding subsequences has limit zero, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "sin(n pi/2)/n^2",
+      "limit": 0,
+      "bound": "1/N^2"
+    },
+    "animation_notes": "Four coloured subsequences to 0."
+  },
+  {
+    "id": "A192",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "latex",
+    "theorem": "Subsequence proof for 1/(n+sin(n))",
+    "question": "Prove that a_n = 1/(n+sin(n)) converges to 0 using subsequences.",
+    "proof": "Split into two classes based on the sign of $\\sin n$. When it is nonnegative, $n + \\sin n \\geq n$; when it is negative, $n + \\sin n \\geq n-1$, so in that case $|a_n - 0| \\leq \\frac{1}{N-1}$. In both cases the reciprocals tend to zero, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "1/(n+sin(n))",
+      "limit": 0,
+      "bound": "\\frac{1}{N-1}"
+    },
+    "animation_notes": "Show the two cases."
+  },
+  {
+    "id": "A193",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "natural_language",
+    "theorem": "Subsequence proof for (-1)^n/(n+2)^2",
+    "question": "Prove that a_n = (-1)^n/(n+2)^2 converges to 0.",
+    "proof": "Along even indices the term equals 1 over (2k plus two) squared, which decays to zero with |a_n - 0| ≤ 1/(N+2)^2. Along odd indices it equals minus 1 over (2k plus one) squared, which also satisfies |a_n - 0| ≤ 1/(N+2)^2. Therefore the full sequence converges to zero.",
+    "parameters": {
+      "sequence": "(-1)^n/(n+2)^2",
+      "limit": 0,
+      "bound": "1/(N+2)^2"
+    },
+    "animation_notes": "Parity colouring."
+  },
+  {
+    "id": "A194",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "latex",
+    "theorem": "Subsequence proof for alternating reciprocal",
+    "question": "Prove that a_n = (-1)^n (1/n + 1/(n+1)) converges to 0.",
+    "proof": "On even indices, the term is $1/(2k) + 1/(2k+1)$, which satisfies $|a_n - 0| \\leq \\frac{2}{N}$ and vanishes in the limit. On odd indices, it is $-1/(2k+1) - 1/(2k+2)$, which also satisfies $|a_n - 0| \\leq \\frac{2}{N}$ and vanishes. So $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "(-1)^n (1/n+1/(n+1))",
+      "limit": 0,
+      "bound": "\\frac{2}{N}"
+    },
+    "animation_notes": "Show both parity formulas."
+  },
+  {
+    "id": "A195",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "subsequence",
+    "proof_format": "mixed",
+    "theorem": "Subsequence proof for (-1)^n/(3n+1)+1/n",
+    "question": "Prove that a_n = (-1)^n/(3n+1) + 1/n converges to 0.",
+    "proof": "For even $n = 2k$, $a_{2k} = 1/(6k+1) + 1/(2k) \\to 0$ with $|a_{2k} - 0| \\leq 4/(3N)$. For odd $n = 2k-1$, $a_{2k-1} = -1/(6k-2) + 1/(2k-1) \\to 0$ with $|a_{2k-1} - 0| \\leq 4/(3N)$. Both parity subsequences go to $0$, so $a_n \\to 0$.",
+    "parameters": {
+      "sequence": "(-1)^n/(3n+1)+1/n",
+      "limit": 0,
+      "bound": "4/(3N)"
+    },
+    "animation_notes": "Show both parity formulas."
+  },
+  {
+    "id": "A196",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "latex",
+    "theorem": "Tail bound for (2n+1)/(3n+2)",
+    "question": "Prove that a_n = (2n+1)/(3n+2) converges to 2/3.",
+    "proof": "For any $n \\geq 1$, a short calculation gives\n\\[\n\\left|\\frac{2n+1}{3n+2} - \\frac{2}{3}\\right| = \\frac{1}{3(3n+2)} \\leq \\frac{1}{9n} \\leq \\frac{1}{9N}.\n\\]\nSo choosing $N > 1/(9\\varepsilon)$ makes the tail satisfy $\\frac{1}{9N} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(2n+1)/(3n+2)",
+      "limit": "2/3",
+      "bound": "\\frac{1}{9N}"
+    },
+    "animation_notes": "Show tail bound 1/(9n)."
+  },
+  {
+    "id": "A197",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "natural_language",
+    "theorem": "Tail bound for (4n+2)/(2n+1)",
+    "question": "Prove that a_n = (4n+2)/(2n+1) converges to 2.",
+    "proof": "The numerator is exactly twice the denominator, so every term equals two and the distance to two is identically zero: |a_n - 2| = 0 < eps. Any N trivially controls the tail.",
+    "parameters": {
+      "sequence": "(4n+2)/(2n+1)",
+      "limit": 2,
+      "bound": "0"
+    },
+    "animation_notes": "The sequence is constant 2."
+  },
+  {
+    "id": "A198",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "mixed",
+    "theorem": "Tail bound for (n^2+1)/(2n^2+3)",
+    "question": "Prove that a_n = (n^2+1)/(2n^2+3) converges to 1/2.",
+    "proof": "The difference from $1/2$ simplifies to $1/(2(2n^2+3))$, which is bounded by $1/(4n^2) \\leq 1/(4N^2)$. Choose $N > 1/(2\\sqrt{\\varepsilon})$ to push the tail below $\\varepsilon$: $|a_n - 1/2| \\leq 1/(4N^2) < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(n^2+1)/(2n^2+3)",
+      "limit": "1/2",
+      "bound": "1/(4N^2)"
+    },
+    "animation_notes": "Rapid quadratic tail decay."
+  },
+  {
+    "id": "A199",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "natural_language",
+    "theorem": "Tail bound for (5n-3)/(2n+7)",
+    "question": "Prove that a_n = (5n-3)/(2n+7) converges to 5/2.",
+    "proof": "Subtracting five halves and simplifying gives forty-one over twice the quantity two n plus seven. For n at least one this is at most 41 over 4n ≤ 41/(4N). Any N past 41 over 4 eps makes the tail satisfy |a_n - 5/2| ≤ 41/(4N) < eps, so the sequence converges to five halves.",
+    "parameters": {
+      "sequence": "(5n-3)/(2n+7)",
+      "limit": "5/2",
+      "bound": "41/(4N)"
+    },
+    "animation_notes": "Display the numerator constant 41."
+  },
+  {
+    "id": "A200",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "latex",
+    "theorem": "Tail bound for (3n^2+2)/(n^2+5)",
+    "question": "Prove that a_n = (3n^2+2)/(n^2+5) converges to 3.",
+    "proof": "The difference from $3$ is $13/(n^2+5)$, which is smaller than $13/n^2 \\leq 13/N^2$. Taking $N > \\sqrt{13/\\varepsilon}$ makes $|a_n - 3| \\leq 13/N^2 < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(3n^2+2)/(n^2+5)",
+      "limit": 3,
+      "bound": "13/N^2"
+    },
+    "animation_notes": "Rapid quadratic decay."
+  },
+  {
+    "id": "A201",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "mixed",
+    "theorem": "Tail bound for (n+5)/(2n+1)",
+    "question": "Prove that a_n = (n+5)/(2n+1) converges to 1/2.",
+    "proof": "The gap from $1/2$ is $9/(4n+2)$, which is at most $9/(4n) \\leq 9/(4N)$. Choose $N > 9/(4\\varepsilon)$ so that $|a_n - 1/2| \\leq 9/(4N) < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(n+5)/(2n+1)",
+      "limit": "1/2",
+      "bound": "9/(4N)"
+    },
+    "animation_notes": "Show 9/(4n) bound."
+  },
+  {
+    "id": "A202",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "latex",
+    "theorem": "Tail bound for 1/(n^2+n)",
+    "question": "Prove that a_n = 1/(n^2+n) converges to 0.",
+    "proof": "Since $n^2 + n > n^2$ we have the two-sided bound\n\\[\n0 < \\frac{1}{n^2+n} < \\frac{1}{n^2} \\leq \\frac{1}{N^2}.\n\\]\nChoosing $N > 1/\\sqrt{\\varepsilon}$ makes $|a_n - 0| \\leq \\frac{1}{N^2} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "1/(n^2+n)",
+      "limit": 0,
+      "bound": "\\frac{1}{N^2}"
+    },
+    "animation_notes": "Show both bounds on screen."
+  },
+  {
+    "id": "A203",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "natural_language",
+    "theorem": "Tail bound for 2/(3n^2+1)",
+    "question": "Prove that a_n = 2/(3n^2+1) converges to 0.",
+    "proof": "Since the denominator is at least 3n squared, the term is no larger than 2 over 3 n squared, hence at most 2 over 3n ≤ 2/(3N). Taking N past 2 over 3 eps suffices to bring |a_n - 0| ≤ 2/(3N) below eps.",
+    "parameters": {
+      "sequence": "2/(3n^2+1)",
+      "limit": 0,
+      "bound": "2/(3N)"
+    },
+    "animation_notes": "Show bound 2/(3n)."
+  },
+  {
+    "id": "A204",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "mixed",
+    "theorem": "Tail bound for (n+1)/(n^2+2)",
+    "question": "Prove that a_n = (n+1)/(n^2+2) converges to 0.",
+    "proof": "The numerator is at most $2n$ and the denominator is at least $n^2$, so the fraction is at most $2/n \\leq 2/N$. Taking $N > 2/\\varepsilon$ makes $|a_n - 0| \\leq 2/N < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(n+1)/(n^2+2)",
+      "limit": 0,
+      "bound": "2/N"
+    },
+    "animation_notes": "Show bound 2/n."
+  },
+  {
+    "id": "A205",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "tail_bound",
+    "proof_format": "latex",
+    "theorem": "Tail bound for 7/(2n^3)",
+    "question": "Prove that a_n = 7/(2n^3) converges to 0.",
+    "proof": "For $n \\geq 1$ we have\n\\[\n0 < \\frac{7}{2n^3} \\leq \\frac{7}{2n} \\leq \\frac{7}{2N}.\n\\]\nChoosing $N > 7/(2\\varepsilon)$ makes the tail satisfy $\\left|\\frac{7}{2n^3} - 0\\right| \\leq \\frac{7}{2N} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "7/(2n^3)",
+      "limit": 0,
+      "bound": "\\frac{7}{2N}"
+    },
+    "animation_notes": "Rapid cubic decay."
+  },
+  {
+    "id": "A206",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "latex",
+    "theorem": "Dominant term for (4n^3+1)/(2n^3+n)",
+    "question": "Prove that a_n = (4n^3+1)/(2n^3+n) converges to 2.",
+    "proof": "Looking at top-degree terms suggests the limit is $2$. Indeed,\n\\[\n\\left|\\frac{4n^3+1}{2n^3+n} - 2\\right| = \\frac{|1-2n|}{2n^3+n} \\leq \\frac{2n}{2n^3} = \\frac{1}{n^2} \\leq \\frac{1}{N^2} \\leq \\frac{1}{N}.\n\\]\nSo $N > 1/\\varepsilon$ suffices.",
+    "parameters": {
+      "sequence": "(4n^3+1)/(2n^3+n)",
+      "limit": 2,
+      "bound": "\\frac{1}{N^2}"
+    },
+    "animation_notes": "Show 1/n^2 bound."
+  },
+  {
+    "id": "A207",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "natural_language",
+    "theorem": "Dominant term for (7n^2-3)/(2n^2+1)",
+    "question": "Prove that a_n = (7n^2-3)/(2n^2+1) converges to 7/2.",
+    "proof": "The leading coefficients suggest seven halves. Comparing carefully, the difference from seven halves is thirteen over twice the quantity two n squared plus one, which is at most thirteen over four n squared ≤ 13/(4N^2). This vanishes, so the sequence approaches seven halves.",
+    "parameters": {
+      "sequence": "(7n^2-3)/(2n^2+1)",
+      "limit": "7/2",
+      "bound": "13/(4N^2)"
+    },
+    "animation_notes": "Show the 13/(4n^2) bound."
+  },
+  {
+    "id": "A208",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "mixed",
+    "theorem": "Dominant term for (5n^3-n)/(10n^3+1)",
+    "question": "Prove that a_n = (5n^3-n)/(10n^3+1) converges to 1/2.",
+    "proof": "The degree-three terms give $1/2$. The difference is $|10n^3-2n-10n^3-1|/(2(10n^3+1)) = (2n+1)/(2(10n^3+1))$, bounded above by $3n/(20n^3) = 3/(20n^2) \\leq 3/(20N^2) \\leq 3/(20N)$. Choosing $N > 3/(20\\varepsilon)$ completes the argument.",
+    "parameters": {
+      "sequence": "(5n^3-n)/(10n^3+1)",
+      "limit": "1/2",
+      "bound": "3/(20N^2)"
+    },
+    "animation_notes": "Show 3n/(20n^3) bound."
+  },
+  {
+    "id": "A209",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "latex",
+    "theorem": "Dominant term for (n^4+5)/(3n^4+n)",
+    "question": "Prove that a_n = (n^4+5)/(3n^4+n) converges to 1/3.",
+    "proof": "The leading terms in numerator and denominator give $1/3$. Dividing both sides of the ratio by $n^4$, the term is\n\\[\n\\frac{1 + 5/n^4}{3 + 1/n^3},\n\\]\nwhich visibly approaches $1/3$; more explicitly, $|a_n - 1/3| \\leq \\frac{1}{N^3} < \\varepsilon$ for $n \\geq N$ once $N > \\varepsilon^{-1/3}$.",
+    "parameters": {
+      "sequence": "(n^4+5)/(3n^4+n)",
+      "limit": "1/3",
+      "bound": "\\frac{1}{N^3}"
+    },
+    "animation_notes": "Show leading-coefficient ratio 1/3."
+  },
+  {
+    "id": "A210",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "natural_language",
+    "theorem": "Dominant term for (2n^2+100)/(n^2+1)",
+    "question": "Prove that a_n = (2n^2+100)/(n^2+1) converges to 2.",
+    "proof": "The quadratic terms dominate and their ratio is two. Working out the difference shows it equals 98 over n squared plus one, which is at most 98/N^2 and shrinks to zero. So the sequence converges to two.",
+    "parameters": {
+      "sequence": "(2n^2+100)/(n^2+1)",
+      "limit": 2,
+      "bound": "98/N^2"
+    },
+    "animation_notes": "Show the constant 98 emerging."
+  },
+  {
+    "id": "A211",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "mixed",
+    "theorem": "Dominant term for (6n^3+n^2)/(2n^3+5)",
+    "question": "Prove that a_n = (6n^3+n^2)/(2n^3+5) converges to 3.",
+    "proof": "The leading terms give $3$. The difference from $3$ simplifies to $(n^2+15)/(2n^3+5)$, which for $n \\geq 4$ is at most $8/n \\leq 8/N$. Taking $N$ past the larger of $4$ and $8/\\varepsilon$ gives $|a_n - 3| \\leq 8/N < \\varepsilon$, so the limit is $3$.",
+    "parameters": {
+      "sequence": "(6n^3+n^2)/(2n^3+5)",
+      "limit": 3,
+      "bound": "8/N"
+    },
+    "animation_notes": "Show the 8/n bound."
+  },
+  {
+    "id": "A212",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "latex",
+    "theorem": "Dominant term for (9n^4+n)/(3n^4+2)",
+    "question": "Prove that a_n = (9n^4+n)/(3n^4+2) converges to 3.",
+    "proof": "Comparing the leading coefficients suggests $3$. The difference simplifies to\n\\[\n\\frac{n+6}{3n^4+2},\n\\]\nwhich for $n \\geq 6$ is bounded by $2/(3n) \\leq \\frac{2}{3N}$. So $N$ past the larger of $6$ and $2/(3\\varepsilon)$ suffices.",
+    "parameters": {
+      "sequence": "(9n^4+n)/(3n^4+2)",
+      "limit": 3,
+      "bound": "\\frac{2}{3N}"
+    },
+    "animation_notes": "Show 2/(3n) bound."
+  },
+  {
+    "id": "A213",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "natural_language",
+    "theorem": "Dominant term for (n^2+3n+1)/(4n^2)",
+    "question": "Prove that a_n = (n^2+3n+1)/(4n^2) converges to 1/4.",
+    "proof": "The leading term in the numerator is n squared, and the denominator is four n squared, so the expected limit is one quarter. The actual gap from one quarter simplifies to (3n plus one) over four n squared, which is at most one over n ≤ 1/N. Any N past 1 over eps makes |a_n - 1/4| ≤ 1/N < eps, so the tail is small.",
+    "parameters": {
+      "sequence": "(n^2+3n+1)/(4n^2)",
+      "limit": "1/4",
+      "bound": "1/N"
+    },
+    "animation_notes": "Show 1/n bound."
+  },
+  {
+    "id": "A214",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "mixed",
+    "theorem": "Dominant term for (3n^5+1)/(n^5+n^3)",
+    "question": "Prove that a_n = (3n^5+1)/(n^5+n^3) converges to 3.",
+    "proof": "The degree-five terms give $3$. The gap from $3$ equals $(3n^3+1)/(n^5+n^3)$, which for $n \\geq 1$ is at most $4/n^2 \\leq 4/N^2 \\leq 4/N$. Taking $N > 4/\\varepsilon$ suffices: $|a_n - 3| \\leq 4/N^2 < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(3n^5+1)/(n^5+n^3)",
+      "limit": 3,
+      "bound": "4/N^2"
+    },
+    "animation_notes": "Show 4/n bound."
+  },
+  {
+    "id": "A215",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "dominant_term",
+    "proof_format": "latex",
+    "theorem": "Dominant term for (8n^3+n^2+5)/(4n^3+7)",
+    "question": "Prove that a_n = (8n^3+n^2+5)/(4n^3+7) converges to 2.",
+    "proof": "The leading coefficients give $2$. After combining, the difference from $2$ is\n\\[\n\\frac{n^2+9}{4n^3+7},\n\\]\nwhich for $n \\geq 3$ is at most $1/(2n) \\leq \\frac{1}{2N}$. So choosing $N > \\max(3, 1/(2\\varepsilon))$ gives $|a_n - 2| \\leq \\frac{1}{2N} < \\varepsilon$ and finishes the proof.",
+    "parameters": {
+      "sequence": "(8n^3+n^2+5)/(4n^3+7)",
+      "limit": 2,
+      "bound": "\\frac{1}{2N}"
+    },
+    "animation_notes": "Show 1/(2n) bound."
+  },
+  {
+    "id": "A226",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "latex",
+    "theorem": "Absolute-value bound for 1/n+1/n^2",
+    "question": "Prove that a_n = 1/n + 1/n^2 converges to 0.",
+    "proof": "By the triangle inequality,\n\\[\n|a_n - 0| \\leq \\frac{1}{n} + \\frac{1}{n^2} \\leq \\frac{2}{n} \\leq \\frac{2}{N}.\n\\]\nChoosing $N > 2/\\varepsilon$ gives $|a_n| \\leq \\frac{2}{N} < \\varepsilon$ for all $n \\geq N$.",
+    "parameters": {
+      "sequence": "1/n+1/n^2",
+      "limit": 0,
+      "bound": "\\frac{2}{N}"
+    },
+    "animation_notes": "Triangle inequality on the two terms."
+  },
+  {
+    "id": "A227",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "natural_language",
+    "theorem": "Absolute-value bound for cos(n)/n+sin(n)/n",
+    "question": "Prove that a_n = cos(n)/n + sin(n)/n converges to 0.",
+    "proof": "Applying the triangle inequality, the absolute value of the sum is at most the absolute value of cosine over n plus the absolute value of sine over n. Each of those is at most 1 over n, giving a bound of 2 over n ≤ 2/N for the whole expression. Any N past 2 over eps makes |a_n - 0| ≤ 2/N < eps, so the tail is small.",
+    "parameters": {
+      "sequence": "cos(n)/n+sin(n)/n",
+      "limit": 0,
+      "bound": "2/N"
+    },
+    "animation_notes": "Triangle inequality on the two terms."
+  },
+  {
+    "id": "A228",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "mixed",
+    "theorem": "Absolute-value bound for (-1)^n/n^2+1/n^3",
+    "question": "Prove that a_n = (-1)^n/n^2 + 1/n^3 converges to 0.",
+    "proof": "Triangle inequality gives $|a_n - 0| \\leq 1/n^2 + 1/n^3 \\leq 2/n^2 \\leq 2/N^2 \\leq 2/N$. Taking $N > 2/\\varepsilon$ makes $|a_n| \\leq 2/N^2 < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(-1)^n/n^2+1/n^3",
+      "limit": 0,
+      "bound": "2/N^2"
+    },
+    "animation_notes": "Show the two-term bound."
+  },
+  {
+    "id": "A229",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "latex",
+    "theorem": "Absolute-value bound for (-1)^n/(3n)+2/n",
+    "question": "Prove that a_n = (-1)^n/(3n) + 2/n converges to 0.",
+    "proof": "By the triangle inequality,\n\\[\n|a_n - 0| \\leq \\frac{1}{3n} + \\frac{2}{n} = \\frac{7}{3n} \\leq \\frac{7}{3N}.\n\\]\nChoosing $N > 7/(3\\varepsilon)$ yields the required bound $\\frac{7}{3N} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(-1)^n/(3n)+2/n",
+      "limit": 0,
+      "bound": "\\frac{7}{3N}"
+    },
+    "animation_notes": "Show the 7/(3n) bound."
+  },
+  {
+    "id": "A230",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "natural_language",
+    "theorem": "Absolute-value bound for (n+(-1)^n)/n^2",
+    "question": "Prove that a_n = (n+(-1)^n)/n^2 converges to 0.",
+    "proof": "The numerator is at most n plus one, which is at most twice n for positive n. Therefore the expression is bounded in absolute value by 2 over n ≤ 2/N. Choosing N past 2 over eps makes |a_n - 0| ≤ 2/N < eps and the tail small.",
+    "parameters": {
+      "sequence": "(n+(-1)^n)/n^2",
+      "limit": 0,
+      "bound": "2/N"
+    },
+    "animation_notes": "Show 2n/n^2 = 2/n bound."
+  },
+  {
+    "id": "A231",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "mixed",
+    "theorem": "Absolute-value bound for sin(n)/n^3+1/n^2",
+    "question": "Prove that a_n = sin(n)/n^3 + 1/n^2 converges to 0.",
+    "proof": "By the triangle inequality, $|a_n - 0| \\leq 1/n^3 + 1/n^2 \\leq 2/n^2 \\leq 2/N^2 \\leq 2/N$. Choose $N > 2/\\varepsilon$ to make $|a_n| \\leq 2/N^2 < \\varepsilon$.",
+    "parameters": {
+      "sequence": "sin(n)/n^3+1/n^2",
+      "limit": 0,
+      "bound": "2/N^2"
+    },
+    "animation_notes": "Show combined 2/n^2 bound."
+  },
+  {
+    "id": "A232",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "latex",
+    "theorem": "Absolute-value bound for cos(n)/(2n) - 1/(3n)",
+    "question": "Prove that a_n = cos(n)/(2n) - 1/(3n) converges to 0.",
+    "proof": "By the triangle inequality,\n\\[\n|a_n - 0| \\leq \\frac{1}{2n} + \\frac{1}{3n} = \\frac{5}{6n} \\leq \\frac{5}{6N}.\n\\]\nChoose $N > 5/(6\\varepsilon)$; then $|a_n| \\leq \\frac{5}{6N} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "cos(n)/(2n)-1/(3n)",
+      "limit": 0,
+      "bound": "\\frac{5}{6N}"
+    },
+    "animation_notes": "Show 5/(6n) bound."
+  },
+  {
+    "id": "A233",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "natural_language",
+    "theorem": "Absolute-value bound for arctan(n)/n",
+    "question": "Prove that a_n = arctan(n)/n converges to 0.",
+    "proof": "The arctangent is bounded by pi over two in absolute value, so the expression is at most pi over two divided by n ≤ pi/(2N). Choosing N past pi over two eps gives |a_n - 0| ≤ pi/(2N) < eps.",
+    "parameters": {
+      "sequence": "arctan(n)/n",
+      "limit": 0,
+      "bound": "pi/(2N)"
+    },
+    "animation_notes": "Show pi/(2n) envelope."
+  },
+  {
+    "id": "A234",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "mixed",
+    "theorem": "Absolute-value bound for (-1)^n/n + (-1)^n/n^2",
+    "question": "Prove that a_n = (-1)^n/n + (-1)^n/n^2 converges to 0.",
+    "proof": "By the triangle inequality, $|a_n - 0| \\leq 1/n + 1/n^2 \\leq 2/n \\leq 2/N$. Choose $N > 2/\\varepsilon$ to make $|a_n| \\leq 2/N < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(-1)^n/n + (-1)^n/n^2",
+      "limit": 0,
+      "bound": "2/N"
+    },
+    "animation_notes": "Both terms alternating with the same sign."
+  },
+  {
+    "id": "A235",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "absolute_value",
+    "proof_format": "latex",
+    "theorem": "Absolute-value bound for sin(n)/n - cos(n)/(2n)",
+    "question": "Prove that a_n = sin(n)/n - cos(n)/(2n) converges to 0.",
+    "proof": "By the triangle inequality,\n\\[\n|a_n - 0| \\leq \\frac{1}{n} + \\frac{1}{2n} = \\frac{3}{2n} \\leq \\frac{3}{2N}.\n\\]\nChoose $N > 3/(2\\varepsilon)$; then $|a_n| \\leq \\frac{3}{2N} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "sin(n)/n-cos(n)/(2n)",
+      "limit": 0,
+      "bound": "\\frac{3}{2N}"
+    },
+    "animation_notes": "Show 3/(2n) bound."
+  },
+  {
+    "id": "A246",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "latex",
+    "theorem": "Rational rewrite for (3n+5)/(2n+1)",
+    "question": "Prove that a_n = (3n+5)/(2n+1) converges to 3/2.",
+    "proof": "Putting everything over a common denominator,\n\\[\n\\left|\\frac{3n+5}{2n+1}-\\frac{3}{2}\\right| = \\frac{7}{4n+2} \\leq \\frac{7}{4n} \\leq \\frac{7}{4N}.\n\\]\nSo choosing $N > 7/(4\\varepsilon)$ suffices.",
+    "parameters": {
+      "sequence": "(3n+5)/(2n+1)",
+      "limit": "3/2",
+      "bound": "\\frac{7}{4N}"
+    },
+    "animation_notes": "Show the common-denominator rewrite."
+  },
+  {
+    "id": "A247",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "natural_language",
+    "theorem": "Rational rewrite for (n+3)/(3n+1)",
+    "question": "Prove that a_n = (n+3)/(3n+1) converges to 1/3.",
+    "proof": "Subtracting one third produces a numerator of eight and a denominator of three times the quantity three n plus one. This ratio is at most eight over nine n ≤ 8/(9N). Any N past eight over nine eps makes |a_n - 1/3| ≤ 8/(9N) < eps, so the limit is one third.",
+    "parameters": {
+      "sequence": "(n+3)/(3n+1)",
+      "limit": "1/3",
+      "bound": "8/(9N)"
+    },
+    "animation_notes": "Show the 8/(9n) bound."
+  },
+  {
+    "id": "A248",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "mixed",
+    "theorem": "Rational rewrite for (2n^2+5)/(3n^2-n)",
+    "question": "Prove that a_n = (2n^2+5)/(3n^2-n) converges to 2/3.",
+    "proof": "The distance from $2/3$ simplifies to $(2n+15)/(3(3n^2-n))$. For $n \\geq 2$ this is at most $17/(9n) \\leq \\frac{17}{9N}$, so choosing $N$ past the larger of $2$ and $17/(9\\varepsilon)$ gives $|a_n - 2/3| \\leq \\frac{17}{9N} < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(2n^2+5)/(3n^2-n)",
+      "limit": "2/3",
+      "bound": "\\frac{17}{9N}"
+    },
+    "animation_notes": "Show the 17/(9n) bound."
+  },
+  {
+    "id": "A249",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "latex",
+    "theorem": "Rational rewrite for (n^2+2n)/(2n^2+1)",
+    "question": "Prove that a_n = (n^2+2n)/(2n^2+1) converges to 1/2.",
+    "proof": "Combining into a single fraction gives the difference from $1/2$ as $(4n-1)/(2(2n^2+1))$, which is at most $1/n \\leq 1/N$. Choosing $N > 1/\\varepsilon$ therefore gives $|a_n - 1/2| \\leq 1/N < \\varepsilon$.",
+    "parameters": {
+      "sequence": "(n^2+2n)/(2n^2+1)",
+      "limit": "1/2",
+      "bound": "1/N"
+    },
+    "animation_notes": "Show the 1/n bound."
+  },
+  {
+    "id": "A250",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "natural_language",
+    "theorem": "Rational rewrite for (4n^2+3)/(2n^2+n)",
+    "question": "Prove that a_n = (4n^2+3)/(2n^2+n) converges to 2.",
+    "proof": "Subtracting two gives a numerator with absolute value equal to two n minus three. Divided by the denominator two n squared plus n, and for n at least two, this is at most 1 over n ≤ 1/N. Any N past the larger of two and one over eps makes |a_n - 2| ≤ 1/N < eps, so the tail is small.",
+    "parameters": {
+      "sequence": "(4n^2+3)/(2n^2+n)",
+      "limit": 2,
+      "bound": "1/N"
+    },
+    "animation_notes": "Show the 1/n bound."
+  },
+  {
+    "id": "A251",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "mixed",
+    "theorem": "Rational rewrite for (5n^2+n)/(3n^2+2)",
+    "question": "Prove that a_n = (5n^2+n)/(3n^2+2) converges to 5/3.",
+    "proof": "The difference from $5/3$ equals $(3n+10)/(3(3n^2+2))$, which for $n \\geq 3$ is at most $13/(9n) \\leq \\frac{13}{9N}$. Choosing $N$ past the larger of $3$ and $13/(9\\varepsilon)$ suffices.",
+    "parameters": {
+      "sequence": "(5n^2+n)/(3n^2+2)",
+      "limit": "5/3",
+      "bound": "\\frac{13}{9N}"
+    },
+    "animation_notes": "Show the 13/(9n) bound."
+  },
+  {
+    "id": "A252",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "latex",
+    "theorem": "Rational rewrite for (n^2+n+1)/(3n^2)",
+    "question": "Prove that a_n = (n^2+n+1)/(3n^2) converges to 1/3.",
+    "proof": "Writing everything over a common denominator,\n\\[\n\\left|\\frac{n^2+n+1}{3n^2} - \\frac{1}{3}\\right| = \\frac{n+1}{3n^2} \\leq \\frac{2}{3n} \\leq \\frac{2}{3N}.\n\\]\nSo $N > 2/(3\\varepsilon)$ suffices.",
+    "parameters": {
+      "sequence": "(n^2+n+1)/(3n^2)",
+      "limit": "1/3",
+      "bound": "\\frac{2}{3N}"
+    },
+    "animation_notes": "Show the 2/(3n) bound."
+  },
+  {
+    "id": "A253",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "natural_language",
+    "theorem": "Rational rewrite for (n^3+1)/(4n^3)",
+    "question": "Prove that a_n = (n^3+1)/(4n^3) converges to 1/4.",
+    "proof": "Subtracting one quarter gives one over four n cubed ≤ 1/(4N^3), which shrinks to zero as n grows. Any N large enough makes |a_n - 1/4| ≤ 1/(4N^3) < eps, so the limit is one quarter.",
+    "parameters": {
+      "sequence": "(n^3+1)/(4n^3)",
+      "limit": "1/4",
+      "bound": "1/(4N^3)"
+    },
+    "animation_notes": "Show the exact difference 1/(4n^3)."
+  },
+  {
+    "id": "A254",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "mixed",
+    "theorem": "Rational rewrite for (2n^3+n)/(5n^3+2)",
+    "question": "Prove that a_n = (2n^3+n)/(5n^3+2) converges to 2/5.",
+    "proof": "The difference from $2/5$ is $(5n+4)/(5(5n^3+2))$, which is at most $9/(25n) \\leq \\frac{9}{25N}$ for $n \\geq 1$. Choosing $N > 9/(25\\varepsilon)$ finishes the argument.",
+    "parameters": {
+      "sequence": "(2n^3+n)/(5n^3+2)",
+      "limit": "2/5",
+      "bound": "\\frac{9}{25N}"
+    },
+    "animation_notes": "Show the 9/(25n) bound."
+  },
+  {
+    "id": "A255",
+    "subject": "Real Analysis",
+    "proof_family": "Sequence Convergence",
+    "proof_style": "rational_rewrite",
+    "proof_format": "latex",
+    "theorem": "Rational rewrite for (7n^3+2n)/(2n^3+n^2)",
+    "question": "Prove that a_n = (7n^3+2n)/(2n^3+n^2) converges to 7/2.",
+    "proof": "The difference from $7/2$ reduces to\n\\[\n\\frac{7n^2-4n}{2n^2(2n+1)},\n\\]\nwhich is at most $7/(4n) \\leq \\frac{7}{4N}$. Choosing $N > 7/(4\\varepsilon)$ gives the desired limit.",
+    "parameters": {
+      "sequence": "(7n^3+2n)/(2n^3+n^2)",
+      "limit": "7/2",
+      "bound": "\\frac{7}{4N}"
+    },
+    "animation_notes": "Show the 7/(4n) bound."
+  }
+]

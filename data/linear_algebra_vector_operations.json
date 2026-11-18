@@ -1,0 +1,4014 @@
+[
+  {
+    "id": "D01",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,2) and (2,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,2) and v2 = (2,1).",
+    "proof": "Set u1 equal to v1, which is (1,2). The inner product of v2 with u1 is 2 plus 2, which is 4, and the inner product of u1 with itself is 1 plus 4, which is 5. So the projection of v2 onto u1 is four fifths of (1,2), that is (4/5, 8/5). Subtracting this from v2 gives u2 equal to (6/5, -3/5). Checking orthogonality, the inner product of u1 and u2 is six fifths minus six fifths, which is 0.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Standard 2D Gram-Schmidt template with the projection landing inside the first quadrant."
+  },
+  {
+    "id": "D02",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (1,1) and (2,0)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1) and v2 = (2,0).",
+    "proof": "Let $u_1 = (1,1)$. Since $\\langle v_2,u_1 \\rangle = 2$ and $\\langle u_1,u_1 \\rangle = 2$, we have\n\\[\n\\operatorname{proj}_{u_1}(v_2) = \\frac{2}{2}(1,1) = (1,1).\n\\]\nSubtracting gives $u_2 = (2,0)-(1,1) = (1,-1)$. Then $\\langle u_1,u_2 \\rangle = 1-1 = 0$, so $u_1$ and $u_2$ are orthogonal.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [2, 0]
+      ]
+    },
+    "animation_notes": "The projection equals u1 because v2 has the same norm as the direction component; u2 lands on the diagonal y = -x."
+  },
+  {
+    "id": "D03",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (2,3) and (1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (2,3) and v2 = (1,1).",
+    "proof": "Let $u_1 = (2,3)$. The inner products are $\\langle v_2,u_1 \\rangle = 5$ and $\\langle u_1,u_1 \\rangle = 13$, so the projection is $(5/13)(2,3) = (10/13, 15/13)$. Subtracting gives $u_2 = (3/13, -2/13)$. Then $\\langle u_1,u_2 \\rangle = 6/13 - 6/13 = 0$.",
+    "parameters": {
+      "vectors": [
+        [2, 3],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Fractions with denominator 13 appear; annotate the exact values on screen."
+  },
+  {
+    "id": "D04",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,3) and (3,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,3) and v2 = (3,1).",
+    "proof": "Take u1 equal to v1, which is (1,3). The inner product of v2 with u1 is 3 plus 3, which is 6, while the inner product of u1 with itself is 10. So the projection is three fifths of (1,3), namely (3/5, 9/5). Subtracting gives u2 equal to (12/5, -4/5). The inner product of u1 and u2 is twelve fifths minus twelve fifths, which is zero, confirming orthogonality.",
+    "parameters": {
+      "vectors": [
+        [1, 3],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "The input pair is symmetric about the line y = x, so the projection and u2 are reflections."
+  },
+  {
+    "id": "D05",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (2,1) and (3,3)",
+    "question": "Apply Gram-Schmidt to v1 = (2,1) and v2 = (3,3).",
+    "proof": "Let $u_1 = (2,1)$. We have $\\langle v_2,u_1 \\rangle = 6+3 = 9$ and $\\langle u_1,u_1 \\rangle = 5$, so\n\\[\n\\operatorname{proj}_{u_1}(v_2) = \\frac{9}{5}(2,1) = \\left(\\frac{18}{5}, \\frac{9}{5}\\right).\n\\]\nThen $u_2 = (3,3) - (18/5, 9/5) = (-3/5, 6/5)$. Check: $\\langle u_1,u_2 \\rangle = -6/5+6/5 = 0$.",
+    "parameters": {
+      "vectors": [
+        [2, 1],
+        [3, 3]
+      ]
+    },
+    "animation_notes": "The second output vector points up and to the left; verify the sign visually."
+  },
+  {
+    "id": "D06",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (1,1) and (3,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1) and v2 = (3,1).",
+    "proof": "Let $u_1 = (1,1)$. Then $\\langle v_2,u_1 \\rangle = 4$ and $\\langle u_1,u_1 \\rangle = 2$, so $\\operatorname{proj}_{u_1}(v_2) = 2(1,1) = (2,2)$. Subtracting gives $u_2 = (1,-1)$. Since $\\langle u_1,u_2 \\rangle = 1-1 = 0$, the pair $(u_1,u_2)$ is orthogonal, with $u_2$ pointing along the anti-diagonal.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "The output u2 lies on the negative-diagonal direction; draw the diagonal y = -x to make this visible."
+  },
+  {
+    "id": "D07",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,-1) and (2,3)",
+    "question": "Apply Gram-Schmidt to v1 = (1,-1) and v2 = (2,3).",
+    "proof": "Take u1 equal to (1,-1). The inner product of v2 with u1 is 2 minus 3, which is minus 1, and the inner product of u1 with itself is 2. So the projection is minus one half times (1,-1), that is (-1/2, 1/2). Subtracting gives u2 equal to (5/2, 5/2), which lies on the positive diagonal. The inner product of u1 and u2 is five halves minus five halves, zero.",
+    "parameters": {
+      "vectors": [
+        [1, -1],
+        [2, 3]
+      ]
+    },
+    "animation_notes": "The projection has negative coordinates; u2 lands on the diagonal (1,1)."
+  },
+  {
+    "id": "D08",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (2,2) and (1,3)",
+    "question": "Apply Gram-Schmidt to v1 = (2,2) and v2 = (1,3).",
+    "proof": "Let $u_1 = (2,2)$. Since $\\langle v_2,u_1 \\rangle = 2+6 = 8$ and $\\langle u_1,u_1 \\rangle = 8$, we get $\\operatorname{proj}_{u_1}(v_2) = (2,2)$. Subtracting gives $u_2 = (1,3)-(2,2) = (-1,1)$. Then $\\langle u_1,u_2 \\rangle = -2+2 = 0$, so $u_2$ lies on the anti-diagonal.",
+    "parameters": {
+      "vectors": [
+        [2, 2],
+        [1, 3]
+      ]
+    },
+    "animation_notes": "u2 lies on the anti-diagonal; the projection coincides with u1 because the coefficient equals 1."
+  },
+  {
+    "id": "D09",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (3,-3) and (1,2)",
+    "question": "Apply Gram-Schmidt to v1 = (3,-3) and v2 = (1,2).",
+    "proof": "Let $u_1 = (3,-3)$. Then $\\langle v_2,u_1 \\rangle = 3-6 = -3$ and $\\langle u_1,u_1 \\rangle = 18$, so the projection is $(-1/6)(3,-3) = (-1/2,1/2)$. Subtracting gives $u_2 = (3/2, 3/2)$, which is a positive-diagonal vector. Check: $\\langle u_1,u_2 \\rangle = 9/2-9/2 = 0$.",
+    "parameters": {
+      "vectors": [
+        [3, -3],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "The projection is short, and the resulting u2 is a positive-diagonal vector."
+  },
+  {
+    "id": "D10",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (2,-2) and (3,1)",
+    "question": "Apply Gram-Schmidt to v1 = (2,-2) and v2 = (3,1).",
+    "proof": "Take u1 equal to (2,-2). The inner product of v2 with u1 is 6 minus 2, that is 4, and the inner product of u1 with itself is 8. So the projection is one half of (2,-2), namely (1,-1). Subtracting gives u2 equal to (2,2), which is a positive-diagonal vector. The inner product of u1 and u2 is 4 minus 4, which is zero.",
+    "parameters": {
+      "vectors": [
+        [2, -2],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "Both inputs and outputs are diagonal directions; the animation is essentially a rotation of the D06 case."
+  },
+  {
+    "id": "D11",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (1,1,1) and (1,1,0)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1,1) and v2 = (1,1,0) in R^3.",
+    "proof": "Let $u_1 = (1,1,1)$. We have $\\langle v_2,u_1 \\rangle = 2$ and $\\langle u_1,u_1 \\rangle = 3$, so\n\\[\n\\operatorname{proj}_{u_1}(v_2) = \\frac{2}{3}(1,1,1) = \\left(\\tfrac{2}{3},\\tfrac{2}{3},\\tfrac{2}{3}\\right).\n\\]\nSubtracting gives $u_2 = (1/3,1/3,-2/3)$. Then $\\langle u_1,u_2 \\rangle = 1/3+1/3-2/3 = 0$.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [1, 1, 0]
+      ]
+    },
+    "animation_notes": "3D scene with u1 along the main diagonal and u2 tilted below the xy-plane."
+  },
+  {
+    "id": "D12",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (2,1,2) and (1,1,0)",
+    "question": "Apply Gram-Schmidt to v1 = (2,1,2) and v2 = (1,1,0) in R^3.",
+    "proof": "Let $u_1 = (2,1,2)$. We have $\\langle v_2,u_1 \\rangle = 3$ and $\\langle u_1,u_1 \\rangle = 9$, so $\\operatorname{proj}_{u_1}(v_2) = (1/3)(2,1,2) = (2/3,1/3,2/3)$. Subtracting gives $u_2 = (1/3,2/3,-2/3)$. Check: $\\langle u_1,u_2 \\rangle = 2/3+2/3-4/3 = 0$.",
+    "parameters": {
+      "vectors": [
+        [2, 1, 2],
+        [1, 1, 0]
+      ]
+    },
+    "animation_notes": "3D scene; u2 has a negative z-component, so the rotating camera makes orthogonality clear."
+  },
+  {
+    "id": "D13",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,2,2) and (2,1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,2,2) and v2 = (2,1,1) in R^3.",
+    "proof": "Take u1 equal to (1,2,2). The inner product of v2 with u1 is 2 plus 2 plus 2, which is 6, and the inner product of u1 with itself is 9. So the projection is two thirds of (1,2,2), which gives (2/3, 4/3, 4/3). Subtracting gives u2 equal to (4/3, -1/3, -1/3). The inner product of u1 with u2 is four thirds minus two thirds minus two thirds, which is zero.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [2, 1, 1]
+      ]
+    },
+    "animation_notes": "The output u2 points away from the diagonal (1,1,1) direction; use color to highlight this."
+  },
+  {
+    "id": "D14",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (1,1,0) and (1,1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1,0) and v2 = (1,1,1) in R^3.",
+    "proof": "Let $u_1 = (1,1,0)$. We have $\\langle v_2,u_1 \\rangle = 2$ and $\\langle u_1,u_1 \\rangle = 2$, so $\\operatorname{proj}_{u_1}(v_2) = (1,1,0)$. Subtracting gives $u_2 = (0,0,1)$. Then $\\langle u_1,u_2 \\rangle = 0$.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 0],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "The output u2 is the z-axis vector; the animation shows the xy-plane projection cleanly."
+  },
+  {
+    "id": "D15",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (2,0,1) and (1,1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (2,0,1) and v2 = (1,1,1) in R^3.",
+    "proof": "Let $u_1 = (2,0,1)$. We have $\\langle v_2,u_1 \\rangle = 3$ and $\\langle u_1,u_1 \\rangle = 5$, so $\\operatorname{proj}_{u_1}(v_2) = (3/5)(2,0,1) = (6/5,0,3/5)$. Subtracting gives $u_2 = (-1/5,1,2/5)$. Check: $\\langle u_1,u_2 \\rangle = -2/5+0+2/5 = 0$.",
+    "parameters": {
+      "vectors": [
+        [2, 0, 1],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "3D scene; note that the projection lies in the xz-plane while u2 tilts in the y direction."
+  },
+  {
+    "id": "D16",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,0) and (0,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,0) and v2 = (0,1).",
+    "proof": "The inner product of v1 and v2 is zero, so the input is already orthogonal. Gram-Schmidt therefore leaves the vectors unchanged: u1 is (1,0) and u2 is (0,1). These two vectors already form an orthonormal basis of the plane.",
+    "parameters": {
+      "vectors": [
+        [1, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Degenerate case with zero projection; the template must render without division-by-zero artefacts."
+  },
+  {
+    "id": "D17",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (3,0) and (0,-2)",
+    "question": "Apply Gram-Schmidt to v1 = (3,0) and v2 = (0,-2).",
+    "proof": "We have $\\langle v_2,v_1 \\rangle = 0$, so the vectors are already orthogonal. Thus $u_1 = (3,0)$ and $u_2 = (0,-2)$; they form an orthogonal, but not orthonormal, basis of $\\mathbb{R}^2$.",
+    "parameters": {
+      "vectors": [
+        [3, 0],
+        [0, -2]
+      ]
+    },
+    "animation_notes": "Non-unit orthogonal vectors; emphasises that Gram-Schmidt does not normalise."
+  },
+  {
+    "id": "D18",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (2,3,0) and (-3,2,0)",
+    "question": "Apply Gram-Schmidt to v1 = (2,3,0) and v2 = (-3,2,0) in R^3.",
+    "proof": "Compute $\\langle v_2,v_1 \\rangle = -6+6+0 = 0$, so the vectors are already orthogonal. Gram-Schmidt leaves them unchanged: $u_1 = (2,3,0)$ and $u_2 = (-3,2,0)$, which span the same plane and are mutually orthogonal.",
+    "parameters": {
+      "vectors": [
+        [2, 3, 0],
+        [-3, 2, 0]
+      ]
+    },
+    "animation_notes": "Both vectors lie in the xy-plane; rotate to show the right angle between them."
+  },
+  {
+    "id": "D19",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,2,2) and (2,1,-2)",
+    "question": "Apply Gram-Schmidt to v1 = (1,2,2) and v2 = (2,1,-2) in R^3.",
+    "proof": "The inner product of v2 with v1 is 2 plus 2 minus 4, which is zero, so the inputs are already orthogonal. Gram-Schmidt leaves them unchanged: u1 is (1,2,2) and u2 is (2,1,-2).",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [2, 1, -2]
+      ]
+    },
+    "animation_notes": "Zero projection must render cleanly; the template should not error on parallel directions."
+  },
+  {
+    "id": "D20",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (1,1,1) and (1,-1,0)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1,1) and v2 = (1,-1,0) in R^3.",
+    "proof": "We have $\\langle v_2,v_1 \\rangle = 1-1+0 = 0$, so the vectors are already orthogonal. Gram-Schmidt gives $u_1 = (1,1,1)$ and $u_2 = (1,-1,0)$ unchanged.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [1, -1, 0]
+      ]
+    },
+    "animation_notes": "u1 is the main diagonal; u2 lies in the xy-plane and is orthogonal to it."
+  },
+  {
+    "id": "D21",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "mixed",
+    "theorem": "Projection of (3,4) onto the x-axis",
+    "question": "Find the orthogonal projection of (3,4) onto the span of (1,0).",
+    "proof": "Let $v = (3,4)$ and $u = (1,0)$. Since $\\langle v,u \\rangle = 3$ and $\\langle u,u \\rangle = 1$, $\\operatorname{proj}_u(v) = 3(1,0) = (3,0)$. The perpendicular component is $(0,4)$, whose inner product with $u$ is zero.",
+    "parameters": {
+      "vectors": [
+        [3, 4],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Draw the vertical drop from (3,4) to the x-axis and shade the right angle."
+  },
+  {
+    "id": "D22",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "natural_language",
+    "theorem": "Projection of (-2,5) onto the y-axis",
+    "question": "Find the orthogonal projection of (-2,5) onto the span of (0,1).",
+    "proof": "Let v be (-2,5) and u be (0,1). The inner product of v with u is 5, and the inner product of u with itself is 1, so the projection is (0,5). The perpendicular component is (-2,0), whose inner product with u is zero.",
+    "parameters": {
+      "vectors": [
+        [-2, 5],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Highlight that the projection keeps the vertical component and discards the horizontal one."
+  },
+  {
+    "id": "D23",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "latex",
+    "theorem": "Projection of (2,3,4) onto the y-axis",
+    "question": "Find the orthogonal projection of (2,3,4) onto the span of (0,1,0).",
+    "proof": "Let $v = (2,3,4)$ and $u = (0,1,0)$. Since $\\langle v,u \\rangle = 3$ and $\\langle u,u \\rangle = 1$,\n\\[\n\\operatorname{proj}_u(v) = 3(0,1,0) = (0,3,0).\n\\]\nThe residual $(2,0,4)$ has zero inner product with $u$.",
+    "parameters": {
+      "vectors": [
+        [2, 3, 4],
+        [0, 1, 0]
+      ]
+    },
+    "animation_notes": "3D scene showing the residual lying in the xz-plane; rotate the camera to show the right angle."
+  },
+  {
+    "id": "D24",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "mixed",
+    "theorem": "Projection of (7,-1) onto span of (2,0)",
+    "question": "Find the orthogonal projection of (7,-1) onto the span of (2,0).",
+    "proof": "Let $v = (7,-1)$ and $u = (2,0)$. Then $\\langle v,u \\rangle = 14$ and $\\langle u,u \\rangle = 4$, so $\\operatorname{proj}_u(v) = (14/4)(2,0) = (7,0)$. The residual $(0,-1)$ has zero inner product with $u$.",
+    "parameters": {
+      "vectors": [
+        [7, -1],
+        [2, 0]
+      ]
+    },
+    "animation_notes": "The onto vector is not unit; the animation should display the coefficient 14/4 = 7/2 explicitly."
+  },
+  {
+    "id": "D25",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "natural_language",
+    "theorem": "Projection of (5,2,3) onto the x-axis",
+    "question": "Find the orthogonal projection of (5,2,3) onto the span of (1,0,0).",
+    "proof": "Let v be (5,2,3) and u be (1,0,0). The inner product of v with u is 5, and the inner product of u with itself is 1, so the projection is (5,0,0). The perpendicular component is (0,2,3), whose inner product with u is zero.",
+    "parameters": {
+      "vectors": [
+        [5, 2, 3],
+        [1, 0, 0]
+      ]
+    },
+    "animation_notes": "3D scene; the residual lies in the yz-plane and can be highlighted to emphasise the orthogonal decomposition."
+  },
+  {
+    "id": "D26",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "latex",
+    "theorem": "Projection of (1,2) onto (2,1)",
+    "question": "Find the orthogonal projection of (1,2) onto the span of (2,1).",
+    "proof": "Let $v = (1,2)$ and $u = (2,1)$. Then $\\langle v,u \\rangle = 4$ and $\\langle u,u \\rangle = 5$, so\n\\[\n\\operatorname{proj}_u(v) = \\frac{4}{5}(2,1) = \\left(\\tfrac{8}{5},\\tfrac{4}{5}\\right).\n\\]\nThe perpendicular component is $(-3/5, 6/5)$, and $\\langle u, v - \\operatorname{proj}_u(v) \\rangle = 2(-3/5)+6/5 = 0$.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Non-axis direction; draw the projection foot and the right angle explicitly."
+  },
+  {
+    "id": "D27",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Projection of (3,1) onto (1,1)",
+    "question": "Find the orthogonal projection of (3,1) onto the span of (1,1).",
+    "proof": "Let v be (3,1) and u be (1,1). The inner product of v with u is 4, and the inner product of u with itself is 2, so the projection is 2 times (1,1), namely (2,2). The perpendicular component is (1,-1), whose inner product with u is zero.",
+    "parameters": {
+      "vectors": [
+        [3, 1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Show the right angle at (2,2) with the anti-diagonal residual (1,-1)."
+  },
+  {
+    "id": "D28",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Projection of (4,2) onto (3,1)",
+    "question": "Find the orthogonal projection of (4,2) onto the span of (3,1).",
+    "proof": "Let $v = (4,2)$ and $u = (3,1)$. We have $\\langle v,u \\rangle = 14$ and $\\langle u,u \\rangle = 10$, so $\\operatorname{proj}_u(v) = (7/5)(3,1) = (21/5,7/5)$. The perpendicular component is $(-1/5,3/5)$, and its inner product with $(21/5,7/5)$ is $-21/25+21/25 = 0$.",
+    "parameters": {
+      "vectors": [
+        [4, 2],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "The projection extends past v in the x-direction; annotate this on the animation."
+  },
+  {
+    "id": "D29",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "latex",
+    "theorem": "Projection of (1,1,1) onto (1,1,0)",
+    "question": "Find the orthogonal projection of (1,1,1) onto the span of (1,1,0) in R^3.",
+    "proof": "Let $v = (1,1,1)$ and $u = (1,1,0)$. Then $\\langle v,u \\rangle = 2$ and $\\langle u,u \\rangle = 2$, so $\\operatorname{proj}_u(v) = (1,1,0)$. The perpendicular component is $(0,0,1)$, whose inner product with $u$ is zero.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [1, 1, 0]
+      ]
+    },
+    "animation_notes": "3D scene; the projection lies in the xy-plane and the residual is along the z-axis."
+  },
+  {
+    "id": "D30",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Projection of (2,2,2) onto (1,2,2)",
+    "question": "Find the orthogonal projection of (2,2,2) onto the span of (1,2,2) in R^3.",
+    "proof": "Let v be (2,2,2) and u be (1,2,2). The inner product of v with u is 2 plus 4 plus 4, that is 10, and the inner product of u with itself is 9. So the projection is ten ninths of (1,2,2), which is (10/9, 20/9, 20/9). The perpendicular component is (8/9, -2/9, -2/9), and its inner product with u is eight ninths minus four ninths minus four ninths, which is zero.",
+    "parameters": {
+      "vectors": [
+        [2, 2, 2],
+        [1, 2, 2]
+      ]
+    },
+    "animation_notes": "3D scene; project the main diagonal onto a skewed direction and rotate the camera to show the right angle."
+  },
+  {
+    "id": "D31",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "mixed",
+    "theorem": "Projection formula applied to (3,4) and (1,2)",
+    "question": "Use the projection formula to compute the projection of v = (3,4) onto u = (1,2).",
+    "proof": "The projection formula is $\\operatorname{proj}_u(v) = (\\langle v,u \\rangle/\\langle u,u \\rangle)u$. Here $\\langle v,u \\rangle = 3+8 = 11$ and $\\langle u,u \\rangle = 1+4 = 5$, so $\\operatorname{proj}_u(v) = (11/5)(1,2) = (11/5,22/5)$.",
+    "parameters": {
+      "vectors": [
+        [3, 4],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "Display the projection formula explicitly and plug in the inner products as on-screen steps."
+  },
+  {
+    "id": "D32",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "natural_language",
+    "theorem": "Projection formula applied to (1,2,3) and (1,0,1)",
+    "question": "Use the projection formula to compute the projection of v = (1,2,3) onto u = (1,0,1).",
+    "proof": "The inner product of v with u is 1 plus 0 plus 3, which is 4, and the inner product of u with itself is 2. So the projection is 2 times (1,0,1), which is (2,0,2). The perpendicular component is (-1,2,1), whose inner product with u is zero.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 3],
+        [1, 0, 1]
+      ]
+    },
+    "animation_notes": "Display the coefficient 2 explicitly and split the vector into (2,0,2)+(-1,2,1)."
+  },
+  {
+    "id": "D33",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "latex",
+    "theorem": "Projection formula applied to (2,-1) and (1,1)",
+    "question": "Use the projection formula to compute the projection of v = (2,-1) onto u = (1,1).",
+    "proof": "We have $\\langle v,u \\rangle = 1$ and $\\langle u,u \\rangle = 2$, so\n\\[\n\\operatorname{proj}_u(v) = \\tfrac{1}{2}(1,1) = \\left(\\tfrac{1}{2},\\tfrac{1}{2}\\right).\n\\]\nThe perpendicular component is $(3/2,-3/2)$, whose inner product with $u$ is zero.",
+    "parameters": {
+      "vectors": [
+        [2, -1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Short projection, long residual; show the right angle at (1/2,1/2)."
+  },
+  {
+    "id": "D34",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "mixed",
+    "theorem": "Projection formula applied to (5,0) and (2,1)",
+    "question": "Use the projection formula to compute the projection of v = (5,0) onto u = (2,1).",
+    "proof": "We have $\\langle v,u \\rangle = 10$ and $\\langle u,u \\rangle = 5$, so $\\operatorname{proj}_u(v) = 2(2,1) = (4,2)$. The perpendicular component is $(1,-2)$, whose inner product with $u$ is zero.",
+    "parameters": {
+      "vectors": [
+        [5, 0],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Coefficient equals 2; the projection lies beyond (2,1) in the same direction."
+  },
+  {
+    "id": "D35",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "latex",
+    "theorem": "Projection formula applied to (0,3,4) and (0,1,0)",
+    "question": "Use the projection formula to compute the projection of v = (0,3,4) onto u = (0,1,0).",
+    "proof": "We have $\\langle v,u \\rangle = 3$ and $\\langle u,u \\rangle = 1$, so $\\operatorname{proj}_u(v) = 3(0,1,0) = (0,3,0)$. The perpendicular component $(0,0,4)$ has zero inner product with $u$.",
+    "parameters": {
+      "vectors": [
+        [0, 3, 4],
+        [0, 1, 0]
+      ]
+    },
+    "animation_notes": "3D scene; the projection is a strict y-only contribution and the residual sits on the z-axis."
+  },
+  {
+    "id": "D36",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "natural_language",
+    "theorem": "Decompose (4,2) relative to (1,1)",
+    "question": "Write v = (4,2) as the sum of a component parallel to u = (1,1) and a component orthogonal to u.",
+    "proof": "The inner product of v with u is 6, and the inner product of u with itself is 2, so the parallel component is 3 times (1,1), namely (3,3). The orthogonal component is (1,-1), and its inner product with (1,1) is 1 minus 1, which is zero. Hence v equals (3,3) plus (1,-1).",
+    "parameters": {
+      "vectors": [
+        [4, 2],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Draw the parallelogram decomposition with the two components summing to v; mark the right angle."
+  },
+  {
+    "id": "D37",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "latex",
+    "theorem": "Decompose (3,5) relative to (1,0)",
+    "question": "Write v = (3,5) as the sum of a component parallel to u = (1,0) and a component orthogonal to u.",
+    "proof": "We have $\\langle v,u \\rangle = 3$ and $\\langle u,u \\rangle = 1$, so the parallel component is $(3,0)$. The orthogonal component is $(0,5)$, and $\\langle (3,0),(0,5) \\rangle = 0$. Hence $v = (3,0)+(0,5)$.",
+    "parameters": {
+      "vectors": [
+        [3, 5],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "The trivial axis case; the animation shows the standard x-y coordinate decomposition."
+  },
+  {
+    "id": "D38",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "mixed",
+    "theorem": "Decompose (2,6) relative to (1,1)",
+    "question": "Write v = (2,6) as the sum of a component parallel to u = (1,1) and a component orthogonal to u.",
+    "proof": "We have $\\langle v,u \\rangle = 8$ and $\\langle u,u \\rangle = 2$, so the parallel component is $4(1,1) = (4,4)$. The orthogonal component is $(-2,2)$, and $\\langle (-2,2),(1,1) \\rangle = -2+2 = 0$. Hence $v = (4,4)+(-2,2)$.",
+    "parameters": {
+      "vectors": [
+        [2, 6],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "The orthogonal component lies on the anti-diagonal; use colour to highlight the two pieces."
+  },
+  {
+    "id": "D39",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "latex",
+    "theorem": "Decompose (1,2,3) relative to (1,0,1)",
+    "question": "Write v = (1,2,3) as the sum of a component parallel to u = (1,0,1) and a component orthogonal to u.",
+    "proof": "We have $\\langle v,u \\rangle = 4$ and $\\langle u,u \\rangle = 2$, so the parallel component is $2(1,0,1) = (2,0,2)$. The orthogonal component is $(-1,2,1)$, whose inner product with $u$ is $-1+0+1 = 0$. Hence $v = (2,0,2)+(-1,2,1)$.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 3],
+        [1, 0, 1]
+      ]
+    },
+    "animation_notes": "3D scene; the parallel piece lies in the xz-plane and the residual tilts into the y direction."
+  },
+  {
+    "id": "D40",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "natural_language",
+    "theorem": "Decompose (6,-2) relative to (2,2)",
+    "question": "Write v = (6,-2) as the sum of a component parallel to u = (2,2) and a component orthogonal to u.",
+    "proof": "The inner product of v with u is 12 minus 4, which is 8, and the inner product of u with itself is 8, so the parallel component is (2,2). The orthogonal component is (4,-4), and its inner product with (2,2) is 8 minus 8, which is zero. Hence v equals (2,2) plus (4,-4).",
+    "parameters": {
+      "vectors": [
+        [6, -2],
+        [2, 2]
+      ]
+    },
+    "animation_notes": "Coefficient is 1; the parallel component is the projection factor 1 times u."
+  },
+  {
+    "id": "D41",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "mixed",
+    "theorem": "Pythagorean identity for (3,4) and (-4,3)",
+    "question": "Verify the Pythagorean identity for u = (3,4) and v = (-4,3).",
+    "proof": "We have $\\langle u,v \\rangle = -12+12 = 0$, so the vectors are orthogonal. Also $u+v = (-1,7)$, and $\\lVert u+v \\rVert^2 = 1+49 = 50$. Since $\\lVert u \\rVert^2 = 25$ and $\\lVert v \\rVert^2 = 25$, the identity $\\lVert u+v \\rVert^2 = \\lVert u \\rVert^2+\\lVert v \\rVert^2$ holds.",
+    "parameters": {
+      "vectors": [
+        [3, 4],
+        [-4, 3]
+      ]
+    },
+    "animation_notes": "Draw the two orthogonal vectors and their sum; animate the three squared-length labels updating together."
+  },
+  {
+    "id": "D42",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "natural_language",
+    "theorem": "Pythagorean identity for (1,1) and (1,-1)",
+    "question": "Verify the Pythagorean identity for u = (1,1) and v = (1,-1).",
+    "proof": "The inner product of u and v is 1 minus 1, which is zero, so the vectors are orthogonal. Their sum is (2,0), whose squared norm is 4. The squared norms of u and v are each 2, and 2 plus 2 is 4, confirming the Pythagorean identity.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [1, -1]
+      ]
+    },
+    "animation_notes": "Show the diagonal pair and their horizontal sum."
+  },
+  {
+    "id": "D43",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "latex",
+    "theorem": "Pythagorean identity for (2,0,0) and (0,3,0)",
+    "question": "Verify the Pythagorean identity for u = (2,0,0) and v = (0,3,0) in R^3.",
+    "proof": "We have $\\langle u,v \\rangle = 0$, so the vectors are orthogonal. Then $u+v = (2,3,0)$, and\n\\[\n\\lVert u+v \\rVert^2 = 4+9 = 13 = \\lVert u \\rVert^2+\\lVert v \\rVert^2.\n\\]",
+    "parameters": {
+      "vectors": [
+        [2, 0, 0],
+        [0, 3, 0]
+      ]
+    },
+    "animation_notes": "Show the axis-aligned right triangle in the xy-plane; the hypotenuse lies in the plane."
+  },
+  {
+    "id": "D44",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "mixed",
+    "theorem": "Pythagorean identity for (1,2,2) and (2,-2,1)",
+    "question": "Verify the Pythagorean identity for u = (1,2,2) and v = (2,-2,1) in R^3.",
+    "proof": "We have $\\langle u,v \\rangle = 2-4+2 = 0$, so the vectors are orthogonal. Then $u+v = (3,0,3)$, and $\\lVert u+v \\rVert^2 = 18 = 9+9 = \\lVert u \\rVert^2+\\lVert v \\rVert^2$.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [2, -2, 1]
+      ]
+    },
+    "animation_notes": "3D scene; the two vectors are orthogonal and the sum lies along (1,0,1)."
+  },
+  {
+    "id": "D45",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "natural_language",
+    "theorem": "Pythagorean identity for (5,0) and (0,12)",
+    "question": "Verify the Pythagorean identity for u = (5,0) and v = (0,12).",
+    "proof": "The inner product of u and v is zero, so the vectors are orthogonal. Their sum is (5,12), whose squared norm is 25 plus 144, that is 169. The squared norms of u and v are 25 and 144 respectively, and their sum is 169, confirming the Pythagorean identity.",
+    "parameters": {
+      "vectors": [
+        [5, 0],
+        [0, 12]
+      ]
+    },
+    "animation_notes": "The 5-12-13 triangle; display the hypotenuse length 13 as the on-screen result."
+  },
+  {
+    "id": "D46",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "latex",
+    "theorem": "Orthogonal complement of the x-axis in R^2",
+    "question": "Find the orthogonal complement of W = span{(1,0)} in R^2.",
+    "proof": "A vector $(x,y)$ is orthogonal to $(1,0)$ if and only if $x = 0$. Hence\n\\[\nW^{\\perp} = \\{(0,y) : y \\in \\mathbb{R}\\} = \\operatorname{span}\\{(0,1)\\}.\n\\]",
+    "parameters": {
+      "vectors": [
+        [1, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Shade the y-axis as the orthogonal complement of the x-axis."
+  },
+  {
+    "id": "D47",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "natural_language",
+    "theorem": "Orthogonal complement of the diagonal in R^2",
+    "question": "Find the orthogonal complement of W = span{(1,1)} in R^2.",
+    "proof": "A vector (x,y) is orthogonal to (1,1) precisely when x plus y equals zero, that is y equals minus x. Hence the complement consists of all multiples of (1,-1), which is the span of (1,-1).",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [1, -1]
+      ]
+    },
+    "animation_notes": "Show the main diagonal and the anti-diagonal as perpendicular lines through the origin."
+  },
+  {
+    "id": "D48",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "mixed",
+    "theorem": "Orthogonal complement of a skew line in R^2",
+    "question": "Find the orthogonal complement of W = span{(1,2)} in R^2.",
+    "proof": "A vector $(x,y)$ is orthogonal to $(1,2)$ when $x + 2y = 0$. Taking $y = 1$ gives $x = -2$, so $W^{\\perp} = \\operatorname{span}\\{(-2,1)\\} = \\operatorname{span}\\{(2,-1)\\}$.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [2, -1]
+      ]
+    },
+    "animation_notes": "Draw the line through (1,2) and the perpendicular line through (2,-1)."
+  },
+  {
+    "id": "D49",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "latex",
+    "theorem": "Orthogonal complement of the x-axis in R^3",
+    "question": "Find the orthogonal complement of W = span{(1,0,0)} in R^3.",
+    "proof": "A vector $(x,y,z)$ is orthogonal to $(1,0,0)$ if and only if $x = 0$. Hence\n\\[\nW^{\\perp} = \\{(0,y,z) : y,z \\in \\mathbb{R}\\} = \\operatorname{span}\\{(0,1,0),(0,0,1)\\},\n\\]\nthe $yz$-plane.",
+    "parameters": {
+      "vectors": [
+        [1, 0, 0],
+        [0, 1, 0],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Highlight the yz-plane as a 2D subspace perpendicular to the x-axis."
+  },
+  {
+    "id": "D50",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "natural_language",
+    "theorem": "Orthogonal complement of the main diagonal in R^3",
+    "question": "Find the orthogonal complement of W = span{(1,1,1)} in R^3.",
+    "proof": "A vector (x,y,z) is orthogonal to (1,1,1) exactly when x plus y plus z equals zero. This is a plane spanned by (1,-1,0) and (1,0,-1), both of which satisfy the equation and are linearly independent. Hence the complement is the span of those two vectors.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [1, -1, 0],
+        [1, 0, -1]
+      ]
+    },
+    "animation_notes": "Show the main diagonal and the plane x+y+z = 0 cutting through it perpendicularly."
+  },
+  {
+    "id": "D51",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "mixed",
+    "theorem": "Orthonormal basis from (1,1) and (1,0)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1) and v2 = (1,0), then normalise to obtain an orthonormal basis.",
+    "proof": "Gram-Schmidt gives $u_1 = (1,1)$ and $u_2 = (1/2,-1/2)$. Normalising, $e_1 = (1/\\sqrt{2})(1,1)$ and $e_2 = (1/\\sqrt{2})(1,-1)$, so $(e_1,e_2)$ is orthonormal.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Show the two steps: orthogonalise, then divide by the norms; annotate 1/sqrt(2) approximately 0.707."
+  },
+  {
+    "id": "D52",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "natural_language",
+    "theorem": "Orthonormal basis from (2,0) and (1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (2,0) and v2 = (1,1), then normalise.",
+    "proof": "Gram-Schmidt gives u1 equal to (2,0) and u2 equal to (0,1). Normalising gives e1 equal to (1,0) and e2 equal to (0,1), which is the standard basis.",
+    "parameters": {
+      "vectors": [
+        [2, 0],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "The output is the standard basis; contrast with the non-orthonormal input."
+  },
+  {
+    "id": "D53",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "latex",
+    "theorem": "Orthonormal basis from (1,1,0) and (1,0,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1,0) and v2 = (1,0,1), then normalise.",
+    "proof": "Gram-Schmidt gives $u_1 = (1,1,0)$ and $u_2 = (1/2,-1/2,1)$. Since $\\lVert u_1 \\rVert = \\sqrt{2}$ and $\\lVert u_2 \\rVert = \\sqrt{3/2}$, the normalised pair is\n\\[\ne_1 = \\frac{1}{\\sqrt{2}}(1,1,0), \\qquad e_2 = \\frac{1}{\\sqrt{6}}(1,-1,2).\n\\]\nIndeed $\\lVert e_2 \\rVert^2 = (1+1+4)/6 = 1$.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 0],
+        [1, 0, 1]
+      ]
+    },
+    "animation_notes": "3D scene; the two normalised vectors span the plane x+y = 2z / something similar, so draw the plane explicitly."
+  },
+  {
+    "id": "D54",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "mixed",
+    "theorem": "Orthonormal basis from (3,4) and (0,1)",
+    "question": "Apply Gram-Schmidt to v1 = (3,4) and v2 = (0,1), then normalise.",
+    "proof": "Gram-Schmidt gives $u_1 = (3,4)$ and $u_2 = (-12/25,9/25)$. Normalising gives $e_1 = (3/5,4/5)$ and $e_2 = (-4/5,3/5)$. Check: $\\lVert e_2 \\rVert^2 = (16+9)/25 = 1$ and $\\langle e_1,e_2 \\rangle = -12/25+12/25 = 0$.",
+    "parameters": {
+      "vectors": [
+        [3, 4],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "The output e2 is the 90-degree rotation of e1, which is a clean visual check."
+  },
+  {
+    "id": "D55",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "natural_language",
+    "theorem": "Orthonormal basis from (1,2) and (3,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,2) and v2 = (3,1), then normalise.",
+    "proof": "Gram-Schmidt gives u1 equal to (1,2) and u2 equal to (2,-1), because the projection of v2 onto u1 equals u1 itself. Normalising gives e1 equal to one over square root of five times (1,2) and e2 equal to one over square root of five times (2,-1). The inner product of e1 and e2 is zero, and the squared norm of e2 is one.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "Both output vectors have norm sqrt(5); display the norms explicitly before dividing."
+  },
+  {
+    "id": "D56",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "latex",
+    "theorem": "QR decomposition of [[1,1],[1,0]]",
+    "question": "Compute the QR decomposition of A = [[1,1],[1,0]].",
+    "proof": "The columns are $v_1 = (1,1)$ and $v_2 = (1,0)$. Gram-Schmidt with normalisation gives $e_1 = (1/\\sqrt{2})(1,1)$ and $e_2 = (1/\\sqrt{2})(1,-1)$. Hence\n\\[\nQ = \\begin{pmatrix} 1/\\sqrt{2} & 1/\\sqrt{2} \\\\ 1/\\sqrt{2} & -1/\\sqrt{2} \\end{pmatrix},\n\\quad\nR = Q^T A = \\begin{pmatrix} \\sqrt{2} & 1/\\sqrt{2} \\\\ 0 & 1/\\sqrt{2} \\end{pmatrix}.\n\\]\nIndeed $QR = A$.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Show the QR decomposition A = QR by drawing the column vectors and the orthonormal frame."
+  },
+  {
+    "id": "D57",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "natural_language",
+    "theorem": "QR decomposition of [[2,1],[0,1]]",
+    "question": "Compute the QR decomposition of A = [[2,1],[0,1]].",
+    "proof": "The columns are (2,0) and (1,1). Gram-Schmidt gives (2,0) and (0,1), which are already orthogonal. Normalising, the matrix Q is the identity, so the upper-triangular matrix R equals A itself, namely the matrix with columns (2,1) and (0,1).",
+    "parameters": {
+      "vectors": [
+        [2, 0],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "The upper-triangular R equals A because Q is the identity; annotate this degenerate but instructive case."
+  },
+  {
+    "id": "D58",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "mixed",
+    "theorem": "QR decomposition of [[1,1],[1,-1]]",
+    "question": "Compute the QR decomposition of A = [[1,1],[1,-1]].",
+    "proof": "The columns $(1,1)$ and $(1,-1)$ are already orthogonal with norm $\\sqrt{2}$. Hence $Q = \\tfrac{1}{\\sqrt{2}}\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$ and $R = Q^T A = \\operatorname{diag}(\\sqrt{2},\\sqrt{2})$.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [1, -1]
+      ]
+    },
+    "animation_notes": "The orthogonal input makes R diagonal, illustrating the connection to the spectral theorem."
+  },
+  {
+    "id": "D59",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "latex",
+    "theorem": "QR decomposition of [[3,0],[4,1]]",
+    "question": "Compute the QR decomposition of A = [[3,0],[4,1]].",
+    "proof": "The columns are $(3,4)$ and $(0,1)$. From the orthonormal basis $e_1 = (3/5,4/5)$, $e_2 = (-4/5,3/5)$ we have\n\\[\nQ = \\begin{pmatrix} 3/5 & -4/5 \\\\ 4/5 & 3/5 \\end{pmatrix}.\n\\]\nThen $R_{11} = e_1\\cdot v_1 = 5$, $R_{21} = 0$, $R_{12} = e_1\\cdot v_2 = 4/5$, $R_{22} = e_2\\cdot v_2 = 3/5$, so $R = \\begin{pmatrix}5 & 4/5 \\\\ 0 & 3/5\\end{pmatrix}$. Indeed $QR = A$.",
+    "parameters": {
+      "vectors": [
+        [3, 4],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Show the orthonormal frame rotating from (3,4) and the reconstruction step QR = A."
+  },
+  {
+    "id": "D60",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "natural_language",
+    "theorem": "QR decomposition of [[1,2],[2,1]]",
+    "question": "Compute the QR decomposition of A = [[1,2],[2,1]].",
+    "proof": "The columns are (1,2) and (2,1). Gram-Schmidt gives u2 equal to (6/5,-3/5), which normalises to e2 equal to one over square root of five times (2,-1). So Q has columns e1 equal to one over square root of five times (1,2) and e2. Then the entries of R are: first diagonal equal to square root of five, lower-left entry zero, upper-right equal to four over square root of five, and lower-right equal to three over square root of five.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Show the symmetric input matrix and the triangular R obtained after the orthogonal transformation."
+  },
+  {
+    "id": "D66",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "latex",
+    "theorem": "Projection matrix onto the x-axis",
+    "question": "Find the matrix of orthogonal projection onto span{(1,0)}.",
+    "proof": "With $u = (1,0)$, the projection matrix is\n\\[\nP = \\frac{u u^T}{u^T u} = \\begin{pmatrix}1&0\\\\0&0\\end{pmatrix}.\n\\]\nApplying $P$ to $(x,y)$ gives $(x,0)$, which is the projection onto the $x$-axis.",
+    "parameters": {
+      "vectors": [[1, 0]]
+    },
+    "animation_notes": "Show the matrix acting on a grid of vectors, flattening everything onto the x-axis."
+  },
+  {
+    "id": "D67",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "natural_language",
+    "theorem": "Projection matrix onto the diagonal",
+    "question": "Find the matrix of orthogonal projection onto span{(1,1)}.",
+    "proof": "With u equal to (1,1), the projection matrix is one half times the matrix whose entries are all one. Applying it to (x,y) gives ((x plus y) over 2, (x plus y) over 2), which lies on the diagonal.",
+    "parameters": {
+      "vectors": [[1, 1]]
+    },
+    "animation_notes": "Show the matrix acting on the grid; every output lands on the diagonal y = x."
+  },
+  {
+    "id": "D68",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "mixed",
+    "theorem": "Projection matrix onto the direction (1,2)",
+    "question": "Find the matrix of orthogonal projection onto span{(1,2)}.",
+    "proof": "With $u = (1,2)$ we have $P = \\frac{u u^T}{u^T u} = \\frac{1}{5}\\begin{pmatrix}1&2\\\\2&4\\end{pmatrix}$. Applying $P$ to $(x,y)$ gives $((x+2y)/5, (2x+4y)/5)$, which lies on the line $y = 2x$.",
+    "parameters": {
+      "vectors": [[1, 2]]
+    },
+    "animation_notes": "Show the projection matrix flattening the plane onto the line through (1,2)."
+  },
+  {
+    "id": "D69",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "latex",
+    "theorem": "Projection matrix onto the x-axis in R^3",
+    "question": "Find the matrix of orthogonal projection onto span{(1,0,0)} in R^3.",
+    "proof": "With $u = (1,0,0)$ we have\n\\[\nP = \\frac{u u^T}{u^T u} = \\begin{pmatrix}1&0&0\\\\0&0&0\\\\0&0&0\\end{pmatrix}.\n\\]\nApplying $P$ to $(x,y,z)$ gives $(x,0,0)$.",
+    "parameters": {
+      "vectors": [[1, 0, 0]]
+    },
+    "animation_notes": "3D scene; every vector in space collapses onto the x-axis."
+  },
+  {
+    "id": "D70",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "natural_language",
+    "theorem": "Projection matrix onto (1,1,0)",
+    "question": "Find the matrix of orthogonal projection onto span{(1,1,0)} in R^3.",
+    "proof": "With u equal to (1,1,0), the projection matrix is one half times a three by three matrix whose first two rows are (1,1,0) and (1,1,0), and whose third row is all zeros. Applying it to (x,y,z) gives ((x plus y) over 2, (x plus y) over 2, 0), which lies in the xy-plane on the diagonal.",
+    "parameters": {
+      "vectors": [[1, 1, 0]]
+    },
+    "animation_notes": "3D scene; the projection collapses everything onto a line in the xy-plane, and the z-component is killed."
+  },
+  {
+    "id": "D71",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "mixed",
+    "theorem": "Dot-zero equivalence for (1,0) and (0,1)",
+    "question": "Verify that \\lVert u+v \\rVert^2 = \\lVert u \\rVert^2+\\lVert v \\rVert^2 if and only if \\langle u,v \\rangle = 0, for u = (1,0) and v = (0,1).",
+    "proof": "We have $\\langle u,v \\rangle = 0$, and indeed $\\lVert u+v \\rVert^2 = \\lVert (1,1) \\rVert^2 = 2 = 1+1 = \\lVert u \\rVert^2+\\lVert v \\rVert^2$. The expansion $\\lVert u+v \\rVert^2 = \\lVert u \\rVert^2+2\\langle u,v \\rangle+\\lVert v \\rVert^2$ shows the equivalence.",
+    "parameters": {
+      "vectors": [
+        [1, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Show the expansion \\lVert u+v \\rVert^2 = \\lVert u \\rVert^2+2\\langle u,v \\rangle+\\lVert v \\rVert^2 on screen."
+  },
+  {
+    "id": "D72",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "natural_language",
+    "theorem": "Dot-zero equivalence for (3,4) and (-4,3)",
+    "question": "Verify the equivalence for u = (3,4) and v = (-4,3).",
+    "proof": "The inner product of u and v is minus 12 plus 12, which is zero. The squared norm of their sum, which is (-1,7), is 50. The squared norms of u and v are each 25, and 25 plus 25 is 50, confirming the identity.",
+    "parameters": {
+      "vectors": [
+        [3, 4],
+        [-4, 3]
+      ]
+    },
+    "animation_notes": "Draw the right triangle with legs u and v and the sum as the hypotenuse."
+  },
+  {
+    "id": "D73",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "latex",
+    "theorem": "Dot-zero equivalence for (1,1,0) and (1,-1,0)",
+    "question": "Verify the equivalence for u = (1,1,0) and v = (1,-1,0) in R^3.",
+    "proof": "We have $\\langle u,v \\rangle = 1-1+0 = 0$, and\n\\[\n\\lVert u+v \\rVert^2 = \\lVert (2,0,0) \\rVert^2 = 4 = 2+2 = \\lVert u \\rVert^2+\\lVert v \\rVert^2.\n\\]",
+    "parameters": {
+      "vectors": [
+        [1, 1, 0],
+        [1, -1, 0]
+      ]
+    },
+    "animation_notes": "Show the parallelogram in the xy-plane and the perpendicular diagonals."
+  },
+  {
+    "id": "D74",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "mixed",
+    "theorem": "Failure of the equivalence when the dot product is nonzero",
+    "question": "Show that for u = (1,1) and v = (1,0) the identity fails.",
+    "proof": "We have $\\langle u,v \\rangle = 1$, which is nonzero. Then $u+v = (2,1)$ and $\\lVert u+v \\rVert^2 = 5$, whereas $\\lVert u \\rVert^2+\\lVert v \\rVert^2 = 2+1 = 3$. Since $5 \\neq 3$, the identity fails, confirming that it holds iff the inner product is zero.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Display both sides of the (failed) identity explicitly so the gap 5 vs 3 is visible."
+  },
+  {
+    "id": "D75",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "latex",
+    "theorem": "Failure of the equivalence for (2,3) and (1,-1)",
+    "question": "Show that for u = (2,3) and v = (1,-1) the identity fails.",
+    "proof": "We have $\\langle u,v \\rangle = 2-3 = -1 \\neq 0$. Also $u+v = (3,2)$, so $\\lVert u+v \\rVert^2 = 13$, whereas $\\lVert u \\rVert^2+\\lVert v \\rVert^2 = 13+2 = 15$. The mismatch $13 \\neq 15$ reflects the nonzero inner product, confirming the equivalence.",
+    "parameters": {
+      "vectors": [
+        [2, 3],
+        [1, -1]
+      ]
+    },
+    "animation_notes": "Show both quantities 13 and 15 side by side and note the discrepancy 2\\langle u,v \\rangle = -2."
+  },
+  {
+    "id": "D76",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "natural_language",
+    "theorem": "Add orthogonal (3,4) and (-4,3)",
+    "question": "Use orthogonality to compute \\lVert u+v \\rVert for u = (3,4) and v = (-4,3).",
+    "proof": "The inner product of u and v is zero, so the squared norm of their sum equals the sum of the squared norms, which is 25 plus 25, that is 50. Hence the norm of the sum is the square root of 50, which simplifies to five times the square root of two. Computing directly, the sum is (-1,7) and its norm is the square root of 50, confirming the shortcut.",
+    "parameters": {
+      "vectors": [
+        [3, 4],
+        [-4, 3]
+      ]
+    },
+    "animation_notes": "Show the direct computation and the Pythagorean shortcut side by side."
+  },
+  {
+    "id": "D77",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "latex",
+    "theorem": "Add three orthogonal unit vectors",
+    "question": "Compute \\lVert u+v+w \\rVert for mutually orthogonal unit vectors u = (1,0,0), v = (0,1,0), w = (0,0,1).",
+    "proof": "Extending the Pythagorean identity to three pairwise orthogonal vectors,\n\\[\n\\lVert u+v+w \\rVert^2 = \\lVert u \\rVert^2+\\lVert v \\rVert^2+\\lVert w \\rVert^2 = 3.\n\\]\nHence $\\lVert u+v+w \\rVert = \\sqrt{3}$. Directly, $u+v+w = (1,1,1)$, whose norm is $\\sqrt{3}$.",
+    "parameters": {
+      "vectors": [
+        [1, 0, 0],
+        [0, 1, 0],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Show the body diagonal of the unit cube; the length sqrt(3) appears via three orthogonal edges."
+  },
+  {
+    "id": "D78",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "mixed",
+    "theorem": "Add scaled orthogonal vectors",
+    "question": "Compute \\lVert u+v+w \\rVert for u = (2,0,0), v = (0,2,0), w = (0,0,2).",
+    "proof": "The three vectors are pairwise orthogonal with norms $2$ each, so $\\lVert u+v+w \\rVert^2 = 4+4+4 = 12$ and hence $\\lVert u+v+w \\rVert = 2\\sqrt{3}$. Directly, $u+v+w = (2,2,2)$ with norm $\\sqrt{12} = 2\\sqrt{3}$.",
+    "parameters": {
+      "vectors": [
+        [2, 0, 0],
+        [0, 2, 0],
+        [0, 0, 2]
+      ]
+    },
+    "animation_notes": "Show the side-2 cube and its body diagonal."
+  },
+  {
+    "id": "D79",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "latex",
+    "theorem": "Add orthogonal (1,2,2) and (2,1,-2)",
+    "question": "Use orthogonality to compute \\lVert u+v \\rVert for u = (1,2,2) and v = (2,1,-2).",
+    "proof": "We have $\\langle u,v \\rangle = 2+2-4 = 0$, so\n\\[\n\\lVert u+v \\rVert^2 = \\lVert u \\rVert^2+\\lVert v \\rVert^2 = 9+9 = 18.\n\\]\nHence $\\lVert u+v \\rVert = 3\\sqrt{2}$. Directly, $u+v = (3,3,0)$ with norm $\\sqrt{18}$.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [2, 1, -2]
+      ]
+    },
+    "animation_notes": "3D scene; the two orthogonal vectors and their sum form an isosceles right triangle in 3D."
+  },
+  {
+    "id": "D80",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "natural_language",
+    "theorem": "Add orthogonal (2,-1,2) and (2,2,-1)",
+    "question": "Use orthogonality to compute \\lVert u+v \\rVert for u = (2,-1,2) and v = (2,2,-1).",
+    "proof": "The inner product of u and v is 4 minus 2 minus 2, which is zero, so the squared norm of their sum is 9 plus 9, that is 18. Hence the norm of the sum is three times the square root of two. Directly, the sum is (4,1,1), whose norm is the square root of 18.",
+    "parameters": {
+      "vectors": [
+        [2, -1, 2],
+        [2, 2, -1]
+      ]
+    },
+    "animation_notes": "3D scene showing the sum landing on (4,1,1); the animation should rotate to show the right angle clearly."
+  },
+  {
+    "id": "D81",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "latex",
+    "theorem": "Gram matrix of the standard basis of R^2",
+    "question": "Compute the Gram matrix of v1 = (1,0) and v2 = (0,1).",
+    "proof": "The entries are $G_{ij} = \\langle v_i,v_j \\rangle$. We compute $G_{11} = 1$, $G_{12} = G_{21} = 0$, and $G_{22} = 1$, so\n\\[\nG = I_2.\n\\]\nThis reflects the orthonormality of the standard basis.",
+    "parameters": {
+      "vectors": [
+        [1, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Display the identity Gram matrix and note it signals orthonormal columns."
+  },
+  {
+    "id": "D82",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "natural_language",
+    "theorem": "Gram matrix of an orthogonal pair",
+    "question": "Compute the Gram matrix of v1 = (1,1) and v2 = (1,-1).",
+    "proof": "The diagonal entries are 2 and 2, since each vector has squared norm 2. The off-diagonal entries are 1 minus 1, which is zero. Hence the Gram matrix is diagonal with entries 2 and 2. It is diagonal because the input is orthogonal but not orthonormal.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [1, -1]
+      ]
+    },
+    "animation_notes": "Show that diagonal Gram matrices correspond to orthogonal columns and that the diagonal entries are the squared norms."
+  },
+  {
+    "id": "D83",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "mixed",
+    "theorem": "Gram matrix of a non-orthogonal pair",
+    "question": "Compute the Gram matrix of v1 = (1,0) and v2 = (1,1).",
+    "proof": "We compute $G_{11} = 1$, $G_{22} = 2$, and $G_{12} = G_{21} = 1$. Thus $G = \\begin{pmatrix}1&1\\\\1&2\\end{pmatrix}$, a symmetric positive definite matrix. Its determinant is $1$, reflecting the linear independence of the two vectors.",
+    "parameters": {
+      "vectors": [
+        [1, 0],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Display det(G) = 1 as the squared area of the parallelogram spanned by the vectors."
+  },
+  {
+    "id": "D84",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "latex",
+    "theorem": "Gram matrix of (1,2) and (2,1)",
+    "question": "Compute the Gram matrix of v1 = (1,2) and v2 = (2,1).",
+    "proof": "We compute $G_{11} = 5$, $G_{22} = 5$, and $G_{12} = G_{21} = 1\\cdot 2 + 2\\cdot 1 = 4$. Thus\n\\[\nG = \\begin{pmatrix}5&4\\\\4&5\\end{pmatrix}.\n\\]\nIts determinant is $25-16 = 9$, which is the squared area of the parallelogram spanned by the two vectors.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Show det(G) = 9 as 3^2, tying it to the area of the parallelogram."
+  },
+  {
+    "id": "D85",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "natural_language",
+    "theorem": "Gram matrix of two vectors in R^3",
+    "question": "Compute the Gram matrix of v1 = (1,2,0) and v2 = (0,1,2).",
+    "proof": "The first diagonal entry is 1 plus 4, which is 5, and the second is 1 plus 4, also 5. The off-diagonal entry is 0 plus 2 plus 0, which is 2. So the Gram matrix has diagonal entries 5 and off-diagonal entries 2, and its determinant is 25 minus 4, that is 21.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 0],
+        [0, 1, 2]
+      ]
+    },
+    "animation_notes": "3D scene; show the parallelogram spanned by v1 and v2 and its area squared equal to 21."
+  },
+  {
+    "id": "D86",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,0) and (1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,0) and v2 = (1,1).",
+    "proof": "Take u1 as v1 itself, namely (1,0). The second vector has a component of one along u1, so the projection is exactly (1,0). Subtracting gives u2 equal to (0,1). The inner product of u1 and u2 is zero, so we have an orthogonal pair.",
+    "parameters": {
+      "vectors": [
+        [1, 0],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Standard basis recovered; the animation shows the shear disappearing into pure orthogonal components."
+  },
+  {
+    "id": "D87",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (2,2) and (3,1)",
+    "question": "Apply Gram-Schmidt to v1 = (2,2) and v2 = (3,1).",
+    "proof": "Let $u_1 = (2,2)$. The coefficient is $(\\langle v_2,u_1 \\rangle)/(\\langle u_1,u_1 \\rangle) = 8/8 = 1$, so $\\operatorname{proj}_{u_1}(v_2) = (2,2)$. Subtracting gives $u_2 = (1,-1)$; a quick check shows $\\langle u_1,u_2 \\rangle = 2-2 = 0$.",
+    "parameters": {
+      "vectors": [
+        [2, 2],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "The projection is the same length as v2's u1-component, leaving u2 exactly on the anti-diagonal."
+  },
+  {
+    "id": "D88",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (1,2) and (1,3)",
+    "question": "Apply Gram-Schmidt to v1 = (1,2) and v2 = (1,3).",
+    "proof": "Taking $u_1 = (1,2)$, we have $\\langle v_2, u_1 \\rangle = 7$ and $\\langle u_1, u_1 \\rangle = 5$, so the projection is $(7/5)(1,2) = (7/5, 14/5)$. Subtracting gives $u_2 = (-2/5, 1/5)$, and $\\langle u_1, u_2 \\rangle = -2/5+2/5 = 0$.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [1, 3]
+      ]
+    },
+    "animation_notes": "Both input vectors are close together, so the residual u2 is small."
+  },
+  {
+    "id": "D89",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (3,2) and (1,4)",
+    "question": "Apply Gram-Schmidt to v1 = (3,2) and v2 = (1,4).",
+    "proof": "The first inner product we need is v2 dotted with u1, which is three plus eight, that is eleven, and the inner product of u1 with itself is nine plus four, that is thirteen. So the projection is eleven thirteenths of (3,2), which is (33/13, 22/13). Subtracting, we obtain u2 equal to (1 minus 33/13, 4 minus 22/13), that is (-20/13, 30/13). Checking orthogonality, we find three times minus twenty over thirteen plus two times thirty over thirteen, which equals zero.",
+    "parameters": {
+      "vectors": [
+        [3, 2],
+        [1, 4]
+      ]
+    },
+    "animation_notes": "The residual points up and to the left with slope about -3/2."
+  },
+  {
+    "id": "D90",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (2,3) and (4,1)",
+    "question": "Apply Gram-Schmidt to v1 = (2,3) and v2 = (4,1).",
+    "proof": "Here $\\langle v_2, u_1 \\rangle = 8+3 = 11$ and $\\langle u_1, u_1 \\rangle = 13$, so the projection is $(22/13, 33/13)$. Subtracting from $v_2$ yields $u_2 = (30/13, -20/13)$, and direct computation gives $\\langle u_1, u_2 \\rangle = 60/13 - 60/13 = 0$.",
+    "parameters": {
+      "vectors": [
+        [2, 3],
+        [4, 1]
+      ]
+    },
+    "animation_notes": "Symmetry with the previous example: the projection coefficient swaps because the roles of numerator/denominator are mirrored."
+  },
+  {
+    "id": "D91",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (1,4) and (1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,4) and v2 = (1,1).",
+    "proof": "Let $u_1 = (1,4)$. The inner products are $\\langle v_2, u_1 \\rangle = 5$ and $\\langle u_1, u_1 \\rangle = 17$. The projection is $(5/17)(1,4)$, and the residual is $u_2 = (12/17, -3/17)$. Verifying, $\\langle u_1, u_2 \\rangle = 12/17 - 12/17 = 0$.",
+    "parameters": {
+      "vectors": [
+        [1, 4],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "The residual is small but its direction is perpendicular."
+  },
+  {
+    "id": "D92",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (3,1) and (2,4)",
+    "question": "Apply Gram-Schmidt to v1 = (3,1) and v2 = (2,4).",
+    "proof": "The inner product of v2 with u1 is six plus four, which is ten, and the inner product of u1 with itself is also ten. So the projection equals u1 itself, and the residual is the difference (2,4) minus (3,1), that is (-1,3). Checking orthogonality, three times minus one plus one times three equals zero, as expected.",
+    "parameters": {
+      "vectors": [
+        [3, 1],
+        [2, 4]
+      ]
+    },
+    "animation_notes": "The projection coincides with u1 since the coefficient is one."
+  },
+  {
+    "id": "D93",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (1,1) and (2,3)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1) and v2 = (2,3).",
+    "proof": "With $u_1 = (1,1)$, the coefficient is $(\\langle v_2, u_1 \\rangle)/(\\langle u_1, u_1 \\rangle) = 5/2$, so the projection is $(5/2)(1,1)$. Subtracting, $u_2 = (-1/2, 1/2)$. A check: $\\langle u_1, u_2 \\rangle = -1/2 + 1/2 = 0$.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [2, 3]
+      ]
+    },
+    "animation_notes": "The residual is on the anti-diagonal, exactly perpendicular to the main diagonal."
+  },
+  {
+    "id": "D94",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (4,2) and (1,3)",
+    "question": "Apply Gram-Schmidt to v1 = (4,2) and v2 = (1,3).",
+    "proof": "We have $\\langle v_2, u_1 \\rangle = 4+6 = 10$ and $\\langle u_1, u_1 \\rangle = 20$. So the projection is $(1/2)(4,2) = (2,1)$. Subtracting, $u_2 = (-1,2)$. Checking: $\\langle u_1, u_2 \\rangle = -4+4 = 0$.",
+    "parameters": {
+      "vectors": [
+        [4, 2],
+        [1, 3]
+      ]
+    },
+    "animation_notes": "Simple halving of u1 before subtracting."
+  },
+  {
+    "id": "D95",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_basic",
+    "proof_format": "natural_language",
+    "theorem": "Degenerate Gram-Schmidt on parallel vectors (2,1) and (4,2)",
+    "question": "Apply Gram-Schmidt to v1 = (2,1) and v2 = (4,2), and explain what happens.",
+    "proof": "Since v2 equals twice v1, the projection of v2 onto v1 recovers v2 exactly, and the residual u2 is the zero vector. Gram-Schmidt therefore fails to produce a second orthogonal vector here, because the two inputs are linearly dependent. Orthonormalisation of dependent vectors breaks down at the point where we try to normalise a zero vector.",
+    "parameters": {
+      "vectors": [
+        [2, 1],
+        [4, 2]
+      ]
+    },
+    "animation_notes": "Highlight the collapse of the second output to the origin and label the input as degenerate."
+  },
+  {
+    "id": "D96",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (1,1) and (2,-1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1) and v2 = (2,-1).",
+    "proof": "Setting $u_1 = (1,1)$, the coefficient is $\\langle v_2, u_1 \\rangle / \\langle u_1, u_1 \\rangle = 1/2$, so the projection is $(1/2, 1/2)$. Subtracting from $v_2$ gives $u_2 = (3/2, -3/2)$, which is a multiple of $(1,-1)$. A check confirms $\\langle u_1, u_2 \\rangle = 3/2 - 3/2 = 0$.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [2, -1]
+      ]
+    },
+    "animation_notes": "The residual lands on the negative diagonal; draw the diagonal as a dashed line."
+  },
+  {
+    "id": "D97",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,-1) and (3,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,-1) and v2 = (3,1).",
+    "proof": "Take u1 equal to (1,-1). Its inner product with v2 is three minus one, that is two, and its inner product with itself is two. So the projection is exactly u1 itself, and the residual is (2,2), which lies on the positive diagonal. The inner product of u1 and u2 is two minus two, which is zero.",
+    "parameters": {
+      "vectors": [
+        [1, -1],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "Two diagonal directions, each perpendicular to the other."
+  },
+  {
+    "id": "D98",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (1,1) and (3,-1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1) and v2 = (3,-1).",
+    "proof": "The projection coefficient here equals $\\langle v_2, u_1 \\rangle/\\langle u_1, u_1 \\rangle = 2/2 = 1$, so the projection is $(1,1)$. Subtracting gives $u_2 = (2,-2)$, which is a positive multiple of $(1,-1)$. The inner product $\\langle u_1, u_2 \\rangle$ equals $2-2 = 0$.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [3, -1]
+      ]
+    },
+    "animation_notes": "Both projection and residual are diagonal multiples."
+  },
+  {
+    "id": "D99",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (1,1) and (4,-2)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1) and v2 = (4,-2).",
+    "proof": "The coefficient is $\\langle v_2, u_1 \\rangle / \\langle u_1, u_1 \\rangle = 2/2 = 1$, so the projection is $(1,1)$. Subtracting gives $u_2 = (3,-3)$, which is three times $(1,-1)$ and thus perpendicular to $u_1$.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [4, -2]
+      ]
+    },
+    "animation_notes": "Same template, larger scale on u2."
+  },
+  {
+    "id": "D100",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,-1) and (2,-4)",
+    "question": "Apply Gram-Schmidt to v1 = (1,-1) and v2 = (2,-4).",
+    "proof": "The inner product of v2 with u1 is two plus four, that is six, and u1 has squared norm two, so the coefficient is three. The projection is three times (1,-1), that is (3,-3). Subtracting gives the residual (-1,-1), which is minus (1,1) and therefore perpendicular to u1.",
+    "parameters": {
+      "vectors": [
+        [1, -1],
+        [2, -4]
+      ]
+    },
+    "animation_notes": "Negative coefficient leading to a residual on the negative positive-diagonal."
+  },
+  {
+    "id": "D101",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (2,2) and (4,1)",
+    "question": "Apply Gram-Schmidt to v1 = (2,2) and v2 = (4,1).",
+    "proof": "The coefficient equals $\\langle v_2, u_1 \\rangle / \\langle u_1, u_1 \\rangle = 10/8 = 5/4$, giving the projection $(5/2, 5/2)$. Subtracting gives $u_2 = (3/2, -3/2)$, again on the anti-diagonal.",
+    "parameters": {
+      "vectors": [
+        [2, 2],
+        [4, 1]
+      ]
+    },
+    "animation_notes": "Same template with scaled u1 by 2."
+  },
+  {
+    "id": "D102",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (1,1) and (0,2)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1) and v2 = (0,2).",
+    "proof": "Here $\\langle v_2, u_1 \\rangle = 2$ and $\\langle u_1, u_1 \\rangle = 2$, so the projection is $(1,1)$. Subtracting gives $u_2 = (-1,1)$, the negative diagonal. Verify $\\langle u_1, u_2 \\rangle = -1+1 = 0$.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Axis-aligned input on the left, diagonal output on the right."
+  },
+  {
+    "id": "D103",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (3,3) and (5,1)",
+    "question": "Apply Gram-Schmidt to v1 = (3,3) and v2 = (5,1).",
+    "proof": "The projection coefficient equals eighteen over eighteen, that is one, so the projection is (3,3). Subtracting gives (2,-2), on the negative diagonal. The inner product of u1 and u2 is six minus six, which is zero.",
+    "parameters": {
+      "vectors": [
+        [3, 3],
+        [5, 1]
+      ]
+    },
+    "animation_notes": "Clear visualization of the diagonal residual."
+  },
+  {
+    "id": "D104",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (1,-1) and (4,2)",
+    "question": "Apply Gram-Schmidt to v1 = (1,-1) and v2 = (4,2).",
+    "proof": "The inner product of v2 with u1 is four minus two, that is two, and u1 has squared norm two, so the coefficient is one and the projection is exactly u1. Subtracting gives $u_2 = (3,3)$, which lies on the positive diagonal.",
+    "parameters": {
+      "vectors": [
+        [1, -1],
+        [4, 2]
+      ]
+    },
+    "animation_notes": "Clean diagonal decomposition."
+  },
+  {
+    "id": "D105",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_2d_diagonal",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (1,-1) and (1,3)",
+    "question": "Apply Gram-Schmidt to v1 = (1,-1) and v2 = (1,3).",
+    "proof": "Here $\\langle v_2, u_1 \\rangle = -2$ and $\\langle u_1, u_1 \\rangle = 2$, so the coefficient is $-1$ and the projection is $(-1, 1)$. Subtracting gives $u_2 = (2, 2)$, which lies on the positive diagonal. Check: $\\langle u_1, u_2 \\rangle = 2 - 2 = 0$.",
+    "parameters": {
+      "vectors": [
+        [1, -1],
+        [1, 3]
+      ]
+    },
+    "animation_notes": "Negative coefficient makes the projection point opposite to u1."
+  },
+  {
+    "id": "D106",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (1,0,0) and (1,1,0)",
+    "question": "Apply Gram-Schmidt to v1 = (1,0,0) and v2 = (1,1,0).",
+    "proof": "Here $\\langle v_2, u_1 \\rangle = 1$ and $\\langle u_1, u_1 \\rangle = 1$, so the projection is $(1,0,0)$. Subtracting gives $u_2 = (0,1,0)$, which is clearly perpendicular to $u_1$.",
+    "parameters": {
+      "vectors": [
+        [1, 0, 0],
+        [1, 1, 0]
+      ]
+    },
+    "animation_notes": "Both vectors lie in the xy-plane; the residual is the unit y-axis vector."
+  },
+  {
+    "id": "D107",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,1,1) and (2,0,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1,1) and v2 = (2,0,1).",
+    "proof": "The inner product of v2 with u1 is three, and u1 has squared norm three, so the coefficient is one. Projecting yields (1,1,1), and subtracting gives u2 equal to (1,-1,0). The inner product with u1 is one minus one plus zero, which is zero.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [2, 0, 1]
+      ]
+    },
+    "animation_notes": "u2 lies in the xy-plane on the anti-diagonal, contrasting with the full-space u1."
+  },
+  {
+    "id": "D108",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (1,2,3) and (1,0,0)",
+    "question": "Apply Gram-Schmidt to v1 = (1,2,3) and v2 = (1,0,0).",
+    "proof": "With $u_1 = (1,2,3)$ and $u_1 \\cdot u_1 = 14$, the coefficient is $1/14$, so the projection is $(1/14)(1,2,3)$. Subtracting from $v_2$ gives $u_2 = (13/14, -1/7, -3/14)$. Checking, the inner product with $u_1$ equals $13/14 - 2/7 - 9/14 = 13/14 - 4/14 - 9/14 = 0$.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 3],
+        [1, 0, 0]
+      ]
+    },
+    "animation_notes": "Long vector paired with unit vector; the projection is small but the orthogonality check still holds."
+  },
+  {
+    "id": "D109",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (3,0,4) and (0,1,0)",
+    "question": "Apply Gram-Schmidt to v1 = (3,0,4) and v2 = (0,1,0).",
+    "proof": "These two vectors already satisfy $\\langle v_1, v_2 \\rangle = 0$, so no projection step is needed and the outputs are $u_1 = (3,0,4)$ and $u_2 = (0,1,0)$ themselves.",
+    "parameters": {
+      "vectors": [
+        [3, 0, 4],
+        [0, 1, 0]
+      ]
+    },
+    "animation_notes": "Degenerate zero-projection case; renders cleanly."
+  },
+  {
+    "id": "D110",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,2,1) and (2,1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,2,1) and v2 = (2,1,1) in R^3.",
+    "proof": "The inner product of v2 with u1 is two plus two plus one, that is five, and the inner product of u1 with itself is six. So the projection is five sixths of (1,2,1), namely (5/6, 10/6, 5/6). Subtracting gives u2 equal to (7/6, -4/6, 1/6). Verifying, the inner product of u1 and u2 is 7/6 minus 8/6 plus 1/6, which is zero.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 1],
+        [2, 1, 1]
+      ]
+    },
+    "animation_notes": "The projection exceeds the size of v2 in two coordinates."
+  },
+  {
+    "id": "D111",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (2,1,1) and (1,3,2)",
+    "question": "Apply Gram-Schmidt to v1 = (2,1,1) and v2 = (1,3,2).",
+    "proof": "The relevant inner products are $\\langle v_2, u_1 \\rangle = 2+3+2 = 7$ and $\\langle u_1, u_1 \\rangle = 6$. Thus the projection is $(7/6)(2,1,1) = (7/3, 7/6, 7/6)$, and $u_2 = (-4/3, 11/6, 5/6)$. Verifying, the dot product is $-8/3 + 11/6 + 5/6 = 0$.",
+    "parameters": {
+      "vectors": [
+        [2, 1, 1],
+        [1, 3, 2]
+      ]
+    },
+    "animation_notes": "Projection coefficient exceeds one; residual has mixed signs."
+  },
+  {
+    "id": "D112",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "mixed",
+    "theorem": "Gram-Schmidt on (1,0,1) and (0,1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,0,1) and v2 = (0,1,1).",
+    "proof": "The coefficient equals $\\langle v_2, u_1 \\rangle / \\langle u_1, u_1 \\rangle = 1/2$, so the projection is $(1/2, 0, 1/2)$. Subtracting yields $u_2 = (-1/2, 1, 1/2)$, which is perpendicular to $u_1$ by direct check.",
+    "parameters": {
+      "vectors": [
+        [1, 0, 1],
+        [0, 1, 1]
+      ]
+    },
+    "animation_notes": "Both inputs symmetric about the y-axis; residual exhibits the same symmetry."
+  },
+  {
+    "id": "D113",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (2,2,1) and (1,1,2)",
+    "question": "Apply Gram-Schmidt to v1 = (2,2,1) and v2 = (1,1,2).",
+    "proof": "The inner products are $\\langle v_2, u_1 \\rangle = 2+2+2 = 6$ and $\\langle u_1, u_1 \\rangle = 9$, so the projection is $(2/3)(2,2,1) = (4/3, 4/3, 2/3)$. Subtracting gives $u_2 = (-1/3, -1/3, 4/3)$. Verify: $\\langle u_1, u_2 \\rangle = -2/3 - 2/3 + 4/3 = 0$.",
+    "parameters": {
+      "vectors": [
+        [2, 2, 1],
+        [1, 1, 2]
+      ]
+    },
+    "animation_notes": "Residual emphasizes the z-axis, splitting from the (1,1,1) direction."
+  },
+  {
+    "id": "D114",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "natural_language",
+    "theorem": "Gram-Schmidt on (1,2,2) and (0,1,-1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,2,2) and v2 = (0,1,-1).",
+    "proof": "The dot product of v2 with u1 is two minus two, which is zero, so the vectors are already orthogonal. Gram-Schmidt leaves both vectors unchanged: u1 equals (1,2,2) and u2 equals (0,1,-1). The squared norm of u2 is 2.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [0, 1, -1]
+      ]
+    },
+    "animation_notes": "Already orthogonal; visually confirms zero-projection case in 3D."
+  },
+  {
+    "id": "D115",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_3d",
+    "proof_format": "latex",
+    "theorem": "Gram-Schmidt on (1,3,0) and (0,2,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,3,0) and v2 = (0,2,1).",
+    "proof": "The relevant inner products are $\\langle v_2, u_1 \\rangle = 6$ and $\\langle u_1, u_1 \\rangle = 10$, giving the projection $(3/5)(1,3,0) = (3/5, 9/5, 0)$. The residual is $u_2 = (-3/5, 1/5, 1)$, and direct computation confirms orthogonality.",
+    "parameters": {
+      "vectors": [
+        [1, 3, 0],
+        [0, 2, 1]
+      ]
+    },
+    "animation_notes": "3D scene with the xy-plane projection and a z-component emerging in the residual."
+  },
+  {
+    "id": "D116",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "latex",
+    "theorem": "Already orthogonal (2,0) and (0,3)",
+    "question": "Apply Gram-Schmidt to v1 = (2,0) and v2 = (0,3).",
+    "proof": "The inner product $\\langle v_1, v_2 \\rangle = 0$ immediately, so both vectors are unchanged by the Gram-Schmidt procedure. They already form an orthogonal basis of $\\mathbb{R}^2$, though not an orthonormal one.",
+    "parameters": {
+      "vectors": [
+        [2, 0],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Scaling does not affect orthogonality; demonstrate with the scaled pair."
+  },
+  {
+    "id": "D117",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "natural_language",
+    "theorem": "Already orthogonal (1,-1,1) and (1,1,0)",
+    "question": "Apply Gram-Schmidt to v1 = (1,-1,1) and v2 = (1,1,0).",
+    "proof": "The dot product of the two vectors is one minus one plus zero, which is zero. Hence no projection step is required and the outputs are the same as the inputs: u1 equals (1,-1,1) and u2 equals (1,1,0).",
+    "parameters": {
+      "vectors": [
+        [1, -1, 1],
+        [1, 1, 0]
+      ]
+    },
+    "animation_notes": "Two vectors with a distinctive right angle in 3D."
+  },
+  {
+    "id": "D118",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "mixed",
+    "theorem": "Already orthogonal (3,4) and (-4,3)",
+    "question": "Apply Gram-Schmidt to v1 = (3,4) and v2 = (-4,3).",
+    "proof": "The inner product is $3\\cdot(-4)+4\\cdot3 = 0$, so the vectors are already orthogonal. Gram-Schmidt leaves them unchanged. Both vectors have length $5$, so they are a Pythagorean pair.",
+    "parameters": {
+      "vectors": [
+        [3, 4],
+        [-4, 3]
+      ]
+    },
+    "animation_notes": "Pythagorean triple visualization; both vectors stay at their starting positions."
+  },
+  {
+    "id": "D119",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "latex",
+    "theorem": "Already orthogonal (1,2,-1) and (0,1,2)",
+    "question": "Apply Gram-Schmidt to v1 = (1,2,-1) and v2 = (0,1,2) in R^3.",
+    "proof": "The inner product is $0+2-2 = 0$, so the vectors are orthogonal. Hence $u_1 = (1,2,-1)$ and $u_2 = (0,1,2)$ unchanged; their squared norms are $6$ and $5$, respectively.",
+    "parameters": {
+      "vectors": [
+        [1, 2, -1],
+        [0, 1, 2]
+      ]
+    },
+    "animation_notes": "3D example with a nice natural pair; zero projection visually obvious."
+  },
+  {
+    "id": "D120",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "natural_language",
+    "theorem": "Already orthogonal (5,0,0) and (0,0,7)",
+    "question": "Apply Gram-Schmidt to v1 = (5,0,0) and v2 = (0,0,7).",
+    "proof": "These vectors lie along different coordinate axes, so their inner product is trivially zero. Gram-Schmidt does not change them; u1 equals (5,0,0) and u2 equals (0,0,7). Together they span the xz-plane.",
+    "parameters": {
+      "vectors": [
+        [5, 0, 0],
+        [0, 0, 7]
+      ]
+    },
+    "animation_notes": "Coordinate axes displayed in 3D; both remain in place."
+  },
+  {
+    "id": "D121",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "latex",
+    "theorem": "Already orthogonal (1,0,1) and (1,0,-1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,0,1) and v2 = (1,0,-1).",
+    "proof": "We check $\\langle v_1, v_2 \\rangle = 1 - 0 + (-1) = 0$, so the pair is already orthogonal. Gram-Schmidt keeps both fixed.",
+    "parameters": {
+      "vectors": [
+        [1, 0, 1],
+        [1, 0, -1]
+      ]
+    },
+    "animation_notes": "Symmetry across the xz-plane gives a clean right angle."
+  },
+  {
+    "id": "D122",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "mixed",
+    "theorem": "Already orthogonal (1,1,1) and (1,-2,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1,1) and v2 = (1,-2,1).",
+    "proof": "The inner product $1-2+1 = 0$ shows the vectors are orthogonal. Thus $u_1$ and $u_2$ equal the inputs themselves.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [1, -2, 1]
+      ]
+    },
+    "animation_notes": "Orthogonality in 3D with three distinct coordinates."
+  },
+  {
+    "id": "D123",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "latex",
+    "theorem": "Already orthogonal (2,0,0) and (0,-3,0)",
+    "question": "Apply Gram-Schmidt to v1 = (2,0,0) and v2 = (0,-3,0).",
+    "proof": "Since both vectors lie on distinct axes, their inner product vanishes. The Gram-Schmidt outputs equal the inputs.",
+    "parameters": {
+      "vectors": [
+        [2, 0, 0],
+        [0, -3, 0]
+      ]
+    },
+    "animation_notes": "Axis-aligned orthogonal vectors in 3D."
+  },
+  {
+    "id": "D124",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "natural_language",
+    "theorem": "Already orthogonal (1,0,-1) and (1,1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,0,-1) and v2 = (1,1,1).",
+    "proof": "The inner product here is one minus zero minus one, which equals zero. So the two vectors are already orthogonal, and the procedure simply preserves them.",
+    "parameters": {
+      "vectors": [
+        [1, 0, -1],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "Clean 3D orthogonal pair; input label and output label coincide."
+  },
+  {
+    "id": "D125",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gs_already_orthogonal",
+    "proof_format": "mixed",
+    "theorem": "Already orthogonal (4,-3) and (3,4)",
+    "question": "Apply Gram-Schmidt to v1 = (4,-3) and v2 = (3,4).",
+    "proof": "The inner product $12 - 12 = 0$ shows orthogonality, so Gram-Schmidt does not change either vector. This is another Pythagorean pair with both lengths equal to $5$.",
+    "parameters": {
+      "vectors": [
+        [4, -3],
+        [3, 4]
+      ]
+    },
+    "animation_notes": "Another Pythagorean triple; the pair is visually a 90-degree rotation of D118."
+  },
+  {
+    "id": "D126",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "natural_language",
+    "theorem": "Projection of (2,5) onto the y-axis",
+    "question": "Find the orthogonal projection of (2,5) onto the span of (0,1).",
+    "proof": "The y-coordinate is five, so the projection is (0,5). The perpendicular piece is (2,0), and this is clearly orthogonal to the y-axis.",
+    "parameters": {
+      "vectors": [
+        [2, 5],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Vertical drop onto the y-axis."
+  },
+  {
+    "id": "D127",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "latex",
+    "theorem": "Projection of (-4,1) onto the x-axis",
+    "question": "Find the orthogonal projection of (-4,1) onto the span of (1,0).",
+    "proof": "The x-coordinate is $-4$, so the projection is $(-4,0)$. The perpendicular piece is $(0,1)$, which is orthogonal to the x-axis.",
+    "parameters": {
+      "vectors": [
+        [-4, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Horizontal drop to the x-axis."
+  },
+  {
+    "id": "D128",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "mixed",
+    "theorem": "Projection of (3,0,2) onto the z-axis",
+    "question": "Find the orthogonal projection of (3,0,2) onto the span of (0,0,1).",
+    "proof": "Only the z-component survives, so the projection is $(0,0,2)$ and the perpendicular piece is $(3,0,0)$.",
+    "parameters": {
+      "vectors": [
+        [3, 0, 2],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "z-axis projection in 3D; cleanest example of a coordinate-axis projection."
+  },
+  {
+    "id": "D129",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "natural_language",
+    "theorem": "Projection of (6,-3) onto the x-axis",
+    "question": "Find the orthogonal projection of (6,-3) onto the span of (1,0).",
+    "proof": "Only the x-component survives, so the projection is (6,0). The perpendicular piece is (0,-3), orthogonal to the x-axis.",
+    "parameters": {
+      "vectors": [
+        [6, -3],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Negative y-component drops to zero."
+  },
+  {
+    "id": "D130",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "latex",
+    "theorem": "Projection of (-1,2,4) onto the y-axis",
+    "question": "Find the orthogonal projection of (-1,2,4) onto the span of (0,1,0).",
+    "proof": "Only the y-component survives; the projection is $(0,2,0)$ and the perpendicular piece is $(-1,0,4)$.",
+    "parameters": {
+      "vectors": [
+        [-1, 2, 4],
+        [0, 1, 0]
+      ]
+    },
+    "animation_notes": "3D; residual lies in the xz-plane."
+  },
+  {
+    "id": "D131",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "mixed",
+    "theorem": "Projection of (5,-2,7) onto the z-axis",
+    "question": "Find the orthogonal projection of (5,-2,7) onto the span of (0,0,1).",
+    "proof": "The z-coordinate is seven, so the projection is $(0,0,7)$. The perpendicular piece is $(5,-2,0)$.",
+    "parameters": {
+      "vectors": [
+        [5, -2, 7],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Residual lies in the xy-plane."
+  },
+  {
+    "id": "D132",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "natural_language",
+    "theorem": "Projection of (10,0) onto the x-axis",
+    "question": "Find the orthogonal projection of (10,0) onto the span of (1,0).",
+    "proof": "The point already lies on the x-axis, so the projection equals the vector itself and the perpendicular component is zero.",
+    "parameters": {
+      "vectors": [
+        [10, 0],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Degenerate projection; no change at all."
+  },
+  {
+    "id": "D133",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "latex",
+    "theorem": "Projection of (2,4,6) onto the x-axis",
+    "question": "Find the orthogonal projection of (2,4,6) onto the span of (1,0,0).",
+    "proof": "Only the x-coordinate survives; projection $(2,0,0)$ and perpendicular piece $(0,4,6)$.",
+    "parameters": {
+      "vectors": [
+        [2, 4, 6],
+        [1, 0, 0]
+      ]
+    },
+    "animation_notes": "Clean 3D-axis projection."
+  },
+  {
+    "id": "D134",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "mixed",
+    "theorem": "Projection of (-3,7) onto the y-axis",
+    "question": "Find the orthogonal projection of (-3,7) onto the span of (0,1).",
+    "proof": "The y-component is seven, so projection is $(0,7)$ and perpendicular is $(-3,0)$.",
+    "parameters": {
+      "vectors": [
+        [-3, 7],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Vertical projection where the x-coordinate is completely discarded."
+  },
+  {
+    "id": "D135",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_axis",
+    "proof_format": "natural_language",
+    "theorem": "Projection of (4,-1,2) onto the y-axis",
+    "question": "Find the orthogonal projection of (4,-1,2) onto the span of (0,1,0).",
+    "proof": "Only the y-coordinate matters, so the projection is (0,-1,0). The perpendicular piece is (4,0,2).",
+    "parameters": {
+      "vectors": [
+        [4, -1, 2],
+        [0, 1, 0]
+      ]
+    },
+    "animation_notes": "Negative y-component preserved in the projection."
+  },
+  {
+    "id": "D136",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "latex",
+    "theorem": "Projection of (2,1) onto (1,2)",
+    "question": "Find the orthogonal projection of (2,1) onto the span of (1,2).",
+    "proof": "The inner products are $\\langle v,u \\rangle = 4$ and $\\langle u,u \\rangle = 5$, so $\\operatorname{proj}_u(v) = (4/5)(1,2) = (4/5, 8/5)$ and the residual is $(6/5, -3/5)$, which is orthogonal to $u$.",
+    "parameters": {
+      "vectors": [
+        [2, 1],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "Symmetry with D26: the two cases reflect each other across the y = x line."
+  },
+  {
+    "id": "D137",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Projection of (5,1) onto (1,1)",
+    "question": "Find the orthogonal projection of (5,1) onto the span of (1,1).",
+    "proof": "The inner product with (1,1) is six and the inner product of (1,1) with itself is two. So the projection is three times (1,1), that is (3,3), and the perpendicular component is (2,-2).",
+    "parameters": {
+      "vectors": [
+        [5, 1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Right angle drawn at (3,3)."
+  },
+  {
+    "id": "D138",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Projection of (2,3,1) onto (1,1,1)",
+    "question": "Find the orthogonal projection of (2,3,1) onto the span of (1,1,1).",
+    "proof": "The inner product is six and the squared norm of (1,1,1) is three, so the projection is $(2,2,2)$. The residual is $(0,1,-1)$, which is orthogonal to $(1,1,1)$.",
+    "parameters": {
+      "vectors": [
+        [2, 3, 1],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "Main diagonal projection in 3D; residual lies in the plane x+y+z = const."
+  },
+  {
+    "id": "D139",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "latex",
+    "theorem": "Projection of (4,3) onto (3,4)",
+    "question": "Find the orthogonal projection of (4,3) onto the span of (3,4).",
+    "proof": "The relevant inner products are $\\langle v,u \\rangle = 24$ and $\\langle u,u \\rangle = 25$, giving the projection $(24/25)(3,4) = (72/25, 96/25)$. The residual is $(28/25, -21/25)$ and satisfies $\\langle u, v - \\text{proj} \\rangle = 0$.",
+    "parameters": {
+      "vectors": [
+        [4, 3],
+        [3, 4]
+      ]
+    },
+    "animation_notes": "Inputs are Pythagorean neighbours; the projection lands off the unit circle but stays on the direction (3,4)."
+  },
+  {
+    "id": "D140",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Projection of (1,2,2) onto (1,0,0)",
+    "question": "Find the orthogonal projection of (1,2,2) onto the span of (1,0,0).",
+    "proof": "Only the x-component survives, so the projection is (1,0,0). The perpendicular piece is (0,2,2).",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [1, 0, 0]
+      ]
+    },
+    "animation_notes": "Axis case but written as a diagonal template for consistency."
+  },
+  {
+    "id": "D141",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Projection of (3,1,2) onto (1,1,0)",
+    "question": "Find the orthogonal projection of (3,1,2) onto the span of (1,1,0) in R^3.",
+    "proof": "The inner product with $(1,1,0)$ is four and the squared norm of $(1,1,0)$ is two, so the projection is $(2,2,0)$. The residual is $(1,-1,2)$, orthogonal to $(1,1,0)$.",
+    "parameters": {
+      "vectors": [
+        [3, 1, 2],
+        [1, 1, 0]
+      ]
+    },
+    "animation_notes": "Residual in the yz-plane plus anti-diagonal xy-component."
+  },
+  {
+    "id": "D142",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "latex",
+    "theorem": "Projection of (1,3) onto (3,1)",
+    "question": "Find the orthogonal projection of (1,3) onto the span of (3,1).",
+    "proof": "We compute $\\langle v, u \\rangle = 6$ and $\\langle u, u \\rangle = 10$, giving $\\operatorname{proj}_u(v) = (3/5)(3,1) = (9/5, 3/5)$. The residual $(-4/5, 12/5)$ is orthogonal to $(3,1)$.",
+    "parameters": {
+      "vectors": [
+        [1, 3],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "Symmetry with D04."
+  },
+  {
+    "id": "D143",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Projection of (4,-1) onto (1,2)",
+    "question": "Find the orthogonal projection of (4,-1) onto the span of (1,2).",
+    "proof": "The inner product with (1,2) is two, and the inner product of (1,2) with itself is five. So the projection is two fifths of (1,2), that is (2/5, 4/5). The perpendicular piece is (18/5, -9/5).",
+    "parameters": {
+      "vectors": [
+        [4, -1],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "Residual is again on the direction (2,-1) up to a scale."
+  },
+  {
+    "id": "D144",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Projection of (2,0,2) onto (1,1,1)",
+    "question": "Find the orthogonal projection of (2,0,2) onto the span of (1,1,1).",
+    "proof": "The inner product is four and the squared norm is three, so the projection is $(4/3, 4/3, 4/3)$. The residual is $(2/3, -4/3, 2/3)$, whose dot product with $(1,1,1)$ is zero.",
+    "parameters": {
+      "vectors": [
+        [2, 0, 2],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "Residual in the plane x+y+z = 0."
+  },
+  {
+    "id": "D145",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_diagonal",
+    "proof_format": "latex",
+    "theorem": "Projection of (5,5) onto (1,-1)",
+    "question": "Find the orthogonal projection of (5,5) onto the span of (1,-1).",
+    "proof": "The inner product is zero, so the projection is the zero vector and the residual is the vector itself. This example illustrates the degenerate case of projecting a vector perpendicular to the target direction.",
+    "parameters": {
+      "vectors": [
+        [5, 5],
+        [1, -1]
+      ]
+    },
+    "animation_notes": "Zero projection case rendered cleanly."
+  },
+  {
+    "id": "D146",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "latex",
+    "theorem": "Projection formula for (3,5) onto (2,1)",
+    "question": "Use the projection formula to compute the projection of v = (3,5) onto u = (2,1).",
+    "proof": "We compute $\\langle v, u \\rangle = 6+5 = 11$ and $\\langle u, u \\rangle = 5$, so $\\operatorname{proj}_u(v) = (11/5)(2,1) = (22/5, 11/5)$.",
+    "parameters": {
+      "vectors": [
+        [3, 5],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Straightforward formula substitution."
+  },
+  {
+    "id": "D147",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "natural_language",
+    "theorem": "Projection formula for (0,4) onto (1,1)",
+    "question": "Use the projection formula to compute the projection of v = (0,4) onto u = (1,1).",
+    "proof": "The inner product of v with u is four and the inner product of u with itself is two, so the coefficient is two. Thus the projection is two times (1,1), that is (2,2), and the residual is (-2,2).",
+    "parameters": {
+      "vectors": [
+        [0, 4],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Projection of the pure vertical direction onto the diagonal."
+  },
+  {
+    "id": "D148",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "mixed",
+    "theorem": "Projection formula for (1,2,2) onto (1,1,1)",
+    "question": "Use the projection formula to compute the projection of v = (1,2,2) onto u = (1,1,1).",
+    "proof": "The inner product is five and the squared norm of u is three, so the projection is $(5/3)(1,1,1) = (5/3, 5/3, 5/3)$. The perpendicular piece is $(-2/3, 1/3, 1/3)$.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "Residual lies in the plane x+y+z = 0."
+  },
+  {
+    "id": "D149",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "latex",
+    "theorem": "Projection formula for (4,0) onto (1,2)",
+    "question": "Use the projection formula to compute the projection of v = (4,0) onto u = (1,2).",
+    "proof": "The relevant inner products are $\\langle v, u \\rangle = 4$ and $\\langle u, u \\rangle = 5$, so $\\operatorname{proj}_u(v) = (4/5)(1,2) = (4/5, 8/5)$.",
+    "parameters": {
+      "vectors": [
+        [4, 0],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "Horizontal vector projected onto a skewed direction."
+  },
+  {
+    "id": "D150",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "natural_language",
+    "theorem": "Projection formula for (2,2) onto (2,-1)",
+    "question": "Use the projection formula to compute the projection of v = (2,2) onto u = (2,-1).",
+    "proof": "The inner product is four minus two, that is two, and the squared norm of u is five. So the projection is two fifths of (2,-1), that is (4/5, -2/5), with residual (6/5, 12/5).",
+    "parameters": {
+      "vectors": [
+        [2, 2],
+        [2, -1]
+      ]
+    },
+    "animation_notes": "Projection lands on the skewed direction; the residual is large."
+  },
+  {
+    "id": "D151",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "latex",
+    "theorem": "Projection formula for (1,1,1) onto (1,2,2)",
+    "question": "Use the projection formula to compute the projection of v = (1,1,1) onto u = (1,2,2).",
+    "proof": "The inner products are $\\langle v, u \\rangle = 5$ and $\\langle u, u \\rangle = 9$, so the projection is $(5/9)(1,2,2) = (5/9, 10/9, 10/9)$ and the residual is $(4/9, -1/9, -1/9)$.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [1, 2, 2]
+      ]
+    },
+    "animation_notes": "The projection is longer than the input vector in two coordinates."
+  },
+  {
+    "id": "D152",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "mixed",
+    "theorem": "Projection formula for (3,4) onto (0,1)",
+    "question": "Use the projection formula to compute the projection of v = (3,4) onto u = (0,1).",
+    "proof": "The inner products are $\\langle v, u \\rangle = 4$ and $\\langle u, u \\rangle = 1$, so $\\operatorname{proj}_u(v) = (0,4)$, with residual $(3,0)$.",
+    "parameters": {
+      "vectors": [
+        [3, 4],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Simple axis case with formula clearly stated."
+  },
+  {
+    "id": "D153",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "latex",
+    "theorem": "Projection formula for (1,-2,3) onto (0,1,1)",
+    "question": "Use the projection formula to compute the projection of v = (1,-2,3) onto u = (0,1,1).",
+    "proof": "We compute $\\langle v, u \\rangle = 1$ and $\\langle u, u \\rangle = 2$, so the projection is $(1/2)(0,1,1) = (0, 1/2, 1/2)$. The residual is $(1, -5/2, 5/2)$.",
+    "parameters": {
+      "vectors": [
+        [1, -2, 3],
+        [0, 1, 1]
+      ]
+    },
+    "animation_notes": "3D projection onto a plane-parallel direction."
+  },
+  {
+    "id": "D154",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "natural_language",
+    "theorem": "Projection formula for (5,7) onto (3,4)",
+    "question": "Use the projection formula to compute the projection of v = (5,7) onto u = (3,4).",
+    "proof": "The inner product is fifteen plus twenty-eight, that is forty-three, and the squared norm of u is twenty-five. So the projection is forty-three over twenty-five times (3,4), that is (129/25, 172/25), and the residual is (25/25-129/25, 175/25-172/25), that is (-104/25, 3/25).",
+    "parameters": {
+      "vectors": [
+        [5, 7],
+        [3, 4]
+      ]
+    },
+    "animation_notes": "Projection pushes past v along the direction (3,4)."
+  },
+  {
+    "id": "D155",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_formula",
+    "proof_format": "latex",
+    "theorem": "Projection formula for (0,1,0) onto (1,1,0)",
+    "question": "Use the projection formula to compute the projection of v = (0,1,0) onto u = (1,1,0).",
+    "proof": "The inner products are $\\langle v, u \\rangle = 1$ and $\\langle u, u \\rangle = 2$, so the projection is $(1/2, 1/2, 0)$, and the residual is $(-1/2, 1/2, 0)$.",
+    "parameters": {
+      "vectors": [
+        [0, 1, 0],
+        [1, 1, 0]
+      ]
+    },
+    "animation_notes": "Unit y-axis projected to the xy-diagonal."
+  },
+  {
+    "id": "D156",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "natural_language",
+    "theorem": "Decompose (5,1) relative to (1,1)",
+    "question": "Write v = (5,1) as the sum of a component parallel to u = (1,1) and a component orthogonal to u.",
+    "proof": "The parallel component is the projection of v onto u, which we computed in an earlier example to be (3,3). The orthogonal component is (2,-2), and its inner product with (1,1) is 2 minus 2, which is zero.",
+    "parameters": {
+      "vectors": [
+        [5, 1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Parallelogram decomposition with the two pieces clearly labeled."
+  },
+  {
+    "id": "D157",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "latex",
+    "theorem": "Decompose (2,3) relative to (1,0)",
+    "question": "Write v = (2,3) as the sum of a component parallel to u = (1,0) and a component orthogonal to u.",
+    "proof": "The parallel component is $(2,0)$, and the orthogonal component is $(0,3)$. Direct check: $\\langle (2,0),(0,3) \\rangle = 0$.",
+    "parameters": {
+      "vectors": [
+        [2, 3],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Trivial coordinate-axis decomposition."
+  },
+  {
+    "id": "D158",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "mixed",
+    "theorem": "Decompose (5,5) relative to (1,-1)",
+    "question": "Write v = (5,5) as the sum of a component parallel to u = (1,-1) and a component orthogonal to u.",
+    "proof": "The projection of v onto $(1,-1)$ is zero, so the parallel component is the zero vector and the orthogonal component is $v$ itself. This is the degenerate case where $v$ is perpendicular to $u$.",
+    "parameters": {
+      "vectors": [
+        [5, 5],
+        [1, -1]
+      ]
+    },
+    "animation_notes": "Degenerate decomposition; entire v is orthogonal to the direction."
+  },
+  {
+    "id": "D159",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "latex",
+    "theorem": "Decompose (1,2,3) relative to (0,1,0)",
+    "question": "Write v = (1,2,3) as the sum of a component parallel to u = (0,1,0) and a component orthogonal to u.",
+    "proof": "The parallel piece is $(0,2,0)$ and the orthogonal piece is $(1,0,3)$; both add to $v$ and are clearly orthogonal.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 3],
+        [0, 1, 0]
+      ]
+    },
+    "animation_notes": "Decomposition along a coordinate axis in 3D."
+  },
+  {
+    "id": "D160",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "natural_language",
+    "theorem": "Decompose (3,3,3) relative to (1,1,1)",
+    "question": "Write v = (3,3,3) as the sum of a component parallel to u = (1,1,1) and a component orthogonal to u.",
+    "proof": "The projection of v onto u recovers v exactly, because v equals three times u. So the parallel component is v itself and the orthogonal component is the zero vector.",
+    "parameters": {
+      "vectors": [
+        [3, 3, 3],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "Degenerate decomposition when v is parallel to the direction."
+  },
+  {
+    "id": "D161",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "mixed",
+    "theorem": "Decompose (4,1) relative to (1,2)",
+    "question": "Write v = (4,1) as the sum of a component parallel to u = (1,2) and a component orthogonal to u.",
+    "proof": "The projection of $v$ onto $u$ is $(6/5)(1,2) = (6/5, 12/5)$, and the orthogonal component is $(14/5, -7/5)$. Both add to $v$, and their inner product equals zero.",
+    "parameters": {
+      "vectors": [
+        [4, 1],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "Right angle drawn at the projection foot."
+  },
+  {
+    "id": "D162",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "latex",
+    "theorem": "Decompose (6,3,3) relative to (1,1,1)",
+    "question": "Write v = (6,3,3) as the sum of a component parallel to u = (1,1,1) and a component orthogonal to u.",
+    "proof": "The projection coefficient is $(6+3+3)/3 = 4$, so the parallel component is $(4,4,4)$. The orthogonal piece is $(2,-1,-1)$, whose dot product with $(1,1,1)$ is zero.",
+    "parameters": {
+      "vectors": [
+        [6, 3, 3],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "3D decomposition with the residual in the x+y+z=0 plane."
+  },
+  {
+    "id": "D163",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "natural_language",
+    "theorem": "Decompose (3,4) relative to (1,1)",
+    "question": "Write v = (3,4) as the sum of a component parallel to u = (1,1) and a component orthogonal to u.",
+    "proof": "The parallel component is seven halves times (1,1), that is (7/2, 7/2). The orthogonal piece is (-1/2, 1/2), which is orthogonal to (1,1).",
+    "parameters": {
+      "vectors": [
+        [3, 4],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Clear visualization with the diagonal split."
+  },
+  {
+    "id": "D164",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "mixed",
+    "theorem": "Decompose (2,2,-4) relative to (1,0,1)",
+    "question": "Write v = (2,2,-4) as the sum of a component parallel to u = (1,0,1) and a component orthogonal to u.",
+    "proof": "The inner products are $\\langle v, u \\rangle = -2$ and $\\langle u, u \\rangle = 2$, so the parallel component is $(-1)(1,0,1) = (-1,0,-1)$. The orthogonal piece is $(3,2,-3)$, whose dot product with $u$ is zero.",
+    "parameters": {
+      "vectors": [
+        [2, 2, -4],
+        [1, 0, 1]
+      ]
+    },
+    "animation_notes": "Negative parallel component flips the direction."
+  },
+  {
+    "id": "D165",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_decomposition",
+    "proof_format": "latex",
+    "theorem": "Decompose (5,0,0) relative to (1,1,1)",
+    "question": "Write v = (5,0,0) as the sum of a component parallel to u = (1,1,1) and a component orthogonal to u.",
+    "proof": "The parallel component is $(5/3)(1,1,1) = (5/3, 5/3, 5/3)$ and the orthogonal piece is $(10/3, -5/3, -5/3)$, which is perpendicular to $(1,1,1)$.",
+    "parameters": {
+      "vectors": [
+        [5, 0, 0],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "Interesting case: original vector is perpendicular to the direction in one coordinate only."
+  },
+  {
+    "id": "D166",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "latex",
+    "theorem": "Pythagoras for (1,0) and (0,1)",
+    "question": "Verify the Pythagorean identity for u = (1,0) and v = (0,1).",
+    "proof": "The vectors are orthogonal since $\\langle u, v \\rangle = 0$. Their sum is $(1,1)$ with squared norm $2 = 1+1 = \\lVert u \\rVert^2 + \\lVert v \\rVert^2$.",
+    "parameters": {
+      "vectors": [
+        [1, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Unit square diagonal visualization."
+  },
+  {
+    "id": "D167",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "natural_language",
+    "theorem": "Pythagoras for (0,3) and (4,0)",
+    "question": "Verify the Pythagorean identity for u = (0,3) and v = (4,0).",
+    "proof": "The vectors are perpendicular, so the identity reduces to computing squared norms. u has squared norm nine, v has squared norm sixteen, and their sum is (4,3) whose squared norm is twenty-five. Nine plus sixteen equals twenty-five, so the identity holds.",
+    "parameters": {
+      "vectors": [
+        [0, 3],
+        [4, 0]
+      ]
+    },
+    "animation_notes": "Classic 3-4-5 triangle."
+  },
+  {
+    "id": "D168",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "mixed",
+    "theorem": "Pythagoras for (2,0) and (0,2)",
+    "question": "Verify the Pythagorean identity for u = (2,0) and v = (0,2).",
+    "proof": "Their inner product is zero. u has squared norm $4$, v has squared norm $4$, and $u+v = (2,2)$ has squared norm $8 = 4+4$.",
+    "parameters": {
+      "vectors": [
+        [2, 0],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Scaled version of the unit square diagonal."
+  },
+  {
+    "id": "D169",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "latex",
+    "theorem": "Pythagoras for (2,1,2) and (1,-2,2)",
+    "question": "Verify the Pythagorean identity for u = (2,1,2) and v = (1,-2,2) in R^3.",
+    "proof": "The inner product equals $2 - 2 + 4 = 4$, so the vectors are not orthogonal. The identity fails; for a corrected version one should choose a different second vector.",
+    "parameters": {
+      "vectors": [
+        [2, 1, 2],
+        [1, -2, 2]
+      ]
+    },
+    "animation_notes": "Illustrate the failure mode when vectors are not orthogonal."
+  },
+  {
+    "id": "D170",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "natural_language",
+    "theorem": "Pythagoras for (1,2,2) and (2,-1,-2)",
+    "question": "Verify the Pythagorean identity for u = (1,2,2) and v = (2,-1,-2).",
+    "proof": "The inner product equals two minus two minus four, which is minus four; the vectors are not orthogonal, so the identity fails. This illustrates that perpendicularity is required for the identity to hold.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [2, -1, -2]
+      ]
+    },
+    "animation_notes": "Emphasize the negative inner product as the failure marker."
+  },
+  {
+    "id": "D171",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "latex",
+    "theorem": "Pythagoras for (1,1,0) and (0,0,1)",
+    "question": "Verify the Pythagorean identity for u = (1,1,0) and v = (0,0,1).",
+    "proof": "The inner product is trivially zero. u has squared norm two, v has squared norm one, and their sum (1,1,1) has squared norm three = 2+1.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 0],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Body diagonal of a unit cube."
+  },
+  {
+    "id": "D172",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "mixed",
+    "theorem": "Pythagoras for (6,0) and (0,8)",
+    "question": "Verify the Pythagorean identity for u = (6,0) and v = (0,8).",
+    "proof": "The vectors lie on distinct axes, so they are orthogonal. The sum (6,8) has squared norm $36+64 = 100$, and $\\lVert u \\rVert^2 + \\lVert v \\rVert^2 = 36+64 = 100$.",
+    "parameters": {
+      "vectors": [
+        [6, 0],
+        [0, 8]
+      ]
+    },
+    "animation_notes": "6-8-10 triangle."
+  },
+  {
+    "id": "D173",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "latex",
+    "theorem": "Pythagoras for (5,0) and (0,12)",
+    "question": "Verify the Pythagorean identity for u = (5,0) and v = (0,12).",
+    "proof": "The inner product vanishes. Summing the squared norms gives $25+144 = 169$, and $u+v = (5,12)$ has squared norm $169$ as expected.",
+    "parameters": {
+      "vectors": [
+        [5, 0],
+        [0, 12]
+      ]
+    },
+    "animation_notes": "Standard 5-12-13 triangle."
+  },
+  {
+    "id": "D174",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "natural_language",
+    "theorem": "Pythagoras for (1,2,2) and (2,1,-2)",
+    "question": "Verify the Pythagorean identity for u = (1,2,2) and v = (2,1,-2) in R^3.",
+    "proof": "The inner product is two plus two minus four, which is zero, so the vectors are orthogonal. Their sum is (3,3,0), whose squared norm is eighteen. Summing the individual squared norms gives nine plus nine, which is eighteen, confirming the identity.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [2, 1, -2]
+      ]
+    },
+    "animation_notes": "3D isosceles right triangle."
+  },
+  {
+    "id": "D175",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "pythagoras",
+    "proof_format": "mixed",
+    "theorem": "Pythagoras for (3,1,1) and (1,-1,0)",
+    "question": "Verify the Pythagorean identity for u = (3,1,1) and v = (1,-1,0).",
+    "proof": "The inner product is three minus one plus zero, that is two, which is not zero, so the identity fails. The squared norms sum to eleven plus two = thirteen, but the squared norm of the sum (4,0,1) is seventeen.",
+    "parameters": {
+      "vectors": [
+        [3, 1, 1],
+        [1, -1, 0]
+      ]
+    },
+    "animation_notes": "Failure example showing inner product forces the gap."
+  },
+  {
+    "id": "D176",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "latex",
+    "theorem": "Orthogonal complement of span{(1,2,3)} in R^3",
+    "question": "Find the orthogonal complement of W = span{(1,2,3)} in R^3.",
+    "proof": "A vector $(x,y,z)$ is orthogonal to $(1,2,3)$ iff $x + 2y + 3z = 0$. A basis is given by $(2,-1,0)$ and $(3,0,-1)$.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 3],
+        [2, -1, 0],
+        [3, 0, -1]
+      ]
+    },
+    "animation_notes": "Show the plane x + 2y + 3z = 0 perpendicular to the vector (1,2,3)."
+  },
+  {
+    "id": "D177",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "natural_language",
+    "theorem": "Orthogonal complement of span{(0,1)} in R^2",
+    "question": "Find the orthogonal complement of W = span{(0,1)} in R^2.",
+    "proof": "A vector is orthogonal to the y-axis only when its y-component is zero. So the complement is the span of (1,0).",
+    "parameters": {
+      "vectors": [
+        [0, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Rotate the y-axis ninety degrees to get the x-axis."
+  },
+  {
+    "id": "D178",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "mixed",
+    "theorem": "Orthogonal complement of span{(1,2,2)} in R^3",
+    "question": "Find the orthogonal complement of W = span{(1,2,2)} in R^3.",
+    "proof": "A vector $(x,y,z)$ is orthogonal to $(1,2,2)$ iff $x + 2y + 2z = 0$. Choosing $y=1$, $z=0$ gives $x=-2$, so $(-2,1,0)$ is one basis vector. Choosing $y=0$, $z=1$ gives $x=-2$, so $(-2,0,1)$ is another.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [-2, 1, 0],
+        [-2, 0, 1]
+      ]
+    },
+    "animation_notes": "Show the plane x+2y+2z=0 in 3D."
+  },
+  {
+    "id": "D179",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "latex",
+    "theorem": "Orthogonal complement of span{(1,-1)} in R^2",
+    "question": "Find the orthogonal complement of W = span{(1,-1)} in R^2.",
+    "proof": "A vector $(x,y)$ is orthogonal to $(1,-1)$ iff $x - y = 0$, i.e. $y = x$. Hence the complement is $\\operatorname{span}\\{(1,1)\\}$.",
+    "parameters": {
+      "vectors": [
+        [1, -1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Anti-diagonal to diagonal rotation."
+  },
+  {
+    "id": "D180",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "natural_language",
+    "theorem": "Orthogonal complement of span{(1,1,0)} in R^3",
+    "question": "Find the orthogonal complement of W = span{(1,1,0)} in R^3.",
+    "proof": "A vector (x,y,z) is orthogonal to (1,1,0) if and only if x plus y equals zero. So the complement is spanned by (1,-1,0) and (0,0,1).",
+    "parameters": {
+      "vectors": [
+        [1, 1, 0],
+        [1, -1, 0],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Vertical plane x+y=0 perpendicular to the xy-diagonal."
+  },
+  {
+    "id": "D181",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "mixed",
+    "theorem": "Orthogonal complement of span{(2,1)} in R^2",
+    "question": "Find the orthogonal complement of W = span{(2,1)} in R^2.",
+    "proof": "A vector $(x,y)$ is orthogonal to $(2,1)$ iff $2x + y = 0$, i.e. $y = -2x$. Thus the complement is $\\operatorname{span}\\{(1,-2)\\}$.",
+    "parameters": {
+      "vectors": [
+        [2, 1],
+        [1, -2]
+      ]
+    },
+    "animation_notes": "Skew line paired with its perpendicular."
+  },
+  {
+    "id": "D182",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "latex",
+    "theorem": "Orthogonal complement of span{(1,0,1),(0,1,0)} in R^3",
+    "question": "Find the orthogonal complement of W = span{(1,0,1),(0,1,0)} in R^3.",
+    "proof": "A vector $(x,y,z)$ is orthogonal to both $(1,0,1)$ and $(0,1,0)$ iff $x+z = 0$ and $y = 0$. Hence the complement is $\\operatorname{span}\\{(1,0,-1)\\}$.",
+    "parameters": {
+      "vectors": [
+        [1, 0, 1],
+        [0, 1, 0],
+        [1, 0, -1]
+      ]
+    },
+    "animation_notes": "Plane perpendicular to a line in 3D."
+  },
+  {
+    "id": "D183",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "natural_language",
+    "theorem": "Orthogonal complement of span{(3,4)} in R^2",
+    "question": "Find the orthogonal complement of W = span{(3,4)} in R^2.",
+    "proof": "A vector is perpendicular to (3,4) when three x plus four y equals zero. A convenient basis is (-4,3), whose dot product with (3,4) is minus twelve plus twelve, which is zero.",
+    "parameters": {
+      "vectors": [
+        [3, 4],
+        [-4, 3]
+      ]
+    },
+    "animation_notes": "Pythagorean pair as perpendicular lines."
+  },
+  {
+    "id": "D184",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "mixed",
+    "theorem": "Orthogonal complement of span{(1,-1,0)} in R^3",
+    "question": "Find the orthogonal complement of W = span{(1,-1,0)} in R^3.",
+    "proof": "A vector $(x,y,z)$ is orthogonal to $(1,-1,0)$ iff $x - y = 0$, so $x = y$. The complement is spanned by $(1,1,0)$ and $(0,0,1)$.",
+    "parameters": {
+      "vectors": [
+        [1, -1, 0],
+        [1, 1, 0],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Plane x=y perpendicular to the anti-diagonal in the xy-plane."
+  },
+  {
+    "id": "D185",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "orthogonal_complement",
+    "proof_format": "latex",
+    "theorem": "Orthogonal complement of span{(2,2,2)} in R^3",
+    "question": "Find the orthogonal complement of W = span{(2,2,2)} in R^3.",
+    "proof": "Since $(2,2,2)$ is parallel to $(1,1,1)$, this reduces to the standard main-diagonal case. The complement is the plane $x+y+z=0$, spanned by $(1,-1,0)$ and $(1,0,-1)$.",
+    "parameters": {
+      "vectors": [
+        [2, 2, 2],
+        [1, -1, 0],
+        [1, 0, -1]
+      ]
+    },
+    "animation_notes": "Same as D50 up to scaling."
+  },
+  {
+    "id": "D186",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "latex",
+    "theorem": "Orthonormal basis from (2,0) and (0,3)",
+    "question": "Apply Gram-Schmidt to v1 = (2,0) and v2 = (0,3) then normalise.",
+    "proof": "The vectors are already orthogonal, so $u_1 = (2,0)$, $u_2 = (0,3)$. Normalising gives $e_1 = (1,0)$, $e_2 = (0,1)$, the standard basis.",
+    "parameters": {
+      "vectors": [
+        [2, 0],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Standard basis emerges after division."
+  },
+  {
+    "id": "D187",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "natural_language",
+    "theorem": "Orthonormal basis from (1,1) and (1,-1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1) and v2 = (1,-1) then normalise.",
+    "proof": "These vectors are already orthogonal, so no Gram-Schmidt work is required. Both have norm square root of two, so dividing each by its norm gives the standard orthonormal diagonal pair.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [1, -1]
+      ]
+    },
+    "animation_notes": "Diagonal frame rotated forty-five degrees."
+  },
+  {
+    "id": "D188",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "mixed",
+    "theorem": "Orthonormal basis from (1,2,2) and (2,1,-2)",
+    "question": "Apply Gram-Schmidt to v1 = (1,2,2) and v2 = (2,1,-2) then normalise.",
+    "proof": "The pair is already orthogonal. Both have norm three, so the orthonormal basis is $(1/3)(1,2,2)$ and $(1/3)(2,1,-2)$.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [2, 1, -2]
+      ]
+    },
+    "animation_notes": "Both vectors have the same norm, giving a clean orthonormal result."
+  },
+  {
+    "id": "D189",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "latex",
+    "theorem": "Orthonormal basis from (3,0,4) and (0,1,0)",
+    "question": "Apply Gram-Schmidt to v1 = (3,0,4) and v2 = (0,1,0) then normalise.",
+    "proof": "The vectors are already orthogonal, so $u_1 = (3,0,4)$ and $u_2 = (0,1,0)$. Since $\\lVert u_1 \\rVert = 5$, dividing gives $e_1 = (3/5, 0, 4/5)$ and $e_2 = (0,1,0)$.",
+    "parameters": {
+      "vectors": [
+        [3, 0, 4],
+        [0, 1, 0]
+      ]
+    },
+    "animation_notes": "Pythagorean triple shows up as a nice orthonormal vector."
+  },
+  {
+    "id": "D190",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "natural_language",
+    "theorem": "Orthonormal basis from (2,0) and (1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (2,0) and v2 = (1,1) then normalise.",
+    "proof": "Gram-Schmidt gives u1 equal to (2,0) and u2 equal to (0,1). Dividing each by its norm gives e1 equal to (1,0) and e2 equal to (0,1), which is the standard basis.",
+    "parameters": {
+      "vectors": [
+        [2, 0],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Standard basis recovered via Gram-Schmidt."
+  },
+  {
+    "id": "D191",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "mixed",
+    "theorem": "Orthonormal basis from (1,1,1) and (1,-1,0)",
+    "question": "Apply Gram-Schmidt to v1 = (1,1,1) and v2 = (1,-1,0) then normalise.",
+    "proof": "The vectors are already orthogonal, so $u_1 = (1,1,1)$ and $u_2 = (1,-1,0)$. Their norms are $\\sqrt{3}$ and $\\sqrt{2}$, so $e_1 = (1/\\sqrt{3})(1,1,1)$ and $e_2 = (1/\\sqrt{2})(1,-1,0)$.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [1, -1, 0]
+      ]
+    },
+    "animation_notes": "Main diagonal plus anti-diagonal in the xy-plane."
+  },
+  {
+    "id": "D192",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "latex",
+    "theorem": "Orthonormal basis from (2,2) and (3,1)",
+    "question": "Apply Gram-Schmidt to v1 = (2,2) and v2 = (3,1) then normalise.",
+    "proof": "Gram-Schmidt gives $u_1 = (2,2)$ and $u_2 = (1,-1)$. Normalising, $e_1 = (1/\\sqrt{2})(1,1)$ and $e_2 = (1/\\sqrt{2})(1,-1)$.",
+    "parameters": {
+      "vectors": [
+        [2, 2],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "Diagonal orthonormal frame after Gram-Schmidt."
+  },
+  {
+    "id": "D193",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "natural_language",
+    "theorem": "Orthonormal basis from (1,2) and (0,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,2) and v2 = (0,1) then normalise.",
+    "proof": "The Gram-Schmidt outputs are u1 equal to (1,2) and u2 equal to (-2/5, 1/5). Normalising gives e1 equal to (1,2) divided by square root of five, and e2 equal to (-2,1) divided by square root of five.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Orthonormal frame with a slant direction."
+  },
+  {
+    "id": "D194",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "mixed",
+    "theorem": "Orthonormal basis from (1,0,1) and (0,1,1)",
+    "question": "Apply Gram-Schmidt to v1 = (1,0,1) and v2 = (0,1,1) then normalise.",
+    "proof": "Gram-Schmidt gives $u_1 = (1,0,1)$ and $u_2 = (-1/2, 1, 1/2)$. Normalising yields $e_1 = (1/\\sqrt{2})(1,0,1)$ and $e_2 = (2/3)(-1/2, 1, 1/2) = (-1/3, 2/3, 1/3)$ scaled appropriately, giving the orthonormal basis.",
+    "parameters": {
+      "vectors": [
+        [1, 0, 1],
+        [0, 1, 1]
+      ]
+    },
+    "animation_notes": "Residual perpendicular to xz-diagonal in 3D."
+  },
+  {
+    "id": "D195",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "normalize_after_gs",
+    "proof_format": "latex",
+    "theorem": "Orthonormal basis from (2,1,0) and (1,2,0)",
+    "question": "Apply Gram-Schmidt to v1 = (2,1,0) and v2 = (1,2,0) then normalise.",
+    "proof": "Gram-Schmidt gives $u_1 = (2,1,0)$ and $u_2 = (0, 3/5, 0)$ scaled, or after full computation $u_2 = (1,2,0) - (2/5)(2,1,0) = (1/5, 8/5, 0)$. Normalising yields orthonormal vectors in the xy-plane.",
+    "parameters": {
+      "vectors": [
+        [2, 1, 0],
+        [1, 2, 0]
+      ]
+    },
+    "animation_notes": "Both vectors lie in the xy-plane; the frame is drawn in 3D."
+  },
+  {
+    "id": "D196",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "latex",
+    "theorem": "QR decomposition of [[2,1],[0,1]]",
+    "question": "Compute the QR decomposition of A = [[2,1],[0,1]].",
+    "proof": "The columns are $(2,0)$ and $(1,1)$. Gram-Schmidt gives $(2,0)$ and $(0,1)$, both already orthogonal. Normalising gives $Q = I$, so $R = A = \\begin{pmatrix}2&1\\\\0&1\\end{pmatrix}$.",
+    "parameters": {
+      "vectors": [
+        [2, 0],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "R is triangular because Q is the identity."
+  },
+  {
+    "id": "D197",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "natural_language",
+    "theorem": "QR decomposition of [[1,2],[0,1]]",
+    "question": "Compute the QR decomposition of A = [[1,2],[0,1]].",
+    "proof": "The columns are (1,0) and (2,1). The first is already unit; the second has a projection of two along (1,0) and residual (0,1). So Q is the identity and R equals A.",
+    "parameters": {
+      "vectors": [
+        [1, 0],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Another identity Q case."
+  },
+  {
+    "id": "D198",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "mixed",
+    "theorem": "QR decomposition of [[1,1],[0,1]]",
+    "question": "Compute the QR decomposition of A = [[1,1],[0,1]].",
+    "proof": "The columns $(1,0)$ and $(1,1)$ give $u_1 = (1,0)$, $u_2 = (0,1)$, so $Q = I$ and $R = A$ again.",
+    "parameters": {
+      "vectors": [
+        [1, 0],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Unit upper-triangular case."
+  },
+  {
+    "id": "D199",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "latex",
+    "theorem": "QR decomposition of [[1,0],[1,1]]",
+    "question": "Compute the QR decomposition of A = [[1,0],[1,1]].",
+    "proof": "The columns are $(1,1)$ and $(0,1)$. Gram-Schmidt: $u_1 = (1,1)$, projection of $v_2$ is $(1/2)(1,1)$, residual is $(-1/2, 1/2)$. Normalising gives $e_1 = (1/\\sqrt{2})(1,1)$, $e_2 = (1/\\sqrt{2})(-1,1)$. Then $Q = \\begin{pmatrix}1/\\sqrt{2}&-1/\\sqrt{2}\\\\1/\\sqrt{2}&1/\\sqrt{2}\\end{pmatrix}$ and $R = Q^T A = \\begin{pmatrix}\\sqrt{2}&1/\\sqrt{2}\\\\0&1/\\sqrt{2}\\end{pmatrix}$.",
+    "parameters": {
+      "vectors": [
+        [1, 1],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Rotation-like Q, triangular R."
+  },
+  {
+    "id": "D200",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "natural_language",
+    "theorem": "QR decomposition of [[2,0],[1,1]]",
+    "question": "Compute the QR decomposition of A = [[2,0],[1,1]].",
+    "proof": "The columns are (2,1) and (0,1). The first has length square root of five; dividing by that gives the first column of Q. The second column Gram-Schmidt step yields the residual perpendicular to (2,1). The resulting Q and R satisfy QR equal to A.",
+    "parameters": {
+      "vectors": [
+        [2, 1],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Shows the QR structure with a scale factor."
+  },
+  {
+    "id": "D202",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "latex",
+    "theorem": "QR decomposition of [[1,3],[2,4]]",
+    "question": "Compute the QR decomposition of A = [[1,3],[2,4]].",
+    "proof": "Columns $v_1 = (1,2)$ and $v_2 = (3,4)$. $\\lVert v_1 \\rVert = \\sqrt{5}$, and $e_1 = (1/\\sqrt{5})(1,2)$. The projection of $v_2$ is $(11/5)(1,2)$, giving residual $(4/5, -2/5)$, whose norm is $\\sqrt{4/5}$. Then $Q$ consists of normalised $v_1$ and residual, and $R = Q^T A$.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [3, 4]
+      ]
+    },
+    "animation_notes": "Full 2x2 QR decomposition."
+  },
+  {
+    "id": "D203",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "natural_language",
+    "theorem": "QR decomposition of [[0,1],[1,0]]",
+    "question": "Compute the QR decomposition of A = [[0,1],[1,0]].",
+    "proof": "The columns (0,1) and (1,0) are already orthonormal but in reverse order. So Q equals A itself and R equals the identity matrix.",
+    "parameters": {
+      "vectors": [
+        [0, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Q equals the swap matrix; R is identity."
+  },
+  {
+    "id": "D204",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "mixed",
+    "theorem": "QR decomposition of [[3,4],[0,1]]",
+    "question": "Compute the QR decomposition of A = [[3,4],[0,1]].",
+    "proof": "Columns $(3,0)$ and $(4,1)$. Gram-Schmidt on the first gives $(3,0)$; projection of the second is $(4/3)(3,0)$, residual is $(0,1)$. Normalising gives $Q = I$ and $R = A = \\begin{pmatrix}3&4\\\\0&1\\end{pmatrix}$.",
+    "parameters": {
+      "vectors": [
+        [3, 0],
+        [4, 1]
+      ]
+    },
+    "animation_notes": "Upper-triangular input is its own R."
+  },
+  {
+    "id": "D205",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "qr_interpretation",
+    "proof_format": "latex",
+    "theorem": "QR decomposition of [[1,0,1],[0,1,1],[0,0,1]]",
+    "question": "Compute the QR decomposition of A = [[1,0,1],[0,1,1],[0,0,1]].",
+    "proof": "The first two columns $(1,0,0)$ and $(0,1,0)$ are already orthonormal; the third has Gram-Schmidt residual $(0,0,1)$. Hence $Q = I$ and $R = A$.",
+    "parameters": {
+      "vectors": [
+        [1, 0, 0],
+        [0, 1, 0],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "3x3 upper-triangular case with Q = I."
+  },
+  {
+    "id": "D216",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "latex",
+    "theorem": "Projection matrix onto the y-axis",
+    "question": "Find the matrix of orthogonal projection onto span{(0,1)}.",
+    "proof": "With $u = (0,1)$, $P = \\frac{u u^T}{u^T u} = \\begin{pmatrix}0&0\\\\0&1\\end{pmatrix}$. This clearly sends any $(x,y)$ to $(0,y)$.",
+    "parameters": {
+      "vectors": [[0, 1]]
+    },
+    "animation_notes": "Everything collapses to the y-axis."
+  },
+  {
+    "id": "D217",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "natural_language",
+    "theorem": "Projection matrix onto span{(1,-1)}",
+    "question": "Find the matrix of orthogonal projection onto span{(1,-1)}.",
+    "proof": "The formula gives one half times the matrix with all entries alternating signs: the diagonal entries are one half and the off-diagonal entries are minus one half. Applying it to (x,y) gives ((x-y)/2, (y-x)/2), which lies on the anti-diagonal.",
+    "parameters": {
+      "vectors": [[1, -1]]
+    },
+    "animation_notes": "Everything projects to the anti-diagonal."
+  },
+  {
+    "id": "D218",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "mixed",
+    "theorem": "Projection matrix onto span{(1,1,1)} in R^3",
+    "question": "Find the matrix of orthogonal projection onto span{(1,1,1)} in R^3.",
+    "proof": "With $u = (1,1,1)$ and $u^T u = 3$, $P = (1/3)\\begin{pmatrix}1&1&1\\\\1&1&1\\\\1&1&1\\end{pmatrix}$. Applying $P$ to $(x,y,z)$ gives $((x+y+z)/3)(1,1,1)$, which is the projection onto the main diagonal.",
+    "parameters": {
+      "vectors": [[1, 1, 1]]
+    },
+    "animation_notes": "Every point projects to the main diagonal."
+  },
+  {
+    "id": "D219",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "latex",
+    "theorem": "Projection matrix onto span{(3,4)}",
+    "question": "Find the matrix of orthogonal projection onto span{(3,4)}.",
+    "proof": "$P = \\frac{1}{25}\\begin{pmatrix}9&12\\\\12&16\\end{pmatrix}$. Applying to $(x,y)$ gives $((9x+12y)/25, (12x+16y)/25)$, which is the projection onto the direction (3,4).",
+    "parameters": {
+      "vectors": [[3, 4]]
+    },
+    "animation_notes": "Projection onto the Pythagorean direction."
+  },
+  {
+    "id": "D220",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "natural_language",
+    "theorem": "Projection matrix onto span{(1,2,2)}",
+    "question": "Find the matrix of orthogonal projection onto span{(1,2,2)} in R^3.",
+    "proof": "The squared norm of the direction vector is nine, so the projection matrix is one ninth times the matrix whose rows are (1,2,2), (2,4,4), and (2,4,4) respectively.",
+    "parameters": {
+      "vectors": [[1, 2, 2]]
+    },
+    "animation_notes": "Rank-one projection in 3D."
+  },
+  {
+    "id": "D221",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "latex",
+    "theorem": "Projection matrix onto span{(2,1,2)}",
+    "question": "Find the matrix of orthogonal projection onto span{(2,1,2)} in R^3.",
+    "proof": "$\\lVert u \\rVert^2 = 9$, so $P = \\frac{1}{9}\\begin{pmatrix}4&2&4\\\\2&1&2\\\\4&2&4\\end{pmatrix}$. Applying to $(x,y,z)$ gives $((4x+2y+4z)/9, (2x+y+2z)/9, (4x+2y+4z)/9)$.",
+    "parameters": {
+      "vectors": [[2, 1, 2]]
+    },
+    "animation_notes": "Projection onto a skewed direction."
+  },
+  {
+    "id": "D222",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "natural_language",
+    "theorem": "Projection matrix onto the z-axis",
+    "question": "Find the matrix of orthogonal projection onto span{(0,0,1)} in R^3.",
+    "proof": "Only the z-coordinate survives the projection, so the matrix has a one in the lower right and zeros everywhere else.",
+    "parameters": {
+      "vectors": [[0, 0, 1]]
+    },
+    "animation_notes": "Everything projects onto the z-axis."
+  },
+  {
+    "id": "D223",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "mixed",
+    "theorem": "Projection matrix onto span{(1,0,1)}",
+    "question": "Find the matrix of orthogonal projection onto span{(1,0,1)} in R^3.",
+    "proof": "The squared norm of the direction is two, so the projection matrix is one half times the matrix whose only nonzero entries are in the corners and the middle (with the middle equal to zero): $\\frac{1}{2}\\begin{pmatrix}1&0&1\\\\0&0&0\\\\1&0&1\\end{pmatrix}$.",
+    "parameters": {
+      "vectors": [[1, 0, 1]]
+    },
+    "animation_notes": "Projection onto the xz-diagonal."
+  },
+  {
+    "id": "D224",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "latex",
+    "theorem": "Projection matrix onto span{(1,1,0)}",
+    "question": "Find the matrix of orthogonal projection onto span{(1,1,0)} in R^3.",
+    "proof": "$u^T u = 2$, so the projection matrix is $(1/2)\\begin{pmatrix}1&1&0\\\\1&1&0\\\\0&0&0\\end{pmatrix}$. The z-coordinate is discarded and the xy-plane content reduces to the diagonal.",
+    "parameters": {
+      "vectors": [[1, 1, 0]]
+    },
+    "animation_notes": "Rank-one projection onto the xy-diagonal."
+  },
+  {
+    "id": "D225",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "projection_matrix",
+    "proof_format": "natural_language",
+    "theorem": "Projection matrix onto span{(1,-1,0)}",
+    "question": "Find the matrix of orthogonal projection onto span{(1,-1,0)} in R^3.",
+    "proof": "The direction has squared norm two, so the projection matrix is one half times the anti-diagonal matrix with entries (1,-1,0), (-1,1,0), (0,0,0). The z-coordinate is annihilated.",
+    "parameters": {
+      "vectors": [[1, -1, 0]]
+    },
+    "animation_notes": "Everything projects onto the xy anti-diagonal."
+  },
+  {
+    "id": "D226",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "latex",
+    "theorem": "Equivalence for (2,0) and (0,3)",
+    "question": "Show that for u = (2,0) and v = (0,3) the identity holds.",
+    "proof": "We have $\\langle u, v \\rangle = 0$. Then $u+v = (2,3)$, with squared norm $13$, and $\\lVert u \\rVert^2 + \\lVert v \\rVert^2 = 4 + 9 = 13$, so the identity holds.",
+    "parameters": {
+      "vectors": [
+        [2, 0],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Axis-aligned case."
+  },
+  {
+    "id": "D227",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "natural_language",
+    "theorem": "Equivalence for (1,2) and (2,-1)",
+    "question": "Show the identity holds for u = (1,2) and v = (2,-1).",
+    "proof": "The inner product is two minus two, which is zero, so the vectors are orthogonal. Their sum is (3,1) with squared norm ten, which matches the sum of the individual squared norms five plus five.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [2, -1]
+      ]
+    },
+    "animation_notes": "Nice small integer example."
+  },
+  {
+    "id": "D228",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "mixed",
+    "theorem": "Failure for (1,2) and (3,1)",
+    "question": "Show the identity fails for u = (1,2) and v = (3,1).",
+    "proof": "The inner product is five, which is nonzero, so the identity fails. Specifically, the squared norm of (4,3) is twenty-five, whereas the sum of squared norms is five plus ten, that is fifteen.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "Twice the inner product accounts for the discrepancy."
+  },
+  {
+    "id": "D229",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "latex",
+    "theorem": "Failure for (0,1) and (1,0) — actually holds",
+    "question": "Verify the identity for u = (0,1) and v = (1,0) (another axis case).",
+    "proof": "The inner product is zero. The sum is $(1,1)$ with squared norm two, matching one plus one.",
+    "parameters": {
+      "vectors": [
+        [0, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Same as D71 but with the roles swapped."
+  },
+  {
+    "id": "D230",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "natural_language",
+    "theorem": "Equivalence for (2,1,2) and (1,-2,0)",
+    "question": "Verify the equivalence for u = (2,1,2) and v = (1,-2,0).",
+    "proof": "The inner product is two minus two plus zero, which is zero. The sum is (3,-1,2) with squared norm fourteen. Summing the squared norms of u and v gives nine plus five, which equals fourteen.",
+    "parameters": {
+      "vectors": [
+        [2, 1, 2],
+        [1, -2, 0]
+      ]
+    },
+    "animation_notes": "3D example with nonzero coordinates."
+  },
+  {
+    "id": "D231",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "latex",
+    "theorem": "Failure for (1,1,1) and (1,0,1)",
+    "question": "Show the identity fails for u = (1,1,1) and v = (1,0,1).",
+    "proof": "The inner product is two, so the identity does not hold. The sum is $(2,1,2)$ with squared norm nine, while the individual squared norms sum to three plus two = five.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [1, 0, 1]
+      ]
+    },
+    "animation_notes": "Mismatch of 4 = 2*inner product."
+  },
+  {
+    "id": "D232",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "mixed",
+    "theorem": "Equivalence for (3,0,4) and (0,1,0)",
+    "question": "Verify the equivalence for u = (3,0,4) and v = (0,1,0).",
+    "proof": "The inner product is zero. Sum is (3,1,4) with squared norm twenty-six; individual norms squared sum to twenty-five plus one = twenty-six.",
+    "parameters": {
+      "vectors": [
+        [3, 0, 4],
+        [0, 1, 0]
+      ]
+    },
+    "animation_notes": "Pythagorean-triple flavored example."
+  },
+  {
+    "id": "D233",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "natural_language",
+    "theorem": "Equivalence for (1,-1,0) and (0,0,1)",
+    "question": "Verify the equivalence for u = (1,-1,0) and v = (0,0,1).",
+    "proof": "The inner product is zero, since only the third coordinate of v is nonzero and u has zero there. The sum (1,-1,1) has squared norm three, matching the sum of norms squared two plus one.",
+    "parameters": {
+      "vectors": [
+        [1, -1, 0],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Axis-aligned in 3D."
+  },
+  {
+    "id": "D234",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "latex",
+    "theorem": "Failure for (4,-3) and (3,4) but actually holds",
+    "question": "Verify the identity for u = (4,-3) and v = (3,4).",
+    "proof": "The inner product is twelve minus twelve, which is zero, so the identity holds. Sum is (7,1) with squared norm fifty; norms squared are twenty-five and twenty-five, summing to fifty.",
+    "parameters": {
+      "vectors": [
+        [4, -3],
+        [3, 4]
+      ]
+    },
+    "animation_notes": "Pythagorean pair again."
+  },
+  {
+    "id": "D235",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "dot_zero_equivalence",
+    "proof_format": "mixed",
+    "theorem": "Failure for (1,2,2) and (2,1,2)",
+    "question": "Show the identity fails for u = (1,2,2) and v = (2,1,2).",
+    "proof": "The inner product is two plus two plus four, that is eight, which is nonzero. The squared norm of the sum (3,3,4) is thirty-four, while the sum of individual squared norms is nine plus nine = eighteen.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [2, 1, 2]
+      ]
+    },
+    "animation_notes": "Large deviation 16 = 2*inner product."
+  },
+  {
+    "id": "D236",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "latex",
+    "theorem": "Add orthogonal (1,0,0) and (0,1,0)",
+    "question": "Use orthogonality to compute the norm of u+v for u = (1,0,0) and v = (0,1,0).",
+    "proof": "They are orthogonal with equal norm one, so $\\lVert u+v \\rVert^2 = 2$ and $\\lVert u+v \\rVert = \\sqrt{2}$. Directly, $u+v = (1,1,0)$ has the same norm.",
+    "parameters": {
+      "vectors": [
+        [1, 0, 0],
+        [0, 1, 0]
+      ]
+    },
+    "animation_notes": "Two orthogonal unit vectors in the xy-plane."
+  },
+  {
+    "id": "D237",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "natural_language",
+    "theorem": "Add orthogonal (2,2) and (-2,2)",
+    "question": "Use orthogonality to compute \\lVert u+v \\rVert for u = (2,2) and v = (-2,2).",
+    "proof": "The inner product is minus four plus four, which is zero. The squared norm of the sum equals eight plus eight, that is sixteen, so the norm is four. Directly, the sum is (0,4), also of norm four.",
+    "parameters": {
+      "vectors": [
+        [2, 2],
+        [-2, 2]
+      ]
+    },
+    "animation_notes": "Symmetric diagonal pair gives a vertical sum."
+  },
+  {
+    "id": "D238",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "mixed",
+    "theorem": "Add orthogonal (1,2,2) and (2,-2,1)",
+    "question": "Use orthogonality to compute \\lVert u+v \\rVert for u = (1,2,2) and v = (2,-2,1).",
+    "proof": "The inner product is two minus four plus two, which is zero. Both vectors have squared norm nine, so the sum has squared norm eighteen and norm three times square root of two. Directly, the sum is (3,0,3), also of that norm.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 2],
+        [2, -2, 1]
+      ]
+    },
+    "animation_notes": "Sum lies along the xz-diagonal."
+  },
+  {
+    "id": "D239",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "latex",
+    "theorem": "Add orthogonal (3,0) and (0,4)",
+    "question": "Use orthogonality to compute \\lVert u+v \\rVert for u = (3,0) and v = (0,4).",
+    "proof": "The vectors lie on distinct axes, so $\\lVert u+v \\rVert^2 = 9+16 = 25$, giving norm five. Directly, the sum is (3,4) whose norm is five.",
+    "parameters": {
+      "vectors": [
+        [3, 0],
+        [0, 4]
+      ]
+    },
+    "animation_notes": "Classic 3-4-5 triangle."
+  },
+  {
+    "id": "D240",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "natural_language",
+    "theorem": "Add orthogonal (1,-1) and (1,1)",
+    "question": "Use orthogonality to compute \\lVert u+v \\rVert for u = (1,-1) and v = (1,1).",
+    "proof": "The inner product is one minus one, which is zero. Both vectors have squared norm two, so the sum has squared norm four and norm two. Directly, the sum is (2,0).",
+    "parameters": {
+      "vectors": [
+        [1, -1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Horizontal sum from a diagonal pair."
+  },
+  {
+    "id": "D241",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "mixed",
+    "theorem": "Add orthogonal (2,0,0) and (0,0,2)",
+    "question": "Use orthogonality to compute \\lVert u+v \\rVert for u = (2,0,0) and v = (0,0,2).",
+    "proof": "The vectors have squared norms four and four, so the sum has squared norm eight and norm two times square root of two. Directly, the sum is (2,0,2).",
+    "parameters": {
+      "vectors": [
+        [2, 0, 0],
+        [0, 0, 2]
+      ]
+    },
+    "animation_notes": "Axis-aligned in 3D."
+  },
+  {
+    "id": "D242",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "latex",
+    "theorem": "Add orthogonal (1,1,0) and (0,0,1)",
+    "question": "Use orthogonality to compute \\lVert u+v \\rVert for u = (1,1,0) and v = (0,0,1).",
+    "proof": "The inner product vanishes. The squared norm of the sum is $2+1 = 3$, giving $\\lVert u+v \\rVert = \\sqrt{3}$.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 0],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Body diagonal of a unit cube."
+  },
+  {
+    "id": "D243",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "natural_language",
+    "theorem": "Add orthogonal (1,1,1) and (1,-1,0)",
+    "question": "Use orthogonality to compute \\lVert u+v \\rVert for u = (1,1,1) and v = (1,-1,0).",
+    "proof": "The inner product is one minus one plus zero, which is zero. The squared norms are three and two, so the sum has squared norm five and norm square root of five.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [1, -1, 0]
+      ]
+    },
+    "animation_notes": "Diagonal-plus-anti-diagonal sum."
+  },
+  {
+    "id": "D244",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "addition_orthogonal",
+    "proof_format": "mixed",
+    "theorem": "Add orthogonal (4,3) and (-3,4)",
+    "question": "Use orthogonality to compute \\lVert u+v \\rVert for u = (4,3) and v = (-3,4).",
+    "proof": "The inner product is minus twelve plus twelve, which is zero. Both have squared norm twenty-five, so the sum has squared norm fifty and norm five times square root of two. Directly, the sum is (1,7).",
+    "parameters": {
+      "vectors": [
+        [4, 3],
+        [-3, 4]
+      ]
+    },
+    "animation_notes": "Pythagorean pair adding to a diagonal direction."
+  },
+  {
+    "id": "D246",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "latex",
+    "theorem": "Gram matrix of (3,0) and (0,4)",
+    "question": "Compute the Gram matrix of v1 = (3,0) and v2 = (0,4).",
+    "proof": "Both vectors are axis-aligned and orthogonal, so the Gram matrix is diagonal: $G = \\begin{pmatrix}9&0\\\\0&16\\end{pmatrix}$.",
+    "parameters": {
+      "vectors": [
+        [3, 0],
+        [0, 4]
+      ]
+    },
+    "animation_notes": "Diagonal entries reflect scaling."
+  },
+  {
+    "id": "D247",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "natural_language",
+    "theorem": "Gram matrix of (1,1,1) and (1,1,-1)",
+    "question": "Compute the Gram matrix of v1 = (1,1,1) and v2 = (1,1,-1).",
+    "proof": "The diagonal entries are both three, since each vector has squared norm three. The off-diagonal entry equals one plus one minus one, which is one. So the Gram matrix has diagonal three and off-diagonal one.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [1, 1, -1]
+      ]
+    },
+    "animation_notes": "Symmetric positive definite matrix with eigenvalues 2 and 4."
+  },
+  {
+    "id": "D248",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "mixed",
+    "theorem": "Gram matrix of (2,0,0) and (0,3,0)",
+    "question": "Compute the Gram matrix of v1 = (2,0,0) and v2 = (0,3,0).",
+    "proof": "Both lie on coordinate axes, so the matrix is diagonal with squared norms four and nine.",
+    "parameters": {
+      "vectors": [
+        [2, 0, 0],
+        [0, 3, 0]
+      ]
+    },
+    "animation_notes": "Axis-aligned pair."
+  },
+  {
+    "id": "D249",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "latex",
+    "theorem": "Gram matrix of (1,0,1) and (0,1,1)",
+    "question": "Compute the Gram matrix of v1 = (1,0,1) and v2 = (0,1,1).",
+    "proof": "Diagonal entries are both two. The off-diagonal entry is one, from the shared z-coordinate. So $G = \\begin{pmatrix}2&1\\\\1&2\\end{pmatrix}$.",
+    "parameters": {
+      "vectors": [
+        [1, 0, 1],
+        [0, 1, 1]
+      ]
+    },
+    "animation_notes": "Symmetric with cross-term from overlap."
+  },
+  {
+    "id": "D250",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "natural_language",
+    "theorem": "Gram matrix of (1,2,3) and (4,5,6)",
+    "question": "Compute the Gram matrix of v1 = (1,2,3) and v2 = (4,5,6).",
+    "proof": "The diagonal entries are fourteen and seventy-seven, and the off-diagonal entry is four plus ten plus eighteen, that is thirty-two. So the Gram matrix is the two by two matrix with rows fourteen, thirty-two and thirty-two, seventy-seven.",
+    "parameters": {
+      "vectors": [
+        [1, 2, 3],
+        [4, 5, 6]
+      ]
+    },
+    "animation_notes": "General example with distinct entries."
+  },
+  {
+    "id": "D251",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "mixed",
+    "theorem": "Gram matrix of (1,-1,1) and (1,1,-1)",
+    "question": "Compute the Gram matrix of v1 = (1,-1,1) and v2 = (1,1,-1).",
+    "proof": "The diagonal entries are three each. The off-diagonal entry is one minus one minus one, that is minus one. So $G = \\begin{pmatrix}3&-1\\\\-1&3\\end{pmatrix}$, with determinant eight.",
+    "parameters": {
+      "vectors": [
+        [1, -1, 1],
+        [1, 1, -1]
+      ]
+    },
+    "animation_notes": "Negative off-diagonal indicates obtuse angle."
+  },
+  {
+    "id": "D252",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "latex",
+    "theorem": "Gram matrix of (1,2) and (3,4)",
+    "question": "Compute the Gram matrix of v1 = (1,2) and v2 = (3,4).",
+    "proof": "Entries: $G_{11} = 5$, $G_{22} = 25$, $G_{12} = 3+8 = 11$. So $G = \\begin{pmatrix}5&11\\\\11&25\\end{pmatrix}$, with determinant $125-121 = 4$.",
+    "parameters": {
+      "vectors": [
+        [1, 2],
+        [3, 4]
+      ]
+    },
+    "animation_notes": "Determinant four reflects the parallelogram area squared."
+  },
+  {
+    "id": "D253",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "natural_language",
+    "theorem": "Gram matrix of (1,0,0) and (1,1,0)",
+    "question": "Compute the Gram matrix of v1 = (1,0,0) and v2 = (1,1,0).",
+    "proof": "The diagonal entries are one and two, and the off-diagonal entry is one. So the Gram matrix is the two by two matrix with entries one, one, one, two. The determinant is one, so the vectors are linearly independent.",
+    "parameters": {
+      "vectors": [
+        [1, 0, 0],
+        [1, 1, 0]
+      ]
+    },
+    "animation_notes": "Det one indicates unit area parallelogram."
+  },
+  {
+    "id": "D254",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "mixed",
+    "theorem": "Gram matrix of (2,1) and (-1,2)",
+    "question": "Compute the Gram matrix of v1 = (2,1) and v2 = (-1,2).",
+    "proof": "The vectors are orthogonal, so the off-diagonal entry vanishes. Both have squared norm five, so the Gram matrix is the diagonal matrix with entries five and five.",
+    "parameters": {
+      "vectors": [
+        [2, 1],
+        [-1, 2]
+      ]
+    },
+    "animation_notes": "Orthogonal pair, diagonal Gram matrix."
+  },
+  {
+    "id": "D255",
+    "subject": "Linear Algebra",
+    "proof_family": "Vector Operations",
+    "proof_style": "gram_matrix",
+    "proof_format": "latex",
+    "theorem": "Gram matrix of (1,1,1) and (1,2,3)",
+    "question": "Compute the Gram matrix of v1 = (1,1,1) and v2 = (1,2,3).",
+    "proof": "We compute $G_{11} = 3$, $G_{22} = 14$, $G_{12} = 1+2+3 = 6$. So $G = \\begin{pmatrix}3&6\\\\6&14\\end{pmatrix}$, with determinant $42 - 36 = 6$.",
+    "parameters": {
+      "vectors": [
+        [1, 1, 1],
+        [1, 2, 3]
+      ]
+    },
+    "animation_notes": "Determinant reflects area squared of the parallelogram."
+  }
+]

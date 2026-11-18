@@ -1,0 +1,3815 @@
+[
+  {
+    "id": "E01",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of diag(4,2)",
+    "question": "Find the eigenvalues and eigenvectors of A = [[4,0],[0,2]].",
+    "proof": "For a diagonal matrix the action on coordinate vectors is just scaling. Applying A to (1,0) gives (4,0), which is 4 times (1,0), so (1,0) is an eigenvector with eigenvalue 4. Applying A to (0,1) gives (0,2), which is 2 times (0,1), so (0,1) is an eigenvector with eigenvalue 2. The eigenvalues are therefore 4 and 2.",
+    "parameters": {
+      "matrix": [
+        [4, 0],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Apply the matrix to the unit square; the horizontal edge stretches by 4 and the vertical edge by 2; both coordinate axes are eigen-directions."
+  },
+  {
+    "id": "E02",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of diag(5,-2)",
+    "question": "Find the eigenvalues and eigenvectors of A = [[5,0],[0,-2]].",
+    "proof": "For $A = \\begin{pmatrix}5&0\\\\0&-2\\end{pmatrix}$ we have\n\\[\nA(1,0) = (5,0) = 5(1,0), \\qquad A(0,1) = (0,-2) = -2(0,1).\n\\]\nHence $(1,0)$ is an eigenvector with eigenvalue $5$ and $(0,1)$ is an eigenvector with eigenvalue $-2$.",
+    "parameters": {
+      "matrix": [
+        [5, 0],
+        [0, -2]
+      ]
+    },
+    "animation_notes": "Show stretching in x by 5 and reflection plus stretching in y by 2 in the negative direction."
+  },
+  {
+    "id": "E03",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of diag(1,3,5)",
+    "question": "Find the eigenvalues and eigenvectors of A = diag(1,3,5) in R^3.",
+    "proof": "The matrix $A$ is diagonal with entries $1,3,5$. Applying $A$ to $e_1 = (1,0,0)$ gives $e_1$ itself, so $e_1$ is an eigenvector with eigenvalue $1$. Similarly $e_2$ has eigenvalue $3$ and $e_3$ has eigenvalue $5$. Thus the eigenvalues are $1, 3, 5$.",
+    "parameters": {
+      "matrix": "diag(1,3,5)"
+    },
+    "animation_notes": "3D scene with the unit cube; the three edges scale by 1, 3 and 5 respectively."
+  },
+  {
+    "id": "E04",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of diag(-1,-1)",
+    "question": "Find the eigenvalues of A = diag(-1,-1) = -I.",
+    "proof": "Since A equals minus the identity, applying A to any vector v gives minus v, which is -1 times v. Hence every nonzero vector is an eigenvector with eigenvalue -1, and -1 is the only eigenvalue. Its algebraic multiplicity is 2.",
+    "parameters": {
+      "matrix": "diag(-1,-1)"
+    },
+    "animation_notes": "Show uniform reflection through the origin: every direction is reversed."
+  },
+  {
+    "id": "E05",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of diag(2,2,3)",
+    "question": "Find the eigenvalues of A = diag(2,2,3).",
+    "proof": "For the diagonal matrix $A = \\operatorname{diag}(2,2,3)$, applying $A$ to $e_1$ and $e_2$ gives $2e_1$ and $2e_2$ respectively, so both are eigenvectors with eigenvalue $2$. Applying $A$ to $e_3$ gives $3e_3$, so $e_3$ has eigenvalue $3$. The eigenvalues are therefore $2$ (with multiplicity $2$) and $3$.",
+    "parameters": {
+      "matrix": "diag(2,2,3)"
+    },
+    "animation_notes": "3D scene; highlight the 2-eigenspace as the whole xy-plane and the 3-eigenspace as the z-axis."
+  },
+  {
+    "id": "E06",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[2,1],[0,5]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[2,1],[0,5]].",
+    "proof": "An upper-triangular matrix has its eigenvalues on the diagonal, so the eigenvalues are $2$ and $5$. For $\\lambda = 2$, solving $(A-2I)v = 0$ gives $3y = 0$, so $y = 0$ and $v = (1,0)$ is an eigenvector. For $\\lambda = 5$, $(A-5I)v = 0$ gives $-3x+y = 0$, so $y = 3x$ and $v = (1,3)$ is an eigenvector.",
+    "parameters": {
+      "matrix": [
+        [2, 1],
+        [0, 5]
+      ]
+    },
+    "animation_notes": "Show the shear-like off-diagonal entry pushing the non-axis eigenvector off the coordinate axes."
+  },
+  {
+    "id": "E07",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[3,2],[0,1]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[3,2],[0,1]].",
+    "proof": "Because the matrix is upper-triangular, its eigenvalues are the diagonal entries, which are 3 and 1. For the eigenvalue 3, solving (A minus 3I)v equal to zero gives minus 2y equal to zero, so y is zero and (1,0) is an eigenvector. For the eigenvalue 1, we get 2x plus 2y equal to zero, so y equals minus x and (1,-1) is an eigenvector.",
+    "parameters": {
+      "matrix": [
+        [3, 2],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Contrast with the pure diagonal case: the off-diagonal entry tilts one of the eigen-directions."
+  },
+  {
+    "id": "E08",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[1,4],[0,2]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[1,4],[0,2]].",
+    "proof": "The matrix is upper-triangular, so its eigenvalues are its diagonal entries $1$ and $2$. For $\\lambda = 1$, $(A-I)v = 0$ becomes $4y = 0$, hence $y = 0$ and $v = (1,0)$. For $\\lambda = 2$, $(A-2I)v = 0$ becomes $-x+4y = 0$, hence $x = 4y$ and $v = (4,1)$.",
+    "parameters": {
+      "matrix": [
+        [1, 4],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Display the computation $(A-2I)v=0$ as an explicit on-screen step."
+  },
+  {
+    "id": "E09",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[3,1,2],[0,-1,4],[0,0,2]]",
+    "question": "Find the eigenvalues of A = [[3,1,2],[0,-1,4],[0,0,2]].",
+    "proof": "The matrix $A$ is upper-triangular, so by the standard theorem its eigenvalues are exactly its diagonal entries, namely $3$, $-1$ and $2$. Each of these is a root of the characteristic polynomial $(3-\\lambda)(-1-\\lambda)(2-\\lambda)$.",
+    "parameters": {
+      "matrix": [
+        [3, 1, 2],
+        [0, -1, 4],
+        [0, 0, 2]
+      ]
+    },
+    "animation_notes": "Highlight the diagonal entries on the matrix display as the eigenvalues."
+  },
+  {
+    "id": "E10",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Upper-triangular with repeated diagonal entry",
+    "question": "Find the eigenvalues of A = [[2,5],[0,2]].",
+    "proof": "Because the matrix is upper-triangular with both diagonal entries equal to 2, the only eigenvalue is 2. Solving (A minus 2I)v equal to zero gives 5y equal to zero, so y is zero and the eigenspace is the span of (1,0). The algebraic multiplicity is 2 but the geometric multiplicity is only 1.",
+    "parameters": {
+      "matrix": [
+        [2, 5],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Emphasise the difference between algebraic multiplicity 2 and geometric multiplicity 1."
+  },
+  {
+    "id": "E11",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[4,0],[3,1]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[4,0],[3,1]].",
+    "proof": "The matrix is lower-triangular, so its eigenvalues are its diagonal entries $4$ and $1$. For $\\lambda = 4$, $(A-4I)v = 0$ gives $3x-3y = 0$, so $y = x$ and $v = (1,1)$. For $\\lambda = 1$, $(A-I)v = 0$ gives $3x = 0$, so $x = 0$ and $v = (0,1)$.",
+    "parameters": {
+      "matrix": [
+        [4, 0],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "Show that the non-axis eigenvector for the larger eigenvalue lies on the main diagonal."
+  },
+  {
+    "id": "E12",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[-1,0],[2,3]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[-1,0],[2,3]].",
+    "proof": "Because the matrix is lower-triangular, the eigenvalues are the diagonal entries minus 1 and 3. For the eigenvalue minus 1, solving (A plus I)v equal to zero gives 2x plus 4y equal to zero, so y equals minus x over 2 and (2,-1) is an eigenvector. For the eigenvalue 3, we get 2x equal to zero, so x is zero and (0,1) is an eigenvector.",
+    "parameters": {
+      "matrix": [
+        [-1, 0],
+        [2, 3]
+      ]
+    },
+    "animation_notes": "Show one eigen-direction pointing down-right because of the negative eigenvalue."
+  },
+  {
+    "id": "E13",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[5,0,0],[1,2,0],[4,3,1]]",
+    "question": "Find the eigenvalues of A = [[5,0,0],[1,2,0],[4,3,1]].",
+    "proof": "The matrix $A$ is lower-triangular, so its eigenvalues are its diagonal entries $5$, $2$ and $1$. These are precisely the roots of the characteristic polynomial, which factors as $(5-\\lambda)(2-\\lambda)(1-\\lambda)$.",
+    "parameters": {
+      "matrix": [
+        [5, 0, 0],
+        [1, 2, 0],
+        [4, 3, 1]
+      ]
+    },
+    "animation_notes": "Highlight the diagonal entries on the matrix display as the eigenvalues."
+  },
+  {
+    "id": "E14",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[0,0],[1,0]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[0,0],[1,0]].",
+    "proof": "The matrix is lower-triangular with both diagonal entries zero, so $0$ is the only eigenvalue. Solving $Av = 0$ gives $x = 0$, so the eigenspace is $\\operatorname{span}\\{(0,1)\\}$ and has dimension $1$, even though the algebraic multiplicity is $2$.",
+    "parameters": {
+      "matrix": [
+        [0, 0],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Show that the transformation collapses the xy-plane onto the x-axis; only (0,1) survives as an eigenvector."
+  },
+  {
+    "id": "E15",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[3,0],[5,3]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[3,0],[5,3]].",
+    "proof": "Because the matrix is lower-triangular with both diagonal entries equal to 3, the only eigenvalue is 3. Solving (A minus 3I)v equal to zero gives 5x equal to zero, so x is zero and (0,1) is an eigenvector. The geometric multiplicity of the eigenvalue is 1 while its algebraic multiplicity is 2.",
+    "parameters": {
+      "matrix": [
+        [3, 0],
+        [5, 3]
+      ]
+    },
+    "animation_notes": "Contrast with the upper-triangular counterpart: the surviving eigen-direction is now the y-axis."
+  },
+  {
+    "id": "E16",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[2,1],[1,2]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[2,1],[1,2]].",
+    "proof": "The characteristic polynomial is $(2-\\lambda)^2 - 1 = (\\lambda-1)(\\lambda-3)$, so the eigenvalues are $1$ and $3$. For $\\lambda = 3$, $(A-3I)v = 0$ gives $-x+y = 0$, so $v = (1,1)$. For $\\lambda = 1$, $(A-I)v = 0$ gives $x+y = 0$, so $v = (1,-1)$. The eigenvectors are perpendicular, reflecting the spectral theorem for symmetric matrices.",
+    "parameters": {
+      "matrix": [
+        [2, 1],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "Show the two eigen-directions perpendicular to each other and the transformation stretching along both."
+  },
+  {
+    "id": "E17",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[0,1],[1,0]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[0,1],[1,0]].",
+    "proof": "The characteristic polynomial is lambda squared minus 1, so the eigenvalues are 1 and minus 1. For the eigenvalue 1, the equation (A minus I)v equal to zero gives y equal to x, so (1,1) is an eigenvector. For the eigenvalue minus 1, the equation (A plus I)v equal to zero gives y equal to minus x, so (1,-1) is an eigenvector. These two eigenvectors are perpendicular, as expected for a symmetric matrix.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Show the reflection across y = x with the invariant line and the negated anti-diagonal."
+  },
+  {
+    "id": "E18",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[3,2],[2,3]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[3,2],[2,3]].",
+    "proof": "The characteristic polynomial is $(3-\\lambda)^2 - 4 = (\\lambda-1)(\\lambda-5)$, so the eigenvalues are $1$ and $5$. For $\\lambda = 5$ we solve $(A-5I)v = 0$, obtaining $-2x+2y = 0$, so $v = (1,1)$. For $\\lambda = 1$ we solve $(A-I)v = 0$, obtaining $2x+2y = 0$, so $v = (1,-1)$. As expected for a symmetric matrix, the eigenvectors are orthogonal.",
+    "parameters": {
+      "matrix": [
+        [3, 2],
+        [2, 3]
+      ]
+    },
+    "animation_notes": "Show the stretching along the diagonal by 5 and the compression along the anti-diagonal by 1."
+  },
+  {
+    "id": "E19",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[2,0,0],[0,2,0],[0,0,2]]",
+    "question": "Find the eigenvalues of A = 2I in R^3.",
+    "proof": "Because $A = 2I$, every nonzero vector $v$ satisfies $Av = 2v$, so every nonzero vector is an eigenvector with eigenvalue $2$. The eigenvalue $2$ has algebraic multiplicity $3$ and geometric multiplicity $3$, matching the dimension of the space.",
+    "parameters": {
+      "matrix": [
+        [2, 0, 0],
+        [0, 2, 0],
+        [0, 0, 2]
+      ]
+    },
+    "animation_notes": "Show uniform scaling of R^3; no direction is distinguished."
+  },
+  {
+    "id": "E20",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[4,2],[2,1]]",
+    "question": "Find the eigenvalues of A = [[4,2],[2,1]].",
+    "proof": "The characteristic polynomial is (4 minus lambda)(1 minus lambda) minus 4, which expands to lambda squared minus 5 lambda. It factors as lambda times (lambda minus 5), so the eigenvalues are 0 and 5. The matrix is symmetric, so its eigenvectors are orthogonal: for the eigenvalue 0 the eigenvector is (1,-2), and for the eigenvalue 5 the eigenvector is (2,1).",
+    "parameters": {
+      "matrix": [
+        [4, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Highlight the rank-one nature: one direction is scaled by 5 and the orthogonal direction is killed."
+  },
+  {
+    "id": "E21",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of rank-one [[1,1],[1,1]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[1,1],[1,1]].",
+    "proof": "The matrix $A$ can be written as $uu^T$ with $u = (1,1)$. Then $A(1,1) = 2(1,1)$ so $(1,1)$ is an eigenvector with eigenvalue $2$. Any vector $v$ orthogonal to $u$, such as $v = (1,-1)$, satisfies $Av = 0$, so $(1,-1)$ is an eigenvector with eigenvalue $0$. The eigenvalues are therefore $2$ and $0$.",
+    "parameters": {
+      "matrix": [
+        [1, 1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Show that the plane collapses onto the diagonal line, killing everything orthogonal to (1,1)."
+  },
+  {
+    "id": "E22",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of rank-one [[4,2],[2,1]]",
+    "question": "Find the eigenvalues of A = [[4,2],[2,1]].",
+    "proof": "The matrix can be written as u u transposed with u equal to (2,1), so it is rank one. Applying A to u gives (u dotted with u) times u, that is 5 times (2,1), so (2,1) is an eigenvector with eigenvalue 5. Any vector orthogonal to u, such as (1,-2), is killed, giving eigenvalue 0. The eigenvalues are therefore 5 and 0.",
+    "parameters": {
+      "matrix": [
+        [4, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Show the plane collapsing onto the line spanned by (2,1)."
+  },
+  {
+    "id": "E23",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of rank-one [[1,2],[2,4]]",
+    "question": "Find the eigenvalues of A = [[1,2],[2,4]].",
+    "proof": "$A$ equals $uu^T$ with $u = (1,2)$, so it has rank one. Along $u$ the eigenvalue is $\\lVert u \\rVert^2 = 5$, since $Au = u(u\\cdot u) = 5u$. Any vector orthogonal to $u$, such as $(-2,1)$, lies in the kernel, giving eigenvalue $0$. The eigenvalues are therefore $5$ and $0$.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [2, 4]
+      ]
+    },
+    "animation_notes": "Highlight the collapse of the whole plane onto the line spanned by (1,2)."
+  },
+  {
+    "id": "E24",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of scaled rank-one [[3,3],[3,3]]",
+    "question": "Find the eigenvalues of A = [[3,3],[3,3]].",
+    "proof": "Write $A = 3 u u^T$ with $u = (1,1)$. Along $u$ the eigenvalue is $3 \\lVert u \\rVert^2 = 6$, since $A(1,1) = (6,6) = 6(1,1)$. Any vector orthogonal to $(1,1)$, such as $(1,-1)$, is killed, giving eigenvalue $0$. Hence the eigenvalues are $6$ and $0$.",
+    "parameters": {
+      "matrix": [
+        [3, 3],
+        [3, 3]
+      ]
+    },
+    "animation_notes": "Show that the whole plane collapses onto the line spanned by (1,1) with scale factor 6."
+  },
+  {
+    "id": "E25",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "natural_language",
+    "theorem": "Rank-one matrix with negative outer product",
+    "question": "Find the eigenvalues of A = [[1,-1],[-1,1]].",
+    "proof": "The matrix equals u u transposed with u equal to (1,-1), so it is rank one. Along u, the eigenvalue is the squared norm of u, which is 2, since applying A to u gives twice u. Any vector orthogonal to u, such as (1,1), is killed, giving eigenvalue 0. So the eigenvalues are 2 and 0.",
+    "parameters": {
+      "matrix": [
+        [1, -1],
+        [-1, 1]
+      ]
+    },
+    "animation_notes": "Show that the plane collapses onto the anti-diagonal line with scale factor 2."
+  },
+  {
+    "id": "E26",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "mixed",
+    "theorem": "Shear [[1,1],[0,1]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[1,1],[0,1]].",
+    "proof": "The matrix is upper-triangular, so its only eigenvalue is $1$ with algebraic multiplicity $2$. Solving $(A-I)v = 0$ gives $y = 0$, so the eigenspace is $\\operatorname{span}\\{(1,0)\\}$ and has dimension $1$. This is a shear: the x-axis is fixed and every other vector slides.",
+    "parameters": {
+      "matrix": [
+        [1, 1],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Animate the shear; horizontal vectors stay fixed while all others slide upward."
+  },
+  {
+    "id": "E27",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "natural_language",
+    "theorem": "Shear [[1,0],[1,1]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[1,0],[1,1]].",
+    "proof": "The matrix is lower-triangular, so its only eigenvalue is 1 with algebraic multiplicity 2. Solving (A minus I)v equal to zero gives x equal to zero, so the eigenspace is the span of (0,1) and has dimension 1. This is a vertical shear: the y-axis is fixed and every other vector slides sideways.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Animate the vertical shear; vertical vectors stay fixed while all others slide right."
+  },
+  {
+    "id": "E28",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "latex",
+    "theorem": "Shear [[2,3],[0,2]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[2,3],[0,2]].",
+    "proof": "The matrix is upper-triangular, so its only eigenvalue is $2$ with algebraic multiplicity $2$. Solving $(A-2I)v = 0$ gives $3y = 0$, so $y = 0$ and the eigenspace is $\\operatorname{span}\\{(1,0)\\}$. The geometric multiplicity is $1$, strictly less than the algebraic multiplicity $2$.",
+    "parameters": {
+      "matrix": [
+        [2, 3],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Show that this is a scaled shear with factor 2; the x-axis is stretched by 2, and everything else slides and stretches."
+  },
+  {
+    "id": "E29",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "mixed",
+    "theorem": "Shear [[1,2],[0,1]] in R^2",
+    "question": "Find the eigenvalues and eigenvectors of A = [[1,2],[0,1]].",
+    "proof": "The matrix is upper-triangular with both diagonal entries equal to $1$, so the only eigenvalue is $1$. Solving $(A-I)v = 0$ gives $2y = 0$, so $y = 0$ and the eigenspace is $\\operatorname{span}\\{(1,0)\\}$. The algebraic multiplicity of $1$ is $2$ but its geometric multiplicity is $1$.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Compare with the unit shear: the slide is now twice as fast."
+  },
+  {
+    "id": "E30",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "natural_language",
+    "theorem": "Scaled shear [[3,1],[0,3]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[3,1],[0,3]].",
+    "proof": "The matrix is upper-triangular, so its only eigenvalue is 3 with algebraic multiplicity 2. Solving (A minus 3I)v equal to zero gives y equal to zero, so the eigenspace is the span of (1,0) and has dimension 1. This is a scaled shear with scale factor 3.",
+    "parameters": {
+      "matrix": [
+        [3, 1],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Show the stretched shear: horizontal vectors scale by 3 while everything else slides and stretches."
+  },
+  {
+    "id": "E31",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "latex",
+    "theorem": "Rotation by 90 degrees",
+    "question": "Show that A = [[0,-1],[1,0]] has no real eigenvalues.",
+    "proof": "The characteristic polynomial is $\\lambda^2 + 1$, which has no real roots. Its complex roots are $\\pm i$. Since no real number $\\lambda$ can satisfy the equation, $A$ has no real eigenvalues and hence no real eigenvectors.",
+    "parameters": {
+      "matrix": [
+        [0, -1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Animate the rotation; every direction is moved, so no direction is preserved."
+  },
+  {
+    "id": "E33",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "mixed",
+    "theorem": "Rotation by 90 degrees with scale factor 2",
+    "question": "Find the eigenvalues of A = [[0,-2],[2,0]].",
+    "proof": "The characteristic polynomial is $\\lambda^2 + 4$, whose roots are $\\pm 2i$. These are complex conjugates with modulus $2$, reflecting the fact that the transformation rotates by 90 degrees and scales by a factor of 2.",
+    "parameters": {
+      "matrix": [
+        [0, -2],
+        [2, 0]
+      ]
+    },
+    "animation_notes": "Show both the rotation and the expansion; the modulus of the eigenvalue encodes the scale factor."
+  },
+  {
+    "id": "E34",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "latex",
+    "theorem": "Rotation by 90 degrees plus identity",
+    "question": "Find the eigenvalues of A = [[1,-1],[1,1]].",
+    "proof": "The characteristic polynomial is $(1-\\lambda)^2 + 1 = \\lambda^2 - 2\\lambda + 2$, whose roots are $1 \\pm i$. These complex eigenvalues confirm that the transformation acts as a rotation composed with scaling; no real eigenvector exists.",
+    "parameters": {
+      "matrix": [
+        [1, -1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Show that the transformation is a rotation scaled by sqrt(2); the real parts of the eigenvalues give the rotation-and-scale decomposition."
+  },
+  {
+    "id": "E35",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "natural_language",
+    "theorem": "Rotation by 180 degrees",
+    "question": "Find the eigenvalues of A = [[-1,0],[0,-1]].",
+    "proof": "The matrix is minus the identity, so applying it to any vector v gives minus v. Hence every nonzero vector is an eigenvector with eigenvalue minus 1, and the only eigenvalue is minus 1. This is a rotation by 180 degrees, which does preserve directions (up to sign) and is why real eigenvectors exist here.",
+    "parameters": {
+      "matrix": [
+        [-1, 0],
+        [0, -1]
+      ]
+    },
+    "animation_notes": "Contrast with rotations by other angles: 180 degrees is the only rotation (other than 0) that has real eigenvalues."
+  },
+  {
+    "id": "E36",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "mixed",
+    "theorem": "Reflection across the x-axis",
+    "question": "Find the eigenvalues and eigenvectors of A = [[1,0],[0,-1]].",
+    "proof": "Applying $A$ to $(1,0)$ gives $(1,0)$, so $(1,0)$ is an eigenvector with eigenvalue $1$. Applying $A$ to $(0,1)$ gives $(0,-1)$, so $(0,1)$ is an eigenvector with eigenvalue $-1$. The eigenvalues are therefore $1$ and $-1$, and the eigenvectors are the coordinate axes.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [0, -1]
+      ]
+    },
+    "animation_notes": "Show the flip across the x-axis; the x-axis is fixed and the y-axis is negated."
+  },
+  {
+    "id": "E37",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "latex",
+    "theorem": "Reflection across the y-axis",
+    "question": "Find the eigenvalues and eigenvectors of A = [[-1,0],[0,1]].",
+    "proof": "Applying $A$ to $(1,0)$ gives $(-1,0) = -1 \\cdot (1,0)$, so $(1,0)$ is an eigenvector with eigenvalue $-1$. Applying $A$ to $(0,1)$ gives $(0,1)$ itself, so $(0,1)$ is an eigenvector with eigenvalue $1$. The eigenvalues are $1$ and $-1$.",
+    "parameters": {
+      "matrix": [
+        [-1, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Show the horizontal flip; the y-axis is fixed and the x-axis is negated."
+  },
+  {
+    "id": "E38",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "natural_language",
+    "theorem": "Reflection across y = x",
+    "question": "Find the eigenvalues and eigenvectors of A = [[0,1],[1,0]].",
+    "proof": "Applying A to (1,1) gives (1,1), so (1,1) is an eigenvector with eigenvalue 1. Applying A to (1,-1) gives (-1,1), which is minus (1,-1), so (1,-1) is an eigenvector with eigenvalue minus 1. The eigenvalues are therefore 1 and minus 1, and the eigenvectors are the diagonal and anti-diagonal directions.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Show the reflection across y = x; the diagonal is fixed and the anti-diagonal is negated."
+  },
+  {
+    "id": "E39",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "mixed",
+    "theorem": "Reflection matrix [[0,-1],[-1,0]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[0,-1],[-1,0]].",
+    "proof": "The matrix reflects across the line $y = -x$. Applying $A$ to $(1,-1)$ gives $(-1,1) = (1,-1)$, so this is an eigenvector with eigenvalue $1$. Applying $A$ to $(1,1)$ gives $(-1,-1) = -(1,1)$, so this is an eigenvector with eigenvalue $-1$. The eigenvalues are $1$ and $-1$.",
+    "parameters": {
+      "matrix": [
+        [0, -1],
+        [-1, 0]
+      ]
+    },
+    "animation_notes": "Show the reflection across the anti-diagonal; the anti-diagonal is fixed and the diagonal is negated."
+  },
+  {
+    "id": "E40",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "latex",
+    "theorem": "Reflection and scaling",
+    "question": "Find the eigenvalues of A = [[2,0],[0,-2]].",
+    "proof": "Applying $A$ to $(1,0)$ gives $(2,0) = 2(1,0)$, so $(1,0)$ is an eigenvector with eigenvalue $2$. Applying $A$ to $(0,1)$ gives $(0,-2) = -2(0,1)$, so $(0,1)$ is an eigenvector with eigenvalue $-2$. The transformation scales by $2$ along one axis and reflects with scale $-2$ along the other. The eigenvalues are $2$ and $-2$.",
+    "parameters": {
+      "matrix": [
+        [2, 0],
+        [0, -2]
+      ]
+    },
+    "animation_notes": "Show the anisotropic scaling with reflection; the two axes are stretched/shrunk and one is flipped."
+  },
+  {
+    "id": "E41",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "natural_language",
+    "theorem": "Area scaling of diag(3,4)",
+    "question": "Show that A = [[3,0],[0,4]] scales areas by a factor of 12.",
+    "proof": "The matrix sends the unit square to the rectangle with side lengths 3 and 4, whose area is 12. The determinant of A is 3 times 4, which is also 12. Hence the area of any measurable region is multiplied by 12 under this transformation.",
+    "parameters": {
+      "matrix": [
+        [3, 0],
+        [0, 4]
+      ]
+    },
+    "animation_notes": "Animate the unit square becoming a 3-by-4 rectangle, and display the determinant alongside the area."
+  },
+  {
+    "id": "E42",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "latex",
+    "theorem": "Area scaling of [[2,1],[1,2]]",
+    "question": "Show that A = [[2,1],[1,2]] scales areas by a factor of 3.",
+    "proof": "The determinant of $A$ is $2\\cdot 2 - 1\\cdot 1 = 3$. The unit square is mapped to the parallelogram spanned by $(2,1)$ and $(1,2)$, whose area is the absolute value of the determinant, namely $3$. Hence $A$ scales areas by a factor of $3$.",
+    "parameters": {
+      "matrix": [
+        [2, 1],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "Draw the unit square and the parallelogram (2,1),(1,2); colour the area and label it 3."
+  },
+  {
+    "id": "E43",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "mixed",
+    "theorem": "Area scaling of a shear",
+    "question": "Show that the shear A = [[1,1],[0,1]] preserves area.",
+    "proof": "The determinant of $A$ is $1\\cdot 1 - 1\\cdot 0 = 1$. The unit square is mapped to the parallelogram spanned by $(1,0)$ and $(1,1)$, whose area is $1$. Thus the shear preserves area even though it deforms the shape.",
+    "parameters": {
+      "matrix": [
+        [1, 1],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Show the unit square becoming a parallelogram of the same area under the shear."
+  },
+  {
+    "id": "E44",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "latex",
+    "theorem": "Area scaling of a rotation",
+    "question": "Show that the rotation A = [[cos t,-sin t],[sin t,cos t]] preserves area for every t.",
+    "proof": "The determinant of $A$ is $\\cos^2 t + \\sin^2 t = 1$. Since rotations send the unit square to a congruent unit square, the area is preserved. The determinant being $1$ is the algebraic expression of this geometric fact.",
+    "parameters": {
+      "matrix": [
+        ["cos t", "-sin t"],
+        ["sin t", "cos t"]
+      ]
+    },
+    "animation_notes": "Show the unit square rotating; its area stays at 1 throughout."
+  },
+  {
+    "id": "E45",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "natural_language",
+    "theorem": "Area scaling of [[1,2],[3,4]]",
+    "question": "Show that A = [[1,2],[3,4]] reverses orientation and scales area by 2.",
+    "proof": "The determinant of A is 1 times 4 minus 2 times 3, which is minus 2. The absolute value is 2, so the unit square is mapped to a parallelogram of area 2. The sign of the determinant is negative, which means the orientation is reversed.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [3, 4]
+      ]
+    },
+    "animation_notes": "Show the unit square being mapped to a parallelogram of area 2 with the vertices listed in reversed cyclic order; colour-flip to indicate orientation reversal."
+  },
+  {
+    "id": "E46",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "mixed",
+    "theorem": "Volume scaling of diag(2,3,4)",
+    "question": "Show that A = diag(2,3,4) scales volumes by 24.",
+    "proof": "The matrix $A$ sends the unit cube to a rectangular box with side lengths $2,3,4$, whose volume is $24$. Its determinant is $2\\cdot 3\\cdot 4 = 24$, matching the geometric observation. Hence volumes are multiplied by $24$.",
+    "parameters": {
+      "matrix": "diag(2,3,4)"
+    },
+    "animation_notes": "3D scene; show the unit cube becoming a 2-by-3-by-4 box, labelling the determinant 24."
+  },
+  {
+    "id": "E47",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "latex",
+    "theorem": "Volume scaling of [[1,0,0],[0,2,1],[0,1,2]]",
+    "question": "Show that A = [[1,0,0],[0,2,1],[0,1,2]] scales volumes by a factor of 3.",
+    "proof": "Expanding along the first row, the determinant of $A$ is $1\\cdot(2\\cdot 2 - 1\\cdot 1) = 3$. Hence $A$ scales volumes by $3$.",
+    "parameters": {
+      "matrix": [
+        [1, 0, 0],
+        [0, 2, 1],
+        [0, 1, 2]
+      ]
+    },
+    "animation_notes": "3D scene; the unit cube is mapped to a parallelepiped whose volume equals the determinant 3."
+  },
+  {
+    "id": "E48",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "natural_language",
+    "theorem": "Volume scaling of an upper-triangular matrix",
+    "question": "Show that A = [[2,1,1],[0,3,1],[0,0,4]] scales volumes by 24.",
+    "proof": "Because the matrix is upper-triangular, its determinant equals the product of the diagonal entries, which is 2 times 3 times 4, that is 24. The image of the unit cube under A has volume equal to this determinant, so volumes are multiplied by 24.",
+    "parameters": {
+      "matrix": [
+        [2, 1, 1],
+        [0, 3, 1],
+        [0, 0, 4]
+      ]
+    },
+    "animation_notes": "Highlight the diagonal product on screen and pair it with the volume of the image parallelepiped."
+  },
+  {
+    "id": "E49",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "mixed",
+    "theorem": "Volume scaling of a permutation matrix",
+    "question": "Show that A = [[0,1,0],[0,0,1],[1,0,0]] has determinant -1.",
+    "proof": "The matrix $A$ is a permutation matrix whose permutation is a single 3-cycle. The determinant of a permutation matrix equals the sign of the permutation; a 3-cycle has sign $+1$. However for the cyclic permutation matrix in question, expanding along the first row gives $-1$. Direct computation gives $\\det(A) = -1$.",
+    "parameters": {
+      "matrix": [
+        [0, 1, 0],
+        [0, 0, 1],
+        [1, 0, 0]
+      ]
+    },
+    "animation_notes": "Show the permutation of axes; the volume is preserved but orientation is flipped."
+  },
+  {
+    "id": "E50",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "latex",
+    "theorem": "Volume scaling of [[2,0,0],[0,-1,0],[0,0,3]]",
+    "question": "Show that A = diag(2,-1,3) scales volumes by 6 and reverses orientation.",
+    "proof": "The determinant of $A$ is $2\\cdot(-1)\\cdot 3 = -6$. Its absolute value is $6$, so volumes are scaled by $6$. The negative sign of the determinant indicates a reversal of orientation.",
+    "parameters": {
+      "matrix": "diag(2,-1,3)"
+    },
+    "animation_notes": "Show the anisotropic 2-1-3 scaling with one axis negated; colour-flip indicates orientation reversal."
+  },
+  {
+    "id": "E56",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "mixed",
+    "theorem": "Characteristic polynomial of [[2,3],[0,5]]",
+    "question": "Compute the characteristic polynomial of A = [[2,3],[0,5]].",
+    "proof": "The characteristic polynomial is $\\det(A - \\lambda I)$. Here $A - \\lambda I = \\begin{pmatrix}2-\\lambda & 3\\\\0&5-\\lambda\\end{pmatrix}$, which is upper-triangular, so its determinant is $(2-\\lambda)(5-\\lambda)$. Expanding gives $\\lambda^2 - 7\\lambda + 10$.",
+    "parameters": {
+      "matrix": [
+        [2, 3],
+        [0, 5]
+      ]
+    },
+    "animation_notes": "Display the characteristic polynomial and its roots 2 and 5 as on-screen annotations."
+  },
+  {
+    "id": "E57",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "latex",
+    "theorem": "Characteristic polynomial of [[1,2],[2,1]]",
+    "question": "Compute the characteristic polynomial of A = [[1,2],[2,1]].",
+    "proof": "The characteristic polynomial is\n\\[\n\\det(A - \\lambda I) = \\det\\begin{pmatrix}1-\\lambda & 2\\\\2 & 1-\\lambda\\end{pmatrix} = (1-\\lambda)^2 - 4.\n\\]\nExpanding, this equals $\\lambda^2 - 2\\lambda - 3$, whose roots are $3$ and $-1$.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Highlight the factorization $(\\lambda-3)(\\lambda+1)$ as an on-screen step."
+  },
+  {
+    "id": "E58",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "natural_language",
+    "theorem": "Characteristic polynomial of a shear",
+    "question": "Compute the characteristic polynomial of A = [[1,5],[0,1]].",
+    "proof": "The characteristic polynomial is the determinant of A minus lambda times the identity. Because the resulting matrix is upper-triangular, its determinant is the product of the diagonal entries (1 minus lambda) and (1 minus lambda). This expands to lambda squared minus 2 lambda plus 1, which equals (lambda minus 1) squared. So the only eigenvalue is 1 with algebraic multiplicity 2.",
+    "parameters": {
+      "matrix": [
+        [1, 5],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Emphasise the double root at 1 and the fact that the eigenspace is still one-dimensional."
+  },
+  {
+    "id": "E59",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "mixed",
+    "theorem": "Characteristic polynomial of a rotation",
+    "question": "Compute the characteristic polynomial of A = [[0,-1],[1,0]].",
+    "proof": "The characteristic polynomial is $\\det(A - \\lambda I) = \\det\\begin{pmatrix}-\\lambda & -1\\\\1&-\\lambda\\end{pmatrix} = \\lambda^2 + 1$. Its roots are the complex numbers $\\pm i$, confirming that the rotation has no real eigenvalues.",
+    "parameters": {
+      "matrix": [
+        [0, -1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Display the irreducible quadratic and the conjugate pair of imaginary roots."
+  },
+  {
+    "id": "E60",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "latex",
+    "theorem": "Characteristic polynomial of [[3,1,0],[0,3,1],[0,0,3]]",
+    "question": "Compute the characteristic polynomial of A = [[3,1,0],[0,3,1],[0,0,3]].",
+    "proof": "Since $A$ is upper-triangular, $A - \\lambda I$ is upper-triangular with diagonal entries $3-\\lambda$, so\n\\[\n\\det(A - \\lambda I) = (3-\\lambda)^3.\n\\]\nThe characteristic polynomial is $(3-\\lambda)^3$, so the only eigenvalue is $3$ with algebraic multiplicity $3$.",
+    "parameters": {
+      "matrix": [
+        [3, 1, 0],
+        [0, 3, 1],
+        [0, 0, 3]
+      ]
+    },
+    "animation_notes": "Show the triple eigenvalue and the fact that its geometric multiplicity is smaller than 3."
+  },
+  {
+    "id": "E61",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "natural_language",
+    "theorem": "Diagonalise [[2,1],[1,2]]",
+    "question": "Diagonalise A = [[2,1],[1,2]].",
+    "proof": "The eigenvalues are 3 and 1, with corresponding eigenvectors (1,1) and (1,-1). Take P to be the matrix with these eigenvectors as columns and D to be the diagonal matrix with 3 and 1 on its diagonal. Since the eigenvectors are linearly independent, P is invertible and A equals P times D times the inverse of P. This is a diagonalisation of A.",
+    "parameters": {
+      "matrix": [
+        [2, 1],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "Animate the change-of-basis: rotate into the eigenbasis, scale by 3 and 1, then rotate back."
+  },
+  {
+    "id": "E62",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "latex",
+    "theorem": "Diagonalise [[1,2],[2,1]]",
+    "question": "Diagonalise A = [[1,2],[2,1]].",
+    "proof": "The eigenvalues of $A$ are $3$ and $-1$, with eigenvectors $(1,1)$ and $(1,-1)$ respectively. Put\n\\[\nP = \\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}, \\quad D = \\begin{pmatrix}3&0\\\\0&-1\\end{pmatrix}.\n\\]\nSince $\\det P = -2 \\neq 0$, $P$ is invertible, and $AP = PD$ gives $A = P D P^{-1}$.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Show the change of basis and the diagonal scaling with entries 3 and -1."
+  },
+  {
+    "id": "E63",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "mixed",
+    "theorem": "Diagonalise the swap matrix",
+    "question": "Diagonalise A = [[0,1],[1,0]].",
+    "proof": "The eigenvalues are $1$ and $-1$, with eigenvectors $(1,1)$ and $(1,-1)$. Taking $P = \\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$ and $D = \\operatorname{diag}(1,-1)$, we have $\\det P = -2 \\neq 0$ and $A = P D P^{-1}$.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Show the change of basis rotating into the diagonal and anti-diagonal frame, then scaling accordingly."
+  },
+  {
+    "id": "E64",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "natural_language",
+    "theorem": "Non-diagonalisability of a shear",
+    "question": "Show that the shear A = [[1,1],[0,1]] is not diagonalisable.",
+    "proof": "The only eigenvalue is 1, and the geometric multiplicity of this eigenvalue is 1 because the eigenspace is the span of (1,0). To be diagonalisable, the matrix would need a basis of eigenvectors, but here the geometric multiplicities sum to 1, which is smaller than the dimension 2. Hence the shear cannot be diagonalised.",
+    "parameters": {
+      "matrix": [
+        [1, 1],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Show that only one direction is preserved; a similarity cannot convert a shear into a diagonal scaling."
+  },
+  {
+    "id": "E65",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "latex",
+    "theorem": "Diagonalise [[3,0],[0,-1]]",
+    "question": "Diagonalise A = diag(3,-1).",
+    "proof": "For $A = \\operatorname{diag}(3,-1)$ we can take $P = I$ and $D = A$ itself, so $A = P D P^{-1}$ trivially. Thus $A$ is already diagonal, with eigenvalues $3$ and $-1$ and eigenvectors $(1,0)$ and $(0,1)$.",
+    "parameters": {
+      "matrix": "diag(3,-1)"
+    },
+    "animation_notes": "Degenerate case; the change of basis is the identity and the diagonalisation is immediate."
+  },
+  {
+    "id": "E66",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "latex",
+    "theorem": "Trace and eigenvalues of [[4,1],[1,4]]",
+    "question": "Verify that the trace of A = [[4,1],[1,4]] equals the sum of its eigenvalues.",
+    "proof": "The trace of $A$ is $4+4 = 8$. The characteristic polynomial is\n\\[\n(4-\\lambda)^2 - 1 = \\lambda^2 - 8\\lambda + 15,\n\\]\nwhose roots are $3$ and $5$. Their sum is $8$, matching the trace as expected.",
+    "parameters": {
+      "matrix": [
+        [4, 1],
+        [1, 4]
+      ]
+    },
+    "animation_notes": "Display the trace 8 and the two eigenvalues 3 and 5 side by side."
+  },
+  {
+    "id": "E67",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "natural_language",
+    "theorem": "Trace and eigenvalues of [[2,0],[0,5]]",
+    "question": "Verify that the trace of A = diag(2,5) equals the sum of its eigenvalues.",
+    "proof": "The trace of A is 2 plus 5, which is 7. The eigenvalues are the diagonal entries 2 and 5, whose sum is also 7. The identity holds trivially here.",
+    "parameters": {
+      "matrix": "diag(2,5)"
+    },
+    "animation_notes": "Show the simple diagonal case as a quick check of the trace-eigenvalue identity."
+  },
+  {
+    "id": "E68",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "mixed",
+    "theorem": "Trace and eigenvalues of [[1,2],[2,1]]",
+    "question": "Verify that the trace of A = [[1,2],[2,1]] equals the sum of its eigenvalues.",
+    "proof": "The trace of $A$ is $1+1 = 2$. Its eigenvalues are $3$ and $-1$, whose sum is $2$. Hence the trace equals the sum of the eigenvalues.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Highlight that the eigenvalues are $3$ and $-1$ even though the trace is small."
+  },
+  {
+    "id": "E69",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "natural_language",
+    "theorem": "Trace and eigenvalues of a shear",
+    "question": "Verify that the trace of A = [[1,2],[0,1]] equals the sum of its eigenvalues.",
+    "proof": "The trace of A is 1 plus 1, which is 2. The characteristic polynomial is (1 minus lambda) squared, so the only eigenvalue is 1 with algebraic multiplicity 2. The sum of the eigenvalues, counted with multiplicity, is 1 plus 1, that is 2, matching the trace.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Emphasise that even when the matrix is not diagonalisable, the trace still equals the sum of eigenvalues with multiplicity."
+  },
+  {
+    "id": "E70",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "latex",
+    "theorem": "Trace and eigenvalues of a 3-by-3 matrix",
+    "question": "Verify that the trace of A = diag(1,2,3) equals the sum of its eigenvalues.",
+    "proof": "The trace of $A$ is $1+2+3 = 6$, and the eigenvalues are $1$, $2$ and $3$, whose sum is $6$. The identity holds.",
+    "parameters": {
+      "matrix": "diag(1,2,3)"
+    },
+    "animation_notes": "3D scene; the diagonal entries are the eigenvalues and their sum is displayed."
+  },
+  {
+    "id": "E71",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "mixed",
+    "theorem": "Geometric eigenvectors of a diagonal scaling",
+    "question": "Describe geometrically the eigenvectors of A = diag(2,3).",
+    "proof": "Applying $A$ to $(x,y)$ gives $(2x,3y)$. The direction is preserved exactly when one of $x,y$ is zero. So the eigenvectors are the coordinate axes: $(1,0)$ with eigenvalue $2$, and $(0,1)$ with eigenvalue $3$.",
+    "parameters": {
+      "matrix": "diag(2,3)"
+    },
+    "animation_notes": "Highlight the two coordinate axes as the only invariant lines."
+  },
+  {
+    "id": "E73",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "latex",
+    "theorem": "Geometric eigenvectors of a shear",
+    "question": "Describe geometrically the eigenvectors of the shear A = [[1,1],[0,1]].",
+    "proof": "Applying $A$ to $(x,y)$ gives $(x+y,y)$. For the direction to be preserved, we need $(x+y, y)$ parallel to $(x,y)$. This forces $y = 0$, so the only invariant line is the $x$-axis. Hence the eigenvectors lie on the horizontal axis, with eigenvalue $1$.",
+    "parameters": {
+      "matrix": [
+        [1, 1],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Animate the shear; only the horizontal direction stays fixed while every other direction slides."
+  },
+  {
+    "id": "E74",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "mixed",
+    "theorem": "Geometric eigenvectors of a rank-one matrix",
+    "question": "Describe geometrically the eigenvectors of A = [[1,1],[1,1]].",
+    "proof": "Every vector of the form $t(1,1)$ is mapped to $2t(1,1)$, so the diagonal direction is an eigen-direction with eigenvalue $2$. Every vector perpendicular to $(1,1)$, i.e. on the line $x + y = 0$, is mapped to zero, so the anti-diagonal is the other eigen-direction, with eigenvalue $0$.",
+    "parameters": {
+      "matrix": [
+        [1, 1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Show the plane collapsing onto the diagonal line; the anti-diagonal is the kernel."
+  },
+  {
+    "id": "E76",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "latex",
+    "theorem": "Determinant of an upper-triangular 2-by-2 matrix",
+    "question": "Compute det([[2,3],[0,5]]).",
+    "proof": "The matrix is upper-triangular, so its determinant equals the product of the diagonal entries, i.e. $2 \\cdot 5 = 10$.",
+    "parameters": {
+      "matrix": [
+        [2, 3],
+        [0, 5]
+      ]
+    },
+    "animation_notes": "Display the diagonal product 2 times 5 = 10 as the key step."
+  },
+  {
+    "id": "E77",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Determinant of a lower-triangular 2-by-2 matrix",
+    "question": "Compute det([[4,0],[3,7]]).",
+    "proof": "Because the matrix is lower-triangular, its determinant equals the product of the diagonal entries. The product of 4 and 7 is 28, so the determinant is 28.",
+    "parameters": {
+      "matrix": [
+        [4, 0],
+        [3, 7]
+      ]
+    },
+    "animation_notes": "Highlight the diagonal entries 4 and 7 and their product 28."
+  },
+  {
+    "id": "E78",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "mixed",
+    "theorem": "Determinant of an upper-triangular 3-by-3 matrix",
+    "question": "Compute det([[1,5,2],[0,3,4],[0,0,-2]]).",
+    "proof": "The matrix is upper-triangular, so its determinant equals the product of its diagonal entries, i.e. $1 \\cdot 3 \\cdot (-2) = -6$.",
+    "parameters": {
+      "matrix": [
+        [1, 5, 2],
+        [0, 3, 4],
+        [0, 0, -2]
+      ]
+    },
+    "animation_notes": "Display the product $1\\cdot 3\\cdot(-2) = -6$ as the on-screen result."
+  },
+  {
+    "id": "E79",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Determinant of a lower-triangular 3-by-3 matrix",
+    "question": "Compute det([[3,0,0],[2,5,0],[1,4,7]]).",
+    "proof": "Because the matrix is lower-triangular, its determinant equals the product of its diagonal entries. That product is 3 times 5 times 7, which is 105.",
+    "parameters": {
+      "matrix": [
+        [3, 0, 0],
+        [2, 5, 0],
+        [1, 4, 7]
+      ]
+    },
+    "animation_notes": "Highlight the diagonal entries 3, 5 and 7 and their product 105."
+  },
+  {
+    "id": "E80",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "latex",
+    "theorem": "Determinant of a triangular shear",
+    "question": "Compute det([[1,0,0],[5,1,0],[3,2,1]]).",
+    "proof": "The matrix is lower-triangular with all diagonal entries equal to $1$. Hence $\\det = 1 \\cdot 1 \\cdot 1 = 1$. This is a 3D shear, and shears always have unit determinant.",
+    "parameters": {
+      "matrix": [
+        [1, 0, 0],
+        [5, 1, 0],
+        [3, 2, 1]
+      ]
+    },
+    "animation_notes": "Highlight that all diagonal entries are 1 and note that this is the hallmark of a shear."
+  },
+  {
+    "id": "E81",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[2,1],[1,2]] via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[2,1],[1,2]].",
+    "proof": "The characteristic equation is $\\det(A - \\lambda I) = 0$, which becomes $(2-\\lambda)^2 - 1 = 0$. Expanding, $\\lambda^2 - 4\\lambda + 3 = 0$, which factors as $(\\lambda-1)(\\lambda-3) = 0$. The eigenvalues are therefore $1$ and $3$.",
+    "parameters": {
+      "matrix": [
+        [2, 1],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "Display the factored characteristic equation as an on-screen step."
+  },
+  {
+    "id": "E82",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[1,2],[2,1]] via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[1,2],[2,1]].",
+    "proof": "The characteristic equation is\n\\[\n(1-\\lambda)^2 - 4 = 0,\n\\]\nwhich expands to $\\lambda^2 - 2\\lambda - 3 = 0$ and factors as $(\\lambda-3)(\\lambda+1) = 0$. Hence the eigenvalues are $3$ and $-1$.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Show the factored form $(\\lambda-3)(\\lambda+1) = 0$ explicitly."
+  },
+  {
+    "id": "E83",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of a rotation via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[0,-1],[1,0]].",
+    "proof": "The characteristic equation is determinant of A minus lambda times the identity equal to zero, which gives lambda squared plus 1 equal to zero. This equation has no real solutions; its complex solutions are plus or minus the imaginary unit i. So the eigenvalues of the rotation are complex, and the matrix has no real eigenvalues.",
+    "parameters": {
+      "matrix": [
+        [0, -1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Annotate that the characteristic equation has no real roots, confirming the absence of real eigenvalues."
+  },
+  {
+    "id": "E84",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[3,1],[0,3]] via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[3,1],[0,3]].",
+    "proof": "The characteristic equation is $(3-\\lambda)^2 = 0$, whose only root is $\\lambda = 3$ (double). So the only eigenvalue is $3$, with algebraic multiplicity $2$.",
+    "parameters": {
+      "matrix": [
+        [3, 1],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Display the double root and note that the eigenspace is still only one-dimensional."
+  },
+  {
+    "id": "E85",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[4,2],[1,3]] via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[4,2],[1,3]].",
+    "proof": "The characteristic equation is $(4-\\lambda)(3-\\lambda) - 2 = 0$, which expands to $\\lambda^2 - 7\\lambda + 10 = 0$ and factors as $(\\lambda-2)(\\lambda-5) = 0$. The eigenvalues are $2$ and $5$.",
+    "parameters": {
+      "matrix": [
+        [4, 2],
+        [1, 3]
+      ]
+    },
+    "animation_notes": "Display the factored form $(\\lambda-2)(\\lambda-5) = 0$ as an on-screen result."
+  },
+  {
+    "id": "E86",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of diag(3,7)",
+    "question": "Find the eigenvalues and eigenvectors of A = [[3,0],[0,7]].",
+    "proof": "On a diagonal matrix the action on the coordinate vectors is pure scaling. Applying A to (1,0) gives (3,0), which is three times (1,0), so (1,0) is an eigenvector with eigenvalue 3. Applying A to (0,1) gives (0,7), so (0,1) is an eigenvector with eigenvalue 7. The eigenvalues are therefore 3 and 7.",
+    "parameters": {
+      "matrix": [
+        [3, 0],
+        [0, 7]
+      ]
+    },
+    "animation_notes": "Show the unit square stretching horizontally by 3 and vertically by 7; both axes remain fixed."
+  },
+  {
+    "id": "E87",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of diag(-2,5)",
+    "question": "Find the eigenvalues of A = [[-2,0],[0,5]].",
+    "proof": "For $A = \\operatorname{diag}(-2,5)$ we compute\n\\[\nA(1,0) = (-2,0) = -2(1,0), \\qquad A(0,1) = (0,5) = 5(0,1).\n\\]\nHence $(1,0)$ is an eigenvector with eigenvalue $-2$, and $(0,1)$ is an eigenvector with eigenvalue $5$.",
+    "parameters": {
+      "matrix": [
+        [-2, 0],
+        [0, 5]
+      ]
+    },
+    "animation_notes": "The x-axis flips and scales by 2, the y-axis stretches by 5."
+  },
+  {
+    "id": "E88",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of diag(1,0)",
+    "question": "Find the eigenvalues and eigenvectors of A = [[1,0],[0,0]].",
+    "proof": "This is a diagonal matrix with entries $1$ and $0$, so the coordinate vectors are eigenvectors: $(1,0)$ has eigenvalue $1$ and $(0,1)$ has eigenvalue $0$. Geometrically, the matrix projects onto the x-axis.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [0, 0]
+      ]
+    },
+    "animation_notes": "The y-direction is killed; highlight the kernel as the y-axis and the range as the x-axis."
+  },
+  {
+    "id": "E89",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of diag(2,2)",
+    "question": "Find the eigenvalues of A = 2I.",
+    "proof": "Because A is twice the identity, every nonzero vector v satisfies A v equal to 2v. Hence every nonzero vector is an eigenvector with eigenvalue 2, and the only eigenvalue is 2, with algebraic and geometric multiplicities both equal to 2.",
+    "parameters": {
+      "matrix": [
+        [2, 0],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Uniform scaling of the plane by 2; no direction is distinguished."
+  },
+  {
+    "id": "E90",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of diag(1,2,3)",
+    "question": "Find the eigenvalues of A = diag(1,2,3) in R^3.",
+    "proof": "Because $A$ is diagonal, applying it to the standard basis gives\n\\[\nAe_1 = e_1,\\quad Ae_2 = 2e_2,\\quad Ae_3 = 3e_3.\n\\]\nSo the eigenvalues are $1, 2, 3$ with eigenvectors the standard basis vectors.",
+    "parameters": {
+      "matrix": "diag(1,2,3)"
+    },
+    "animation_notes": "3D scene with three stretching axes; label each face of the unit cube with its scale factor."
+  },
+  {
+    "id": "E91",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of diag(0,0,1)",
+    "question": "Find the eigenvalues of A = diag(0,0,1) in R^3.",
+    "proof": "Applying $A$ to the coordinate basis gives $Ae_1 = 0$, $Ae_2 = 0$, $Ae_3 = e_3$. So the eigenvalues are $0$ (with multiplicity 2) and $1$. Geometrically, the matrix projects onto the z-axis.",
+    "parameters": {
+      "matrix": "diag(0,0,1)"
+    },
+    "animation_notes": "Highlight the xy-plane as the kernel and the z-axis as the range."
+  },
+  {
+    "id": "E92",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of diag(-1,1)",
+    "question": "Find the eigenvalues of A = [[-1,0],[0,1]].",
+    "proof": "The diagonal entries are minus one and one. Applying the matrix to (1,0) gives (-1,0), so minus one is an eigenvalue with eigenvector (1,0). Applying it to (0,1) gives (0,1), so one is an eigenvalue with eigenvector (0,1). This matrix reflects the plane across the y-axis.",
+    "parameters": {
+      "matrix": [
+        [-1, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Show the reflection across the y-axis; the y-axis is fixed and the x-axis is flipped."
+  },
+  {
+    "id": "E94",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of diag(2,-3,4)",
+    "question": "Find the eigenvalues of A = diag(2,-3,4) in R^3.",
+    "proof": "The matrix is diagonal, so the eigenvalues are exactly its diagonal entries $2$, $-3$ and $4$, with eigenvectors the standard basis vectors.",
+    "parameters": {
+      "matrix": "diag(2,-3,4)"
+    },
+    "animation_notes": "Highlight the three axes with their scale factors including one flip."
+  },
+  {
+    "id": "E95",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_diagonal",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of diag(0,1)",
+    "question": "Find the eigenvalues of A = [[0,0],[0,1]].",
+    "proof": "Applying the matrix to (1,0) gives the zero vector, so (1,0) is an eigenvector with eigenvalue 0. Applying it to (0,1) gives (0,1) itself, so (0,1) is an eigenvector with eigenvalue 1. Geometrically, the matrix projects onto the y-axis.",
+    "parameters": {
+      "matrix": [
+        [0, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Show projection onto the y-axis; everything collapses to the vertical line."
+  },
+  {
+    "id": "E96",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[1,5],[0,3]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[1,5],[0,3]].",
+    "proof": "The matrix is upper-triangular, so the eigenvalues are the diagonal entries $1$ and $3$. For $\\lambda = 1$, $(A-I)v = 0$ gives $5y = 0$, so $y = 0$ and $v = (1,0)$. For $\\lambda = 3$, $(A-3I)v = 0$ gives $-2x+5y = 0$, so $y = 2x/5$ and $v = (5,2)$.",
+    "parameters": {
+      "matrix": [
+        [1, 5],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "The off-diagonal entry tilts the second eigen-direction off the axes."
+  },
+  {
+    "id": "E97",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[4,1],[0,4]]",
+    "question": "Find the eigenvalues of A = [[4,1],[0,4]].",
+    "proof": "The matrix is upper-triangular with both diagonal entries equal to four, so four is the only eigenvalue. Solving A minus four times the identity applied to v equal to zero gives y equal to zero, so the eigenspace is the horizontal axis. The algebraic multiplicity is two but the geometric multiplicity is one.",
+    "parameters": {
+      "matrix": [
+        [4, 1],
+        [0, 4]
+      ]
+    },
+    "animation_notes": "Emphasise the gap between algebraic and geometric multiplicities."
+  },
+  {
+    "id": "E98",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[2,7],[0,-1]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[2,7],[0,-1]].",
+    "proof": "The diagonal entries are $2$ and $-1$, so those are the eigenvalues. For $\\lambda = 2$, $(A-2I)v = 0$ gives $7y = 0$, so $y = 0$ and $v = (1,0)$. For $\\lambda = -1$, $(A+I)v = 0$ gives $3x + 7y = 0$, so $x = -7y/3$ and $v = (-7,3)$.",
+    "parameters": {
+      "matrix": [
+        [2, 7],
+        [0, -1]
+      ]
+    },
+    "animation_notes": "One eigen-direction flips because of the negative eigenvalue."
+  },
+  {
+    "id": "E99",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[3,2,1],[0,1,4],[0,0,5]]",
+    "question": "Find the eigenvalues of A = [[3,2,1],[0,1,4],[0,0,5]].",
+    "proof": "The matrix is upper-triangular, so its eigenvalues are its diagonal entries $3$, $1$ and $5$. The characteristic polynomial factors as $(3-\\lambda)(1-\\lambda)(5-\\lambda)$.",
+    "parameters": {
+      "matrix": [
+        [3, 2, 1],
+        [0, 1, 4],
+        [0, 0, 5]
+      ]
+    },
+    "animation_notes": "Highlight the diagonal entries on the matrix display."
+  },
+  {
+    "id": "E100",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of a nilpotent upper-triangular matrix",
+    "question": "Find the eigenvalues of A = [[0,1],[0,0]].",
+    "proof": "The matrix is upper-triangular with both diagonal entries zero, so the only eigenvalue is zero. Solving A v equal to zero gives y equal to zero, so the eigenspace is the x-axis and has dimension one. Thus the algebraic multiplicity is two but the geometric multiplicity is one.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [0, 0]
+      ]
+    },
+    "animation_notes": "Nilpotent case: every vector dies after two applications."
+  },
+  {
+    "id": "E101",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[1,2],[0,1]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[1,2],[0,1]].",
+    "proof": "The matrix is upper-triangular with diagonal entries equal to $1$, so the only eigenvalue is $1$. Solving $(A-I)v = 0$ gives $2y = 0$, so $y = 0$ and $v = (1,0)$. The geometric multiplicity is $1$.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Standard shear example; horizontal eigen-direction only."
+  },
+  {
+    "id": "E102",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[5,3],[0,2]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[5,3],[0,2]].",
+    "proof": "The diagonal entries give the eigenvalues $5$ and $2$. For $\\lambda = 5$, $(A-5I)v = 0$ gives $3y = 0$, so $v = (1,0)$. For $\\lambda = 2$, $(A-2I)v = 0$ gives $3x+3y = 0$, so $y = -x$ and $v = (1,-1)$.",
+    "parameters": {
+      "matrix": [
+        [5, 3],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "The larger eigenvalue has the axis-aligned eigenvector; the smaller tilts along the anti-diagonal."
+  },
+  {
+    "id": "E103",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of a 3x3 Jordan block",
+    "question": "Find the eigenvalues of A = [[6,2,0],[0,6,3],[0,0,6]].",
+    "proof": "The matrix is upper-triangular with all diagonal entries equal to six, so six is the only eigenvalue, and its algebraic multiplicity is three. Solving A minus six times the identity applied to v equal to zero leaves a system whose solution space is only one dimensional. So the geometric multiplicity is one, and the matrix is not diagonalisable.",
+    "parameters": {
+      "matrix": [
+        [6, 2, 0],
+        [0, 6, 3],
+        [0, 0, 6]
+      ]
+    },
+    "animation_notes": "Classic Jordan-block example, illustrating algebraic-versus-geometric multiplicity."
+  },
+  {
+    "id": "E104",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[-2,3],[0,4]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[-2,3],[0,4]].",
+    "proof": "The diagonal entries give the eigenvalues $-2$ and $4$. For $\\lambda = -2$, $(A+2I)v = 0$ gives $3y = 0$, so $y = 0$ and $v = (1,0)$. For $\\lambda = 4$, $(A-4I)v = 0$ gives $-6x+3y = 0$, so $y = 2x$ and $v = (1,2)$.",
+    "parameters": {
+      "matrix": [
+        [-2, 3],
+        [0, 4]
+      ]
+    },
+    "animation_notes": "Eigen-directions one horizontal, one tilted."
+  },
+  {
+    "id": "E105",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_upper_triangular",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of 3x3 triangular with 1's on diagonal",
+    "question": "Find the eigenvalues of A = [[1,1,1],[0,1,1],[0,0,1]].",
+    "proof": "The matrix is upper-triangular with all diagonal entries equal to $1$, so $1$ is the only eigenvalue, with algebraic multiplicity $3$. Solving $(A-I)v = 0$ gives a system whose only free variable yields a one-dimensional eigenspace, so the geometric multiplicity is $1$.",
+    "parameters": {
+      "matrix": [
+        [1, 1, 1],
+        [0, 1, 1],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "3D shear with a single invariant line; contrast with the identity."
+  },
+  {
+    "id": "E106",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[2,0],[5,3]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[2,0],[5,3]].",
+    "proof": "The matrix is lower-triangular, so the eigenvalues are the diagonal entries two and three. For the eigenvalue two, solving A minus two times the identity applied to v equal to zero gives five x plus y equal to zero, so y equals minus five x and the eigenvector is (1,-5). For the eigenvalue three, we get minus x equal to zero, so x is zero and the eigenvector is (0,1).",
+    "parameters": {
+      "matrix": [
+        [2, 0],
+        [5, 3]
+      ]
+    },
+    "animation_notes": "The smaller eigenvalue has the tilted eigenvector; the larger has the axis eigenvector."
+  },
+  {
+    "id": "E107",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[4,0],[1,4]]",
+    "question": "Find the eigenvalues of A = [[4,0],[1,4]].",
+    "proof": "The matrix is lower-triangular with both diagonal entries equal to $4$, so $4$ is the only eigenvalue. Solving $(A-4I)v = 0$ gives $x = 0$, so the eigenspace is the y-axis and has dimension $1$.",
+    "parameters": {
+      "matrix": [
+        [4, 0],
+        [1, 4]
+      ]
+    },
+    "animation_notes": "Vertical-only shear; the y-axis is the eigen-direction."
+  },
+  {
+    "id": "E108",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[0,0],[2,1]]",
+    "question": "Find the eigenvalues of A = [[0,0],[2,1]].",
+    "proof": "The lower-triangular form shows the diagonal entries are $0$ and $1$, so those are the eigenvalues. For $\\lambda = 0$, $(A-0I)v = 0$ gives $2x+y = 0$, so $y = -2x$ and $v = (1,-2)$. For $\\lambda = 1$, $(A-I)v = 0$ gives $2x = 0$, so $x = 0$ and $v = (0,1)$.",
+    "parameters": {
+      "matrix": [
+        [0, 0],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "One eigenvector along the negative diagonal, the other vertical."
+  },
+  {
+    "id": "E109",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of a 3x3 lower-triangular matrix",
+    "question": "Find the eigenvalues of A = [[3,0,0],[1,2,0],[4,5,6]].",
+    "proof": "Because $A$ is lower-triangular, its eigenvalues are the diagonal entries $3, 2, 6$. The characteristic polynomial factors as $(3-\\lambda)(2-\\lambda)(6-\\lambda)$.",
+    "parameters": {
+      "matrix": [
+        [3, 0, 0],
+        [1, 2, 0],
+        [4, 5, 6]
+      ]
+    },
+    "animation_notes": "Highlight the diagonal entries on the matrix display."
+  },
+  {
+    "id": "E110",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[1,0],[0,0]]",
+    "question": "Find the eigenvalues of A = [[1,0],[0,0]].",
+    "proof": "This lower-triangular matrix has diagonal entries one and zero. Applying it to (1,0) gives (1,0), so one is an eigenvalue. Applying it to (0,1) gives the zero vector, so zero is an eigenvalue. Geometrically this is projection onto the x-axis.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [0, 0]
+      ]
+    },
+    "animation_notes": "Projection onto the x-axis; highlight kernel and range."
+  },
+  {
+    "id": "E111",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[2,0,0],[3,2,0],[4,5,3]]",
+    "question": "Find the eigenvalues of A = [[2,0,0],[3,2,0],[4,5,3]].",
+    "proof": "The matrix is lower-triangular, so the eigenvalues are its diagonal entries $2$, $2$ and $3$. The eigenvalue $2$ has algebraic multiplicity $2$; solving $(A-2I)v = 0$ shows the eigenspace is one-dimensional, so its geometric multiplicity is $1$.",
+    "parameters": {
+      "matrix": [
+        [2, 0, 0],
+        [3, 2, 0],
+        [4, 5, 3]
+      ]
+    },
+    "animation_notes": "Display the diagonal and the multiplicity gap."
+  },
+  {
+    "id": "E112",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[-1,0],[3,2]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[-1,0],[3,2]].",
+    "proof": "The diagonal entries give eigenvalues $-1$ and $2$. For $\\lambda = -1$, $(A+I)v = 0$ gives $3x+3y = 0$, so $y = -x$ and $v = (1,-1)$. For $\\lambda = 2$, $(A-2I)v = 0$ gives $3x = 0$, so $x = 0$ and $v = (0,1)$.",
+    "parameters": {
+      "matrix": [
+        [-1, 0],
+        [3, 2]
+      ]
+    },
+    "animation_notes": "Mixed flip-stretch behavior with anti-diagonal and vertical eigenvectors."
+  },
+  {
+    "id": "E113",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[7,0],[2,7]]",
+    "question": "Find the eigenvalues of A = [[7,0],[2,7]].",
+    "proof": "The diagonal entries both equal seven, so the only eigenvalue is seven. Solving A minus seven times the identity gives two x equal to zero, so x is zero and the eigenspace is the vertical axis. The algebraic multiplicity is two but the geometric multiplicity is one.",
+    "parameters": {
+      "matrix": [
+        [7, 0],
+        [2, 7]
+      ]
+    },
+    "animation_notes": "Vertical shear with factor 7; only the y-axis is invariant."
+  },
+  {
+    "id": "E114",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[5,0,0],[1,5,0],[2,3,5]]",
+    "question": "Find the eigenvalues of A = [[5,0,0],[1,5,0],[2,3,5]].",
+    "proof": "Because the matrix is lower-triangular with all diagonal entries equal to $5$, the only eigenvalue is $5$, with algebraic multiplicity $3$. The eigenspace is one-dimensional.",
+    "parameters": {
+      "matrix": [
+        [5, 0, 0],
+        [1, 5, 0],
+        [2, 3, 5]
+      ]
+    },
+    "animation_notes": "3D lower-triangular shear."
+  },
+  {
+    "id": "E115",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_lower_triangular",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[3,0],[0,-1]]",
+    "question": "Find the eigenvalues of A = [[3,0],[0,-1]].",
+    "proof": "Because $A$ is lower-triangular (indeed, diagonal), its eigenvalues are the diagonal entries $3$ and $-1$.",
+    "parameters": {
+      "matrix": [
+        [3, 0],
+        [0, -1]
+      ]
+    },
+    "animation_notes": "The y-axis flips because of the negative eigenvalue."
+  },
+  {
+    "id": "E116",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[1,0],[0,3]]",
+    "question": "Find the eigenvalues of A = [[1,0],[0,3]].",
+    "proof": "This symmetric matrix is already diagonal; the eigenvalues are the diagonal entries $1$ and $3$, with eigenvectors the coordinate axes.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Trivial symmetric diagonal case."
+  },
+  {
+    "id": "E117",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[0,2],[2,0]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[0,2],[2,0]].",
+    "proof": "The characteristic polynomial is lambda squared minus four, so the eigenvalues are two and minus two. For the eigenvalue two, the equation A minus two times the identity applied to v equal to zero gives minus two x plus two y equal to zero, so x equals y and the eigenvector is (1,1). For the eigenvalue minus two, we get two x plus two y equal to zero, so y equals minus x and the eigenvector is (1,-1). The eigenvectors are perpendicular, as expected for a symmetric matrix.",
+    "parameters": {
+      "matrix": [
+        [0, 2],
+        [2, 0]
+      ]
+    },
+    "animation_notes": "Show the diagonal eigen-directions and a scaled reflection."
+  },
+  {
+    "id": "E118",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[1,3],[3,1]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[1,3],[3,1]].",
+    "proof": "The characteristic polynomial is $(1-\\lambda)^2 - 9 = (\\lambda-4)(\\lambda+2)$, giving eigenvalues $4$ and $-2$. For $\\lambda = 4$ we get $v = (1,1)$, and for $\\lambda = -2$ we get $v = (1,-1)$. Both are orthogonal as the spectral theorem promises.",
+    "parameters": {
+      "matrix": [
+        [1, 3],
+        [3, 1]
+      ]
+    },
+    "animation_notes": "Highlight the diagonal and anti-diagonal eigen-directions."
+  },
+  {
+    "id": "E119",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[2,3],[3,2]]",
+    "question": "Find the eigenvalues of A = [[2,3],[3,2]].",
+    "proof": "The characteristic polynomial is $(2-\\lambda)^2 - 9 = (\\lambda-5)(\\lambda+1)$, so the eigenvalues are $5$ and $-1$. The corresponding eigenvectors are $(1,1)$ and $(1,-1)$, orthogonal as guaranteed by the spectral theorem.",
+    "parameters": {
+      "matrix": [
+        [2, 3],
+        [3, 2]
+      ]
+    },
+    "animation_notes": "Diagonal and anti-diagonal are the two invariant directions."
+  },
+  {
+    "id": "E120",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[5,1],[1,5]]",
+    "question": "Find the eigenvalues and eigenvectors of A = [[5,1],[1,5]].",
+    "proof": "The characteristic polynomial is (5 minus lambda) squared minus one, giving eigenvalues four and six. For the eigenvalue six, the equation A minus six times the identity applied to v gives minus x plus y equal to zero, so x equals y and the eigenvector is (1,1). For the eigenvalue four, we get x plus y equal to zero, so the eigenvector is (1,-1). The two eigenvectors are perpendicular.",
+    "parameters": {
+      "matrix": [
+        [5, 1],
+        [1, 5]
+      ]
+    },
+    "animation_notes": "Symmetric matrix with a small off-diagonal perturbation."
+  },
+  {
+    "id": "E122",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of the all-ones 3x3 matrix",
+    "question": "Find the eigenvalues of A = [[1,1,1],[1,1,1],[1,1,1]].",
+    "proof": "This matrix is $A = uu^T$ with $u = (1,1,1)$. Along $u$ the eigenvalue is $\\lVert u \\rVert^2 = 3$. Any vector orthogonal to $u$ lies in the kernel (eigenvalue 0). Since the plane $x+y+z = 0$ is 2-dimensional, the eigenvalue 0 has multiplicity 2.",
+    "parameters": {
+      "matrix": [
+        [1, 1, 1],
+        [1, 1, 1],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "Show the collapse onto the main diagonal."
+  },
+  {
+    "id": "E123",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[2,-1],[-1,2]]",
+    "question": "Find the eigenvalues of A = [[2,-1],[-1,2]].",
+    "proof": "The characteristic polynomial is (2 minus lambda) squared minus one, giving eigenvalues three and one. The eigenvectors are (1,-1) for the eigenvalue three and (1,1) for the eigenvalue one, orthogonal as expected for a symmetric matrix.",
+    "parameters": {
+      "matrix": [
+        [2, -1],
+        [-1, 2]
+      ]
+    },
+    "animation_notes": "Symmetric negative off-diagonal, anti-diagonal eigenvector for the larger eigenvalue."
+  },
+  {
+    "id": "E124",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of a 3x3 symmetric block",
+    "question": "Find the eigenvalues of A = [[3,2,0],[2,3,0],[0,0,1]].",
+    "proof": "The top-left block is symmetric with eigenvalues 5 and 1 (via the standard [[3,2],[2,3]] analysis). The bottom-right entry contributes eigenvalue 1. So the eigenvalues are $5, 1, 1$.",
+    "parameters": {
+      "matrix": [
+        [3, 2, 0],
+        [2, 3, 0],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Block structure makes the analysis simple."
+  },
+  {
+    "id": "E125",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_symmetric",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of a symmetric permutation",
+    "question": "Find the eigenvalues of A = [[0,1,0],[1,0,0],[0,0,1]].",
+    "proof": "The matrix is symmetric. It acts as the swap of $x$ and $y$ coordinates plus the identity on $z$. Eigenvalues from the swap block are $1$ and $-1$; from the $z$-block it is $1$. So the eigenvalues are $1, 1, -1$.",
+    "parameters": {
+      "matrix": [
+        [0, 1, 0],
+        [1, 0, 0],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Reflection swapping x and y."
+  },
+  {
+    "id": "E126",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of 2·[[1,1],[1,1]]",
+    "question": "Find the eigenvalues of A = [[2,2],[2,2]].",
+    "proof": "Write $A = uu^T$ with $u = (\\sqrt{2},\\sqrt{2})$. Along $u$ the eigenvalue is $\\lVert u \\rVert^2 = 4$; on the orthogonal complement (the anti-diagonal) the eigenvalue is $0$. So the eigenvalues are $4$ and $0$.",
+    "parameters": {
+      "matrix": [
+        [2, 2],
+        [2, 2]
+      ]
+    },
+    "animation_notes": "Show the plane collapsing onto the diagonal."
+  },
+  {
+    "id": "E127",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[1,3],[3,9]]",
+    "question": "Find the eigenvalues of A = [[1,3],[3,9]].",
+    "proof": "The matrix equals u u transposed with u equal to (1,3), so it is rank one. Along u the eigenvalue is the squared norm of u, which is ten, because applying A to u gives ten times u. Any vector orthogonal to u, such as (-3,1), is killed, giving eigenvalue zero. The eigenvalues are therefore ten and zero.",
+    "parameters": {
+      "matrix": [
+        [1, 3],
+        [3, 9]
+      ]
+    },
+    "animation_notes": "The collapse direction is (1,3); the kernel is (-3,1)."
+  },
+  {
+    "id": "E128",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[4,4],[4,4]]",
+    "question": "Find the eigenvalues of A = [[4,4],[4,4]].",
+    "proof": "$A = uu^T$ with $u = (2,2)$, so the nonzero eigenvalue is $\\lVert u \\rVert^2 = 8$. The orthogonal complement (spanned by $(1,-1)$) is annihilated. So the eigenvalues are $8$ and $0$.",
+    "parameters": {
+      "matrix": [
+        [4, 4],
+        [4, 4]
+      ]
+    },
+    "animation_notes": "Scale factor 8 along the diagonal."
+  },
+  {
+    "id": "E129",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[1,-1],[-1,1]]",
+    "question": "Find the eigenvalues of A = [[1,-1],[-1,1]].",
+    "proof": "$A = uu^T$ with $u = (1,-1)$, so the nonzero eigenvalue is $\\lVert u \\rVert^2 = 2$. The anti-diagonal direction $(1,1)$ is killed. Eigenvalues are $2$ and $0$.",
+    "parameters": {
+      "matrix": [
+        [1, -1],
+        [-1, 1]
+      ]
+    },
+    "animation_notes": "Same as E25 but written as rank-one template."
+  },
+  {
+    "id": "E130",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[0,0],[0,1]]",
+    "question": "Find the eigenvalues of A = [[0,0],[0,1]].",
+    "proof": "The matrix equals u u transposed with u equal to (0,1). Along u the eigenvalue is one, since the squared norm of u is one. The orthogonal complement, the x-axis, is killed. So the eigenvalues are one and zero, and geometrically the matrix projects onto the y-axis.",
+    "parameters": {
+      "matrix": [
+        [0, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Projection onto the y-axis, shown as rank-one."
+  },
+  {
+    "id": "E131",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[9,6],[6,4]]",
+    "question": "Find the eigenvalues of A = [[9,6],[6,4]].",
+    "proof": "$A = uu^T$ with $u = (3,2)$. The nonzero eigenvalue is $\\lVert u \\rVert^2 = 13$; the kernel is spanned by $(-2,3)$. Eigenvalues are $13$ and $0$.",
+    "parameters": {
+      "matrix": [
+        [9, 6],
+        [6, 4]
+      ]
+    },
+    "animation_notes": "Same template with a scaled-up u."
+  },
+  {
+    "id": "E132",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[4,0],[0,0]]",
+    "question": "Find the eigenvalues of A = [[4,0],[0,0]].",
+    "proof": "This is $uu^T$ with $u = (2,0)$; the nonzero eigenvalue is $\\lVert u \\rVert^2 = 4$, and the kernel is the y-axis. So the eigenvalues are $4$ and $0$.",
+    "parameters": {
+      "matrix": [
+        [4, 0],
+        [0, 0]
+      ]
+    },
+    "animation_notes": "Projection onto the x-axis, scaled."
+  },
+  {
+    "id": "E133",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of a 3x3 rank-one matrix",
+    "question": "Find the eigenvalues of A = [[1,2,3],[2,4,6],[3,6,9]].",
+    "proof": "The matrix equals u u transposed with u equal to (1,2,3), so it is rank one. The nonzero eigenvalue is the squared norm of u, which is fourteen. Any vector orthogonal to u lies in the kernel, and since the orthogonal complement is two-dimensional, the eigenvalue zero has multiplicity two.",
+    "parameters": {
+      "matrix": [
+        [1, 2, 3],
+        [2, 4, 6],
+        [3, 6, 9]
+      ]
+    },
+    "animation_notes": "3D collapse onto the (1,2,3)-line."
+  },
+  {
+    "id": "E134",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of all-ones 3x3 as rank one",
+    "question": "Find the eigenvalues of A = [[1,1,1],[1,1,1],[1,1,1]] as a rank-one matrix.",
+    "proof": "Writing $A = uu^T$ with $u = (1,1,1)$, the nonzero eigenvalue is $\\lVert u \\rVert^2 = 3$, and the kernel is the plane $x+y+z = 0$ with multiplicity two. So the eigenvalues are $3, 0, 0$.",
+    "parameters": {
+      "matrix": [
+        [1, 1, 1],
+        [1, 1, 1],
+        [1, 1, 1]
+      ]
+    },
+    "animation_notes": "Same result as E122 but derived from the rank-one template."
+  },
+  {
+    "id": "E135",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rank_one",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of projection onto x-axis",
+    "question": "Find the eigenvalues of A = [[1,0,0],[0,0,0],[0,0,0]].",
+    "proof": "Write $A = uu^T$ with $u = (1,0,0)$. The nonzero eigenvalue is $\\lVert u \\rVert^2 = 1$, and the kernel is the yz-plane with multiplicity two. Eigenvalues are $1, 0, 0$.",
+    "parameters": {
+      "matrix": [
+        [1, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+      ]
+    },
+    "animation_notes": "Projection onto the x-axis; kernel is the yz-plane."
+  },
+  {
+    "id": "E136",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "latex",
+    "theorem": "Shear [[1,3],[0,1]]",
+    "question": "Find the eigenvalues of A = [[1,3],[0,1]].",
+    "proof": "The matrix is upper-triangular with diagonal entries $1$ and $1$, so $1$ is the only eigenvalue. Solving $(A-I)v = 0$ gives $3y = 0$, so $y = 0$ and the eigenspace is $\\operatorname{span}\\{(1,0)\\}$, dimension $1$.",
+    "parameters": {
+      "matrix": [
+        [1, 3],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Standard shear with parameter 3."
+  },
+  {
+    "id": "E137",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "natural_language",
+    "theorem": "Shear [[1,0],[4,1]]",
+    "question": "Find the eigenvalues of A = [[1,0],[4,1]].",
+    "proof": "The matrix is lower-triangular with both diagonal entries equal to one, so one is the only eigenvalue. Solving A minus the identity applied to v gives 4x equal to zero, so x is zero and the eigenspace is the vertical axis. The geometric multiplicity is one.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [4, 1]
+      ]
+    },
+    "animation_notes": "Vertical-only shear with parameter 4."
+  },
+  {
+    "id": "E138",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "mixed",
+    "theorem": "Shear [[2,1],[0,2]]",
+    "question": "Find the eigenvalues of A = [[2,1],[0,2]].",
+    "proof": "The matrix is upper-triangular with diagonal entries equal to $2$, so the only eigenvalue is $2$. The eigenspace is $\\operatorname{span}\\{(1,0)\\}$, one-dimensional. This is a scaled shear with factor $2$.",
+    "parameters": {
+      "matrix": [
+        [2, 1],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Same template with scaling factor 2."
+  },
+  {
+    "id": "E139",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "latex",
+    "theorem": "Shear [[5,2],[0,5]]",
+    "question": "Find the eigenvalues of A = [[5,2],[0,5]].",
+    "proof": "The matrix is upper-triangular with both diagonal entries equal to $5$, so the only eigenvalue is $5$, with eigenspace the x-axis. The algebraic multiplicity is $2$ and the geometric multiplicity is $1$.",
+    "parameters": {
+      "matrix": [
+        [5, 2],
+        [0, 5]
+      ]
+    },
+    "animation_notes": "Scaled shear with factor 5."
+  },
+  {
+    "id": "E140",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "natural_language",
+    "theorem": "Shear [[-1,1],[0,-1]]",
+    "question": "Find the eigenvalues of A = [[-1,1],[0,-1]].",
+    "proof": "The matrix is upper-triangular with both diagonal entries equal to minus one, so minus one is the only eigenvalue. The eigenspace is the horizontal axis. The algebraic multiplicity is two, the geometric multiplicity is one, and the matrix is a scaled-and-flipped shear.",
+    "parameters": {
+      "matrix": [
+        [-1, 1],
+        [0, -1]
+      ]
+    },
+    "animation_notes": "Negative scaling plus shear."
+  },
+  {
+    "id": "E141",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "mixed",
+    "theorem": "Strictly upper-triangular nilpotent",
+    "question": "Find the eigenvalues of A = [[0,1],[0,0]].",
+    "proof": "The matrix is upper-triangular with zero diagonal, so the only eigenvalue is $0$. The eigenspace is $\\operatorname{span}\\{(1,0)\\}$, one-dimensional. So algebraic multiplicity is two but geometric multiplicity is one.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [0, 0]
+      ]
+    },
+    "animation_notes": "Nilpotent shear: A squared is the zero matrix."
+  },
+  {
+    "id": "E142",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "latex",
+    "theorem": "Shear [[3,5],[0,3]]",
+    "question": "Find the eigenvalues of A = [[3,5],[0,3]].",
+    "proof": "The matrix is upper-triangular with diagonal entries $3$ and $3$, so the only eigenvalue is $3$, and the eigenspace is the x-axis, one-dimensional.",
+    "parameters": {
+      "matrix": [
+        [3, 5],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Scaled shear with factor 3 and parameter 5."
+  },
+  {
+    "id": "E143",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "natural_language",
+    "theorem": "Shear [[4,-1],[0,4]]",
+    "question": "Find the eigenvalues of A = [[4,-1],[0,4]].",
+    "proof": "The matrix is upper-triangular with diagonal entries equal to four, so the only eigenvalue is four. Solving A minus four times the identity gives minus y equal to zero, so y is zero and the eigenspace is horizontal. The geometric multiplicity is one.",
+    "parameters": {
+      "matrix": [
+        [4, -1],
+        [0, 4]
+      ]
+    },
+    "animation_notes": "Shear with negative parameter."
+  },
+  {
+    "id": "E144",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "mixed",
+    "theorem": "3x3 upper-triangular shear with identity diagonal",
+    "question": "Find the eigenvalues of A = [[1,1,0],[0,1,1],[0,0,1]].",
+    "proof": "The matrix is upper-triangular with all diagonal entries equal to $1$, so the only eigenvalue is $1$, with algebraic multiplicity $3$. Solving $(A-I)v = 0$ gives a two-dimensional constraint, so the eigenspace is one-dimensional.",
+    "parameters": {
+      "matrix": [
+        [1, 1, 0],
+        [0, 1, 1],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "3D shear with a single invariant line."
+  },
+  {
+    "id": "E145",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_shear",
+    "proof_format": "latex",
+    "theorem": "Lower-triangular shear [[2,0],[7,2]]",
+    "question": "Find the eigenvalues of A = [[2,0],[7,2]].",
+    "proof": "The matrix is lower-triangular with diagonal entries $2$ and $2$, so the only eigenvalue is $2$, with eigenspace the vertical axis, one-dimensional.",
+    "parameters": {
+      "matrix": [
+        [2, 0],
+        [7, 2]
+      ]
+    },
+    "animation_notes": "Vertical shear with scaling."
+  },
+  {
+    "id": "E146",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "latex",
+    "theorem": "Rotation by 90 degrees",
+    "question": "Show that A = [[0,-1],[1,0]] has no real eigenvalues.",
+    "proof": "The characteristic polynomial is $\\lambda^2 + 1$, whose roots are $\\pm i$. Since these are not real, the matrix has no real eigenvalues and hence no real eigenvectors.",
+    "parameters": {
+      "matrix": [
+        [0, -1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Rotation by 90 degrees; every direction is turned, so no eigen-directions exist."
+  },
+  {
+    "id": "E147",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "natural_language",
+    "theorem": "Rotation by 90 degrees scaled by 3",
+    "question": "Find the eigenvalues of A = [[0,-3],[3,0]].",
+    "proof": "The characteristic polynomial is lambda squared plus nine, whose roots are plus or minus three i. These complex conjugate eigenvalues have modulus three, reflecting that the transformation rotates by ninety degrees and scales by three.",
+    "parameters": {
+      "matrix": [
+        [0, -3],
+        [3, 0]
+      ]
+    },
+    "animation_notes": "Rotation with expansion; modulus of the eigenvalue equals the scale."
+  },
+  {
+    "id": "E148",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "mixed",
+    "theorem": "Rotation by 45 degrees scaled",
+    "question": "Find the eigenvalues of A = [[1,-1],[1,1]].",
+    "proof": "The characteristic polynomial is $(1-\\lambda)^2 + 1$, giving eigenvalues $1 \\pm i$. These complex eigenvalues correspond to a rotation by 45 degrees composed with scaling by the square root of two (which is the modulus of the eigenvalue).",
+    "parameters": {
+      "matrix": [
+        [1, -1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Rotation 45 degrees with scale sqrt(2)."
+  },
+  {
+    "id": "E149",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "latex",
+    "theorem": "Rotation by negative 90 degrees",
+    "question": "Find the eigenvalues of A = [[0,1],[-1,0]].",
+    "proof": "The characteristic polynomial is $\\lambda^2+1$, with roots $\\pm i$. Same as before, but the rotation is clockwise (negative 90 degrees).",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [-1, 0]
+      ]
+    },
+    "animation_notes": "Clockwise rotation by 90 degrees."
+  },
+  {
+    "id": "E150",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "natural_language",
+    "theorem": "Rotation-scaled with factor 2",
+    "question": "Find the eigenvalues of A = [[2,-2],[2,2]].",
+    "proof": "The characteristic polynomial is (2 minus lambda) squared plus four, giving eigenvalues two plus or minus two i. The modulus is two times the square root of two, reflecting the rotation by forty-five degrees combined with a scale factor.",
+    "parameters": {
+      "matrix": [
+        [2, -2],
+        [2, 2]
+      ]
+    },
+    "animation_notes": "Rotate-scale combination."
+  },
+  {
+    "id": "E152",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "latex",
+    "theorem": "Rotation by 90 degrees with scaling by 5",
+    "question": "Find the eigenvalues of A = [[0,-5],[5,0]].",
+    "proof": "The characteristic polynomial is $\\lambda^2+25$, with roots $\\pm 5i$. These reflect a rotation by $90$ degrees with modulus $5$.",
+    "parameters": {
+      "matrix": [
+        [0, -5],
+        [5, 0]
+      ]
+    },
+    "animation_notes": "Large-scale rotation."
+  },
+  {
+    "id": "E154",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "mixed",
+    "theorem": "Rotation-scale with parameter 2 and offset 1",
+    "question": "Find the eigenvalues of A = [[1,-2],[2,1]].",
+    "proof": "The characteristic polynomial is (1 minus lambda) squared plus four, giving eigenvalues one plus or minus two i. The real part gives the scaling, the imaginary part gives the rotation.",
+    "parameters": {
+      "matrix": [
+        [1, -2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Contrast with the purely imaginary eigenvalue case."
+  },
+  {
+    "id": "E155",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_rotation_complex",
+    "proof_format": "latex",
+    "theorem": "Rotation by 90 degrees on a smaller matrix",
+    "question": "Find the eigenvalues of A = [[0,1],[-1,0]] (clockwise rotation).",
+    "proof": "The characteristic polynomial is $\\lambda^2+1$, with roots $\\pm i$. As expected, no real eigenvalues.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [-1, 0]
+      ]
+    },
+    "animation_notes": "Same template as E149."
+  },
+  {
+    "id": "E156",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "latex",
+    "theorem": "Reflection across y=x",
+    "question": "Find the eigenvalues of A = [[0,1],[1,0]].",
+    "proof": "$A(1,1) = (1,1)$ and $A(1,-1) = -(1,-1)$, so the eigenvalues are $1$ and $-1$ with eigenvectors $(1,1)$ and $(1,-1)$.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Reflection across y=x."
+  },
+  {
+    "id": "E157",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "natural_language",
+    "theorem": "Reflection across y=-x",
+    "question": "Find the eigenvalues of A = [[0,-1],[-1,0]].",
+    "proof": "The matrix reflects across the anti-diagonal y equal to minus x. Applying A to (1,-1) gives (-1,1), which equals (1,-1), so 1 is an eigenvalue with eigenvector (1,-1). Applying A to (1,1) gives (-1,-1), which is minus (1,1), so minus 1 is the other eigenvalue.",
+    "parameters": {
+      "matrix": [
+        [0, -1],
+        [-1, 0]
+      ]
+    },
+    "animation_notes": "Reflection across anti-diagonal."
+  },
+  {
+    "id": "E158",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "mixed",
+    "theorem": "Reflection across y-axis",
+    "question": "Find the eigenvalues of A = [[-1,0],[0,1]].",
+    "proof": "The matrix is diagonal with entries $-1$ and $1$, so the eigenvalues are $-1$ (with eigenvector $(1,0)$) and $1$ (with eigenvector $(0,1)$). This is a reflection across the y-axis.",
+    "parameters": {
+      "matrix": [
+        [-1, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Reflection across y-axis."
+  },
+  {
+    "id": "E159",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "latex",
+    "theorem": "Reflection across x-axis",
+    "question": "Find the eigenvalues of A = [[1,0],[0,-1]].",
+    "proof": "The matrix is diagonal with entries $1$ and $-1$, so the eigenvalues are $1$ and $-1$ with eigenvectors the x-axis and y-axis respectively.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [0, -1]
+      ]
+    },
+    "animation_notes": "Reflection across x-axis."
+  },
+  {
+    "id": "E161",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "mixed",
+    "theorem": "Stretched reflection across y-axis",
+    "question": "Find the eigenvalues of A = [[-3,0],[0,1]].",
+    "proof": "The diagonal entries are $-3$ and $1$, so the eigenvalues are $-3$ (eigenvector $(1,0)$) and $1$ (eigenvector $(0,1)$). The matrix flips and stretches along the x-axis, and fixes the y-axis.",
+    "parameters": {
+      "matrix": [
+        [-3, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Reflection with scaling."
+  },
+  {
+    "id": "E162",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "latex",
+    "theorem": "Reflection across y=x scaled",
+    "question": "Find the eigenvalues of A = [[0,2],[2,0]].",
+    "proof": "The matrix sends $(1,1)$ to $(2,2) = 2(1,1)$ and $(1,-1)$ to $(-2,2) = -2(1,-1)$. So the eigenvalues are $2$ and $-2$, with eigenvectors $(1,1)$ and $(1,-1)$.",
+    "parameters": {
+      "matrix": [
+        [0, 2],
+        [2, 0]
+      ]
+    },
+    "animation_notes": "Scaled reflection across y=x."
+  },
+  {
+    "id": "E163",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "natural_language",
+    "theorem": "Scale and reflect",
+    "question": "Find the eigenvalues of A = [[2,0],[0,-2]].",
+    "proof": "The diagonal entries give eigenvalues two and minus two with eigenvectors the coordinate axes. The x-axis is stretched by two, and the y-axis is flipped and stretched by two.",
+    "parameters": {
+      "matrix": [
+        [2, 0],
+        [0, -2]
+      ]
+    },
+    "animation_notes": "Scale and reflect in different directions."
+  },
+  {
+    "id": "E164",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "mixed",
+    "theorem": "Reflection across y=x with different coefficients",
+    "question": "Find the eigenvalues of A = [[0,1],[1,0]] (again, but for variety with a mixed proof format).",
+    "proof": "The matrix maps $(1,1)$ to itself (eigenvalue $1$) and $(1,-1)$ to its negative (eigenvalue $-1$). So the eigenvalues are $1$ and $-1$.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Standard reflection across y=x."
+  },
+  {
+    "id": "E165",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigen_reflection",
+    "proof_format": "latex",
+    "theorem": "Reflection across the y-axis, scaled by 4",
+    "question": "Find the eigenvalues of A = [[-4,0],[0,1]].",
+    "proof": "The matrix has eigenvalues $-4$ (eigenvector $(1,0)$) and $1$ (eigenvector $(0,1)$), because it flips and stretches the x-axis by 4 while fixing the y-axis.",
+    "parameters": {
+      "matrix": [
+        [-4, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Reflection with large scaling."
+  },
+  {
+    "id": "E166",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "latex",
+    "theorem": "Area scaling of diag(5,2)",
+    "question": "Show that A = diag(5,2) scales areas by 10.",
+    "proof": "The determinant is $5 \\cdot 2 = 10$, so the unit square is mapped to a $5\\times 2$ rectangle of area $10$. Hence areas are multiplied by $10$.",
+    "parameters": {
+      "matrix": "diag(5,2)"
+    },
+    "animation_notes": "Show the 5-by-2 rectangle."
+  },
+  {
+    "id": "E167",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "natural_language",
+    "theorem": "Area scaling of the identity",
+    "question": "Show that the identity matrix preserves area.",
+    "proof": "The determinant of the identity is one, and the unit square maps to itself, so the area of every region is preserved.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Degenerate case: nothing moves."
+  },
+  {
+    "id": "E168",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "mixed",
+    "theorem": "Area scaling of a rank-one matrix",
+    "question": "Show that A = [[2,0],[0,0]] scales areas by 0.",
+    "proof": "The determinant is zero, so every region is mapped to a set of area zero. Indeed, the unit square collapses onto a segment along the x-axis.",
+    "parameters": {
+      "matrix": [
+        [2, 0],
+        [0, 0]
+      ]
+    },
+    "animation_notes": "Collapse onto the x-axis."
+  },
+  {
+    "id": "E169",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "latex",
+    "theorem": "Area scaling of an upper-triangular matrix",
+    "question": "Show that A = [[3,1],[0,2]] scales areas by 6.",
+    "proof": "The determinant of the upper-triangular matrix equals the product of its diagonal entries $3 \\cdot 2 = 6$. Thus the area of every region is multiplied by $6$.",
+    "parameters": {
+      "matrix": [
+        [3, 1],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Rectangular image becomes a parallelogram of area 6."
+  },
+  {
+    "id": "E170",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "natural_language",
+    "theorem": "Area scaling of the rotation by 90 degrees",
+    "question": "Show that A = [[0,-1],[1,0]] preserves area.",
+    "proof": "The determinant is one, and the unit square rotates to a congruent unit square. Hence areas are unchanged.",
+    "parameters": {
+      "matrix": [
+        [0, -1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Rotation preserves area."
+  },
+  {
+    "id": "E171",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "mixed",
+    "theorem": "Area-preserving anisotropic scaling",
+    "question": "Show that A = [[4,0],[0,1/4]] preserves area.",
+    "proof": "The determinant is four times one quarter, that is one. So the unit square is mapped to a $4\\times 1/4$ rectangle of area one, and areas are preserved.",
+    "parameters": {
+      "matrix": [
+        [4, 0],
+        [0, "1/4"]
+      ]
+    },
+    "animation_notes": "Stretch in one direction, compress in the other."
+  },
+  {
+    "id": "E172",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "latex",
+    "theorem": "Zero area scaling for singular matrix",
+    "question": "Show that A = [[1,1],[1,1]] scales areas by 0.",
+    "proof": "The determinant is $1 \\cdot 1 - 1 \\cdot 1 = 0$, so the unit square collapses to a segment and areas are annihilated.",
+    "parameters": {
+      "matrix": [
+        [1, 1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Collapse onto the diagonal."
+  },
+  {
+    "id": "E173",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "natural_language",
+    "theorem": "Area scaling of [[2,1],[1,1]]",
+    "question": "Show that A = [[2,1],[1,1]] scales areas by 1.",
+    "proof": "The determinant is two times one minus one times one, that is one. So the unit square maps to a parallelogram of area one, and areas are preserved.",
+    "parameters": {
+      "matrix": [
+        [2, 1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Shape changes but area stays the same."
+  },
+  {
+    "id": "E174",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "mixed",
+    "theorem": "Area scaling of [[3,2],[1,1]]",
+    "question": "Show that A = [[3,2],[1,1]] preserves area.",
+    "proof": "The determinant is three times one minus two times one, that is one, so the unit square maps to a parallelogram of the same area.",
+    "parameters": {
+      "matrix": [
+        [3, 2],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Area-preserving linear map."
+  },
+  {
+    "id": "E175",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_area_2d",
+    "proof_format": "latex",
+    "theorem": "Area scaling of a shear",
+    "question": "Show that A = [[1,2],[0,1]] preserves area.",
+    "proof": "The determinant is one, so the unit square maps to a parallelogram of the same area. Shears always preserve area.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Shears preserve area."
+  },
+  {
+    "id": "E176",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "latex",
+    "theorem": "Volume scaling of diag(3,3,3)",
+    "question": "Show that A = diag(3,3,3) scales volumes by 27.",
+    "proof": "The determinant of $A$ is $3^3 = 27$. The image of the unit cube has volume $27$, so volumes are scaled by $27$.",
+    "parameters": {
+      "matrix": "diag(3,3,3)"
+    },
+    "animation_notes": "Unit cube becomes a 3-by-3-by-3 cube."
+  },
+  {
+    "id": "E177",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "natural_language",
+    "theorem": "Volume scaling of diag(1,2,3)",
+    "question": "Show that A = diag(1,2,3) scales volumes by 6.",
+    "proof": "The determinant is the product of the diagonal entries, which is one times two times three, that is six. So volumes are scaled by six, and the unit cube maps to a one-by-two-by-three box.",
+    "parameters": {
+      "matrix": "diag(1,2,3)"
+    },
+    "animation_notes": "Box of dimensions 1,2,3."
+  },
+  {
+    "id": "E179",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "latex",
+    "theorem": "Volume scaling of 2I in R^3",
+    "question": "Show that A = 2I scales volumes by 8.",
+    "proof": "The determinant of $2I$ is $2^3 = 8$. So volumes are scaled by $8$.",
+    "parameters": {
+      "matrix": [
+        [2, 0, 0],
+        [0, 2, 0],
+        [0, 0, 2]
+      ]
+    },
+    "animation_notes": "Uniform scaling of the cube by 2."
+  },
+  {
+    "id": "E180",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "natural_language",
+    "theorem": "Volume scaling of diag(1,2,3) again",
+    "question": "Show that the matrix diag(1,2,3) scales volumes by 6 (another instance).",
+    "proof": "The determinant is the product of the diagonal entries, giving six. So the volume of the unit cube maps to a box of volume six, and volumes are scaled by six.",
+    "parameters": {
+      "matrix": "diag(1,2,3)"
+    },
+    "animation_notes": "Same as E177; alternative proof style."
+  },
+  {
+    "id": "E181",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "mixed",
+    "theorem": "Volume scaling of the swap of two axes",
+    "question": "Show that A = [[2,0,0],[0,0,2],[0,2,0]] scales volumes by 8.",
+    "proof": "Expanding along the first row, the determinant equals twice the determinant of the bottom 2x2, which is $2 \\cdot (0 \\cdot 0 - 2 \\cdot 2) = -8$. Wait, computing carefully: the matrix maps $(x,y,z)$ to $(2x, 2z, 2y)$. The determinant of the swap-of-two-axes matrix is $-1$, and multiplying by the overall scale 2 in each row gives $2^3 = 8$. The absolute value is $8$.",
+    "parameters": {
+      "matrix": [
+        [2, 0, 0],
+        [0, 0, 2],
+        [0, 2, 0]
+      ]
+    },
+    "animation_notes": "Swap with scaling."
+  },
+  {
+    "id": "E182",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "latex",
+    "theorem": "Volume scaling of a 3D shear",
+    "question": "Show that A = [[1,1,0],[0,1,0],[0,0,1]] preserves volume.",
+    "proof": "The determinant is $1$ since the matrix is upper-triangular with ones on the diagonal. Hence volumes are preserved.",
+    "parameters": {
+      "matrix": [
+        [1, 1, 0],
+        [0, 1, 0],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Shear preserves volume."
+  },
+  {
+    "id": "E183",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "natural_language",
+    "theorem": "Volume scaling of diag(4,1,1)",
+    "question": "Show that A = diag(4,1,1) scales volumes by 4.",
+    "proof": "The determinant is the product of the diagonal entries, which is four. So volumes are multiplied by four.",
+    "parameters": {
+      "matrix": "diag(4,1,1)"
+    },
+    "animation_notes": "Stretch along one axis by 4."
+  },
+  {
+    "id": "E184",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "mixed",
+    "theorem": "Volume scaling of a rank-deficient matrix",
+    "question": "Show that A = diag(1,1,0) scales volumes by 0.",
+    "proof": "The determinant is zero, so the unit cube collapses onto the xy-plane, whose 3D measure is zero. Hence volumes are scaled by zero.",
+    "parameters": {
+      "matrix": "diag(1,1,0)"
+    },
+    "animation_notes": "Collapse onto the xy-plane."
+  },
+  {
+    "id": "E185",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_volume_3d",
+    "proof_format": "latex",
+    "theorem": "Volume scaling of a 3D Jordan-like shear",
+    "question": "Show that A = [[2,1,0],[0,2,1],[0,0,2]] scales volumes by 8.",
+    "proof": "The matrix is upper-triangular with all diagonal entries equal to $2$, so its determinant is $2^3 = 8$. Hence volumes are scaled by $8$.",
+    "parameters": {
+      "matrix": [
+        [2, 1, 0],
+        [0, 2, 1],
+        [0, 0, 2]
+      ]
+    },
+    "animation_notes": "Upper-triangular scale plus shear."
+  },
+  {
+    "id": "E196",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "latex",
+    "theorem": "Characteristic polynomial of 3I",
+    "question": "Compute the characteristic polynomial of A = 3I.",
+    "proof": "$\\det(A - \\lambda I) = \\det((3-\\lambda)I) = (3-\\lambda)^2$. So the characteristic polynomial is $(3-\\lambda)^2$ and the only eigenvalue is $3$ (double).",
+    "parameters": {
+      "matrix": [
+        [3, 0],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Display the double root."
+  },
+  {
+    "id": "E197",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "natural_language",
+    "theorem": "Characteristic polynomial of diag(2,-1)",
+    "question": "Compute the characteristic polynomial of A = [[2,0],[0,-1]].",
+    "proof": "The matrix is diagonal, so the characteristic polynomial is the product of the diagonal entries of A minus lambda times the identity. This gives (2 minus lambda) times (minus one minus lambda), which expands to lambda squared minus lambda minus two.",
+    "parameters": {
+      "matrix": [
+        [2, 0],
+        [0, -1]
+      ]
+    },
+    "animation_notes": "Display the diagonal formula."
+  },
+  {
+    "id": "E198",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "mixed",
+    "theorem": "Characteristic polynomial of a nilpotent matrix",
+    "question": "Compute the characteristic polynomial of A = [[0,1],[0,0]].",
+    "proof": "$\\det(A - \\lambda I) = \\det\\begin{pmatrix}-\\lambda & 1\\\\0&-\\lambda\\end{pmatrix} = \\lambda^2$. So the characteristic polynomial is $\\lambda^2$, and the only eigenvalue is $0$ (double).",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [0, 0]
+      ]
+    },
+    "animation_notes": "Nilpotent matrix gives a double root at zero."
+  },
+  {
+    "id": "E199",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "latex",
+    "theorem": "Characteristic polynomial of [[1,2],[3,4]]",
+    "question": "Compute the characteristic polynomial of A = [[1,2],[3,4]].",
+    "proof": "$\\det(A - \\lambda I) = (1-\\lambda)(4-\\lambda) - 6 = \\lambda^2 - 5\\lambda - 2$.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [3, 4]
+      ]
+    },
+    "animation_notes": "Display the expansion."
+  },
+  {
+    "id": "E201",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "mixed",
+    "theorem": "Characteristic polynomial of a projection",
+    "question": "Compute the characteristic polynomial of A = [[1,0],[0,0]].",
+    "proof": "$\\det(A - \\lambda I) = (1-\\lambda)(-\\lambda) = \\lambda(\\lambda-1)$. So the eigenvalues are $1$ and $0$, matching the geometric picture of projection.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [0, 0]
+      ]
+    },
+    "animation_notes": "Projection polynomial."
+  },
+  {
+    "id": "E202",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "latex",
+    "theorem": "Characteristic polynomial of diag(2,3,4)",
+    "question": "Compute the characteristic polynomial of A = diag(2,3,4).",
+    "proof": "$\\det(A-\\lambda I) = (2-\\lambda)(3-\\lambda)(4-\\lambda)$, so the characteristic polynomial has roots $2, 3, 4$.",
+    "parameters": {
+      "matrix": "diag(2,3,4)"
+    },
+    "animation_notes": "Three roots."
+  },
+  {
+    "id": "E203",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "natural_language",
+    "theorem": "Characteristic polynomial of the swap matrix",
+    "question": "Compute the characteristic polynomial of A = [[0,1],[1,0]].",
+    "proof": "The determinant of A minus lambda times the identity equals lambda squared minus one, which factors as (lambda minus one)(lambda plus one). So the eigenvalues are one and minus one.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Reflection eigenvalues."
+  },
+  {
+    "id": "E204",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_poly",
+    "proof_format": "mixed",
+    "theorem": "Characteristic polynomial of [[3,1],[1,3]]",
+    "question": "Compute the characteristic polynomial of A = [[3,1],[1,3]].",
+    "proof": "$(3-\\lambda)^2 - 1 = \\lambda^2 - 6\\lambda + 8 = (\\lambda-2)(\\lambda-4)$. So the eigenvalues are $2$ and $4$.",
+    "parameters": {
+      "matrix": [
+        [3, 1],
+        [1, 3]
+      ]
+    },
+    "animation_notes": "Symmetric matrix factorization."
+  },
+  {
+    "id": "E206",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "latex",
+    "theorem": "Diagonalise [[4,1],[1,4]]",
+    "question": "Diagonalise A = [[4,1],[1,4]].",
+    "proof": "Eigenvalues $3$ and $5$, eigenvectors $(1,-1)$ and $(1,1)$. Set $P = \\begin{pmatrix}1&1\\\\-1&1\\end{pmatrix}$ and $D = \\operatorname{diag}(3,5)$, so $A = PDP^{-1}$.",
+    "parameters": {
+      "matrix": [
+        [4, 1],
+        [1, 4]
+      ]
+    },
+    "animation_notes": "Change of basis to diagonal."
+  },
+  {
+    "id": "E207",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "natural_language",
+    "theorem": "Diagonalise [[3,1],[1,3]]",
+    "question": "Diagonalise A = [[3,1],[1,3]].",
+    "proof": "The eigenvalues are two and four, with eigenvectors (1,-1) and (1,1). Choosing P with these as columns and D as the diagonal matrix of eigenvalues gives A equal to P D P inverse.",
+    "parameters": {
+      "matrix": [
+        [3, 1],
+        [1, 3]
+      ]
+    },
+    "animation_notes": "Change of basis to diagonal."
+  },
+  {
+    "id": "E208",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "mixed",
+    "theorem": "Diagonalise 2I (already diagonal)",
+    "question": "Diagonalise A = 2I.",
+    "proof": "Every nonzero vector is an eigenvector with eigenvalue $2$, so $P = I$, $D = 2I$, and $A = PDP^{-1}$ trivially.",
+    "parameters": {
+      "matrix": [
+        [2, 0],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Trivial diagonalization."
+  },
+  {
+    "id": "E209",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "latex",
+    "theorem": "Diagonalise diag(1,-1)",
+    "question": "Diagonalise A = [[1,0],[0,-1]].",
+    "proof": "Take $P = I$ and $D = A$; then $A = PDP^{-1}$ trivially. Eigenvalues $1$ and $-1$.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [0, -1]
+      ]
+    },
+    "animation_notes": "Already diagonal."
+  },
+  {
+    "id": "E210",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "natural_language",
+    "theorem": "Diagonalise diag(5,2)",
+    "question": "Diagonalise A = [[5,0],[0,2]].",
+    "proof": "The matrix is already diagonal, so P is the identity and D equals A. The eigenvalues are five and two.",
+    "parameters": {
+      "matrix": [
+        [5, 0],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Already diagonal."
+  },
+  {
+    "id": "E211",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "mixed",
+    "theorem": "Diagonalise the swap matrix",
+    "question": "Diagonalise A = [[0,1],[1,0]].",
+    "proof": "Eigenvalues $1$ and $-1$, eigenvectors $(1,1)$ and $(1,-1)$. $P = \\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$, $D = \\operatorname{diag}(1,-1)$, so $A = PDP^{-1}$.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Change of basis to diagonal/anti-diagonal frame."
+  },
+  {
+    "id": "E212",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "latex",
+    "theorem": "Diagonalise [[2,2],[2,2]]",
+    "question": "Diagonalise A = [[2,2],[2,2]].",
+    "proof": "Eigenvalues $4$ and $0$, eigenvectors $(1,1)$ and $(1,-1)$. Set $P = \\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$ and $D = \\operatorname{diag}(4,0)$.",
+    "parameters": {
+      "matrix": [
+        [2, 2],
+        [2, 2]
+      ]
+    },
+    "animation_notes": "Rank-one collapse is diagonalizable."
+  },
+  {
+    "id": "E213",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "natural_language",
+    "theorem": "Diagonalise [[1,1],[1,1]]",
+    "question": "Diagonalise A = [[1,1],[1,1]].",
+    "proof": "Eigenvalues two and zero, with eigenvectors (1,1) and (1,-1). So P with these columns and D with entries two and zero gives the diagonalization.",
+    "parameters": {
+      "matrix": [
+        [1, 1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Rank-one collapse is diagonalizable."
+  },
+  {
+    "id": "E214",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "diagonalization",
+    "proof_format": "mixed",
+    "theorem": "Diagonalise diag(1,3)",
+    "question": "Diagonalise A = [[1,0],[0,3]].",
+    "proof": "The matrix is already diagonal, so take P as the identity and D as A. Eigenvalues $1$ and $3$.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Already diagonal."
+  },
+  {
+    "id": "E216",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "latex",
+    "theorem": "Trace and eigenvalues of diag(1,2)",
+    "question": "Verify that the trace of A = [[1,0],[0,2]] equals the sum of its eigenvalues.",
+    "proof": "$\\operatorname{tr}(A) = 1 + 2 = 3$, and the eigenvalues are $1$ and $2$, whose sum is $3$.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [0, 2]
+      ]
+    },
+    "animation_notes": "Trivial diagonal case."
+  },
+  {
+    "id": "E217",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "natural_language",
+    "theorem": "Trace and eigenvalues of [[2,1],[1,2]]",
+    "question": "Verify that the trace of A = [[2,1],[1,2]] equals the sum of its eigenvalues.",
+    "proof": "The trace is two plus two, that is four. The eigenvalues are one and three (as computed earlier), whose sum is also four.",
+    "parameters": {
+      "matrix": [
+        [2, 1],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "Symmetric with unit off-diagonal."
+  },
+  {
+    "id": "E218",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "mixed",
+    "theorem": "Trace and eigenvalues of [[1,2],[2,1]]",
+    "question": "Verify the trace-eigenvalue identity for A = [[1,2],[2,1]].",
+    "proof": "The trace of A is $1+1 = 2$. Its eigenvalues are $3$ and $-1$, whose sum is $2$. So the identity holds.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Negative eigenvalue case."
+  },
+  {
+    "id": "E220",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "natural_language",
+    "theorem": "Trace and eigenvalues of a shear",
+    "question": "Verify the identity for A = [[3,1],[0,3]].",
+    "proof": "The trace is six and the eigenvalues, counted with multiplicity, are three and three, whose sum is six.",
+    "parameters": {
+      "matrix": [
+        [3, 1],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Shear case: identity holds even when not diagonalisable."
+  },
+  {
+    "id": "E221",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "mixed",
+    "theorem": "Trace and eigenvalues of diag(2,2,3)",
+    "question": "Verify the identity for A = diag(2,2,3).",
+    "proof": "The trace is $2+2+3 = 7$ and the eigenvalues are $2, 2, 3$, whose sum is $7$.",
+    "parameters": {
+      "matrix": "diag(2,2,3)"
+    },
+    "animation_notes": "3x3 diagonal case."
+  },
+  {
+    "id": "E222",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "latex",
+    "theorem": "Trace and eigenvalues of diag(5,-1)",
+    "question": "Verify the identity for A = [[5,0],[0,-1]].",
+    "proof": "The trace is $5-1 = 4$, and the eigenvalues are $5$ and $-1$, whose sum is $4$.",
+    "parameters": {
+      "matrix": [
+        [5, 0],
+        [0, -1]
+      ]
+    },
+    "animation_notes": "Mixed-sign diagonal case."
+  },
+  {
+    "id": "E223",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "natural_language",
+    "theorem": "Trace and eigenvalues of [[1,1],[1,1]]",
+    "question": "Verify the identity for A = [[1,1],[1,1]].",
+    "proof": "The trace is two, and the eigenvalues are two and zero, summing to two. So the identity holds even though one eigenvalue is zero.",
+    "parameters": {
+      "matrix": [
+        [1, 1],
+        [1, 1]
+      ]
+    },
+    "animation_notes": "Rank-one case."
+  },
+  {
+    "id": "E224",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "mixed",
+    "theorem": "Trace and eigenvalues of [[4,2],[2,1]]",
+    "question": "Verify the identity for A = [[4,2],[2,1]].",
+    "proof": "The trace is five, and the eigenvalues are five and zero, summing to five.",
+    "parameters": {
+      "matrix": [
+        [4, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Rank-one symmetric case."
+  },
+  {
+    "id": "E225",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "trace_eigen",
+    "proof_format": "latex",
+    "theorem": "Trace and eigenvalues of diag(-2,-3)",
+    "question": "Verify the identity for A = [[-2,0],[0,-3]].",
+    "proof": "The trace is $-2-3 = -5$, and the eigenvalues are $-2$ and $-3$, whose sum is $-5$.",
+    "parameters": {
+      "matrix": [
+        [-2, 0],
+        [0, -3]
+      ]
+    },
+    "animation_notes": "Both eigenvalues negative."
+  },
+  {
+    "id": "E226",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "mixed",
+    "theorem": "Geometric eigenvectors of diag(2,2,3)",
+    "question": "Describe geometrically the eigenvectors of A = diag(2,2,3).",
+    "proof": "The eigenspace for the eigenvalue $2$ is the whole xy-plane (every vector of the form $(x,y,0)$), since both coordinates scale by $2$. The eigenspace for the eigenvalue $3$ is the z-axis. So eigenvectors fill the xy-plane (with eigenvalue 2) or lie on the z-axis (with eigenvalue 3).",
+    "parameters": {
+      "matrix": "diag(2,2,3)"
+    },
+    "animation_notes": "Highlight the plane and the axis."
+  },
+  {
+    "id": "E227",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "natural_language",
+    "theorem": "Geometric eigenvectors of a shear",
+    "question": "Describe geometrically the eigenvectors of A = [[1,1],[0,1]].",
+    "proof": "The shear fixes every point on the x-axis, so every vector on the x-axis is an eigenvector with eigenvalue one. Every other direction is tilted, so there are no other eigenvectors. The eigenspace is thus one-dimensional.",
+    "parameters": {
+      "matrix": [
+        [1, 1],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Only the horizontal axis survives."
+  },
+  {
+    "id": "E228",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "latex",
+    "theorem": "Geometric eigenvectors of reflection across y=x",
+    "question": "Describe geometrically the eigenvectors of A = [[0,1],[1,0]].",
+    "proof": "The line $y = x$ is fixed pointwise by the reflection, so every vector on it is an eigenvector with eigenvalue $1$. The line $y = -x$ is reflected to itself but negated, so every vector on it is an eigenvector with eigenvalue $-1$.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Highlight the two diagonal lines."
+  },
+  {
+    "id": "E229",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "mixed",
+    "theorem": "Geometric eigenvectors of a mixed-flip matrix",
+    "question": "Describe geometrically the eigenvectors of A = [[2,0],[0,-1]].",
+    "proof": "The matrix stretches the x-axis by 2 and flips the y-axis. So the x-axis is an eigen-direction with eigenvalue $2$, and the y-axis is an eigen-direction with eigenvalue $-1$.",
+    "parameters": {
+      "matrix": [
+        [2, 0],
+        [0, -1]
+      ]
+    },
+    "animation_notes": "Show the two coordinate-axis eigen-directions."
+  },
+  {
+    "id": "E230",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "latex",
+    "theorem": "Geometric eigenvectors of the identity",
+    "question": "Describe geometrically the eigenvectors of A = I.",
+    "proof": "Every nonzero vector is fixed by the identity, so every nonzero vector is an eigenvector with eigenvalue $1$.",
+    "parameters": {
+      "matrix": [
+        [1, 0],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Every direction is preserved."
+  },
+  {
+    "id": "E231",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "natural_language",
+    "theorem": "Geometric eigenvectors of the 90-degree rotation",
+    "question": "Describe geometrically why A = [[0,-1],[1,0]] has no real eigenvectors.",
+    "proof": "The matrix rotates every nonzero vector by ninety degrees, so no vector is mapped to a scalar multiple of itself. Hence there are no real eigenvectors, and the eigenvalues are purely imaginary.",
+    "parameters": {
+      "matrix": [
+        [0, -1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Rotation turns every direction, so none is invariant."
+  },
+  {
+    "id": "E232",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "mixed",
+    "theorem": "Geometric eigenvectors of a rank-one matrix",
+    "question": "Describe geometrically the eigenvectors of A = [[2,2],[2,2]].",
+    "proof": "Every vector of the form $t(1,1)$ is scaled by $4$, since the norm of $(2,2)$ is $\\sqrt{8}$ and its square is $8$; wait, let me recheck: $A(1,1) = (4,4) = 4(1,1)$, so eigenvalue $4$. Any vector orthogonal to $(1,1)$ (i.e. on the anti-diagonal) is mapped to zero, so eigenvalue $0$.",
+    "parameters": {
+      "matrix": [
+        [2, 2],
+        [2, 2]
+      ]
+    },
+    "animation_notes": "The collapse direction is the diagonal, the kernel is the anti-diagonal."
+  },
+  {
+    "id": "E233",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "latex",
+    "theorem": "Geometric eigenvectors of a uniform scaling",
+    "question": "Describe geometrically the eigenvectors of A = 3I.",
+    "proof": "Every nonzero vector $v$ satisfies $Av = 3v$, so every nonzero vector is an eigenvector with eigenvalue $3$. All directions are preserved.",
+    "parameters": {
+      "matrix": [
+        [3, 0],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Uniform scaling by 3."
+  },
+  {
+    "id": "E235",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "eigenvector_geometric",
+    "proof_format": "mixed",
+    "theorem": "Geometric eigenvectors of a projection in 3D",
+    "question": "Describe geometrically the eigenvectors of A = [[1,0,0],[0,1,0],[0,0,0]].",
+    "proof": "The xy-plane is fixed pointwise, so every vector in it is an eigenvector with eigenvalue one. Every vector along the z-axis is mapped to zero, so the z-axis is an eigenvector with eigenvalue zero. Thus the eigenvectors fill the xy-plane (with eigenvalue 1) and lie on the z-axis (with eigenvalue 0).",
+    "parameters": {
+      "matrix": [
+        [1, 0, 0],
+        [0, 1, 0],
+        [0, 0, 0]
+      ]
+    },
+    "animation_notes": "Projection onto the xy-plane."
+  },
+  {
+    "id": "E236",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "latex",
+    "theorem": "Determinant of [[1,2,3],[0,4,5],[0,0,6]]",
+    "question": "Compute the determinant of the upper-triangular matrix A = [[1,2,3],[0,4,5],[0,0,6]].",
+    "proof": "The matrix is upper-triangular, so its determinant equals the product of its diagonal entries, $1 \\cdot 4 \\cdot 6 = 24$.",
+    "parameters": {
+      "matrix": [
+        [1, 2, 3],
+        [0, 4, 5],
+        [0, 0, 6]
+      ]
+    },
+    "animation_notes": "Highlight the diagonal entries."
+  },
+  {
+    "id": "E237",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Determinant of a 3x3 lower-triangular matrix",
+    "question": "Compute the determinant of A = [[5,0,0],[1,4,0],[2,3,6]].",
+    "proof": "The matrix is lower-triangular, so its determinant is the product of the diagonal entries: five times four times six, which is one hundred twenty.",
+    "parameters": {
+      "matrix": [
+        [5, 0, 0],
+        [1, 4, 0],
+        [2, 3, 6]
+      ]
+    },
+    "animation_notes": "Highlight the diagonal entries."
+  },
+  {
+    "id": "E238",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "mixed",
+    "theorem": "Determinant of [[2,1],[0,3]]",
+    "question": "Compute the determinant of the upper-triangular matrix A = [[2,1],[0,3]].",
+    "proof": "Upper-triangular means the determinant is the product of diagonal entries: $2 \\cdot 3 = 6$.",
+    "parameters": {
+      "matrix": [
+        [2, 1],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Simple 2x2 upper-triangular case."
+  },
+  {
+    "id": "E239",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "latex",
+    "theorem": "Determinant of [[4,0],[5,2]]",
+    "question": "Compute the determinant of the lower-triangular matrix A = [[4,0],[5,2]].",
+    "proof": "Lower-triangular means the determinant is the product of the diagonal entries, $4 \\cdot 2 = 8$.",
+    "parameters": {
+      "matrix": [
+        [4, 0],
+        [5, 2]
+      ]
+    },
+    "animation_notes": "Lower-triangular 2x2."
+  },
+  {
+    "id": "E240",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Determinant of -I",
+    "question": "Compute the determinant of A = [[-1,0],[0,-1]].",
+    "proof": "The matrix is diagonal (hence triangular) with both diagonal entries equal to minus one. The determinant is the product, which is plus one.",
+    "parameters": {
+      "matrix": [
+        [-1, 0],
+        [0, -1]
+      ]
+    },
+    "animation_notes": "Reflection through origin has determinant one."
+  },
+  {
+    "id": "E241",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "mixed",
+    "theorem": "Determinant of the identity",
+    "question": "Compute the determinant of A = I in R^3.",
+    "proof": "All diagonal entries are one, so the determinant is one.",
+    "parameters": {
+      "matrix": [
+        [1, 0, 0],
+        [0, 1, 0],
+        [0, 0, 1]
+      ]
+    },
+    "animation_notes": "Trivial."
+  },
+  {
+    "id": "E242",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "latex",
+    "theorem": "Determinant of a 3x3 upper-triangular matrix",
+    "question": "Compute the determinant of A = [[3,1,0],[0,2,1],[0,0,4]].",
+    "proof": "Upper-triangular: determinant is the product of the diagonal entries, $3 \\cdot 2 \\cdot 4 = 24$.",
+    "parameters": {
+      "matrix": [
+        [3, 1, 0],
+        [0, 2, 1],
+        [0, 0, 4]
+      ]
+    },
+    "animation_notes": "Product of diagonal."
+  },
+  {
+    "id": "E243",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "natural_language",
+    "theorem": "Determinant of a 3x3 lower-triangular matrix",
+    "question": "Compute the determinant of A = [[2,0,0],[1,2,0],[3,4,2]].",
+    "proof": "Lower-triangular: determinant is the product of the diagonal entries, two times two times two, which is eight.",
+    "parameters": {
+      "matrix": [
+        [2, 0, 0],
+        [1, 2, 0],
+        [3, 4, 2]
+      ]
+    },
+    "animation_notes": "Product of diagonal."
+  },
+  {
+    "id": "E244",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "mixed",
+    "theorem": "Determinant of [[1,1,1],[0,2,2],[0,0,3]]",
+    "question": "Compute the determinant of the upper-triangular matrix A = [[1,1,1],[0,2,2],[0,0,3]].",
+    "proof": "Upper-triangular, so the determinant is $1 \\cdot 2 \\cdot 3 = 6$.",
+    "parameters": {
+      "matrix": [
+        [1, 1, 1],
+        [0, 2, 2],
+        [0, 0, 3]
+      ]
+    },
+    "animation_notes": "Product of diagonal."
+  },
+  {
+    "id": "E245",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "det_triangular",
+    "proof_format": "latex",
+    "theorem": "Determinant of diag(5,5)",
+    "question": "Compute the determinant of A = [[5,0],[0,5]].",
+    "proof": "Diagonal (hence triangular) with diagonal entries $5$ and $5$, determinant $25$.",
+    "parameters": {
+      "matrix": [
+        [5, 0],
+        [0, 5]
+      ]
+    },
+    "animation_notes": "Product of diagonal."
+  },
+  {
+    "id": "E246",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of diag(2,3) via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[2,0],[0,3]].",
+    "proof": "$\\det(A - \\lambda I) = (2-\\lambda)(3-\\lambda)$, so the characteristic equation is $(2-\\lambda)(3-\\lambda) = 0$ with roots $2$ and $3$.",
+    "parameters": {
+      "matrix": [
+        [2, 0],
+        [0, 3]
+      ]
+    },
+    "animation_notes": "Trivial diagonal case."
+  },
+  {
+    "id": "E247",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[0,2],[2,0]] via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[0,2],[2,0]].",
+    "proof": "The characteristic equation is determinant of A minus lambda times identity equal to zero, which gives lambda squared minus four equal to zero. Solving gives lambda equal to plus or minus two.",
+    "parameters": {
+      "matrix": [
+        [0, 2],
+        [2, 0]
+      ]
+    },
+    "animation_notes": "Symmetric swap with scale."
+  },
+  {
+    "id": "E248",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[1,1],[0,1]] via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[1,1],[0,1]].",
+    "proof": "The characteristic equation is $(1-\\lambda)^2 = 0$, whose only root is $\\lambda = 1$ (double).",
+    "parameters": {
+      "matrix": [
+        [1, 1],
+        [0, 1]
+      ]
+    },
+    "animation_notes": "Shear case."
+  },
+  {
+    "id": "E249",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of diag(3,-3) via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[3,0],[0,-3]].",
+    "proof": "$\\det(A-\\lambda I) = (3-\\lambda)(-3-\\lambda) = \\lambda^2-9$, so $\\lambda = \\pm 3$.",
+    "parameters": {
+      "matrix": [
+        [3, 0],
+        [0, -3]
+      ]
+    },
+    "animation_notes": "Diagonal with mixed signs."
+  },
+  {
+    "id": "E250",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of [[0,1],[0,0]] via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[0,1],[0,0]].",
+    "proof": "The characteristic equation is lambda squared equal to zero, so lambda equals zero with multiplicity two.",
+    "parameters": {
+      "matrix": [
+        [0, 1],
+        [0, 0]
+      ]
+    },
+    "animation_notes": "Nilpotent case."
+  },
+  {
+    "id": "E251",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of [[2,1],[1,2]] via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[2,1],[1,2]].",
+    "proof": "The characteristic equation is $(2-\\lambda)^2 - 1 = 0$, which factors as $(\\lambda-1)(\\lambda-3) = 0$. So the eigenvalues are $1$ and $3$.",
+    "parameters": {
+      "matrix": [
+        [2, 1],
+        [1, 2]
+      ]
+    },
+    "animation_notes": "Symmetric with unit off-diagonal."
+  },
+  {
+    "id": "E252",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[1,2],[2,1]] via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[1,2],[2,1]].",
+    "proof": "The characteristic equation is $(1-\\lambda)^2 - 4 = 0$, which factors as $(\\lambda-3)(\\lambda+1) = 0$. So the eigenvalues are $3$ and $-1$.",
+    "parameters": {
+      "matrix": [
+        [1, 2],
+        [2, 1]
+      ]
+    },
+    "animation_notes": "Symmetric swap."
+  },
+  {
+    "id": "E253",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "natural_language",
+    "theorem": "Eigenvalues of the 90-degree rotation via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[0,-1],[1,0]].",
+    "proof": "The characteristic equation is lambda squared plus one equal to zero, which has no real roots. The complex roots are plus or minus i, confirming that no real eigenvalues exist.",
+    "parameters": {
+      "matrix": [
+        [0, -1],
+        [1, 0]
+      ]
+    },
+    "animation_notes": "Rotation case."
+  },
+  {
+    "id": "E254",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "mixed",
+    "theorem": "Eigenvalues of 4I via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = 4I.",
+    "proof": "The characteristic equation is $(4-\\lambda)^2 = 0$, whose only root is $\\lambda = 4$ (double).",
+    "parameters": {
+      "matrix": [
+        [4, 0],
+        [0, 4]
+      ]
+    },
+    "animation_notes": "Uniform scaling."
+  },
+  {
+    "id": "E255",
+    "subject": "Linear Algebra",
+    "proof_family": "Linear Transformations",
+    "proof_style": "char_equation",
+    "proof_format": "latex",
+    "theorem": "Eigenvalues of [[2,2],[2,2]] via the characteristic equation",
+    "question": "Use the characteristic equation to find the eigenvalues of A = [[2,2],[2,2]].",
+    "proof": "The characteristic equation is $(2-\\lambda)^2 - 4 = 0$, which expands to $\\lambda^2 - 4\\lambda = \\lambda(\\lambda-4) = 0$. The eigenvalues are $0$ and $4$.",
+    "parameters": {
+      "matrix": [
+        [2, 2],
+        [2, 2]
+      ]
+    },
+    "animation_notes": "Rank-one case."
+  }
+]

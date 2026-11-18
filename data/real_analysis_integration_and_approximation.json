@@ -1,0 +1,1634 @@
+[
+  {
+    "id": "C16",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Right Riemann sum for sqrt{x}",
+    "question": "Using a right-endpoint Riemann sum on the uniform partition of $[0,1]$, evaluate $\\int_0^1 \\sqrt{x}\\,dx$ and show that it equals $2/3$.",
+    "proof": "With right endpoints $k/n$ and width $1/n$, $S_n = (1/n)\\sum_{k=1}^n \\sqrt{k/n} = (1/n^{3/2})\\sum_{k=1}^n \\sqrt{k}$. Using the asymptotic $\\sum_{k=1}^n \\sqrt{k} \\sim \\frac{2}{3}n^{3/2}$ (from Faulhaber-type estimates), we get $S_n \\to 2/3$. Continuity of $\\sqrt{x}$ identifies the integral.",
+    "parameters": {
+      "function": "sqrt{x}",
+      "interval": "[0,1]",
+      "sample_point": "right",
+      "integral_value": "2/3"
+    },
+    "animation_notes": "Show right rectangles under the square-root curve."
+  },
+  {
+    "id": "C17",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Right Riemann sum for 1/(1+x)",
+    "question": "Without using antiderivatives, verify that $\\int_0^1 1/(1+x) dx = \\ln 2$ via the limit of right-endpoint approximations over $n$ equal subintervals.",
+    "proof": "The right sum is 1 over n times the sum of 1 over (1 plus k over n). This equals the harmonic sum H of 2n minus H of n. As n grows, the difference approaches the natural logarithm of two. Continuity of the integrand on the unit interval identifies the limit with the integral, so the integral is ln 2.",
+    "parameters": {
+      "function": "1/(1+x)",
+      "interval": "\\int_0^1",
+      "sample_point": "right",
+      "integral_value": "ln 2"
+    },
+    "animation_notes": "Show harmonic sums converging to ln 2."
+  },
+  {
+    "id": "C18",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Right Riemann sum for 1/x",
+    "question": "By the formal definition of the definite integral as the limit of right Riemann sums over equal subintervals, prove $\\int_1^2 1/x dx = \\ln 2$.",
+    "proof": "With right endpoints $1+k/n$ and width $1/n$,\n\\[\nS_n = \\frac{1}{n}\\sum_{k=1}^n \\frac{1}{1+k/n} = \\sum_{k=1}^n \\frac{1}{n+k} = H_{2n} - H_n.\n\\]\nThis tends to $\\ln 2$ since $H_n = \\ln n + \\gamma + o(1)$. Continuity of $1/x$ identifies the integral.",
+    "parameters": {
+      "function": "1/x",
+      "interval": "\\int_1^2",
+      "sample_point": "right",
+      "integral_value": "ln 2"
+    },
+    "animation_notes": "Show harmonic sums H_{2n}-H_n approaching ln 2."
+  },
+  {
+    "id": "C20",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Right Riemann sum for x+1",
+    "question": "Without using antiderivatives, verify $\\int_0^1 (x+1)\\,dx = 3/2$ via the limit of right-endpoint approximations over $n$ equal subintervals.",
+    "proof": "The right sum splits as $(1/n^2)\\sum k + 1 = (n+1)/(2n) + 1 \\to 3/2$. Continuity of $x+1$ identifies the integral.",
+    "parameters": {
+      "function": "x+1",
+      "interval": "\\int_0^1",
+      "sample_point": "right",
+      "integral_value": "3/2"
+    },
+    "animation_notes": "Show the two contributions from x and from 1."
+  },
+  {
+    "id": "C21",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Right Riemann sum for 3x^2",
+    "question": "Prove $\\int_0^1 3x^2\\,dx = 1$ using a right-endpoint uniform Riemann sum.",
+    "proof": "The right sum is\n\\[\nS_n = \\frac{3}{n^3}\\sum_{k=1}^n k^2 = \\frac{3(n+1)(2n+1)}{6n^2} \\to 1.\n\\]\nContinuity of $3x^2$ identifies the integral.",
+    "parameters": {
+      "function": "3x^2",
+      "interval": "\\int_0^1",
+      "sample_point": "right",
+      "integral_value": 1
+    },
+    "animation_notes": "Show the factor 3 factored out."
+  },
+  {
+    "id": "C22",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Right Riemann sum for 1/(1+x^2)",
+    "question": "How do you prove that the integral of 1/(1+x^2) from 0 to 1 equals pi/4, by using right-endpoint Riemann sums on a uniform grid?",
+    "proof": "With right endpoints k/n, the right sum is one over n times the sum of 1 over (1 plus (k over n) squared). As n grows this approaches the area under the arctangent curve, whose total from zero to one equals pi/4. Continuity identifies the limit with the integral.",
+    "parameters": {
+      "function": "1/(1+x^2)",
+      "interval": "from 0 to 1",
+      "sample_point": "right",
+      "integral_value": "pi/4"
+    },
+    "animation_notes": "Show the bell-shaped integrand tiled by rectangles."
+  },
+  {
+    "id": "C23",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Right Riemann sum for 2x",
+    "question": "Using a uniform right-endpoint Riemann sum on $[0,1]$, evaluate $\\int_0^1 2x\\,dx$ and show it equals $1$.",
+    "proof": "The right sum is $(2/n^2)\\sum k = 2(n+1)/(2n) = (n+1)/n \\to 1$. Continuity of $2x$ identifies the integral.",
+    "parameters": {
+      "function": "2x",
+      "interval": "[0,1]",
+      "sample_point": "right",
+      "integral_value": 1
+    },
+    "animation_notes": "Show the diagonal line y = 2x."
+  },
+  {
+    "id": "C24",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Right Riemann sum for x^2-1",
+    "question": "Let $f(x) = x^2-1$ on $[0,1]$. Form the right Riemann sum $S_n$ on the uniform partition, take the limit, and confirm the integral equals $-2/3$.",
+    "proof": "By linearity, $S_n = (1/n^3)\\sum k^2 - 1 = (n+1)(2n+1)/(6n^2) - 1 \\to 1/3 - 1 = -2/3$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "x^2-1",
+      "interval": "[0,1]",
+      "sample_point": "right",
+      "integral_value": "-2/3"
+    },
+    "animation_notes": "Show the negative signed area below the axis."
+  },
+  {
+    "id": "C25",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Right Riemann sum for 6x^2",
+    "question": "Show that integrating 6x^2 from 0 to 1 equals 2 by using right endpoints and a uniform grid.",
+    "proof": "Sampling at k over n, the sum becomes six times the right sum for x squared. That right sum tends to one third, so six times one third equals two. Continuity of six x squared identifies the integral as two.",
+    "parameters": {
+      "function": "6x^2",
+      "interval": "from 0 to 1",
+      "sample_point": "right",
+      "integral_value": 2
+    },
+    "animation_notes": "Show the constant 6 factored out."
+  },
+  {
+    "id": "C36",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for x^5",
+    "question": "Using left endpoints over the uniform partition of $[0,1]$, prove $\\int_0^1 x^5\\,dx = 1/6$.",
+    "proof": "With left endpoints $k/n$ for $k=0,\\dots,n-1$, the sum is\n\\[\nL_n = \\frac{1}{n^6}\\sum_{k=0}^{n-1} k^5 = \\frac{1}{n^6}\\cdot\\frac{(n-1)^2 n^2 (2n^2 - 2n - 1)}{12} \\to 1/6.\n\\]\nContinuity of $x^5$ identifies the integral.",
+    "parameters": {
+      "function": "x^5",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": "1/6"
+    },
+    "animation_notes": "Show the quintic left rectangles."
+  },
+  {
+    "id": "C37",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for sqrt{x}",
+    "question": "Partition $[0,1]$ into $n$ equal subintervals and form the left-endpoint Riemann sum for $f(x) = \\sqrt{x}$; take the limit to show the integral is $2/3$.",
+    "proof": "With left endpoints $k/n$ for $k=0,\\dots,n-1$, the sum is $L_n = (1/n^{3/2})\\sum_{k=0}^{n-1} \\sqrt{k}$, whose asymptotics give $L_n \\to 2/3$. Continuity of $\\sqrt{x}$ identifies the integral.",
+    "parameters": {
+      "function": "sqrt{x}",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": "2/3"
+    },
+    "animation_notes": "Show left rectangles under the square-root curve."
+  },
+  {
+    "id": "C39",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for e^x",
+    "question": "Let $f(x) = e^x$ on $[0,1]$. Form the left Riemann sum $L_n$ on the uniform partition, compute $\\lim_{n\\to\\infty} L_n$, and confirm the integral equals $e-1$.",
+    "proof": "The left sum is\n\\[\nL_n = \\frac{1}{n}\\sum_{k=0}^{n-1} e^{k/n} = \\frac{1}{n}\\cdot\\frac{e-1}{e^{1/n}-1} \\to e-1\n\\]\nsince $n(e^{1/n}-1) \\to 1$. Continuity of $e^x$ identifies the integral.",
+    "parameters": {
+      "function": "e^x",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": "e-1"
+    },
+    "animation_notes": "Show the geometric sum step."
+  },
+  {
+    "id": "C40",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for 2^x",
+    "question": "Without using the Fundamental Theorem, show that $\\int_0^1 2^x\\,dx = 1/\\ln 2$ by evaluating the left-endpoint Riemann sum on the uniform partition.",
+    "proof": "The left sum is $(1/n)\\sum_{k=0}^{n-1} 2^{k/n} = (1/n)(2-1)/(2^{1/n}-1)$, and since $n(2^{1/n}-1) \\to \\ln 2$, the sum tends to $1/\\ln 2$. Continuity of $2^x$ identifies the integral.",
+    "parameters": {
+      "function": "2^x",
+      "interval": "\\int_0^1",
+      "sample_point": "left",
+      "integral_value": "1/ln 2"
+    },
+    "animation_notes": "Show the geometric-series ratio 2^{1/n}."
+  },
+  {
+    "id": "C42",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for x^2 on [0,3]",
+    "question": "Prove $\\int_0^3 x^2\\,dx = 9$ using left endpoints over $n$ equal subintervals of $[0,3]$.",
+    "proof": "With width $3/n$ and left endpoints $3k/n$, the sum is\n\\[\nL_n = \\frac{3}{n}\\sum_{k=0}^{n-1}\\left(\\frac{3k}{n}\\right)^2 = \\frac{27}{n^3}\\cdot\\frac{(n-1)n(2n-1)}{6} \\to 9.\n\\]\nContinuity of $x^2$ identifies the integral.",
+    "parameters": {
+      "function": "x^2",
+      "interval": "[0,3]",
+      "sample_point": "left",
+      "integral_value": 9
+    },
+    "animation_notes": "Show left rectangles under the parabola on [0,3]."
+  },
+  {
+    "id": "C43",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for x on [1,2]",
+    "question": "Using a left-endpoint uniform Riemann sum on $[1,2]$, evaluate $\\int_1^2 x\\,dx$ and confirm it equals $3/2$.",
+    "proof": "On $[1,2]$, left endpoints are $1+k/n$ and width is $1/n$, so $L_n = (1/n)\\sum_{k=0}^{n-1}(1+k/n) = 1 + (n-1)/(2n) \\to 3/2$. Continuity of $x$ identifies the integral.",
+    "parameters": {
+      "function": "x",
+      "interval": "[1,2]",
+      "sample_point": "left",
+      "integral_value": "3/2"
+    },
+    "animation_notes": "Show left rectangles on [1,2]."
+  },
+  {
+    "id": "C44",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Left Riemann sum for x^3 on [-1,1]",
+    "question": "Show that the integral of x^3 from -1 to 1 equals 0, using left-endpoint rectangles on a uniform partition.",
+    "proof": "With left endpoints minus one plus two k over n and width two over n, the sum pairs each term with its opposite by symmetry about the origin, so it equals zero exactly for every n. Continuity of x cubed identifies the integral as zero.",
+    "parameters": {
+      "function": "x^3",
+      "interval": "from -1 to 1",
+      "sample_point": "left",
+      "integral_value": 0
+    },
+    "animation_notes": "Show the odd-symmetry cancellation."
+  },
+  {
+    "id": "C45",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for sin x on [0,pi]",
+    "question": "Prove $\\int_0^{\\pi} \\sin x\\,dx = 2$ using left endpoints on $n$ equal subintervals of $[0,\\pi]$.",
+    "proof": "The left sum with width $\\pi/n$ and left endpoints $k\\pi/n$ is\n\\[\nL_n = \\frac{\\pi}{n}\\sum_{k=0}^{n-1} \\sin(k\\pi/n) = \\frac{\\pi}{n}\\cdot\\frac{\\sin((n-1)\\pi/(2n))\\sin(n\\pi/(2n))}{\\sin(\\pi/(2n))} \\to 2\n\\]\nas $n\\to\\infty$. Continuity of $\\sin x$ identifies the integral.",
+    "parameters": {
+      "function": "sin x",
+      "interval": "[0,\\pi]",
+      "sample_point": "left",
+      "integral_value": 2
+    },
+    "animation_notes": "Show the sine arch area approaching 2."
+  },
+  {
+    "id": "C46",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for cos x on [0,pi/2]",
+    "question": "Without invoking the Fundamental Theorem, show $\\int_0^{\\pi/2} \\cos x\\,dx = 1$ via left-endpoint Riemann sums on the uniform partition.",
+    "proof": "The left sum with width $\\pi/(2n)$ and left endpoints $k\\pi/(2n)$ is $L_n = (\\pi/(2n))\\sum_{k=0}^{n-1}\\cos(k\\pi/(2n))$, which converges to $\\sin(\\pi/2) - \\sin 0 = 1$. Continuity of $\\cos x$ identifies the integral.",
+    "parameters": {
+      "function": "cos x",
+      "interval": "\\int_0^{\\pi/2}",
+      "sample_point": "left",
+      "integral_value": 1
+    },
+    "animation_notes": "Show cosine arch on [0, pi/2]."
+  },
+  {
+    "id": "C47",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Left Riemann sum for 1/(1+x^2)",
+    "question": "How do you show, using left-endpoint rectangles on the uniform partition of [0, 1], that the integral of 1/(1+x^2) equals pi/4?",
+    "proof": "With left endpoints k over n, the sum becomes one over n times the sum of 1 over (1 plus (k over n) squared). This approaches the area under the arctangent curve, which equals pi/4. Continuity of the integrand identifies the integral.",
+    "parameters": {
+      "function": "1/(1+x^2)",
+      "interval": "[0, 1]",
+      "sample_point": "left",
+      "integral_value": "pi/4"
+    },
+    "animation_notes": "Show the bell-curve area approaching pi/4."
+  },
+  {
+    "id": "C48",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for x^4 on [0,2]",
+    "question": "By the formal definition of the definite integral as the limit of left Riemann sums, prove $\\int_0^2 x^4\\,dx = 32/5$.",
+    "proof": "With width $2/n$ and left endpoints $2k/n$, the sum is $L_n = (2/n)\\sum_{k=0}^{n-1}(2k/n)^4 = (32/n^5)\\sum_{k=0}^{n-1} k^4$. Using Faulhaber's quartic sum, $L_n \\to 32/5$. Continuity of $x^4$ identifies the integral.",
+    "parameters": {
+      "function": "x^4",
+      "interval": "\\int_0^2",
+      "sample_point": "left",
+      "integral_value": "32/5"
+    },
+    "animation_notes": "Show the quartic left rectangles."
+  },
+  {
+    "id": "C49",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for 4x",
+    "question": "Using left endpoints over the uniform partition of $[0,1]$, evaluate $\\int_0^1 4x\\,dx$ and show it equals $2$.",
+    "proof": "The left sum is $L_n = (4/n^2)\\sum_{k=0}^{n-1} k = 4(n-1)/(2n) = 2(n-1)/n \\to 2$. Continuity of $4x$ identifies the integral.",
+    "parameters": {
+      "function": "4x",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": 2
+    },
+    "animation_notes": "Show the linear function under the left staircase."
+  },
+  {
+    "id": "C50",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Left Riemann sum for 5x",
+    "question": "How can you prove that the integral of 5x from zero to one equals 5/2, using left-endpoint rectangles on a uniform grid?",
+    "proof": "The left sum for five x is five times the left sum for x. That left sum approaches one half, so five times one half equals 5/2. Continuity of five x gives the integral.",
+    "parameters": {
+      "function": "5x",
+      "interval": "from zero to one",
+      "sample_point": "left",
+      "integral_value": "5/2"
+    },
+    "animation_notes": "Show the constant 5 factored out."
+  },
+  {
+    "id": "C51",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for 1/(1+x)^2",
+    "question": "Prove $\\int_0^1 1/(1+x)^2 dx = 1/2$ via the limit of left-endpoint Riemann sums on the uniform partition of $[0,1]$.",
+    "proof": "With left endpoints $k/n$, the sum is $L_n = (1/n)\\sum_{k=0}^{n-1} 1/(1+k/n)^2$. Because the antiderivative is $-1/(1+x)$, the limit equals $[-1/(1+x)]_0^1 = 1/2$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "1/(1+x)^2",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": "1/2"
+    },
+    "animation_notes": "Show left rectangles bracketing the reciprocal curve."
+  },
+  {
+    "id": "C52",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for 2x+1 on [0,2]",
+    "question": "Using a left-endpoint Riemann sum over $n$ equal subintervals of $[0,2]$, evaluate $\\int_0^2 (2x+1)\\,dx$ and show it equals $6$.",
+    "proof": "With width $2/n$ and left endpoints $2k/n$, $L_n = (2/n)\\sum_{k=0}^{n-1}(4k/n+1) = 4(n-1)/n + 2 \\to 4+2 = 6$. Continuity of $2x+1$ identifies the integral.",
+    "parameters": {
+      "function": "2x+1",
+      "interval": "[0,2]",
+      "sample_point": "left",
+      "integral_value": 6
+    },
+    "animation_notes": "Show the sum split into the linear and constant parts."
+  },
+  {
+    "id": "C53",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Left Riemann sum for x^2-1",
+    "question": "Show that the integral of x^2-1, over the unit interval, equals -2/3, using left-endpoint samples on a uniform partition.",
+    "proof": "By linearity, the left sum splits into the left sum for x squared minus the left sum for one. The first piece approaches one third and the second is exactly one. Subtracting gives -2/3, which by continuity is the integral.",
+    "parameters": {
+      "function": "x^2-1",
+      "interval": "the unit interval",
+      "sample_point": "left",
+      "integral_value": "-2/3"
+    },
+    "animation_notes": "Show the negative signed area."
+  },
+  {
+    "id": "C54",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for 3x^2-2x",
+    "question": "Let $f(x) = 3x^2-2x$ on $[0,1]$. Construct the left Riemann sum $L_n$ on the uniform partition, take the limit, and confirm the integral equals 0.",
+    "proof": "By linearity, $L_n = 3\\cdot(1/n^3)\\sum_{k=0}^{n-1} k^2 - 2\\cdot(1/n^2)\\sum_{k=0}^{n-1} k = 3(n-1)(2n-1)/(6n^2) - (n-1)/n$. The pieces tend to $1$ and $-1$, so $L_n \\to 0$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "3x^2-2x",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": 0
+    },
+    "animation_notes": "Show the two leading contributions cancelling."
+  },
+  {
+    "id": "C55",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for x+x^2+x^3",
+    "question": "Using left endpoints on $n$ equal subintervals of $[0,1]$, evaluate $\\int_0^1 (x+x^2+x^3)\\,dx$ and show it equals $13/12$.",
+    "proof": "By linearity, $L_n = (n-1)/(2n) + (n-1)(2n-1)/(6n^2) + (n-1)^2/(4n^2)$, whose three terms tend to $1/2, 1/3, 1/4$, summing to $13/12$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "x+x^2+x^3",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": "13/12"
+    },
+    "animation_notes": "Show three polynomial contributions."
+  },
+  {
+    "id": "C56",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Left Riemann sum for e^(-x)",
+    "question": "By the formal definition of the definite integral as the limit of left Riemann sums, show that the integral of e^(-x), from zero to one, equals 1-1/e.",
+    "proof": "The left sum with ratio e to the minus one over n equals one over n times the sum of e to the minus k over n for k from zero to n minus one. Using the geometric-series formula and the standard limit n times (e to the minus one over n minus 1) tending to minus one, the sum approaches 1-1/e. Continuity identifies the integral.",
+    "parameters": {
+      "function": "e^(-x)",
+      "interval": "from zero to one",
+      "sample_point": "left",
+      "integral_value": "1-1/e"
+    },
+    "animation_notes": "Show the geometric sum step."
+  },
+  {
+    "id": "C57",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for x^3 on [1,2]",
+    "question": "Without using antiderivatives, verify $\\int_1^2 x^3\\,dx = 15/4$ via the limit of left-endpoint approximations over $n$ equal subintervals of $[1,2]$.",
+    "proof": "With left endpoints $1+k/n$ and width $1/n$, the sum expands to $1 + 3(n-1)/(2n) + 3(n-1)(2n-1)/(6n^2) + (n-1)^2/(4n^2)$, whose terms tend to $1 + 3/2 + 1 + 1/4 = 15/4$. Continuity of $x^3$ identifies the integral.",
+    "parameters": {
+      "function": "x^3",
+      "interval": "[1,2]",
+      "sample_point": "left",
+      "integral_value": "15/4"
+    },
+    "animation_notes": "Show the binomial expansion step."
+  },
+  {
+    "id": "C58",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for 2^x on [0,2]",
+    "question": "Using a left-endpoint uniform Riemann sum on $[0,2]$, evaluate $\\int_0^2 2^x\\,dx$ and show it equals $3/\\ln 2$.",
+    "proof": "With width $2/n$ and left endpoints $2k/n$, $L_n = (2/n)\\sum_{k=0}^{n-1} 2^{2k/n}$, geometric with ratio $2^{2/n}$. Applying the standard formula and $n(2^{2/n}-1) \\to 2\\ln 2$, the sum tends to $3/\\ln 2$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "2^x",
+      "interval": "[0,2]",
+      "sample_point": "left",
+      "integral_value": "3/ln 2"
+    },
+    "animation_notes": "Show the ratio 2^{2/n} in the geometric sum."
+  },
+  {
+    "id": "C59",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Left Riemann sum for 1/x",
+    "question": "How does one show, using left-endpoint rectangles on the uniform partition of [1, 2], that the integral of 1/x equals ln 2?",
+    "proof": "With left endpoints 1 plus k over n, the sum becomes H of (2n minus 1) minus H of (n minus 1), which approaches ln 2. Continuity of 1/x identifies the integral.",
+    "parameters": {
+      "function": "1/x",
+      "interval": "[1, 2]",
+      "sample_point": "left",
+      "integral_value": "ln 2"
+    },
+    "animation_notes": "Show the harmonic difference converging to ln 2."
+  },
+  {
+    "id": "C60",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for cos(2x) on [0,pi/2]",
+    "question": "Prove $\\int_0^{\\pi/2} \\cos(2x)\\,dx = 0$ via the limit of left-endpoint Riemann sums.",
+    "proof": "The left sum with width $\\pi/(2n)$ and left endpoints $k\\pi/(2n)$ telescopes via the standard trig identity to $(1/2)\\sin(\\pi/(2n))\\cot(\\pi/(2n))$-type sums, whose limit equals $(1/2)(\\sin\\pi - \\sin 0) = 0$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "cos(2x)",
+      "interval": "\\int_0^{\\pi/2}",
+      "sample_point": "left",
+      "integral_value": 0
+    },
+    "animation_notes": "Show the positive and negative lobes cancelling."
+  },
+  {
+    "id": "C61",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for x^5",
+    "question": "Prove $\\int_0^1 x^5\\,dx = 1/6$ using the midpoint rule over the uniform partition of $[0,1]$.",
+    "proof": "The midpoint sum is $M_n = (1/n^6)\\sum_{k=1}^n (k-1/2)^5$. The sum $\\sum(k-1/2)^5$ has leading term $n^6/6$, so $M_n \\to 1/6$. Continuity of $x^5$ identifies the integral.",
+    "parameters": {
+      "function": "x^5",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": "1/6"
+    },
+    "animation_notes": "Show the leading-order asymptotic."
+  },
+  {
+    "id": "C62",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "mixed",
+    "theorem": "Midpoint rule for sqrt{x}",
+    "question": "Without using the Fundamental Theorem, verify $\\int_0^1 \\sqrt{x}\\,dx = 2/3$ via midpoint approximations over $n$ equal subintervals.",
+    "proof": "The midpoint sum is $M_n = (1/n^{3/2})\\sum_{k=1}^n (k-1/2)^{1/2}$, whose leading asymptotics give $M_n \\to 2/3$. Continuity of $\\sqrt{x}$ identifies the integral.",
+    "parameters": {
+      "function": "sqrt{x}",
+      "interval": "\\int_0^1",
+      "sample_point": "midpoint",
+      "integral_value": "2/3"
+    },
+    "animation_notes": "Show midpoint rectangles under the square root."
+  },
+  {
+    "id": "C63",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for 2^x",
+    "question": "How do you show, using midpoint Riemann sums on the uniform partition of [0, 1], that the integral of 2^x equals 1/ln 2?",
+    "proof": "The midpoint sum becomes a geometric series with ratio 2 to the one over n. Applying the standard formula and the limit n times (2 to the one over n minus 1) tending to log 2, the sum approaches one over log two. Continuity of two to the x identifies the integral.",
+    "parameters": {
+      "function": "2^x",
+      "interval": "[0, 1]",
+      "sample_point": "midpoint",
+      "integral_value": "1/ln 2"
+    },
+    "animation_notes": "Show the geometric midpoint sum."
+  },
+  {
+    "id": "C64",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for x+1",
+    "question": "Prove $\\int_0^1 (x+1)\\,dx = 3/2$ using the midpoint rule over a uniform partition of $[0,1]$.",
+    "proof": "The midpoint sum is $M_n = (1/n)\\sum_{k=1}^n ((k-1/2)/n + 1) = (1/n^2)(n^2/2) + 1 = 3/2$, independent of $n$. So the integral is $3/2$.",
+    "parameters": {
+      "function": "x+1",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": "3/2"
+    },
+    "animation_notes": "Show midpoint exactness for linears."
+  },
+  {
+    "id": "C65",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "mixed",
+    "theorem": "Midpoint rule for 3x^2+x",
+    "question": "Using midpoint samples on $n$ equal subintervals of $[0,1]$, evaluate $\\int_0^1 (3x^2+x)\\,dx$ and show it equals $3/2$.",
+    "proof": "By linearity, $M_n = 3\\cdot(1/n^3)\\sum(k-1/2)^2 + (1/n^2)\\sum(k-1/2)$. The pieces tend to $3/3=1$ and $1/2$, so $M_n \\to 3/2$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "3x^2+x",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": "3/2"
+    },
+    "animation_notes": "Show the two contributions."
+  },
+  {
+    "id": "C66",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for x^2 on [0,3]",
+    "question": "How can you compute the integral of x^2 from zero to three using midpoint rectangles on a uniform partition? Show it equals 9.",
+    "proof": "With width three over n and midpoints (k minus one half) times three over n, the sum becomes nine over n cubed times the sum of (k minus one half) squared, which equals three-quarters of (4n squared minus one) over n squared. This tends to nine. Continuity identifies the integral.",
+    "parameters": {
+      "function": "x^2",
+      "interval": "from zero to three",
+      "sample_point": "midpoint",
+      "integral_value": 9
+    },
+    "animation_notes": "Show the parabola on [0, 3]."
+  },
+  {
+    "id": "C67",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for x^3 on [-1,1]",
+    "question": "Prove $\\int_{-1}^1 x^3\\,dx = 0$ using the midpoint rule on a uniform partition.",
+    "proof": "The midpoints $-1 + (2k-1)/n$ for $k=1,\\dots,n$ come in opposite pairs about the origin, so each midpoint cube cancels its mirror. Hence every midpoint sum equals 0, and the integral is 0.",
+    "parameters": {
+      "function": "x^3",
+      "interval": "\\int_{-1}^1",
+      "sample_point": "midpoint",
+      "integral_value": 0
+    },
+    "animation_notes": "Show the perfect left-right cancellation."
+  },
+  {
+    "id": "C68",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "mixed",
+    "theorem": "Midpoint rule for cos x on [0,pi/2]",
+    "question": "Using the midpoint rule on the uniform partition of $[0,\\pi/2]$, evaluate $\\int_0^{\\pi/2}\\cos x\\,dx$ and show it equals $1$.",
+    "proof": "The midpoint sum is $(\\pi/(2n))\\sum_{k=1}^n \\cos((k-1/2)\\pi/(2n))$, which converges by symmetry to $\\sin(\\pi/2) - \\sin 0 = 1$. Continuity of $\\cos x$ identifies the integral.",
+    "parameters": {
+      "function": "cos x",
+      "interval": "[0,\\pi/2]",
+      "sample_point": "midpoint",
+      "integral_value": 1
+    },
+    "animation_notes": "Show midpoint rectangles under the cosine arch."
+  },
+  {
+    "id": "C69",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for 1/(1+x^2)",
+    "question": "How do you show, using the midpoint rule on the uniform partition of [0, 1], that the integral of 1/(1+x^2) equals pi/4?",
+    "proof": "The midpoints are k minus one half over n, and the sum becomes one over n times the sum of 1 over (1 plus the square of that midpoint). As n grows this approaches the arctangent integral, which equals pi/4. Continuity identifies the limit.",
+    "parameters": {
+      "function": "1/(1+x^2)",
+      "interval": "[0, 1]",
+      "sample_point": "midpoint",
+      "integral_value": "pi/4"
+    },
+    "animation_notes": "Show midpoint rectangles bracketing the bell curve."
+  },
+  {
+    "id": "C70",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for x^4 on [0,2]",
+    "question": "Prove $\\int_0^2 x^4\\,dx = 32/5$ via the midpoint rule on $n$ equal subintervals of $[0,2]$.",
+    "proof": "With width $2/n$ and midpoints $(2k-1)/n$, the sum is $M_n = (2/n)\\sum_{k=1}^n ((2k-1)/n)^4$, whose leading asymptotics give $M_n \\to 32/5$. Continuity of $x^4$ identifies the integral.",
+    "parameters": {
+      "function": "x^4",
+      "interval": "[0,2]",
+      "sample_point": "midpoint",
+      "integral_value": "32/5"
+    },
+    "animation_notes": "Show the quartic midpoint rectangles."
+  },
+  {
+    "id": "C71",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "mixed",
+    "theorem": "Midpoint rule for 4x",
+    "question": "Using midpoint samples on the uniform partition of $[0,1]$, evaluate $\\int_0^1 4x\\,dx$ and show it equals $2$.",
+    "proof": "The midpoint rule is exact for linear functions, so at every $n$ the sum equals the integral. Hence the midpoint sum is exactly $2$ for every $n$, and the integral is $2$.",
+    "parameters": {
+      "function": "4x",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": 2
+    },
+    "animation_notes": "Show midpoint exactness for linears."
+  },
+  {
+    "id": "C72",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for 5x",
+    "question": "How can you show, using midpoint rectangles on a uniform grid of the unit interval, that the integral of 5x equals 5/2?",
+    "proof": "The midpoint sum for five x equals five times the midpoint sum for x. The latter is exactly one half for every n, so five times one half is 5/2. Continuity gives the integral.",
+    "parameters": {
+      "function": "5x",
+      "interval": "the unit interval",
+      "sample_point": "midpoint",
+      "integral_value": "5/2"
+    },
+    "animation_notes": "Show the factor 5 factored out."
+  },
+  {
+    "id": "C73",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for 1/(1+x)^2",
+    "question": "Without using antiderivatives, verify $\\int_0^1 1/(1+x)^2 dx = 1/2$ via the midpoint rule on the uniform partition of $[0,1]$.",
+    "proof": "The midpoint sum is $M_n = (1/n)\\sum_{k=1}^n 1/(1+(k-1/2)/n)^2 = \\sum_{k=1}^n n/(n+k-1/2)^2$. As $n\\to\\infty$ this converges to $[-1/(1+x)]_0^1 = 1/2$. Continuity of the integrand identifies the integral.",
+    "parameters": {
+      "function": "1/(1+x)^2",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": "1/2"
+    },
+    "animation_notes": "Show midpoint rectangles bracketing the reciprocal curve."
+  },
+  {
+    "id": "C74",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "mixed",
+    "theorem": "Midpoint rule for 2x+1 on [0,2]",
+    "question": "Using the midpoint rule on $n$ equal subintervals of $[0,2]$, evaluate $\\int_0^2 (2x+1)\\,dx$ and confirm it equals $6$.",
+    "proof": "By exactness of the midpoint rule for linears, the midpoint sum equals $\\int_0^2 (2x+1)\\,dx = [x^2 + x]_0^2 = 6$ for every $n$. Hence the integral is $6$.",
+    "parameters": {
+      "function": "2x+1",
+      "interval": "[0,2]",
+      "sample_point": "midpoint",
+      "integral_value": 6
+    },
+    "animation_notes": "Show midpoint exactness for linears."
+  },
+  {
+    "id": "C75",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for x^2-1",
+    "question": "Show that the integral of x^2-1, over the unit interval, equals -2/3, using the midpoint rule on a uniform partition.",
+    "proof": "By linearity, the midpoint sum splits into the midpoint sum for x squared minus the midpoint sum for one. The first piece tends to one third, the second equals one, so the difference tends to -2/3. Continuity identifies the integral.",
+    "parameters": {
+      "function": "x^2-1",
+      "interval": "the unit interval",
+      "sample_point": "midpoint",
+      "integral_value": "-2/3"
+    },
+    "animation_notes": "Show the negative signed area."
+  },
+  {
+    "id": "C76",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for 3x^2-2x",
+    "question": "Let $f(x) = 3x^2 - 2x$ on $[0,1]$. Construct the midpoint Riemann sum $M_n$ on the uniform partition, compute the limit, and confirm the integral equals 0.",
+    "proof": "By linearity, $M_n = 3(1/n^3)\\sum(k-1/2)^2 - 2(1/n^2)\\sum(k-1/2)$. The pieces tend to $1$ and $1$, so their difference tends to 0. Continuity identifies the integral.",
+    "parameters": {
+      "function": "3x^2-2x",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": 0
+    },
+    "animation_notes": "Show the cancellation of leading terms."
+  },
+  {
+    "id": "C77",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "mixed",
+    "theorem": "Midpoint rule for x+x^2+x^3",
+    "question": "Using the midpoint rule on $n$ equal subintervals of $[0,1]$, evaluate $\\int_0^1 (x+x^2+x^3)\\,dx$ and show it equals $13/12$.",
+    "proof": "By linearity, $M_n$ splits into the midpoint sums for $x$, $x^2$, $x^3$, which tend to $1/2$, $1/3$, $1/4$; adding gives $13/12$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "x+x^2+x^3",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": "13/12"
+    },
+    "animation_notes": "Show the three contributions."
+  },
+  {
+    "id": "C78",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for x^3 on [1,2]",
+    "question": "Without using antiderivatives, verify that the integral of x^3 from 1 to 2 equals 15/4 via midpoint approximations on n equal subintervals.",
+    "proof": "The midpoints are one plus (2k minus one) over (2n). Expanding the cube and summing gives three pieces tending to one, three halves, one, and one quarter, whose sum is fifteen quarters. Continuity identifies the integral.",
+    "parameters": {
+      "function": "x^3",
+      "interval": "from 1 to 2",
+      "sample_point": "midpoint",
+      "integral_value": "15/4"
+    },
+    "animation_notes": "Show the midpoint binomial expansion."
+  },
+  {
+    "id": "C79",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for 2^x on [0,2]",
+    "question": "Prove $\\int_0^2 2^x\\,dx = 3/\\ln 2$ via the midpoint rule on $n$ equal subintervals of $[0,2]$.",
+    "proof": "The midpoint sum is geometric with ratio $2^{2/n}$. Applying the standard formula and $n(2^{2/n}-1) \\to 2\\ln 2$, the sum tends to $3/\\ln 2$. Continuity of $2^x$ identifies the integral.",
+    "parameters": {
+      "function": "2^x",
+      "interval": "[0,2]",
+      "sample_point": "midpoint",
+      "integral_value": "3/ln 2"
+    },
+    "animation_notes": "Show the geometric midpoint sum."
+  },
+  {
+    "id": "C80",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "mixed",
+    "theorem": "Midpoint rule for 1/x",
+    "question": "Using the midpoint rule on $n$ equal subintervals of $[1,2]$, evaluate $\\int_1^2 1/x dx$ and show it equals $\\ln 2$.",
+    "proof": "The midpoint sum is $(1/n)\\sum_{k=1}^n 1/(1+(2k-1)/(2n))$, which converges to the integral $\\ln 2$ by continuity of $1/x$.",
+    "parameters": {
+      "function": "1/x",
+      "interval": "[1,2]",
+      "sample_point": "midpoint",
+      "integral_value": "ln 2"
+    },
+    "animation_notes": "Show midpoint rectangles bracketing the hyperbola."
+  },
+  {
+    "id": "C81",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for cos(2x) on [0,pi/2]",
+    "question": "How do you show that the integral of cos(2x), from 0 to pi/2, equals 0, using the midpoint rule on a uniform partition?",
+    "proof": "The midpoints of the two halves of the interval give cosine values that pair opposite, so the midpoint sum cancels in opposite pairs. Hence every midpoint sum equals zero, and the integral is zero.",
+    "parameters": {
+      "function": "cos(2x)",
+      "interval": "from 0 to pi/2",
+      "sample_point": "midpoint",
+      "integral_value": 0
+    },
+    "animation_notes": "Show the paired cosine cancellation."
+  },
+  {
+    "id": "C82",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for 6x^2",
+    "question": "Prove $\\int_0^1 6x^2\\,dx = 2$ using the midpoint rule over the uniform partition of $[0,1]$.",
+    "proof": "The midpoint sum for $6x^2$ is $6$ times the midpoint sum for $x^2$. The latter is $(4n^2-1)/(12n^2) \\to 1/3$, so $M_n \\to 2$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "6x^2",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": 2
+    },
+    "animation_notes": "Show the constant 6 factored out."
+  },
+  {
+    "id": "C83",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "mixed",
+    "theorem": "Midpoint rule for x^6",
+    "question": "Using the midpoint rule on $n$ equal subintervals of $[0,1]$, evaluate $\\int_0^1 x^6\\,dx$ and show it equals $1/7$.",
+    "proof": "The midpoint sum is $M_n = (1/n^7)\\sum_{k=1}^n (k-1/2)^6$, whose leading term is $n^7/7$, so $M_n \\to 1/7$. Continuity of $x^6$ identifies the integral.",
+    "parameters": {
+      "function": "x^6",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": "1/7"
+    },
+    "animation_notes": "Show the leading-order asymptotic."
+  },
+  {
+    "id": "C84",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for x^7",
+    "question": "How does one show, using midpoint Riemann sums on the uniform partition of [0, 1], that the integral of x^7 equals 1/8?",
+    "proof": "The midpoint sum becomes one over n to the eighth times the sum of (k minus one half) to the seventh. The leading term of this sum is one eighth of n to the eighth, so the midpoint sum tends to one eighth. Continuity identifies the integral.",
+    "parameters": {
+      "function": "x^7",
+      "interval": "[0, 1]",
+      "sample_point": "midpoint",
+      "integral_value": "1/8"
+    },
+    "animation_notes": "Show the leading-order asymptotic."
+  },
+  {
+    "id": "C85",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for x^8",
+    "question": "Prove $\\int_0^1 x^8\\,dx = 1/9$ using the midpoint rule over a uniform partition of $[0,1]$.",
+    "proof": "The midpoint sum is $M_n = (1/n^9)\\sum_{k=1}^n (k-1/2)^8$, whose leading term is $n^9/9$, so $M_n \\to 1/9$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "x^8",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": "1/9"
+    },
+    "animation_notes": "Show the leading-order asymptotic."
+  },
+  {
+    "id": "C166",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Right Riemann sum for cosh x",
+    "question": "Using right endpoints on the uniform partition of $[0,1]$, prove $\\int_0^1 \\cosh x\\,dx = \\sinh 1$.",
+    "proof": "The right sum is $(1/n)\\sum_{k=1}^n \\cosh(k/n)$, which converges by continuity to the integral $[\\sinh x]_0^1 = \\sinh 1$.",
+    "parameters": {
+      "function": "cosh x",
+      "interval": "[0,1]",
+      "sample_point": "right",
+      "integral_value": "sinh 1"
+    },
+    "animation_notes": "Show right rectangles under the hyperbolic cosine."
+  },
+  {
+    "id": "C167",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Right Riemann sum for sinh x",
+    "question": "Without invoking the Fundamental Theorem, verify $\\int_0^1 \\sinh x\\,dx = \\cosh 1 - 1$ via right-endpoint Riemann sums.",
+    "proof": "The right sum is $(1/n)\\sum_{k=1}^n \\sinh(k/n)$, which converges by continuity to $[\\cosh x]_0^1 = \\cosh 1 - 1$.",
+    "parameters": {
+      "function": "sinh x",
+      "interval": "\\int_0^1",
+      "sample_point": "right",
+      "integral_value": "cosh 1 - 1"
+    },
+    "animation_notes": "Show right rectangles under the hyperbolic sine."
+  },
+  {
+    "id": "C168",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Right Riemann sum for tan x",
+    "question": "How do you show, using right-endpoint rectangles on the uniform partition of [0, pi/4], that the integral of tan x equals (1/2)ln 2?",
+    "proof": "Sampling at k pi over 4n with width pi over 4n, the sum converges by continuity to the integral of tangent, which equals minus log of cosine evaluated from zero to pi/4. That gives one half of log two.",
+    "parameters": {
+      "function": "tan x",
+      "interval": "[0, pi/4]",
+      "sample_point": "right",
+      "integral_value": "(1/2)ln 2"
+    },
+    "animation_notes": "Show right rectangles under the tangent on [0, pi/4]."
+  },
+  {
+    "id": "C169",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Right Riemann sum for e^(-2x)",
+    "question": "Prove $\\int_0^1 e^{-2x}\\,dx = (1-e^{-2})/2$ via the limit of right-endpoint Riemann sums on the uniform partition of $[0,1]$.",
+    "proof": "The right sum is geometric with ratio $e^{-2/n}$, giving $(e^{-2/n}/n)(1-e^{-2})/(1-e^{-2/n})$. Since $n(1-e^{-2/n}) \\to 2$, the limit is $(1-e^{-2})/2$. Continuity of $e^{-2x}$ identifies the integral.",
+    "parameters": {
+      "function": "e^{-2x}",
+      "interval": "[0,1]",
+      "sample_point": "right",
+      "integral_value": "(1-e^{-2})/2"
+    },
+    "animation_notes": "Show the geometric sum step."
+  },
+  {
+    "id": "C170",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Right Riemann sum for x/(1+x^2)",
+    "question": "Using right endpoints on $n$ equal subintervals of $[0,1]$, evaluate $\\int_0^1 \\frac{x}{1+x^2}\\,dx$ and show it equals $(1/2)\\ln 2$.",
+    "proof": "The right sum converges by continuity of the integrand to $(1/2)[\\ln(1+x^2)]_0^1 = (1/2)\\ln 2$.",
+    "parameters": {
+      "function": "\\frac{x}{1+x^2}",
+      "interval": "[0,1]",
+      "sample_point": "right",
+      "integral_value": "(1/2)ln 2"
+    },
+    "animation_notes": "Show right rectangles under the integrand."
+  },
+  {
+    "id": "C171",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Right Riemann sum for (x+1)^2",
+    "question": "How can you prove that the integral of (x+1)^2 from 0 to 1 equals 7/3, using right-endpoint rectangles on a uniform grid?",
+    "proof": "Expanding (x+1)^2 = x^2 + 2x + 1, the right sum splits into three pieces that tend to one third, one, and one. Adding gives 7/3, which by continuity is the integral.",
+    "parameters": {
+      "function": "(x+1)^2",
+      "interval": "from 0 to 1",
+      "sample_point": "right",
+      "integral_value": "7/3"
+    },
+    "animation_notes": "Show the three contributions from the expansion."
+  },
+  {
+    "id": "C172",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Right Riemann sum for x^2+x+1",
+    "question": "Prove $\\int_0^1 (x^2+x+1)\\,dx = 11/6$ using a right-endpoint uniform Riemann sum.",
+    "proof": "By linearity, $S_n = (1/n^3)\\sum k^2 + (1/n^2)\\sum k + 1$, whose pieces tend to $1/3$, $1/2$, $1$; summing gives $11/6$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "x^2+x+1",
+      "interval": "\\int_0^1",
+      "sample_point": "right",
+      "integral_value": "11/6"
+    },
+    "animation_notes": "Show the three summands."
+  },
+  {
+    "id": "C173",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Right Riemann sum for 3x^3",
+    "question": "Using right endpoints on the uniform partition of $[0,1]$, evaluate $\\int_0^1 3x^3\\,dx$ and show it equals $3/4$.",
+    "proof": "The right sum for $3x^3$ is $3$ times the right sum for $x^3$, which tends to $1/4$, so $S_n \\to 3/4$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "3x^3",
+      "interval": "[0,1]",
+      "sample_point": "right",
+      "integral_value": "3/4"
+    },
+    "animation_notes": "Show the constant 3 factored out."
+  },
+  {
+    "id": "C174",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Right Riemann sum for 7x^4",
+    "question": "How do you show, using right-endpoint rectangles on the uniform partition of [0, 1], that the integral of 7x^4 equals 7/5?",
+    "proof": "The right sum for seven x to the fourth is seven times the right sum for x to the fourth, which tends to one fifth. Multiplying, seven times one fifth equals seven fifths. Continuity identifies the integral.",
+    "parameters": {
+      "function": "7x^4",
+      "interval": "[0, 1]",
+      "sample_point": "right",
+      "integral_value": "7/5"
+    },
+    "animation_notes": "Show the constant 7 factored out."
+  },
+  {
+    "id": "C175",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Right Riemann sum for sqrt{x} on [0,4]",
+    "question": "Prove $\\int_0^4 \\sqrt{x}\\,dx = 16/3$ via the limit of right-endpoint Riemann sums on $n$ equal subintervals of $[0,4]$.",
+    "proof": "With width $4/n$ and right endpoints $4k/n$, the sum is $S_n = (4/n)\\sum_{k=1}^n \\sqrt{4k/n} = (8/n^{3/2})\\sum_{k=1}^n \\sqrt{k}$, whose asymptotics give $S_n \\to 16/3$. Continuity of $\\sqrt{x}$ identifies the integral.",
+    "parameters": {
+      "function": "sqrt{x}",
+      "interval": "[0,4]",
+      "sample_point": "right",
+      "integral_value": "16/3"
+    },
+    "animation_notes": "Show right rectangles under the square root on [0,4]."
+  },
+  {
+    "id": "C176",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for x^6",
+    "question": "Without using antiderivatives, verify $\\int_0^1 x^6\\,dx = 1/7$ via the limit of left-endpoint approximations over $n$ equal subintervals.",
+    "proof": "The left sum is $L_n = (1/n^7)\\sum_{k=0}^{n-1} k^6$, whose leading term is $(n-1)^7/(7n^7) \\to 1/7$. Continuity of $x^6$ identifies the integral.",
+    "parameters": {
+      "function": "x^6",
+      "interval": "\\int_0^1",
+      "sample_point": "left",
+      "integral_value": "1/7"
+    },
+    "animation_notes": "Show the leading-order asymptotic."
+  },
+  {
+    "id": "C177",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Left Riemann sum for x^7",
+    "question": "How do you compute the integral of x^7 from 0 to 1, using left-endpoint rectangles on a uniform grid? Show it equals 1/8.",
+    "proof": "The left sum becomes one over n to the eighth times the sum of k to the seventh for k up to n minus one, whose leading term is one eighth of n to the eighth. Dividing gives one eighth, which by continuity is the integral.",
+    "parameters": {
+      "function": "x^7",
+      "interval": "from 0 to 1",
+      "sample_point": "left",
+      "integral_value": "1/8"
+    },
+    "animation_notes": "Show the leading-order asymptotic."
+  },
+  {
+    "id": "C178",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for cosh x",
+    "question": "Using left endpoints over $n$ equal subintervals of $[0,1]$, evaluate $\\int_0^1 \\cosh x\\,dx$ and show it equals $\\sinh 1$.",
+    "proof": "The left sum $(1/n)\\sum_{k=0}^{n-1}\\cosh(k/n)$ converges by continuity to $[\\sinh x]_0^1 = \\sinh 1$.",
+    "parameters": {
+      "function": "cosh x",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": "sinh 1"
+    },
+    "animation_notes": "Show left rectangles under the hyperbolic cosine."
+  },
+  {
+    "id": "C179",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for sinh x",
+    "question": "By the formal definition of the definite integral as the limit of left Riemann sums, prove $\\int_0^1 \\sinh x\\,dx = \\cosh 1 - 1$.",
+    "proof": "The left sum $(1/n)\\sum_{k=0}^{n-1}\\sinh(k/n)$ converges by continuity to $[\\cosh x]_0^1 = \\cosh 1 - 1$.",
+    "parameters": {
+      "function": "sinh x",
+      "interval": "\\int_0^1",
+      "sample_point": "left",
+      "integral_value": "cosh 1 - 1"
+    },
+    "animation_notes": "Show left rectangles under the hyperbolic sine."
+  },
+  {
+    "id": "C180",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Left Riemann sum for tan x",
+    "question": "Show, using left-endpoint rectangles on a uniform partition of [0, pi/4], that the integral of tan x equals (1/2)ln 2.",
+    "proof": "The left sum with width pi over 4n and left endpoints k pi over 4n converges by continuity to minus log of cosine evaluated from zero to pi/4, which equals one half of log two.",
+    "parameters": {
+      "function": "tan x",
+      "interval": "[0, pi/4]",
+      "sample_point": "left",
+      "integral_value": "(1/2)ln 2"
+    },
+    "animation_notes": "Show left rectangles under the tangent on [0, pi/4]."
+  },
+  {
+    "id": "C181",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for e^(-2x)",
+    "question": "Prove $\\int_0^1 e^{-2x}\\,dx = (1-e^{-2})/2$ via the limit of left-endpoint Riemann sums on $[0,1]$.",
+    "proof": "The left sum $(1/n)\\sum_{k=0}^{n-1} e^{-2k/n}$ is geometric with ratio $e^{-2/n}$, giving $((1-e^{-2})/n)/(1-e^{-2/n})$. Since $n(1-e^{-2/n}) \\to 2$, the sum tends to $(1-e^{-2})/2$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "e^{-2x}",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": "(1-e^{-2})/2"
+    },
+    "animation_notes": "Show the geometric sum."
+  },
+  {
+    "id": "C182",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for x/(1+x^2)",
+    "question": "Using left endpoints on $n$ equal subintervals of $[0,1]$, evaluate $\\int_0^1 x/(1+x^2)\\,dx$ and show it equals $(1/2)\\ln 2$.",
+    "proof": "The left sum converges by continuity of the integrand to $(1/2)[\\ln(1+x^2)]_0^1 = (1/2)\\ln 2$.",
+    "parameters": {
+      "function": "x/(1+x^2)",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": "(1/2)ln 2"
+    },
+    "animation_notes": "Show left rectangles under the integrand."
+  },
+  {
+    "id": "C183",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Left Riemann sum for (x+1)^2",
+    "question": "How can you show, using left-endpoint rectangles on the unit interval, that the integral of (x+1)^2 equals 7/3?",
+    "proof": "Expanding (x+1)^2 into three terms, the left sum splits into contributions that tend to one third, one, and one. Adding gives 7/3, which by continuity is the integral.",
+    "parameters": {
+      "function": "(x+1)^2",
+      "interval": "the unit interval",
+      "sample_point": "left",
+      "integral_value": "7/3"
+    },
+    "animation_notes": "Show the three contributions."
+  },
+  {
+    "id": "C184",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for sqrt{x} on [0,4]",
+    "question": "Without using the Fundamental Theorem, verify $\\int_0^4 \\sqrt{x}\\,dx = 16/3$ via the limit of left-endpoint approximations.",
+    "proof": "The left sum is $(8/n^{3/2})\\sum_{k=0}^{n-1}\\sqrt{k}$, whose asymptotics give $16/3$. Continuity of $\\sqrt{x}$ identifies the integral.",
+    "parameters": {
+      "function": "sqrt{x}",
+      "interval": "\\int_0^4",
+      "sample_point": "left",
+      "integral_value": "16/3"
+    },
+    "animation_notes": "Show left rectangles on [0,4]."
+  },
+  {
+    "id": "C185",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for 8x^3",
+    "question": "Using left endpoints on $n$ equal subintervals of $[0,1]$, evaluate $\\int_0^1 8x^3\\,dx$ and confirm it equals $2$.",
+    "proof": "The left sum for $8x^3$ is $8$ times the left sum for $x^3$, which tends to $1/4$, so $L_n \\to 2$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "8x^3",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": 2
+    },
+    "animation_notes": "Show the factor 8 factored out."
+  },
+  {
+    "id": "C186",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for x^6",
+    "question": "Prove $\\int_0^1 x^6\\,dx = 1/7$ using the midpoint rule over a uniform partition of $[0,1]$.",
+    "proof": "The midpoint sum is $M_n = (1/n^7)\\sum_{k=1}^n (k-1/2)^6$, whose leading term is $n^7/7$, giving $M_n \\to 1/7$. Continuity of $x^6$ identifies the integral.",
+    "parameters": {
+      "function": "x^6",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": "1/7"
+    },
+    "animation_notes": "Show the leading-order term."
+  },
+  {
+    "id": "C187",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "mixed",
+    "theorem": "Midpoint rule for x^7",
+    "question": "Without using antiderivatives, verify $\\int_0^1 x^7\\,dx = 1/8$ via the midpoint rule over $n$ equal subintervals.",
+    "proof": "The midpoint sum is $M_n = (1/n^8)\\sum_{k=1}^n (k-1/2)^7$, whose leading term is $n^8/8$, giving $M_n \\to 1/8$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "x^7",
+      "interval": "\\int_0^1",
+      "sample_point": "midpoint",
+      "integral_value": "1/8"
+    },
+    "animation_notes": "Show the leading-order term."
+  },
+  {
+    "id": "C188",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for cosh x",
+    "question": "How do you show, using the midpoint rule on the uniform partition of [0, 1], that the integral of cosh x equals sinh 1?",
+    "proof": "The midpoint sum $(1/n)\\sum_{k=1}^n \\cosh((k-1/2)/n)$ converges by continuity of the integrand to hyperbolic sine of one minus hyperbolic sine of zero, that is hyperbolic sine of one.",
+    "parameters": {
+      "function": "cosh x",
+      "interval": "[0, 1]",
+      "sample_point": "midpoint",
+      "integral_value": "sinh 1"
+    },
+    "animation_notes": "Show midpoint rectangles under hyperbolic cosine."
+  },
+  {
+    "id": "C189",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for sinh x",
+    "question": "Prove $\\int_0^1 \\sinh x\\,dx = \\cosh 1 - 1$ via the midpoint rule on the uniform partition of $[0,1]$.",
+    "proof": "The midpoint sum $(1/n)\\sum_{k=1}^n \\sinh((k-1/2)/n)$ converges by continuity to $[\\cosh x]_0^1 = \\cosh 1 - 1$.",
+    "parameters": {
+      "function": "sinh x",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": "cosh 1 - 1"
+    },
+    "animation_notes": "Show midpoint rectangles under hyperbolic sine."
+  },
+  {
+    "id": "C190",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "mixed",
+    "theorem": "Midpoint rule for tan x",
+    "question": "Using midpoint samples on $n$ equal subintervals of $[0,\\pi/4]$, evaluate $\\int_0^{\\pi/4} \\tan x\\,dx$ and show it equals $(1/2)\\ln 2$.",
+    "proof": "The midpoint sum with width $\\pi/(4n)$ and midpoints $(k-1/2)\\pi/(4n)$ converges by continuity to $-\\ln\\cos(\\pi/4) + \\ln\\cos 0 = (1/2)\\ln 2$.",
+    "parameters": {
+      "function": "tan x",
+      "interval": "[0,\\pi/4]",
+      "sample_point": "midpoint",
+      "integral_value": "(1/2)ln 2"
+    },
+    "animation_notes": "Show midpoint rectangles under tangent on [0, pi/4]."
+  },
+  {
+    "id": "C191",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for e^(-2x)",
+    "question": "How does one show, using the midpoint rule on [0, 1], that the integral of e^(-2x) equals (1-e^(-2))/2?",
+    "proof": "The midpoint sum is geometric with ratio e to the minus two over n. Applying the geometric formula and the limit n times (1 minus e to the minus two over n) tending to two, the sum approaches one half of (one minus e to the minus two). Continuity identifies the integral.",
+    "parameters": {
+      "function": "e^(-2x)",
+      "interval": "[0, 1]",
+      "sample_point": "midpoint",
+      "integral_value": "(1-e^(-2))/2"
+    },
+    "animation_notes": "Show the geometric midpoint sum."
+  },
+  {
+    "id": "C192",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for x/(1+x^2)",
+    "question": "Prove $\\int_0^1 \\frac{x}{1+x^2}\\,dx = (1/2)\\ln 2$ via the midpoint rule on the uniform partition of $[0,1]$.",
+    "proof": "The midpoint sum $(1/n)\\sum_{k=1}^n (k-1/2)/(n^2 + (k-1/2)^2)$-type expression converges by continuity to $(1/2)[\\ln(1+x^2)]_0^1 = (1/2)\\ln 2$.",
+    "parameters": {
+      "function": "\\frac{x}{1+x^2}",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": "(1/2)ln 2"
+    },
+    "animation_notes": "Show midpoint rectangles under the integrand."
+  },
+  {
+    "id": "C193",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "mixed",
+    "theorem": "Midpoint rule for (x+1)^2",
+    "question": "Using the midpoint rule on $n$ equal subintervals of $[0,1]$, evaluate $\\int_0^1 (x+1)^2\\,dx$ and confirm it equals $7/3$.",
+    "proof": "By linearity, the midpoint sum splits into pieces tending to $1/3$, $1$, $1$; summing gives $7/3$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "(x+1)^2",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": "7/3"
+    },
+    "animation_notes": "Show the three contributions."
+  },
+  {
+    "id": "C195",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "latex",
+    "theorem": "Midpoint rule for 8x^3",
+    "question": "Prove $\\int_0^1 8x^3\\,dx = 2$ via the midpoint rule over $n$ equal subintervals of $[0,1]$.",
+    "proof": "The midpoint sum for $8x^3$ is $8$ times the midpoint sum for $x^3$, which equals $(2n^2-1)/(2n^2) \\to 1$; multiplying gives $2$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "8x^3",
+      "interval": "[0,1]",
+      "sample_point": "midpoint",
+      "integral_value": 2
+    },
+    "animation_notes": "Show the factor 8 factored out."
+  },
+  {
+    "id": "C196",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Right Riemann sum for 9x^2",
+    "question": "Using right endpoints on the uniform partition of $[0,1]$, evaluate $\\int_0^1 9x^2\\,dx$ and show it equals $3$.",
+    "proof": "The right sum is $9$ times the right sum for $x^2$, which tends to $1/3$; multiplying gives $3$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "9x^2",
+      "interval": "[0,1]",
+      "sample_point": "right",
+      "integral_value": 3
+    },
+    "animation_notes": "Show the factor 9 factored out."
+  },
+  {
+    "id": "C197",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "natural_language",
+    "theorem": "Right Riemann sum for x^9",
+    "question": "How does one show, using right-endpoint rectangles on the uniform partition of the unit interval, that the integral of x^9 equals 1/10?",
+    "proof": "The right sum is one over n to the tenth times the sum of k to the ninth, whose leading term is one tenth of n to the tenth. Dividing gives one tenth, which by continuity is the integral.",
+    "parameters": {
+      "function": "x^9",
+      "interval": "the unit interval",
+      "sample_point": "right",
+      "integral_value": "1/10"
+    },
+    "animation_notes": "Show the leading-order asymptotic."
+  },
+  {
+    "id": "C198",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Left Riemann sum for 3x",
+    "question": "Prove $\\int_0^1 3x\\,dx = 3/2$ using left endpoints over a uniform partition of $[0,1]$.",
+    "proof": "The left sum is $L_n = (3/n^2)\\sum_{k=0}^{n-1} k = 3(n-1)/(2n) \\to 3/2$. Continuity of $3x$ identifies the integral.",
+    "parameters": {
+      "function": "3x",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": "3/2"
+    },
+    "animation_notes": "Show the factor 3 factored out."
+  },
+  {
+    "id": "C199",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for x^2+1",
+    "question": "Using left endpoints on $n$ equal subintervals of $[0,1]$, evaluate $\\int_0^1 (x^2+1)\\,dx$ and show it equals $4/3$.",
+    "proof": "By linearity, $L_n = (n-1)(2n-1)/(6n^2) + 1 \\to 1/3 + 1 = 4/3$. Continuity of $x^2+1$ identifies the integral.",
+    "parameters": {
+      "function": "x^2+1",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": "4/3"
+    },
+    "animation_notes": "Show the two contributions."
+  },
+  {
+    "id": "C200",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for x^2+1",
+    "question": "How can you show, using midpoint rectangles on the uniform partition of [0, 1], that the integral of x^2+1 equals 4/3?",
+    "proof": "By linearity, the midpoint sum splits into the sum for x squared plus one. The first piece tends to one third, the second is exactly one, so the total tends to four thirds. Continuity identifies the integral.",
+    "parameters": {
+      "function": "x^2+1",
+      "interval": "[0, 1]",
+      "sample_point": "midpoint",
+      "integral_value": "4/3"
+    },
+    "animation_notes": "Show the two contributions."
+  },
+  {
+    "id": "C201",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Right Riemann sum for 1/(2x+1)",
+    "question": "Prove $\\int_0^1 1/(2x+1) dx = (1/2)\\ln 3$ via the limit of right-endpoint Riemann sums on $[0,1]$.",
+    "proof": "The right sum $(1/n)\\sum_{k=1}^n 1/(2k/n + 1) = \\sum_{k=1}^n 1/(2k+n)$ converges to $(1/2)[\\ln(2x+1)]_0^1 = (1/2)\\ln 3$ by continuity of the integrand.",
+    "parameters": {
+      "function": "1/(2x+1)",
+      "interval": "[0,1]",
+      "sample_point": "right",
+      "integral_value": "(1/2)ln 3"
+    },
+    "animation_notes": "Show right rectangles under the integrand."
+  },
+  {
+    "id": "C202",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for 1/(2x+1)",
+    "question": "Using left endpoints on $n$ equal subintervals of $[0,1]$, evaluate $\\int_0^1 1/(2x+1) dx$ and show it equals $(1/2)\\ln 3$.",
+    "proof": "The left sum $(1/n)\\sum_{k=0}^{n-1} 1/(2k/n + 1)$ converges by continuity to $(1/2)[\\ln(2x+1)]_0^1 = (1/2)\\ln 3$.",
+    "parameters": {
+      "function": "1/(2x+1)",
+      "interval": "[0,1]",
+      "sample_point": "left",
+      "integral_value": "(1/2)ln 3"
+    },
+    "animation_notes": "Show left rectangles under the integrand."
+  },
+  {
+    "id": "C203",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "midpoint",
+    "proof_format": "natural_language",
+    "theorem": "Midpoint rule for 2x^3+x",
+    "question": "How do you show, using the midpoint rule on the uniform partition of [0, 1], that the integral of 2x^3+x equals 3/4?",
+    "proof": "By linearity, the midpoint sum splits into two times the sum for x cubed plus the sum for x. The pieces tend to one quarter and one half, summing to three quarters. Continuity identifies the integral.",
+    "parameters": {
+      "function": "2x^3+x",
+      "interval": "[0, 1]",
+      "sample_point": "midpoint",
+      "integral_value": "3/4"
+    },
+    "animation_notes": "Show the two contributions."
+  },
+  {
+    "id": "C204",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "right_endpoint_uniform",
+    "proof_format": "latex",
+    "theorem": "Right Riemann sum for 2x+3",
+    "question": "Prove $\\int_0^1 (2x+3)\\,dx = 4$ using a right-endpoint uniform Riemann sum on $[0,1]$.",
+    "proof": "By linearity, $S_n = (2/n^2)\\sum k + 3 = (n+1)/n + 3 \\to 1 + 3 = 4$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "2x+3",
+      "interval": "[0,1]",
+      "sample_point": "right",
+      "integral_value": 4
+    },
+    "animation_notes": "Show the two contributions."
+  },
+  {
+    "id": "C205",
+    "subject": "Real Analysis",
+    "proof_family": "Integration and Approximation",
+    "proof_style": "left_endpoint_uniform",
+    "proof_format": "mixed",
+    "theorem": "Left Riemann sum for e^(2x) on [0,2]",
+    "question": "Using left endpoints on $n$ equal subintervals of $[0,2]$, evaluate $\\int_0^2 e^{2x}\\,dx$ and show it equals $(e^4-1)/2$.",
+    "proof": "The left sum $(2/n)\\sum_{k=0}^{n-1} e^{4k/n}$ is geometric with ratio $e^{4/n}$, giving $(2(e^4-1)/n)/(e^{4/n}-1)$. Since $n(e^{4/n}-1) \\to 4$, the sum tends to $(e^4-1)/2$. Continuity identifies the integral.",
+    "parameters": {
+      "function": "e^{2x}",
+      "interval": "[0,2]",
+      "sample_point": "left",
+      "integral_value": "(e^4-1)/2"
+    },
+    "animation_notes": "Show the geometric sum."
+  }
+]
