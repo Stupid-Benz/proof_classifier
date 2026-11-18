@@ -1,0 +1,233 @@
+{
+  "split": {
+    "train_records": 812,
+    "base_train_records": 784,
+    "feedback_train_records": 28,
+    "test_records": 197,
+    "seed": 42
+  },
+  "ner_entity_metrics": {
+    "precision": 0.8209876543209876,
+    "recall": 0.9214780600461894,
+    "f1": 0.868335146898803,
+    "tp": 399,
+    "fp": 87,
+    "fn": 34,
+    "per_field": {
+      "bound": {
+        "precision": 0.4857142857142857,
+        "recall": 0.7555555555555555,
+        "f1": 0.5913043478260869,
+        "support": 45
+      },
+      "curve": {
+        "precision": 0.975,
+        "recall": 1.0,
+        "f1": 0.9873417721518987,
+        "support": 39
+      },
+      "evaluation_point": {
+        "precision": 0.8222222222222222,
+        "recall": 0.9487179487179487,
+        "f1": 0.8809523809523809,
+        "support": 39
+      },
+      "function": {
+        "precision": 0.6190476190476191,
+        "recall": 0.6842105263157895,
+        "f1": 0.6500000000000001,
+        "support": 19
+      },
+      "integral_value": {
+        "precision": 0.5833333333333334,
+        "recall": 0.7368421052631579,
+        "f1": 0.6511627906976745,
+        "support": 19
+      },
+      "interval": {
+        "precision": 0.5,
+        "recall": 0.7368421052631579,
+        "f1": 0.5957446808510638,
+        "support": 19
+      },
+      "limit": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "matrix": {
+        "precision": 0.8823529411764706,
+        "recall": 0.9782608695652174,
+        "f1": 0.9278350515463919,
+        "support": 46
+      },
+      "sample_point": {
+        "precision": 0.9,
+        "recall": 0.9473684210526315,
+        "f1": 0.9230769230769231,
+        "support": 19
+      },
+      "sequence": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "vectors": {
+        "precision": 0.979381443298969,
+        "recall": 0.9693877551020408,
+        "f1": 0.9743589743589743,
+        "support": 98
+      }
+    }
+  },
+  "seqeval_ner_report": {
+    "bound": {
+      "precision": 0.4857142857142857,
+      "recall": 0.7555555555555555,
+      "f1-score": 0.5913043478260869,
+      "support": 45
+    },
+    "curve": {
+      "precision": 0.975,
+      "recall": 1.0,
+      "f1-score": 0.9873417721518987,
+      "support": 39
+    },
+    "evaluation_point": {
+      "precision": 0.8222222222222222,
+      "recall": 0.9487179487179487,
+      "f1-score": 0.8809523809523809,
+      "support": 39
+    },
+    "function": {
+      "precision": 0.6190476190476191,
+      "recall": 0.6842105263157895,
+      "f1-score": 0.6500000000000001,
+      "support": 19
+    },
+    "integral_value": {
+      "precision": 0.5833333333333334,
+      "recall": 0.7368421052631579,
+      "f1-score": 0.6511627906976745,
+      "support": 19
+    },
+    "interval": {
+      "precision": 0.5,
+      "recall": 0.7368421052631579,
+      "f1-score": 0.5957446808510638,
+      "support": 19
+    },
+    "limit": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 45
+    },
+    "matrix": {
+      "precision": 0.8823529411764706,
+      "recall": 0.9782608695652174,
+      "f1-score": 0.9278350515463919,
+      "support": 46
+    },
+    "sample_point": {
+      "precision": 0.9,
+      "recall": 0.9473684210526315,
+      "f1-score": 0.9230769230769231,
+      "support": 19
+    },
+    "sequence": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 45
+    },
+    "vectors": {
+      "precision": 0.979381443298969,
+      "recall": 0.9693877551020408,
+      "f1-score": 0.9743589743589743,
+      "support": 98
+    },
+    "micro avg": {
+      "precision": 0.8209876543209876,
+      "recall": 0.9214780600461894,
+      "f1-score": 0.868335146898803,
+      "support": 433
+    },
+    "macro avg": {
+      "precision": 0.7951865313448091,
+      "recall": 0.8870168442577726,
+      "f1-score": 0.8347069928601268,
+      "support": 433
+    },
+    "weighted avg": {
+      "precision": 0.8497959915853677,
+      "recall": 0.9214780600461894,
+      "f1-score": 0.880414464155755,
+      "support": 433
+    }
+  },
+  "alignment_counts": {
+    "curve": 196,
+    "evaluation_point": 195,
+    "matrix": 226,
+    "vectors": 481,
+    "sample_point": 106,
+    "interval": 104,
+    "function": 105,
+    "integral_value": 105,
+    "sequence": 241,
+    "limit": 241,
+    "bound": 242
+  },
+  "aligned_record_counts": {
+    "curve": 196,
+    "evaluation_point": 195,
+    "matrix": 226,
+    "vectors": 247,
+    "function": 105,
+    "interval": 104,
+    "sample_point": 106,
+    "integral_value": 105,
+    "sequence": 241,
+    "limit": 241,
+    "bound": 242
+  },
+  "target_key_counts": {
+    "curve": 196,
+    "evaluation_point": 196,
+    "matrix": 226,
+    "vectors": 247,
+    "function": 105,
+    "interval": 104,
+    "sample_point": 106,
+    "integral_value": 105,
+    "sequence": 241,
+    "limit": 241,
+    "bound": 242
+  },
+  "unaligned_targets": [
+    {
+      "record_id": "F177",
+      "proof_family": "Curves and Moving Frames",
+      "field": "evaluation_point",
+      "value": "\\sqrt2"
+    }
+  ],
+  "skipped_unlabelled_records": [],
+  "feedback_skipped_unaligned_records": [],
+  "manual_annotation_records": 8,
+  "manual_annotation_span_counts": {
+    "sequence": 2,
+    "limit": 2,
+    "bound": 3,
+    "sample_point": 5,
+    "function": 4,
+    "interval": 3,
+    "integral_value": 4,
+    "vectors": 8
+  },
+  "excluded_family_record_count": 0,
+  "evaluation_note": "Metrics are against automatically aligned dataset parameter spans (weak/pseudo labels), not manually annotated gold NER labels."
+}

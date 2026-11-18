@@ -1,0 +1,400 @@
+{
+  "outer_folds": 5,
+  "repeats": 3,
+  "subject_accuracy": 1.0,
+  "subject_macro_f1": 1.0,
+  "subject_accuracy_across_repeats": {
+    "mean": 1.0,
+    "std": 0.0
+  },
+  "subject_macro_f1_across_repeats": {
+    "mean": 1.0,
+    "std": 0.0
+  },
+  "subject_report": {
+    "Differential Geometry": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 588.0
+    },
+    "Linear Algebra": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1392.0
+    },
+    "Real Analysis": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 963.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2943.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2943.0
+    }
+  },
+  "subject_confusion_matrix": [
+    [588, 0, 0],
+    [0, 1392, 0],
+    [0, 0, 963]
+  ],
+  "subject_labels": [
+    "Differential Geometry",
+    "Linear Algebra",
+    "Real Analysis"
+  ],
+  "family_end_to_end_accuracy": 1.0,
+  "family_end_to_end_macro_f1": 1.0,
+  "family_end_to_end_accuracy_across_repeats": {
+    "mean": 1.0,
+    "std": 0.0
+  },
+  "family_end_to_end_macro_f1_across_repeats": {
+    "mean": 1.0,
+    "std": 0.0
+  },
+  "family_end_to_end_report": {
+    "Curves and Moving Frames": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 588.0
+    },
+    "Integration and Approximation": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 288.0
+    },
+    "Linear Transformations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 678.0
+    },
+    "Sequence Convergence": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 675.0
+    },
+    "Vector Operations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 714.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2943.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2943.0
+    }
+  },
+  "family_end_to_end_confusion_matrix": [
+    [588, 0, 0, 0, 0],
+    [0, 288, 0, 0, 0],
+    [0, 0, 678, 0, 0],
+    [0, 0, 0, 675, 0],
+    [0, 0, 0, 0, 714]
+  ],
+  "family_labels": [
+    "Curves and Moving Frames",
+    "Integration and Approximation",
+    "Linear Transformations",
+    "Sequence Convergence",
+    "Vector Operations"
+  ],
+  "family_oracle_accuracy": 1.0,
+  "family_oracle_macro_f1": 1.0,
+  "family_oracle_accuracy_across_repeats": {
+    "mean": 1.0,
+    "std": 0.0
+  },
+  "family_oracle_macro_f1_across_repeats": {
+    "mean": 1.0,
+    "std": 0.0
+  },
+  "family_oracle_report": {
+    "Curves and Moving Frames": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 588.0
+    },
+    "Integration and Approximation": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 288.0
+    },
+    "Linear Transformations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 678.0
+    },
+    "Sequence Convergence": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 675.0
+    },
+    "Vector Operations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 714.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2943.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2943.0
+    }
+  },
+  "joint_subject_and_family_accuracy": 1.0,
+  "joint_accuracy_across_repeats": {
+    "mean": 1.0,
+    "std": 0.0
+  },
+  "repeat_metrics": [
+    {
+      "repeat": 1,
+      "subject_accuracy": 1.0,
+      "subject_macro_f1": 1.0,
+      "family_end_to_end_accuracy": 1.0,
+      "family_end_to_end_macro_f1": 1.0,
+      "family_oracle_accuracy": 1.0,
+      "family_oracle_macro_f1": 1.0,
+      "joint_accuracy": 1.0
+    },
+    {
+      "repeat": 2,
+      "subject_accuracy": 1.0,
+      "subject_macro_f1": 1.0,
+      "family_end_to_end_accuracy": 1.0,
+      "family_end_to_end_macro_f1": 1.0,
+      "family_oracle_accuracy": 1.0,
+      "family_oracle_macro_f1": 1.0,
+      "joint_accuracy": 1.0
+    },
+    {
+      "repeat": 3,
+      "subject_accuracy": 1.0,
+      "subject_macro_f1": 1.0,
+      "family_end_to_end_accuracy": 1.0,
+      "family_end_to_end_macro_f1": 1.0,
+      "family_oracle_accuracy": 1.0,
+      "family_oracle_macro_f1": 1.0,
+      "joint_accuracy": 1.0
+    }
+  ],
+  "fold_details": [
+    {
+      "repeat": 1,
+      "fold": 1,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 1,
+      "fold": 2,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 1,
+      "fold": 3,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 1,
+      "fold": 4,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 1.0,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 1,
+      "fold": 5,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "fold": 1,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "fold": 2,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "fold": 3,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.1,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "fold": 4,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "fold": 5,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 3,
+      "fold": 1,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 3,
+      "fold": 2,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 3,
+      "fold": 3,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 3,
+      "fold": 4,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    },
+    {
+      "repeat": 3,
+      "fold": 5,
+      "selected_C": {
+        "subject_C": 0.01,
+        "family_C": {
+          "Differential Geometry": 0.0,
+          "Linear Algebra": 0.01,
+          "Real Analysis": 0.01
+        }
+      }
+    }
+  ]
+}

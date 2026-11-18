@@ -6,7 +6,7 @@ __pycache__/
 venv/
 
 # Model outputs and training artifacts
-models/
+# models/
 *.log
 
 # Local editor/system files

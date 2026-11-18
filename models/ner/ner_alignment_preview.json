@@ -1,0 +1,2236 @@
+[
+  {
+    "record_id": "A01",
+    "proof_style": "direct_epsilon_N",
+    "targets": {
+      "sequence": "3/n",
+      "limit": 0,
+      "bound": "Choose N as a natural number greater than 3/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "3/n",
+        "start": 27,
+        "end": 30
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 44,
+        "end": 45
+      },
+      {
+        "field": "bound",
+        "text": "Choose N as a natural number greater than 3/eps",
+        "start": 77,
+        "end": 124
+      }
+    ]
+  },
+  {
+    "record_id": "A02",
+    "proof_style": "direct_epsilon_N",
+    "targets": {
+      "sequence": "(2n+1)/n",
+      "limit": 2,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(2n+1)/n",
+        "start": 27,
+        "end": 35
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 49,
+        "end": 50
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 117,
+        "end": 134
+      }
+    ]
+  },
+  {
+    "record_id": "A03",
+    "proof_style": "direct_epsilon_N",
+    "targets": {
+      "sequence": "1/(n+2)",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/(n+2)",
+        "start": 27,
+        "end": 34
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 48,
+        "end": 49
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 99,
+        "end": 116
+      }
+    ]
+  },
+  {
+    "record_id": "A04",
+    "proof_style": "direct_epsilon_N",
+    "targets": {
+      "sequence": "5/(2n+1)",
+      "limit": 0,
+      "bound": "Choose N greater than 5/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "5/(2n+1)",
+        "start": 27,
+        "end": 35
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 49,
+        "end": 50
+      },
+      {
+        "field": "bound",
+        "text": "Choose N greater than 5/eps",
+        "start": 91,
+        "end": 118
+      }
+    ]
+  },
+  {
+    "record_id": "A05",
+    "proof_style": "direct_epsilon_N",
+    "targets": {
+      "sequence": "(n+4)/(n+1)",
+      "limit": 1,
+      "bound": "N > 3/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n+4)/(n+1)",
+        "start": 27,
+        "end": 38
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 52,
+        "end": 53
+      },
+      {
+        "field": "bound",
+        "text": "N > 3/\\varepsilon",
+        "start": 122,
+        "end": 139
+      }
+    ]
+  },
+  {
+    "record_id": "A06",
+    "proof_style": "algebraic_first",
+    "targets": {
+      "sequence": "(3n+2)/(n+1)",
+      "limit": 3,
+      "bound": "choose N with N > 1/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(3n+2)/(n+1)",
+        "start": 27,
+        "end": 39
+      },
+      {
+        "field": "limit",
+        "text": "3",
+        "start": 53,
+        "end": 54
+      },
+      {
+        "field": "bound",
+        "text": "choose N with N > 1/eps",
+        "start": 197,
+        "end": 220
+      }
+    ]
+  },
+  {
+    "record_id": "A07",
+    "proof_style": "algebraic_first",
+    "targets": {
+      "sequence": "(4n-1)/(2n+3)",
+      "limit": 2,
+      "bound": "N > \\frac{7}{2\\varepsilon}$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(4n-1)/(2n+3)",
+        "start": 27,
+        "end": 40
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 54,
+        "end": 55
+      },
+      {
+        "field": "bound",
+        "text": "N > \\frac{7}{2\\varepsilon}",
+        "start": 190,
+        "end": 216
+      }
+    ]
+  },
+  {
+    "record_id": "A08",
+    "proof_style": "algebraic_first",
+    "targets": {
+      "sequence": "(n^2+2)/(n^2+n)",
+      "limit": 1,
+      "bound": "N > \\max(2, 1/\\varepsilon)$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n^2+2)/(n^2+n)",
+        "start": 27,
+        "end": 42
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 56,
+        "end": 57
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(2, 1/\\varepsilon)",
+        "start": 225,
+        "end": 251
+      }
+    ]
+  },
+  {
+    "record_id": "A09",
+    "proof_style": "algebraic_first",
+    "targets": {
+      "sequence": "(2n^2+n+1)/(n^2+1)",
+      "limit": 2,
+      "bound": "pick N greater than 1/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(2n^2+n+1)/(n^2+1)",
+        "start": 27,
+        "end": 45
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 59,
+        "end": 60
+      },
+      {
+        "field": "bound",
+        "text": "pick N greater than 1/eps",
+        "start": 215,
+        "end": 240
+      }
+    ]
+  },
+  {
+    "record_id": "A10",
+    "proof_style": "algebraic_first",
+    "targets": {
+      "sequence": "(5n+2)/(2n-1)",
+      "limit": "5/2",
+      "bound": "N > \\frac{9}{2\\varepsilon}$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(5n+2)/(2n-1)",
+        "start": 27,
+        "end": 40
+      },
+      {
+        "field": "limit",
+        "text": "5/2",
+        "start": 54,
+        "end": 57
+      },
+      {
+        "field": "bound",
+        "text": "N > \\frac{9}{2\\varepsilon}",
+        "start": 284,
+        "end": 310
+      }
+    ]
+  },
+  {
+    "record_id": "A11",
+    "proof_style": "comparison",
+    "targets": {
+      "sequence": "sin(n)/n",
+      "limit": 0,
+      "bound": "Choose N greater than 1/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sin(n)/n",
+        "start": 27,
+        "end": 35
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 49,
+        "end": 50
+      },
+      {
+        "field": "bound",
+        "text": "Choose N greater than 1/eps",
+        "start": 146,
+        "end": 173
+      }
+    ]
+  },
+  {
+    "record_id": "A12",
+    "proof_style": "comparison",
+    "targets": {
+      "sequence": "cos(n)/n^2",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "cos(n)/n^2",
+        "start": 27,
+        "end": 37
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 51,
+        "end": 52
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 193,
+        "end": 210
+      }
+    ]
+  },
+  {
+    "record_id": "A13",
+    "proof_style": "comparison",
+    "targets": {
+      "sequence": "(-1)^n/(2n+3)",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/(2n+3)",
+        "start": 27,
+        "end": 40
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 54,
+        "end": 55
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 149,
+        "end": 166
+      }
+    ]
+  },
+  {
+    "record_id": "A14",
+    "proof_style": "comparison",
+    "targets": {
+      "sequence": "(sin(n)+cos(n))/n",
+      "limit": 0,
+      "bound": "choose N greater than 2/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(sin(n)+cos(n))/n",
+        "start": 27,
+        "end": 44
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 58,
+        "end": 59
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 2/eps",
+        "start": 211,
+        "end": 238
+      }
+    ]
+  },
+  {
+    "record_id": "A15",
+    "proof_style": "comparison",
+    "targets": {
+      "sequence": "arctan(n)/n",
+      "limit": 0,
+      "bound": "N > \\pi/(2\\varepsilon)$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "arctan(n)/n",
+        "start": 27,
+        "end": 38
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 52,
+        "end": 53
+      },
+      {
+        "field": "bound",
+        "text": "N > \\pi/(2\\varepsilon)",
+        "start": 211,
+        "end": 233
+      }
+    ]
+  },
+  {
+    "record_id": "A16",
+    "proof_style": "squeeze",
+    "targets": {
+      "sequence": "(-1)^n/n",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/n",
+        "start": 27,
+        "end": 35
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 49,
+        "end": 50
+      }
+    ]
+  },
+  {
+    "record_id": "A17",
+    "proof_style": "squeeze",
+    "targets": {
+      "sequence": "sin(n)/n",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sin(n)/n",
+        "start": 27,
+        "end": 35
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 49,
+        "end": 50
+      }
+    ]
+  },
+  {
+    "record_id": "A18",
+    "proof_style": "squeeze",
+    "targets": {
+      "sequence": "n/(n^2+1)",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "n/(n^2+1)",
+        "start": 27,
+        "end": 36
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 50,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "record_id": "A19",
+    "proof_style": "squeeze",
+    "targets": {
+      "sequence": "(cos(n)+2)/n",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(cos(n)+2)/n",
+        "start": 27,
+        "end": 39
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 53,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "record_id": "A20",
+    "proof_style": "squeeze",
+    "targets": {
+      "sequence": "1/(n+sin(n))",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/(n+sin(n))",
+        "start": 27,
+        "end": 39
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 53,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "record_id": "A21",
+    "proof_style": "monotone_bounded",
+    "targets": {
+      "sequence": "1 - 1/2^n",
+      "limit": 1
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1 - 1/2^n",
+        "start": 27,
+        "end": 36
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 50,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "record_id": "A22",
+    "proof_style": "monotone_bounded",
+    "targets": {
+      "sequence": "n/(n+1)",
+      "limit": 1
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "n/(n+1)",
+        "start": 27,
+        "end": 34
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 48,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "record_id": "A23",
+    "proof_style": "monotone_bounded",
+    "targets": {
+      "sequence": "1 - 1/n^2",
+      "limit": 1
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1 - 1/n^2",
+        "start": 27,
+        "end": 36
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 50,
+        "end": 51
+      }
+    ]
+  },
+  {
+    "record_id": "A24",
+    "proof_style": "monotone_bounded",
+    "targets": {
+      "sequence": "sqrt(n+1)-sqrt(n)",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sqrt(n+1)-sqrt(n)",
+        "start": 27,
+        "end": 44
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 303,
+        "end": 304
+      }
+    ]
+  },
+  {
+    "record_id": "A25",
+    "proof_style": "monotone_bounded",
+    "targets": {
+      "sequence": "1/2^n",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/2^n",
+        "start": 27,
+        "end": 32
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 46,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "record_id": "A26",
+    "proof_style": "definition_verbatim",
+    "targets": {
+      "sequence": "7",
+      "limit": 7
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "7",
+        "start": 49,
+        "end": 50
+      },
+      {
+        "field": "limit",
+        "text": "7",
+        "start": 64,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "record_id": "A27",
+    "proof_style": "definition_verbatim",
+    "targets": {
+      "sequence": "0",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "0",
+        "start": 27,
+        "end": 28
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 42,
+        "end": 43
+      }
+    ]
+  },
+  {
+    "record_id": "A28",
+    "proof_style": "definition_verbatim",
+    "targets": {
+      "sequence": "2/n",
+      "limit": 0,
+      "bound": "N > 2/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "2/n",
+        "start": 27,
+        "end": 30
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 44,
+        "end": 45
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon",
+        "start": 96,
+        "end": 113
+      }
+    ]
+  },
+  {
+    "record_id": "A29",
+    "proof_style": "definition_verbatim",
+    "targets": {
+      "sequence": "(n+1)/n",
+      "limit": 1,
+      "bound": "Choose N greater than 1/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n+1)/n",
+        "start": 27,
+        "end": 34
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 48,
+        "end": 49
+      },
+      {
+        "field": "bound",
+        "text": "Choose N greater than 1/eps",
+        "start": 71,
+        "end": 98
+      }
+    ]
+  },
+  {
+    "record_id": "A30",
+    "proof_style": "definition_verbatim",
+    "targets": {
+      "sequence": "1/n^3",
+      "limit": 0,
+      "bound": "N > \\varepsilon^{-1/3}$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/n^3",
+        "start": 27,
+        "end": 32
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 46,
+        "end": 47
+      },
+      {
+        "field": "bound",
+        "text": "N > \\varepsilon^{-1/3",
+        "start": 114,
+        "end": 135
+      }
+    ]
+  },
+  {
+    "record_id": "A31",
+    "proof_style": "telescoping",
+    "targets": {
+      "sequence": "sum_{k=1}^n 1/(k(k+1))",
+      "limit": 1
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n 1/(k(k+1))",
+        "start": 27,
+        "end": 49
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 63,
+        "end": 64
+      }
+    ]
+  },
+  {
+    "record_id": "A32",
+    "proof_style": "telescoping",
+    "targets": {
+      "sequence": "sum_{k=1}^n 1/((2k-1)(2k+1))",
+      "limit": "1/2"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n 1/((2k-1)(2k+1))",
+        "start": 27,
+        "end": 55
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 69,
+        "end": 72
+      }
+    ]
+  },
+  {
+    "record_id": "A33",
+    "proof_style": "telescoping",
+    "targets": {
+      "sequence": "sum_{k=1}^n (1/k - 1/(k+1))",
+      "limit": 1
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n (1/k - 1/(k+1))",
+        "start": 27,
+        "end": 54
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 68,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "record_id": "A34",
+    "proof_style": "telescoping",
+    "targets": {
+      "sequence": "sum_{k=1}^n 1/(k(k+2))",
+      "limit": "3/4"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n 1/(k(k+2))",
+        "start": 27,
+        "end": 49
+      },
+      {
+        "field": "limit",
+        "text": "3/4",
+        "start": 63,
+        "end": 66
+      }
+    ]
+  },
+  {
+    "record_id": "A35",
+    "proof_style": "telescoping",
+    "targets": {
+      "sequence": "sum_{k=1}^n (1/sqrt(k)-1/sqrt(k+1))",
+      "limit": 1
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n (1/sqrt(k) - 1/sqrt(k+1))",
+        "start": 27,
+        "end": 64
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 78,
+        "end": 79
+      }
+    ]
+  },
+  {
+    "record_id": "A36",
+    "proof_style": "geometric",
+    "targets": {
+      "sequence": "sum_{k=0}^{n-1} (1/2)^k",
+      "limit": 2
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=0}^{n-1} (1/2)^k",
+        "start": 27,
+        "end": 50
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 64,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "record_id": "A37",
+    "proof_style": "geometric",
+    "targets": {
+      "sequence": "sum_{k=0}^{n-1} (1/3)^k",
+      "limit": "3/2"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=0}^{n-1} (1/3)^k",
+        "start": 27,
+        "end": 50
+      },
+      {
+        "field": "limit",
+        "text": "3/2",
+        "start": 64,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "record_id": "A38",
+    "proof_style": "geometric",
+    "targets": {
+      "sequence": "sum_{k=0}^{n-1} (-1/2)^k",
+      "limit": "2/3"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=0}^{n-1} (-1/2)^k",
+        "start": 27,
+        "end": 51
+      },
+      {
+        "field": "limit",
+        "text": "2/3",
+        "start": 65,
+        "end": 68
+      }
+    ]
+  },
+  {
+    "record_id": "A39",
+    "proof_style": "geometric",
+    "targets": {
+      "sequence": "sum_{k=0}^{n-1} (2/3)^k",
+      "limit": 3
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=0}^{n-1} (2/3)^k",
+        "start": 27,
+        "end": 50
+      },
+      {
+        "field": "limit",
+        "text": "3",
+        "start": 64,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "record_id": "A40",
+    "proof_style": "geometric",
+    "targets": {
+      "sequence": "sum_{k=0}^{n-1} (1/4)^k",
+      "limit": "4/3"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=0}^{n-1} (1/4)^k",
+        "start": 27,
+        "end": 50
+      },
+      {
+        "field": "limit",
+        "text": "4/3",
+        "start": 64,
+        "end": 67
+      }
+    ]
+  },
+  {
+    "record_id": "A41",
+    "proof_style": "induction",
+    "targets": {
+      "sequence": "1/2^n",
+      "limit": 0,
+      "bound": "choose N greater than 1/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/2^n",
+        "start": 27,
+        "end": 32
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 46,
+        "end": 47
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 1/eps",
+        "start": 149,
+        "end": 176
+      }
+    ]
+  },
+  {
+    "record_id": "A42",
+    "proof_style": "induction",
+    "targets": {
+      "sequence": "1/n!",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/n!",
+        "start": 27,
+        "end": 31
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 45,
+        "end": 46
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 182,
+        "end": 199
+      }
+    ]
+  },
+  {
+    "record_id": "A43",
+    "proof_style": "induction",
+    "targets": {
+      "sequence": "n/3^n",
+      "limit": 0,
+      "bound": "N > \\max(2, 1/\\varepsilon)$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "n/3^n",
+        "start": 27,
+        "end": 32
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 46,
+        "end": 47
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(2, 1/\\varepsilon)",
+        "start": 172,
+        "end": 198
+      }
+    ]
+  },
+  {
+    "record_id": "A44",
+    "proof_style": "induction",
+    "targets": {
+      "sequence": "1/(n 2^n)",
+      "limit": 0,
+      "bound": "Take N greater than 1/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/(n 2^n)",
+        "start": 27,
+        "end": 36
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "field": "bound",
+        "text": "Take N greater than 1/eps",
+        "start": 183,
+        "end": 208
+      }
+    ]
+  },
+  {
+    "record_id": "A45",
+    "proof_style": "induction",
+    "targets": {
+      "sequence": "1/(2^n+1)",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/(2^n+1)",
+        "start": 27,
+        "end": 36
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 50,
+        "end": 51
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 191,
+        "end": 208
+      }
+    ]
+  },
+  {
+    "record_id": "A46",
+    "proof_style": "contradiction",
+    "targets": {
+      "sequence": "1/n",
+      "limit": 0,
+      "bound": "choose N greater than 1/eps, then any n at least N satisfies 1/n at most 1/N, which is below eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/n",
+        "start": 44,
+        "end": 47
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 61,
+        "end": 62
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 1/eps, then any n at least N satisfies 1/n at most 1/N, which is below eps",
+        "start": 255,
+        "end": 351
+      }
+    ]
+  },
+  {
+    "record_id": "A47",
+    "proof_style": "contradiction",
+    "targets": {
+      "sequence": "1/n^2",
+      "limit": 0,
+      "bound": "N > 1/\\sqrt{\\varepsilon}$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/n^2",
+        "start": 44,
+        "end": 49
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 63,
+        "end": 64
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\sqrt{\\varepsilon",
+        "start": 209,
+        "end": 232
+      }
+    ]
+  },
+  {
+    "record_id": "A48",
+    "proof_style": "contradiction",
+    "targets": {
+      "sequence": "(-1)^n/n",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon$ gives $1/n \\leq 1/N < \\varepsilon$ for all $n \\geq N$, a contradiction"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/n",
+        "start": 44,
+        "end": 52
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 66,
+        "end": 67
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon$ gives $1/n \\leq 1/N < \\varepsilon$ for all $n \\geq N$, a contradiction",
+        "start": 223,
+        "end": 312
+      }
+    ]
+  },
+  {
+    "record_id": "A49",
+    "proof_style": "contradiction",
+    "targets": {
+      "sequence": "(n+1)/n",
+      "limit": 1,
+      "bound": "Taking N greater than 1/eps gives 1/n at most 1/N, which is below eps, contradicting the supposition"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n+1)/n",
+        "start": 44,
+        "end": 51
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 65,
+        "end": 66
+      },
+      {
+        "field": "bound",
+        "text": "Taking N greater than 1/eps gives 1/n at most 1/N, which is below eps, contradicting the supposition",
+        "start": 255,
+        "end": 355
+      }
+    ]
+  },
+  {
+    "record_id": "A50",
+    "proof_style": "contradiction",
+    "targets": {
+      "sequence": "3/(n+2)",
+      "limit": 0,
+      "bound": "N > 3/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "3/(n+2)",
+        "start": 44,
+        "end": 51
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 65,
+        "end": 66
+      },
+      {
+        "field": "bound",
+        "text": "N > 3/\\varepsilon",
+        "start": 213,
+        "end": 230
+      }
+    ]
+  },
+  {
+    "record_id": "A51",
+    "proof_style": "subsequence",
+    "targets": {
+      "sequence": "(-1)^n/n",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/n",
+        "start": 27,
+        "end": 35
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 49,
+        "end": 50
+      }
+    ]
+  },
+  {
+    "record_id": "A52",
+    "proof_style": "subsequence",
+    "targets": {
+      "sequence": "sin(n pi/2)/n",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sin(n pi/2)/n",
+        "start": 27,
+        "end": 40
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 54,
+        "end": 55
+      }
+    ]
+  },
+  {
+    "record_id": "A53",
+    "proof_style": "subsequence",
+    "targets": {
+      "sequence": "(1+(-1)^n)/n",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(1+(-1)^n)/n",
+        "start": 27,
+        "end": 39
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 53,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "record_id": "A54",
+    "proof_style": "subsequence",
+    "targets": {
+      "sequence": "cos(n pi)/n",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "cos(n pi)/n",
+        "start": 27,
+        "end": 38
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 52,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "record_id": "A55",
+    "proof_style": "subsequence",
+    "targets": {
+      "sequence": "(-1)^n/(n+1)+1/n",
+      "limit": 0
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/(n+1)+1/n",
+        "start": 27,
+        "end": 43
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 57,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "record_id": "A56",
+    "proof_style": "tail_bound",
+    "targets": {
+      "sequence": "(n+3)/(2n+1)",
+      "limit": "1/2",
+      "bound": "choose N greater than 5/(4eps)"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n+3)/(2n+1)",
+        "start": 27,
+        "end": 39
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 53,
+        "end": 56
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 5/(4eps)",
+        "start": 156,
+        "end": 186
+      }
+    ]
+  },
+  {
+    "record_id": "A57",
+    "proof_style": "tail_bound",
+    "targets": {
+      "sequence": "(2n^2+1)/(n^2+3)",
+      "limit": 2,
+      "bound": "N > 5/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(2n^2+1)/(n^2+3)",
+        "start": 27,
+        "end": 43
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 57,
+        "end": 58
+      },
+      {
+        "field": "bound",
+        "text": "N > 5/\\varepsilon",
+        "start": 208,
+        "end": 225
+      }
+    ]
+  },
+  {
+    "record_id": "A58",
+    "proof_style": "tail_bound",
+    "targets": {
+      "sequence": "(3n-2)/(n+1)",
+      "limit": 3,
+      "bound": "N > 5/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(3n-2)/(n+1)",
+        "start": 27,
+        "end": 39
+      },
+      {
+        "field": "limit",
+        "text": "3",
+        "start": 53,
+        "end": 54
+      },
+      {
+        "field": "bound",
+        "text": "N > 5/\\varepsilon",
+        "start": 157,
+        "end": 174
+      }
+    ]
+  },
+  {
+    "record_id": "A59",
+    "proof_style": "tail_bound",
+    "targets": {
+      "sequence": "(n^2+2n)/(3n^2+1)",
+      "limit": "1/3",
+      "bound": "choose N greater than 2/(3eps)"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n^2+2n)/(3n^2+1)",
+        "start": 27,
+        "end": 44
+      },
+      {
+        "field": "limit",
+        "text": "1/3",
+        "start": 58,
+        "end": 61
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 2/(3eps)",
+        "start": 253,
+        "end": 283
+      }
+    ]
+  },
+  {
+    "record_id": "A60",
+    "proof_style": "tail_bound",
+    "targets": {
+      "sequence": "1/(sqrt(n)+1)",
+      "limit": 0,
+      "bound": "N > 1/\\varepsilon^2$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/(sqrt(n)+1)",
+        "start": 27,
+        "end": 40
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 54,
+        "end": 55
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon^2",
+        "start": 170,
+        "end": 189
+      }
+    ]
+  },
+  {
+    "record_id": "A61",
+    "proof_style": "dominant_term",
+    "targets": {
+      "sequence": "(3n^2+2n+1)/(n^2+5)",
+      "limit": 3,
+      "bound": "Choosing N above max(7, 2/eps) guarantees the tail is within eps of 3, so the sequence converges to 3"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(3n^2+2n+1)/(n^2+5)",
+        "start": 27,
+        "end": 46
+      },
+      {
+        "field": "limit",
+        "text": "3",
+        "start": 60,
+        "end": 61
+      },
+      {
+        "field": "bound",
+        "text": "Choosing N above max(7, 2/eps) guarantees the tail is within eps of 3, so the sequence converges to 3",
+        "start": 269,
+        "end": 370
+      }
+    ]
+  },
+  {
+    "record_id": "A62",
+    "proof_style": "dominant_term",
+    "targets": {
+      "sequence": "(2n^3-1)/(4n^3+n)",
+      "limit": "1/2",
+      "bound": "N > 3/(8\\varepsilon)$ gives $a_n \\to 1/2$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(2n^3-1)/(4n^3+n)",
+        "start": 27,
+        "end": 44
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 58,
+        "end": 61
+      },
+      {
+        "field": "bound",
+        "text": "N > 3/(8\\varepsilon)$ gives $a_n \\to 1/2",
+        "start": 295,
+        "end": 335
+      }
+    ]
+  },
+  {
+    "record_id": "A63",
+    "proof_style": "dominant_term",
+    "targets": {
+      "sequence": "(5n^2+n)/(2n^2+3)",
+      "limit": "5/2",
+      "bound": "N > \\max(8, 1/(2\\varepsilon))$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(5n^2+n)/(2n^2+3)",
+        "start": 27,
+        "end": 44
+      },
+      {
+        "field": "limit",
+        "text": "5/2",
+        "start": 58,
+        "end": 61
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(8, 1/(2\\varepsilon))",
+        "start": 251,
+        "end": 280
+      }
+    ]
+  },
+  {
+    "record_id": "A64",
+    "proof_style": "dominant_term",
+    "targets": {
+      "sequence": "(n^3+2n)/(2n^3+n^2+1)",
+      "limit": "1/2",
+      "bound": "Taking N above max(5, 1/(2eps)) makes the tail lie within eps of 1/2, so the sequence converges to 1/2"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n^3+2n)/(2n^3+n^2+1)",
+        "start": 27,
+        "end": 48
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 62,
+        "end": 65
+      },
+      {
+        "field": "bound",
+        "text": "Taking N above max(5, 1/(2eps)) makes the tail lie within eps of 1/2, so the sequence converges to 1/2",
+        "start": 299,
+        "end": 401
+      }
+    ]
+  },
+  {
+    "record_id": "A65",
+    "proof_style": "dominant_term",
+    "targets": {
+      "sequence": "(4n^4+n^2)/(2n^4+3n)",
+      "limit": 2,
+      "bound": "N > \\max(6, \\sqrt{1/(2\\varepsilon)})$ gives $a_n \\to 2$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(4n^4+n^2)/(2n^4+3n)",
+        "start": 27,
+        "end": 47
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 61,
+        "end": 62
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(6, \\sqrt{1/(2\\varepsilon)})$ gives $a_n \\to 2",
+        "start": 275,
+        "end": 329
+      }
+    ]
+  },
+  {
+    "record_id": "A66",
+    "proof_style": "limit_algebra",
+    "targets": {
+      "sequence": "(1+1/n)(2-1/n)",
+      "limit": 2
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(1+1/n)(2-1/n)",
+        "start": 27,
+        "end": 41
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 55,
+        "end": 56
+      }
+    ]
+  },
+  {
+    "record_id": "A67",
+    "proof_style": "limit_algebra",
+    "targets": {
+      "sequence": "(n+1)/n + 1/n^2",
+      "limit": 1
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n+1)/n + 1/n^2",
+        "start": 27,
+        "end": 42
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 56,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "record_id": "A68",
+    "proof_style": "limit_algebra",
+    "targets": {
+      "sequence": "(2+3/n)/(1-1/n)",
+      "limit": 2
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(2+3/n)/(1-1/n)",
+        "start": 27,
+        "end": 42
+      },
+      {
+        "field": "limit",
+        "text": "2",
+        "start": 56,
+        "end": 57
+      }
+    ]
+  },
+  {
+    "record_id": "A69",
+    "proof_style": "limit_algebra",
+    "targets": {
+      "sequence": "sqrt(1+1/n)",
+      "limit": 1
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sqrt(1+1/n)",
+        "start": 27,
+        "end": 38
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 52,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "record_id": "A70",
+    "proof_style": "limit_algebra",
+    "targets": {
+      "sequence": "(n/(n+1))^2",
+      "limit": 1
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n/(n+1))^2",
+        "start": 27,
+        "end": 38
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 52,
+        "end": 53
+      }
+    ]
+  },
+  {
+    "record_id": "A71",
+    "proof_style": "absolute_value",
+    "targets": {
+      "sequence": "(-1)^n/n + 1/n",
+      "limit": 0,
+      "bound": "choose N greater than 2/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/n + 1/n",
+        "start": 27,
+        "end": 41
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 55,
+        "end": 56
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 2/eps",
+        "start": 217,
+        "end": 244
+      }
+    ]
+  },
+  {
+    "record_id": "A72",
+    "proof_style": "absolute_value",
+    "targets": {
+      "sequence": "sin(n)/n + cos(n)/n^2",
+      "limit": 0,
+      "bound": "N > 2/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sin(n)/n + cos(n)/n^2",
+        "start": 27,
+        "end": 48
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 62,
+        "end": 63
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon",
+        "start": 241,
+        "end": 258
+      }
+    ]
+  },
+  {
+    "record_id": "A73",
+    "proof_style": "absolute_value",
+    "targets": {
+      "sequence": "(n+(-1)^n)/(n+1)",
+      "limit": 1,
+      "bound": "N > 2/\\varepsilon$ gives $|a_n - 1| < \\varepsilon$, so $a_n \\to 1$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n+(-1)^n)/(n+1)",
+        "start": 27,
+        "end": 43
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 57,
+        "end": 58
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon$ gives $|a_n - 1| < \\varepsilon$, so $a_n \\to 1",
+        "start": 223,
+        "end": 288
+      }
+    ]
+  },
+  {
+    "record_id": "A74",
+    "proof_style": "absolute_value",
+    "targets": {
+      "sequence": "1/n - 1/(n+1)",
+      "limit": 0,
+      "bound": "choose N greater than 1/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/n - 1/(n+1)",
+        "start": 27,
+        "end": 40
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 54,
+        "end": 55
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 1/eps",
+        "start": 169,
+        "end": 196
+      }
+    ]
+  },
+  {
+    "record_id": "A75",
+    "proof_style": "absolute_value",
+    "targets": {
+      "sequence": "(-1)^n/(n+1) + (-1)^(n+1)/(n+2)",
+      "limit": 0,
+      "bound": "N > 2/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/(n+1) + (-1)^(n+1)/(n+2)",
+        "start": 27,
+        "end": 58
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 72,
+        "end": 73
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon",
+        "start": 209,
+        "end": 226
+      }
+    ]
+  },
+  {
+    "record_id": "A76",
+    "proof_style": "cauchy_criterion",
+    "targets": {
+      "sequence": "1/n",
+      "limit": 0,
+      "bound": "choose N greater than 2/eps"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/n",
+        "start": 27,
+        "end": 30
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 2/eps",
+        "start": 150,
+        "end": 177
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 305,
+        "end": 306
+      }
+    ]
+  },
+  {
+    "record_id": "A77",
+    "proof_style": "cauchy_criterion",
+    "targets": {
+      "sequence": "1/n^2",
+      "limit": 0,
+      "bound": "N > 2/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "1/n^2",
+        "start": 27,
+        "end": 32
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon",
+        "start": 193,
+        "end": 210
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 316,
+        "end": 317
+      }
+    ]
+  },
+  {
+    "record_id": "A78",
+    "proof_style": "cauchy_criterion",
+    "targets": {
+      "sequence": "(-1)^n/n",
+      "limit": 0,
+      "bound": "N > 2/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(-1)^n/n",
+        "start": 27,
+        "end": 35
+      },
+      {
+        "field": "limit",
+        "text": "0",
+        "start": 155,
+        "end": 156
+      },
+      {
+        "field": "bound",
+        "text": "N > 2/\\varepsilon",
+        "start": 165,
+        "end": 182
+      }
+    ]
+  },
+  {
+    "record_id": "A79",
+    "proof_style": "cauchy_criterion",
+    "targets": {
+      "sequence": "(n+1)/n",
+      "limit": 1,
+      "bound": "Taking N greater than 2/eps ensures that the difference is below eps whenever both m and n are at least N"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n+1)/n",
+        "start": 27,
+        "end": 34
+      },
+      {
+        "field": "bound",
+        "text": "Taking N greater than 2/eps ensures that the difference is below eps whenever both m and n are at least N",
+        "start": 227,
+        "end": 332
+      },
+      {
+        "field": "limit",
+        "text": "1",
+        "start": 377,
+        "end": 378
+      }
+    ]
+  },
+  {
+    "record_id": "A80",
+    "proof_style": "cauchy_criterion",
+    "targets": {
+      "sequence": "sum_{k=1}^n 1/k^2",
+      "bound": "N > 1/\\varepsilon$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "sum_{k=1}^n 1/k^2",
+        "start": 27,
+        "end": 44
+      },
+      {
+        "field": "bound",
+        "text": "N > 1/\\varepsilon",
+        "start": 240,
+        "end": 257
+      }
+    ]
+  },
+  {
+    "record_id": "A81",
+    "proof_style": "rational_rewrite",
+    "targets": {
+      "sequence": "(n+2)/(2n+1)",
+      "limit": "1/2",
+      "bound": "choose N greater than 3/(4eps)"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n+2)/(2n+1)",
+        "start": 27,
+        "end": 39
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 53,
+        "end": 56
+      },
+      {
+        "field": "bound",
+        "text": "choose N greater than 3/(4eps)",
+        "start": 230,
+        "end": 260
+      }
+    ]
+  },
+  {
+    "record_id": "A82",
+    "proof_style": "rational_rewrite",
+    "targets": {
+      "sequence": "(3n^2+n)/(n^2+2)",
+      "limit": 3,
+      "bound": "N > \\max(6, 1/\\varepsilon)$ gives $a_n \\to 3$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(3n^2+n)/(n^2+2)",
+        "start": 27,
+        "end": 43
+      },
+      {
+        "field": "limit",
+        "text": "3",
+        "start": 57,
+        "end": 58
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(6, 1/\\varepsilon)$ gives $a_n \\to 3",
+        "start": 230,
+        "end": 274
+      }
+    ]
+  },
+  {
+    "record_id": "A83",
+    "proof_style": "rational_rewrite",
+    "targets": {
+      "sequence": "(2n^2+3n+1)/(4n^2+n)",
+      "limit": "1/2",
+      "bound": "N > \\max(2, 7/(8\\varepsilon))$ gives $a_n \\to 1/2$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(2n^2+3n+1)/(4n^2+n)",
+        "start": 27,
+        "end": 47
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 61,
+        "end": 64
+      },
+      {
+        "field": "bound",
+        "text": "N > \\max(2, 7/(8\\varepsilon))$ gives $a_n \\to 1/2",
+        "start": 280,
+        "end": 329
+      }
+    ]
+  },
+  {
+    "record_id": "A84",
+    "proof_style": "rational_rewrite",
+    "targets": {
+      "sequence": "(n^2-1)/(2n^2+n)",
+      "limit": "1/2",
+      "bound": "taking N greater than max(2, 3/(4eps)) makes the tail lie within eps of 1/2, so the sequence converges to 1/2"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(n^2-1)/(2n^2+n)",
+        "start": 27,
+        "end": 43
+      },
+      {
+        "field": "limit",
+        "text": "1/2",
+        "start": 57,
+        "end": 60
+      },
+      {
+        "field": "bound",
+        "text": "taking N greater than max(2, 3/(4eps)) makes the tail lie within eps of 1/2, so the sequence converges to 1/2",
+        "start": 255,
+        "end": 364
+      }
+    ]
+  },
+  {
+    "record_id": "A85",
+    "proof_style": "rational_rewrite",
+    "targets": {
+      "sequence": "(5n^3+2n)/(2n^3+n^2)",
+      "limit": "5/2",
+      "bound": "N > 5/(4\\varepsilon)$ gives $a_n \\to 5/2$"
+    },
+    "aligned_spans": [
+      {
+        "field": "sequence",
+        "text": "(5n^3+2n)/(2n^3+n^2)",
+        "start": 27,
+        "end": 47
+      },
+      {
+        "field": "limit",
+        "text": "5/2",
+        "start": 61,
+        "end": 64
+      },
+      {
+        "field": "bound",
+        "text": "N > 5/(4\\varepsilon)$ gives $a_n \\to 5/2",
+        "start": 279,
+        "end": 319
+      }
+    ]
+  }
+]
