@@ -52,6 +52,9 @@ from page_latex_ocr import (
     recognize_pdf,
 )
 
+from argparse import Namespace
+from pathlib import Path
+
 import os
 
 def detect_device() -> str:
@@ -221,9 +224,29 @@ def load_extractor(path: str, device: str):
 def load_latex_ocr_model(device: str):
     from pix2tex.cli import LatexOCR
 
+    # 指向仓库内预置的权重文件
+    checkpoint_path = Path(__file__).parent / "models" / "pix2tex" / "weights.pth"
+    resizer_path = Path(__file__).parent / "models" / "pix2tex" / "image_resizer.pth"
+
+    if not checkpoint_path.is_file():
+        raise FileNotFoundError(
+            f"pix2tex weights not found at {checkpoint_path}. "
+            "Please commit weights.pth to your repository."
+        )
+
+    args = Namespace(
+        config="settings/config.yaml",          # 使用默认配置
+        checkpoint=str(checkpoint_path),        # 自定义权重路径
+        no_cuda=(device == "cpu"),
+        no_resize=not resizer_path.is_file(),
+        temperature=0.25,
+    )
+    if resizer_path.is_file():
+        args.image_resizer = str(resizer_path)
+
     buf = io.StringIO()
     with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
-        model = LatexOCR()
+        model = LatexOCR(args)                  # 传入自定义 arguments
         if device != "cpu":
             try:
                 model.model.to(device)
@@ -232,8 +255,6 @@ def load_latex_ocr_model(device: str):
             except Exception as exc:
                 print(f"pix2tex GPU move failed ({exc}); using default device.")
 
-        # Warmup inference: compiles the encoder/decoder graph and, on GPU,
-        # the CUDA kernels. A blank image is enough; output is discarded.
         try:
             model(Image.new("RGB", (256, 64), "white"))
         except Exception as exc:
